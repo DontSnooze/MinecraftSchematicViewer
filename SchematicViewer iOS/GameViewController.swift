@@ -285,14 +285,25 @@ class GameViewController: UIViewController {
         buttonA?.valueChangedHandler = {(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) -> Void in
             // Put here the codes to run when button A clicked
             print("Button A Pressed")
-            let block = SceneBlock.createBlock()
-            block.position = self.gameController.playerNode.position
+            
             if value == 0 {
                 // releasing A
                 print("releasing A")
+                self.stopVerticalMovement()
             } else {
                 // holding A
                 print("holding A")
+                let action = SCNAction.repeatForever(
+                    SCNAction.moveBy(
+                        x: 0.0,
+                        y: -rotationSpeed,
+                        z: 0.0,
+                        duration: 0.1
+                    )
+                )
+                
+                self.stopVerticalMovement()
+                self.gameController.playerNode.runAction(action, forKey: "down_movement")
             }
         }
         
@@ -304,10 +315,21 @@ class GameViewController: UIViewController {
                 // releasing B
                 print("releasing B")
                 
+                self.stopVerticalMovement()
+                
             } else {
                 // holding B
                 print("holding B")
-                
+                let action = SCNAction.repeatForever(
+                    SCNAction.moveBy(
+                        x: 0.0,
+                        y: rotationSpeed,
+                        z: 0.0,
+                        duration: 0.1
+                    )
+                )
+                self.stopVerticalMovement()
+                self.gameController.playerNode.runAction(action, forKey: "up_movement")
             }
         }
     }
@@ -349,6 +371,17 @@ class GameViewController: UIViewController {
         let keys = [
             "right_movement",
             "left_movement"
+        ]
+        
+        for key in keys {
+            gameController.playerNode.removeAction(forKey: key)
+        }
+    }
+    
+    func stopVerticalMovement() {
+        let keys = [
+            "up_movement",
+            "down_movement"
         ]
         
         for key in keys {
