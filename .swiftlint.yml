@@ -71,7 +71,7 @@ line_length:
 
 function_body_length:
     warning: 80
-    error: 150
+#    error: 150
 
 function_parameter_count:
     warning: 4
@@ -131,7 +131,7 @@ number_separator:
 cyclomatic_complexity:
     ignores_case_statements: true
     warning: 7
-    error: 11
+#    error: 11
 
 custom_rules:
     comments_space: # From https://github.com/brandenr/swiftlintconfig

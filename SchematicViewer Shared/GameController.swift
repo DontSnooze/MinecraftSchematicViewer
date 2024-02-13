@@ -17,6 +17,8 @@ class GameController: NSObject, SCNSceneRendererDelegate {
 
     let scene: SCNScene
     let sceneRenderer: SCNSceneRenderer
+    let cameraNode: SCNNode
+    let playerNode: SCNNode
     
     init(sceneRenderer renderer: SCNSceneRenderer) {
         sceneRenderer = renderer
@@ -28,6 +30,16 @@ class GameController: NSObject, SCNSceneRendererDelegate {
         
         scene = worldScene
         
+        guard let sceneCamera = scene.rootNode.childNode(withName: "camera", recursively: true) else {
+            fatalError("camera node is nil")
+        }
+        
+        guard let node = scene.rootNode.childNode(withName: "box", recursively: true) else {
+            fatalError("box node is nil")
+        }
+        
+        cameraNode = sceneCamera
+        playerNode = node
         super.init()
         
         sceneRenderer.delegate = self
