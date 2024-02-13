@@ -20,17 +20,28 @@ class GameController: NSObject, SCNSceneRendererDelegate {
     
     init(sceneRenderer renderer: SCNSceneRenderer) {
         sceneRenderer = renderer
-        scene = SCNScene(named: "Art.scnassets/ship.scn")!
+        
+        guard let worldScene = SCNScene(named: "Art.scnassets/world.scn") else {
+            print("scene is nil")
+            fatalError("scene is nil")
+        }
+        
+        scene = worldScene
         
         super.init()
         
         sceneRenderer.delegate = self
         
-        if let ship = scene.rootNode.childNode(withName: "ship", recursively: true) {
-            ship.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
-        }
+//        if let ship = scene.rootNode.childNode(withName: "ship", recursively: true) {
+//            ship.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
+//        }
         
         sceneRenderer.scene = scene
+        
+        let block = SceneBlock.createBlock()
+        block.position = SCNVector3(0, 0, 0)
+        
+        scene.rootNode.addChildNode(block)
     }
     
     func highlightNodes(atPoint point: CGPoint) {

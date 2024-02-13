@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C1C4D932B7ABEE300C1E1C4 /* SceneBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1C4D922B7ABEE300C1E1C4 /* SceneBlock.swift */; };
+		9C1C4D942B7ABEE300C1E1C4 /* SceneBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1C4D922B7ABEE300C1E1C4 /* SceneBlock.swift */; };
+		9C1C4D952B7ABEE300C1E1C4 /* SceneBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1C4D922B7ABEE300C1E1C4 /* SceneBlock.swift */; };
 		9C7483172B75E0CA00FAFD7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7483162B75E0CA00FAFD7C /* AppDelegate.swift */; };
 		9C7483192B75E0CA00FAFD7C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7483182B75E0CA00FAFD7C /* GameViewController.swift */; };
 		9C74831C2B75E0CA00FAFD7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C74831A2B75E0CA00FAFD7C /* Main.storyboard */; };
@@ -30,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C1C4D922B7ABEE300C1E1C4 /* SceneBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneBlock.swift; sourceTree = "<group>"; };
 		9C74830C2B75E0C700FAFD7C /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		9C74830D2B75E0C700FAFD7C /* Art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Art.scnassets; sourceTree = "<group>"; };
 		9C74830E2B75E0CA00FAFD7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				9C74830C2B75E0C700FAFD7C /* GameController.swift */,
+				9C1C4D922B7ABEE300C1E1C4 /* SceneBlock.swift */,
 				9C74830D2B75E0C700FAFD7C /* Art.scnassets */,
 				9C74830E2B75E0CA00FAFD7C /* Assets.xcassets */,
 			);
@@ -147,6 +152,7 @@
 			buildConfigurationList = 9C7483492B75E0CA00FAFD7C /* Build configuration list for PBXNativeTarget "SchematicViewer iOS" */;
 			buildPhases = (
 				9C74830F2B75E0CA00FAFD7C /* Sources */,
+				9CED7FF62B7AC5E90033ADBF /* SwiftLint */,
 				9C7483102B75E0CA00FAFD7C /* Frameworks */,
 				9C7483112B75E0CA00FAFD7C /* Resources */,
 			);
@@ -269,11 +275,35 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9CED7FF62B7AC5E90033ADBF /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.swiftlint.yml",
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9C74830F2B75E0CA00FAFD7C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C1C4D932B7ABEE300C1E1C4 /* SceneBlock.swift in Sources */,
 				9C7483192B75E0CA00FAFD7C /* GameViewController.swift in Sources */,
 				9C74833E2B75E0CA00FAFD7C /* GameController.swift in Sources */,
 				9C7483172B75E0CA00FAFD7C /* AppDelegate.swift in Sources */,
@@ -284,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C1C4D942B7ABEE300C1E1C4 /* SceneBlock.swift in Sources */,
 				9C7483292B75E0CA00FAFD7C /* GameViewController.swift in Sources */,
 				9C74833F2B75E0CA00FAFD7C /* GameController.swift in Sources */,
 				9C7483272B75E0CA00FAFD7C /* AppDelegate.swift in Sources */,
@@ -294,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C1C4D952B7ABEE300C1E1C4 /* SceneBlock.swift in Sources */,
 				9C7483392B75E0CA00FAFD7C /* GameViewController.swift in Sources */,
 				9C7483402B75E0CA00FAFD7C /* GameController.swift in Sources */,
 				9C7483372B75E0CA00FAFD7C /* AppDelegate.swift in Sources */,
@@ -468,6 +500,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3BT7A38RRX;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -498,6 +531,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3BT7A38RRX;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
