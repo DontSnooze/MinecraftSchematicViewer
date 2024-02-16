@@ -74,8 +74,8 @@ function_body_length:
 #    error: 150
 
 function_parameter_count:
-    warning: 4
-    error: 6
+    warning: 7
+    error: 9
 
 type_name: # class name
     min_length: 3

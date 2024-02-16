@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "powered_rail.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

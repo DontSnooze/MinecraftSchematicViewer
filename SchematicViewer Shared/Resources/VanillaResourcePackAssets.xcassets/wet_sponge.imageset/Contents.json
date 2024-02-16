@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "wet_sponge.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

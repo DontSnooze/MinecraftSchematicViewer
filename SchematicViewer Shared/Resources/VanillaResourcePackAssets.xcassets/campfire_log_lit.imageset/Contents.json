@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "campfire_log_lit.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

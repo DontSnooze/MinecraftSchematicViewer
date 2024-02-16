@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "blast_furnace_front.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

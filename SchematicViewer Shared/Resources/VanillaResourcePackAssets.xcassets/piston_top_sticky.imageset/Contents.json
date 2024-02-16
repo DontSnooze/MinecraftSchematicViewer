@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "piston_top_sticky.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

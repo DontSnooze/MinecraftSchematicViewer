@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "packed_mud.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

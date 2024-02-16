@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "light_gray_stained_glass_pane_top.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

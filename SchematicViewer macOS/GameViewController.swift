@@ -14,12 +14,12 @@ class GameViewController: NSViewController {
         return self.view as! SCNView
     }
     
-    var gameController: GameController!
+    var gameSceneController: GameSceneController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.gameController = GameController(sceneRenderer: gameView)
+        self.gameSceneController = GameSceneController(sceneRenderer: gameView)
         
         // Allow the user to manipulate the camera
         self.gameView.allowsCameraControl = true
@@ -41,7 +41,7 @@ class GameViewController: NSViewController {
     func handleClick(_ gestureRecognizer: NSGestureRecognizer) {
         // Highlight the clicked nodes
         let p = gestureRecognizer.location(in: gameView)
-        gameController.highlightNodes(atPoint: p)
+        gameSceneController.highlightNodes(atPoint: p)
     }
     
 }

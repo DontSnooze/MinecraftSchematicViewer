@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "raw_iron_block.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

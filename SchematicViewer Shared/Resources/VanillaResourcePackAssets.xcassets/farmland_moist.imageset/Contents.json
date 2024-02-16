@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "farmland_moist.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

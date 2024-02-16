@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "amethyst_cluster.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

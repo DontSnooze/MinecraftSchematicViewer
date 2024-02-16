@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "pointed_dripstone_up_tip.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

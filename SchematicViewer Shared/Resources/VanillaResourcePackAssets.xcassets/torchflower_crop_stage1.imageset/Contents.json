@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "torchflower_crop_stage1.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

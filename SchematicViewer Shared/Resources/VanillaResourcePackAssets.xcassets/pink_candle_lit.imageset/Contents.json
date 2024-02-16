@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "pink_candle_lit.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

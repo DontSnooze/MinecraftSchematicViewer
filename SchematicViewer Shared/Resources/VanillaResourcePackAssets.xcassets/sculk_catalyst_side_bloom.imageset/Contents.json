@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "sculk_catalyst_side_bloom.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

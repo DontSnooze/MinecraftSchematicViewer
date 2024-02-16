@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "frosted_ice_1.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

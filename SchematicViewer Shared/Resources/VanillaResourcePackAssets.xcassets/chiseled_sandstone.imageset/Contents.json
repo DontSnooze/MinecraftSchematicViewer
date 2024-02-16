@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "chiseled_sandstone.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

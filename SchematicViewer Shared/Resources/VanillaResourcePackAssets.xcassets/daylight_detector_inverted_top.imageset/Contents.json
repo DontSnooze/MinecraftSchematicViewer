@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "daylight_detector_inverted_top.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

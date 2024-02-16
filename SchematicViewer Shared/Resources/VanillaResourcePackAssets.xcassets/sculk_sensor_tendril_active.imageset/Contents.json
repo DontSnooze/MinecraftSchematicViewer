@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "sculk_sensor_tendril_active.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "barrel_top_open.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

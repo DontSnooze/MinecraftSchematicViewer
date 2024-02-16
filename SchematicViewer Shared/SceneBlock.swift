@@ -9,36 +9,114 @@ import Foundation
 import SceneKit
 
 class SceneBlock {
-    class func createBlock() -> SCNNode {
+    static func createBlock() -> SCNNode {
         let g = SCNBox(width: 1.0, height: 1.0, length: 1.0, chamferRadius: 0.05)
-        
         let brick = SCNNode(geometry: g)
         
         brick.name = "brick"
-        
-        #if !targetEnvironment(simulator)
-        brick.physicsBody = SCNPhysicsBody(type: .kinematic, shape: SCNPhysicsShape(node: brick, options: nil))
-        brick.physicsBody?.contactTestBitMask = ColliderType.ship.rawValue
-        brick.physicsBody?.categoryBitMask = ColliderType.brick.rawValue
-        brick.physicsBody?.mass = 1.0
-        brick.physicsBody?.friction = 0
-        brick.physicsBody?.restitution = 0
-        brick.physicsBody?.rollingFriction = 0
-        brick.physicsBody?.damping = 0
-        brick.physicsBody?.angularDamping = 0
-        brick.physicsBody?.charge = 0
-        brick.physicsBody?.isAffectedByGravity = false
-        #endif
-        
-        brick.geometry?.firstMaterial?.transparency = 0.75
-        
-        brick.geometry?.firstMaterial?.specular.contents = UIColor.white
-        
-        //        brick.geometry?.firstMaterial?.reflective.contents = UIColor.black
+        brick.geometry?.firstMaterial?.transparency = 0.6
         
         let brickColor = UIColor.cyan
         brick.geometry?.firstMaterial?.diffuse.contents = brickColor
         
         return brick
+    }
+    
+    static func repeatedImageBlock(image: UIImage) -> SCNNode {
+        let g = SCNBox(width: 1.0, height: 1.0, length: 1.0, chamferRadius: 0.01)
+        let block = SCNNode(geometry: g)
+        
+        block.name = "block"
+        
+        let  material = SCNMaterial()
+        material.diffuse.contents = image
+        block.geometry?.materials = [material]
+        
+        return block
+    }
+    
+    static func sixImageBlock(imageNames: [String]) -> SCNNode {
+        var materials = [SCNMaterial]()
+        
+        for name in imageNames {
+            if let image = UIImage(named: name) {
+                let  material = SCNMaterial()
+                material.diffuse.contents = image
+                materials.append(material)
+            }
+        }
+        
+        let g = SCNBox(width: 1.0, height: 1.0, length: 1.0, chamferRadius: 0.01)
+        let block = SCNNode(geometry: g)
+        
+        block.name = "block"
+        block.geometry?.materials = materials
+        
+        return block
+    }
+    
+    static func sixImageBlock(frontImage: UIImage?, 
+                              rightImage: UIImage?,
+                              backImage: UIImage?,
+                              leftImage: UIImage?,
+                              topImage: UIImage?,
+                              bottomImage: UIImage?) -> SCNNode {
+        
+        let g = SCNBox(width: 1.0, height: 1.0, length: 1.0, chamferRadius: 0.01)
+        let block = SCNNode(geometry: g)
+        block.name = "block"
+        
+        var materials = [SCNMaterial]()
+        
+        // [ PZ(FRONT) , PX(RIGHT) , NZ(BACK) , NX(LEFT) , PY(TOP) , NY(BOTTOM) ]
+        if let frontImage = frontImage {
+            let material = SCNMaterial()
+            material.diffuse.contents = frontImage
+            materials.append(material)
+        }
+        
+        if let rightImage = rightImage {
+            let material = SCNMaterial()
+            material.diffuse.contents = rightImage
+            materials.append(material)
+        }
+        
+        if let backImage = backImage {
+            let material = SCNMaterial()
+            material.diffuse.contents = backImage
+            materials.append(material)
+        }
+        
+        if let leftImage = leftImage {
+            let material = SCNMaterial()
+            material.diffuse.contents = leftImage
+            materials.append(material)
+        }
+        
+        if let topImage = topImage {
+            let material = SCNMaterial()
+            material.diffuse.contents = topImage
+            materials.append(material)
+        }
+        
+        if let bottomImage = bottomImage {
+            let material = SCNMaterial()
+            material.diffuse.contents = bottomImage
+            materials.append(material)
+        }
+        
+        // [ PZ(FRONT) , PX(RIGHT) , NZ(BACK) , NX(LEFT) , PY(TOP) , NY(BOTTOM) ]
+        if materials.isEmpty {
+            block.geometry?.firstMaterial?.diffuse.contents = UIColor.cyan
+            block.geometry?.firstMaterial?.transparency = 0.6
+        } else {
+            block.geometry?.materials = materials
+        }
+        return block
+    }
+    
+    // [ PZ(FRONT) , PX(RIGHT) , NZ(BACK) , NX(LEFT) , PY(TOP) , NY(BOTTOM) ]
+    static func sixImageBlock(pxImage: UIImage, nxImage: UIImage, pyImage: UIImage, nyImage: UIImage, pzImage: UIImage, nzImage: UIImage) -> SCNNode {
+        return sixImageBlock(frontImage: pzImage, rightImage: pxImage, backImage: nzImage, leftImage: nxImage, topImage: pyImage, bottomImage: nyImage)
     }
 }

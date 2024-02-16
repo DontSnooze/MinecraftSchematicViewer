@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "cave_vines.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

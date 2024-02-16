@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "loom_front.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

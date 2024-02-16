@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "oxeye_daisy.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

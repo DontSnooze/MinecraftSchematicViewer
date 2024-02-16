@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "dark_oak_trapdoor.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

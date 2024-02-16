@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "structure_block_data.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

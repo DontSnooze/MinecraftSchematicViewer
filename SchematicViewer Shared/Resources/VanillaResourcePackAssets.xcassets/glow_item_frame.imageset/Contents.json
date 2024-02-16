@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "glow_item_frame.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

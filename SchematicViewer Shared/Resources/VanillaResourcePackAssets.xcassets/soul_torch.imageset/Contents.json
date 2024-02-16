@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "soul_torch.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

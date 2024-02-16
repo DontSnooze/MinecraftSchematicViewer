@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "red_tulip.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

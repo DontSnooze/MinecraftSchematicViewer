@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "smooth_stone_slab_side.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

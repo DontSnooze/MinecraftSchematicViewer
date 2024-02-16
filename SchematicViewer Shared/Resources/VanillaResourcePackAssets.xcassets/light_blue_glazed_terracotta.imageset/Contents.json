@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "light_blue_glazed_terracotta.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

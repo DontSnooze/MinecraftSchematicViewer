@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "polished_andesite.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

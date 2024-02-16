@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "beehive_front_honey.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

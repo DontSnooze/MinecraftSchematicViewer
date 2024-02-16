@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "damaged_anvil_top.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

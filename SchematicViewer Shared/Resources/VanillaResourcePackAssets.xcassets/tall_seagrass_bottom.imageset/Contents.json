@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "tall_seagrass_bottom.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
