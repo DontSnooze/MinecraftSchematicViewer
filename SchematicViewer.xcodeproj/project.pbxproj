@@ -13,9 +13,6 @@
 		9C172E8C2B7F9D8B005FC710 /* NBTParser+BlockNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172E8B2B7F9D8B005FC710 /* NBTParser+BlockNames.swift */; };
 		9C172E8D2B7F9D8B005FC710 /* NBTParser+BlockNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172E8B2B7F9D8B005FC710 /* NBTParser+BlockNames.swift */; };
 		9C172E8E2B7F9D8B005FC710 /* NBTParser+BlockNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172E8B2B7F9D8B005FC710 /* NBTParser+BlockNames.swift */; };
-		9C172E902B7F9EEA005FC710 /* NBTBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172E8F2B7F9EEA005FC710 /* NBTBlock.swift */; };
-		9C172E912B7F9EEA005FC710 /* NBTBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172E8F2B7F9EEA005FC710 /* NBTBlock.swift */; };
-		9C172E922B7F9EEA005FC710 /* NBTBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172E8F2B7F9EEA005FC710 /* NBTBlock.swift */; };
 		9C172E952B7FC88C005FC710 /* GrassBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172E942B7FC88C005FC710 /* GrassBlock.swift */; };
 		9C172E962B7FC88C005FC710 /* GrassBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172E942B7FC88C005FC710 /* GrassBlock.swift */; };
 		9C172E972B7FC88C005FC710 /* GrassBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172E942B7FC88C005FC710 /* GrassBlock.swift */; };
@@ -26,23 +23,11 @@
 		9C172EA72B7FCA28005FC710 /* ChestBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172E9B2B7FCA28005FC710 /* ChestBlock.swift */; };
 		9C172EA82B7FCA28005FC710 /* ChestBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172E9B2B7FCA28005FC710 /* ChestBlock.swift */; };
 		9C172EAD2B7FD3B9005FC710 /* VirtualController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EAC2B7FD3B9005FC710 /* VirtualController.swift */; };
-		9C172EAE2B7FD3B9005FC710 /* VirtualController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EAC2B7FD3B9005FC710 /* VirtualController.swift */; };
-		9C172EAF2B7FD3B9005FC710 /* VirtualController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EAC2B7FD3B9005FC710 /* VirtualController.swift */; };
 		9C172EB12B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EB02B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift */; };
-		9C172EB22B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EB02B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift */; };
-		9C172EB32B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EB02B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift */; };
 		9C172EB52B7FF1CC005FC710 /* VirtualController+LeftThumbStick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EB42B7FF1CC005FC710 /* VirtualController+LeftThumbStick.swift */; };
-		9C172EB62B7FF1CC005FC710 /* VirtualController+LeftThumbStick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EB42B7FF1CC005FC710 /* VirtualController+LeftThumbStick.swift */; };
-		9C172EB72B7FF1CC005FC710 /* VirtualController+LeftThumbStick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EB42B7FF1CC005FC710 /* VirtualController+LeftThumbStick.swift */; };
 		9C172EB92B7FF320005FC710 /* VirtualController+RightThumbStick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EB82B7FF320005FC710 /* VirtualController+RightThumbStick.swift */; };
-		9C172EBA2B7FF320005FC710 /* VirtualController+RightThumbStick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EB82B7FF320005FC710 /* VirtualController+RightThumbStick.swift */; };
-		9C172EBB2B7FF320005FC710 /* VirtualController+RightThumbStick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EB82B7FF320005FC710 /* VirtualController+RightThumbStick.swift */; };
 		9C172EBD2B7FF3E7005FC710 /* VirtualController+ButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EBC2B7FF3E7005FC710 /* VirtualController+ButtonA.swift */; };
-		9C172EBE2B7FF3E7005FC710 /* VirtualController+ButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EBC2B7FF3E7005FC710 /* VirtualController+ButtonA.swift */; };
-		9C172EBF2B7FF3E7005FC710 /* VirtualController+ButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EBC2B7FF3E7005FC710 /* VirtualController+ButtonA.swift */; };
 		9C172EC12B7FF3F2005FC710 /* VirtualController+ButtonB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EC02B7FF3F2005FC710 /* VirtualController+ButtonB.swift */; };
-		9C172EC22B7FF3F2005FC710 /* VirtualController+ButtonB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EC02B7FF3F2005FC710 /* VirtualController+ButtonB.swift */; };
-		9C172EC32B7FF3F2005FC710 /* VirtualController+ButtonB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EC02B7FF3F2005FC710 /* VirtualController+ButtonB.swift */; };
 		9C1C4D932B7ABEE300C1E1C4 /* SceneBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1C4D922B7ABEE300C1E1C4 /* SceneBlock.swift */; };
 		9C1C4D942B7ABEE300C1E1C4 /* SceneBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1C4D922B7ABEE300C1E1C4 /* SceneBlock.swift */; };
 		9C1C4D952B7ABEE300C1E1C4 /* SceneBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1C4D922B7ABEE300C1E1C4 /* SceneBlock.swift */; };
@@ -77,6 +62,18 @@
 		9C7483442B75E0CA00FAFD7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C74830E2B75E0CA00FAFD7C /* Assets.xcassets */; };
 		9C7483452B75E0CA00FAFD7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C74830E2B75E0CA00FAFD7C /* Assets.xcassets */; };
 		9C7483462B75E0CA00FAFD7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C74830E2B75E0CA00FAFD7C /* Assets.xcassets */; };
+		9CD32BD62B81CAF400A069EC /* BlocksMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD52B81CAF400A069EC /* BlocksMenuView.swift */; };
+		9CD32BD82B81CB6000A069EC /* BlocksMenuView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD72B81CB6000A069EC /* BlocksMenuView+ViewModel.swift */; };
+		9CD32BDA2B81CBCA00A069EC /* BlocksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD92B81CBCA00A069EC /* BlocksData.swift */; };
+		9CD32BDB2B81CBCA00A069EC /* BlocksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD92B81CBCA00A069EC /* BlocksData.swift */; };
+		9CD32BDC2B81CBCA00A069EC /* BlocksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD92B81CBCA00A069EC /* BlocksData.swift */; };
+		9CD32BDE2B81E73E00A069EC /* MapLevelsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BDD2B81E73E00A069EC /* MapLevelsMenuView.swift */; };
+		9CD32BE02B81E74F00A069EC /* MapLevelsMenuView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BDF2B81E74E00A069EC /* MapLevelsMenuView+ViewModel.swift */; };
+		9CD32BE22B81F96D00A069EC /* GameViewController+MapLevelsMenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BE12B81F96D00A069EC /* GameViewController+MapLevelsMenuDelegate.swift */; };
+		9CD32BE42B82017700A069EC /* MenuOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BE32B82017700A069EC /* MenuOverlay.swift */; };
+		9CD32BE62B823AF200A069EC /* GameViewController+MenuOverlayDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BE52B823AF100A069EC /* GameViewController+MenuOverlayDelegate.swift */; };
+		9CD32BEA2B82408100A069EC /* MenuOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BE32B82017700A069EC /* MenuOverlay.swift */; };
+		9CD32BEB2B82408100A069EC /* MenuOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BE32B82017700A069EC /* MenuOverlay.swift */; };
 		9CED803C2B7E62FA0033ADBF /* NBTParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED803B2B7E62FA0033ADBF /* NBTParser.swift */; };
 		9CED803D2B7E62FA0033ADBF /* NBTParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED803B2B7E62FA0033ADBF /* NBTParser.swift */; };
 		9CED803E2B7E62FA0033ADBF /* NBTParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED803B2B7E62FA0033ADBF /* NBTParser.swift */; };
@@ -86,7 +83,6 @@
 /* Begin PBXFileReference section */
 		9C172E872B7F9CFA005FC710 /* BlockTextures.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = BlockTextures.xcassets; sourceTree = "<group>"; };
 		9C172E8B2B7F9D8B005FC710 /* NBTParser+BlockNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NBTParser+BlockNames.swift"; sourceTree = "<group>"; };
-		9C172E8F2B7F9EEA005FC710 /* NBTBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBTBlock.swift; sourceTree = "<group>"; };
 		9C172E942B7FC88C005FC710 /* GrassBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrassBlock.swift; sourceTree = "<group>"; };
 		9C172E992B7FCA28005FC710 /* WaterBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterBlock.swift; sourceTree = "<group>"; };
 		9C172E9B2B7FCA28005FC710 /* ChestBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChestBlock.swift; sourceTree = "<group>"; };
@@ -120,6 +116,14 @@
 		9C7483382B75E0CA00FAFD7C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		9C74833B2B75E0CA00FAFD7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C74833D2B75E0CA00FAFD7C /* SchematicViewer_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SchematicViewer_macOS.entitlements; sourceTree = "<group>"; };
+		9CD32BD52B81CAF400A069EC /* BlocksMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksMenuView.swift; sourceTree = "<group>"; };
+		9CD32BD72B81CB6000A069EC /* BlocksMenuView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlocksMenuView+ViewModel.swift"; sourceTree = "<group>"; };
+		9CD32BD92B81CBCA00A069EC /* BlocksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksData.swift; sourceTree = "<group>"; };
+		9CD32BDD2B81E73E00A069EC /* MapLevelsMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLevelsMenuView.swift; sourceTree = "<group>"; };
+		9CD32BDF2B81E74E00A069EC /* MapLevelsMenuView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapLevelsMenuView+ViewModel.swift"; sourceTree = "<group>"; };
+		9CD32BE12B81F96D00A069EC /* GameViewController+MapLevelsMenuDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController+MapLevelsMenuDelegate.swift"; sourceTree = "<group>"; };
+		9CD32BE32B82017700A069EC /* MenuOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOverlay.swift; sourceTree = "<group>"; };
+		9CD32BE52B823AF100A069EC /* GameViewController+MenuOverlayDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController+MenuOverlayDelegate.swift"; sourceTree = "<group>"; };
 		9CED803B2B7E62FA0033ADBF /* NBTParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBTParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,7 +170,6 @@
 				9C3298BB2B7F985F00A75C29 /* NBTParser+NodeHelper.swift */,
 				9C3298BF2B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift */,
 				9C172E8B2B7F9D8B005FC710 /* NBTParser+BlockNames.swift */,
-				9C172E8F2B7F9EEA005FC710 /* NBTBlock.swift */,
 			);
 			path = NBTParser;
 			sourceTree = "<group>";
@@ -199,8 +202,8 @@
 		9C74830B2B75E0C700FAFD7C /* SchematicViewer Shared */ = {
 			isa = PBXGroup;
 			children = (
-				9C74830C2B75E0C700FAFD7C /* GameSceneController.swift */,
-				9C1C4D922B7ABEE300C1E1C4 /* SceneBlock.swift */,
+				9CD32BED2B8241B900A069EC /* Game Scene */,
+				9CD32BE92B82405100A069EC /* Helpers */,
 				9C172EC42B7FFC22005FC710 /* NBTParser */,
 				9C172E932B7FC81A005FC710 /* CustomBlocks */,
 				9C3298AA2B7E7F4B00A75C29 /* Resources */,
@@ -221,10 +224,11 @@
 		9C7483152B75E0CA00FAFD7C /* SchematicViewer iOS */ = {
 			isa = PBXGroup;
 			children = (
-				9C7483162B75E0CA00FAFD7C /* AppDelegate.swift */,
-				9C7483182B75E0CA00FAFD7C /* GameViewController.swift */,
-				9C172EB02B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift */,
+				9CD32BEC2B82413200A069EC /* GameViewController */,
+				9CD32BE72B823FAF00A069EC /* Views */,
+				9CD32BE82B823FC700A069EC /* ViewModels */,
 				9CD32BD42B7FFD2000A069EC /* VirtualController */,
+				9C7483162B75E0CA00FAFD7C /* AppDelegate.swift */,
 				9C74831A2B75E0CA00FAFD7C /* Main.storyboard */,
 				9C74831D2B75E0CA00FAFD7C /* LaunchScreen.storyboard */,
 			);
@@ -263,6 +267,53 @@
 				9C172EC02B7FF3F2005FC710 /* VirtualController+ButtonB.swift */,
 			);
 			path = VirtualController;
+			sourceTree = "<group>";
+		};
+		9CD32BE72B823FAF00A069EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9CD32BD52B81CAF400A069EC /* BlocksMenuView.swift */,
+				9CD32BDD2B81E73E00A069EC /* MapLevelsMenuView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9CD32BE82B823FC700A069EC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9CD32BD72B81CB6000A069EC /* BlocksMenuView+ViewModel.swift */,
+				9CD32BDF2B81E74E00A069EC /* MapLevelsMenuView+ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9CD32BE92B82405100A069EC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9C1C4D922B7ABEE300C1E1C4 /* SceneBlock.swift */,
+				9CD32BD92B81CBCA00A069EC /* BlocksData.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9CD32BEC2B82413200A069EC /* GameViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9C7483182B75E0CA00FAFD7C /* GameViewController.swift */,
+				9C172EB02B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift */,
+				9CD32BE12B81F96D00A069EC /* GameViewController+MapLevelsMenuDelegate.swift */,
+				9CD32BE52B823AF100A069EC /* GameViewController+MenuOverlayDelegate.swift */,
+			);
+			path = GameViewController;
+			sourceTree = "<group>";
+		};
+		9CD32BED2B8241B900A069EC /* Game Scene */ = {
+			isa = PBXGroup;
+			children = (
+				9C74830C2B75E0C700FAFD7C /* GameSceneController.swift */,
+				9CD32BE32B82017700A069EC /* MenuOverlay.swift */,
+			);
+			path = "Game Scene";
 			sourceTree = "<group>";
 		};
 		9CED80432B7E739F0033ADBF /* Frameworks */ = {
@@ -452,16 +503,23 @@
 				9C172EB92B7FF320005FC710 /* VirtualController+RightThumbStick.swift in Sources */,
 				9C172EBD2B7FF3E7005FC710 /* VirtualController+ButtonA.swift in Sources */,
 				9C7483192B75E0CA00FAFD7C /* GameViewController.swift in Sources */,
+				9CD32BE62B823AF200A069EC /* GameViewController+MenuOverlayDelegate.swift in Sources */,
+				9CD32BD82B81CB6000A069EC /* BlocksMenuView+ViewModel.swift in Sources */,
+				9CD32BD62B81CAF400A069EC /* BlocksMenuView.swift in Sources */,
+				9CD32BDA2B81CBCA00A069EC /* BlocksData.swift in Sources */,
+				9CD32BDE2B81E73E00A069EC /* MapLevelsMenuView.swift in Sources */,
 				9C172EA62B7FCA28005FC710 /* ChestBlock.swift in Sources */,
+				9CD32BE02B81E74F00A069EC /* MapLevelsMenuView+ViewModel.swift in Sources */,
 				9C74833E2B75E0CA00FAFD7C /* GameSceneController.swift in Sources */,
 				9C172EAD2B7FD3B9005FC710 /* VirtualController.swift in Sources */,
 				9C172EC12B7FF3F2005FC710 /* VirtualController+ButtonB.swift in Sources */,
+				9CD32BE42B82017700A069EC /* MenuOverlay.swift in Sources */,
 				9C7483172B75E0CA00FAFD7C /* AppDelegate.swift in Sources */,
 				9C172E952B7FC88C005FC710 /* GrassBlock.swift in Sources */,
 				9C172EA02B7FCA28005FC710 /* WaterBlock.swift in Sources */,
 				9C172EB52B7FF1CC005FC710 /* VirtualController+LeftThumbStick.swift in Sources */,
 				9C172EB12B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift in Sources */,
-				9C172E902B7F9EEA005FC710 /* NBTBlock.swift in Sources */,
+				9CD32BE22B81F96D00A069EC /* GameViewController+MapLevelsMenuDelegate.swift in Sources */,
 				9C3298BC2B7F985F00A75C29 /* NBTParser+NodeHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,19 +532,14 @@
 				9C3298C12B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift in Sources */,
 				9C1C4D942B7ABEE300C1E1C4 /* SceneBlock.swift in Sources */,
 				9CED803D2B7E62FA0033ADBF /* NBTParser.swift in Sources */,
-				9C172EBA2B7FF320005FC710 /* VirtualController+RightThumbStick.swift in Sources */,
-				9C172EBE2B7FF3E7005FC710 /* VirtualController+ButtonA.swift in Sources */,
+				9CD32BEA2B82408100A069EC /* MenuOverlay.swift in Sources */,
 				9C7483292B75E0CA00FAFD7C /* GameViewController.swift in Sources */,
+				9CD32BDB2B81CBCA00A069EC /* BlocksData.swift in Sources */,
 				9C172EA72B7FCA28005FC710 /* ChestBlock.swift in Sources */,
 				9C74833F2B75E0CA00FAFD7C /* GameSceneController.swift in Sources */,
-				9C172EAE2B7FD3B9005FC710 /* VirtualController.swift in Sources */,
-				9C172EC22B7FF3F2005FC710 /* VirtualController+ButtonB.swift in Sources */,
 				9C7483272B75E0CA00FAFD7C /* AppDelegate.swift in Sources */,
 				9C172E962B7FC88C005FC710 /* GrassBlock.swift in Sources */,
 				9C172EA12B7FCA28005FC710 /* WaterBlock.swift in Sources */,
-				9C172EB62B7FF1CC005FC710 /* VirtualController+LeftThumbStick.swift in Sources */,
-				9C172EB22B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift in Sources */,
-				9C172E912B7F9EEA005FC710 /* NBTBlock.swift in Sources */,
 				9C3298BD2B7F985F00A75C29 /* NBTParser+NodeHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,19 +552,14 @@
 				9C3298C22B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift in Sources */,
 				9C1C4D952B7ABEE300C1E1C4 /* SceneBlock.swift in Sources */,
 				9CED803E2B7E62FA0033ADBF /* NBTParser.swift in Sources */,
-				9C172EBB2B7FF320005FC710 /* VirtualController+RightThumbStick.swift in Sources */,
-				9C172EBF2B7FF3E7005FC710 /* VirtualController+ButtonA.swift in Sources */,
+				9CD32BEB2B82408100A069EC /* MenuOverlay.swift in Sources */,
 				9C7483392B75E0CA00FAFD7C /* GameViewController.swift in Sources */,
+				9CD32BDC2B81CBCA00A069EC /* BlocksData.swift in Sources */,
 				9C172EA82B7FCA28005FC710 /* ChestBlock.swift in Sources */,
 				9C7483402B75E0CA00FAFD7C /* GameSceneController.swift in Sources */,
-				9C172EAF2B7FD3B9005FC710 /* VirtualController.swift in Sources */,
-				9C172EC32B7FF3F2005FC710 /* VirtualController+ButtonB.swift in Sources */,
 				9C7483372B75E0CA00FAFD7C /* AppDelegate.swift in Sources */,
 				9C172E972B7FC88C005FC710 /* GrassBlock.swift in Sources */,
 				9C172EA22B7FCA28005FC710 /* WaterBlock.swift in Sources */,
-				9C172EB72B7FF1CC005FC710 /* VirtualController+LeftThumbStick.swift in Sources */,
-				9C172EB32B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift in Sources */,
-				9C172E922B7F9EEA005FC710 /* NBTBlock.swift in Sources */,
 				9C3298BE2B7F985F00A75C29 /* NBTParser+NodeHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

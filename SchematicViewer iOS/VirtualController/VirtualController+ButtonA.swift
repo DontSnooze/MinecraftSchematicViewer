@@ -13,8 +13,7 @@ extension VirtualController {
         let buttonA = gamepad.buttonA
         
         buttonA.valueChangedHandler = {(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) -> Void in
-            // Put here the codes to run when button A clicked
-//            print("Button A Pressed")
+            // button A clicked
             
             if value == 0 {
                 // releasing A

@@ -19,12 +19,14 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
     let sceneRenderer: SCNSceneRenderer
     let cameraNode: SCNNode
     let playerNode: SCNNode
+    var parsedNbt: NBT?
+    var mapLevels = [[SCNNode]]()
+    var hiddenMapLevels = [Int]()
     
     init(sceneRenderer renderer: SCNSceneRenderer) {
         sceneRenderer = renderer
         
         guard let worldScene = SCNScene(named: "Art.scnassets/world.scn") else {
-            print("scene is nil")
             fatalError("scene is nil")
         }
         
@@ -34,8 +36,8 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
             fatalError("camera node is nil")
         }
         
-        guard let node = scene.rootNode.childNode(withName: "box", recursively: true) else {
-            fatalError("box node is nil")
+        guard let node = scene.rootNode.childNode(withName: "player", recursively: true) else {
+            fatalError("player node is nil")
         }
         
         cameraNode = sceneCamera
@@ -51,7 +53,7 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
         sceneRenderer.scene = scene
         
         NBTParser.parseNbt { nbt in
-            self.parseBlockIds(nbt: nbt)
+            self.parsedNbt = nbt
             self.handleParsedNbt(nbt: nbt)
         }
     }
@@ -102,12 +104,18 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
     }
     
     func handleParsedNbt(nbt: NBT) {
-        NBTParser.addAllBlocks(nbt: nbt, scene: scene)
+        mapLevels = NBTParser.addAllBlocks(nbt: nbt, scene: scene, removinglevels: [])
     }
     
-    func parseBlockIds(nbt: NBT) {
-        let blockNames = NBTParser.blockNameDictionary(nbt: nbt)
-        print("blockNames: \(blockNames)")
+    func updateMap(removinglevels: [Int]) {
+        guard let nbt = parsedNbt else {
+            print("Could not updateMap. parsedNbt is nil")
+            return
+        }
+        
+        NBTParser.removeAllNodes(from: mapLevels)
+        hiddenMapLevels = removinglevels
+        mapLevels = NBTParser.addAllBlocks(nbt: nbt, scene: scene, removinglevels: removinglevels)
     }
     
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {

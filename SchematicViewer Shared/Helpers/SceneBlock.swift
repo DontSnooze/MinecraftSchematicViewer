@@ -64,7 +64,6 @@ class SceneBlock {
         
         let g = SCNBox(width: 1.0, height: 1.0, length: 1.0, chamferRadius: 0.01)
         let block = SCNNode(geometry: g)
-        block.name = "block"
         
         var materials = [SCNMaterial]()
         

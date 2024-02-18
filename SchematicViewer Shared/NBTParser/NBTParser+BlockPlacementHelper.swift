@@ -9,6 +9,14 @@ import SwiftNBT
 import SceneKit
 
 extension NBTParser {
+    static func removeAllNodes(from nodeGrid: [[SCNNode]]) {
+        for level in nodeGrid {
+            for node in level {
+                node.removeFromParentNode()
+            }
+        }
+    }
+    
     static func blockForIndex(nbt: NBT, index: Int, blockId: Int) -> SCNNode {
         let position = blockPosition(from: nbt, index: index)
         var block = SceneBlock.createBlock()
@@ -125,24 +133,56 @@ extension NBTParser {
 
         let block = SceneBlock.sixImageBlock(frontImage: frontImage, rightImage: sideImage, backImage: backImage, leftImage: sideImage, topImage: topImage, bottomImage: bottomImage)
 
+        block.name = blockName
+        
         return block
     }
     
-    static func addAllBlocks(nbt: NBT, scene: SCNScene) {
+    static func addAllBlocks(nbt: NBT, scene: SCNScene, removinglevels: [Int] = []) -> [[SCNNode]] {
 //        var blocks = new THREE.Object3D();
+        
         let blockIndexArray = NBTParser.nbtByteArrayNodeValue(nbt: nbt, key: "Blocks")
+        let mapLength = Int(NBTParser.nbtShortNodeValue(nbt: nbt, key: "Length"))
+        let mapWidth = Int(NBTParser.nbtShortNodeValue(nbt: nbt, key: "Width"))
+        
+        var blockLevelsArray = [[SCNNode]]()
+        var blockLevelArray = [SCNNode]()
+        
+        let levelArea = mapLength * mapWidth
+        
+        var currentPlaneCount = levelArea
+        var currentLevel = 0
+        
         for i in 0..<blockIndexArray.count {
             let blockId = blockIndexArray[i]
             
             // skip "air" blocks
             guard blockId != 0 else {
+                if i == currentPlaneCount - 1 {
+                    blockLevelsArray.append(blockLevelArray)
+                    blockLevelArray = [SCNNode]()
+                    currentPlaneCount += levelArea
+                    currentLevel += 1
+                }
                 continue
             }
             
             let block = blockForIndex(nbt: nbt, index: i, blockId: Int(blockId))
-            scene.rootNode.addChildNode(block)
+            
+            if !removinglevels.contains(currentLevel) {
+                scene.rootNode.addChildNode(block)
+                blockLevelArray.append(block)
+            }
+            
+            if i == currentPlaneCount - 1 {
+                blockLevelsArray.append(blockLevelArray)
+                blockLevelArray = [SCNNode]()
+                currentPlaneCount += levelArea
+                currentLevel += 1
+            }
         }
 //        scene.add( blocks );
+        return blockLevelsArray
     }
     
     static func customBlock(blockId: Int) -> SCNNode? {

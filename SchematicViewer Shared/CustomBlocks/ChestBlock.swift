@@ -15,7 +15,7 @@ extension SCNNode {
         
         let block = SceneBlock.sixImageBlock(frontImage: frontImage, rightImage: backImage, backImage: backImage, leftImage: backImage, topImage: topImage, bottomImage: topImage)
         
-        block.name = "grass_block"
+        block.name = "chest"
         
         return block
     }

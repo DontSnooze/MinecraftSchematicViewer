@@ -84,7 +84,7 @@ class VirtualController {
     @objc
     func handleControllerDidConnect(_ notification: Notification) {
         guard let gameController = notification.object as? GCController else {
-//            print("gameController is nil")
+            print("gameController is nil")
             return
         }
         
