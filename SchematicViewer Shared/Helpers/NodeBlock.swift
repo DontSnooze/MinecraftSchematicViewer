@@ -198,8 +198,7 @@ struct NodeBlock {
         case .wallSign:
             applyDirectionAttribute(to: block)
         case .block:
-            break
-        
+            applyDirectionAttribute(to: block)
         }
     }
     

@@ -82,6 +82,9 @@
 		9C946D8B2B83CB7B00521690 /* HopperNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D8A2B83CB7B00521690 /* HopperNode.swift */; };
 		9C946D8C2B83CB7B00521690 /* HopperNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D8A2B83CB7B00521690 /* HopperNode.swift */; };
 		9C946D8D2B83CB7B00521690 /* HopperNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D8A2B83CB7B00521690 /* HopperNode.swift */; };
+		9C946D8F2B83E6C200521690 /* chest_s_e_n_w_dble.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C946D8E2B83E6C200521690 /* chest_s_e_n_w_dble.schem */; };
+		9C946D902B83E6C200521690 /* chest_s_e_n_w_dble.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C946D8E2B83E6C200521690 /* chest_s_e_n_w_dble.schem */; };
+		9C946D912B83E6C200521690 /* chest_s_e_n_w_dble.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C946D8E2B83E6C200521690 /* chest_s_e_n_w_dble.schem */; };
 		9CD32BD62B81CAF400A069EC /* BlocksMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD52B81CAF400A069EC /* BlocksMenuView.swift */; };
 		9CD32BD82B81CB6000A069EC /* BlocksMenuView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD72B81CB6000A069EC /* BlocksMenuView+ViewModel.swift */; };
 		9CD32BDA2B81CBCA00A069EC /* BlocksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD92B81CBCA00A069EC /* BlocksData.swift */; };
@@ -148,6 +151,7 @@
 		9C946D822B83A7A100521690 /* GenericBlockNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericBlockNode.swift; sourceTree = "<group>"; };
 		9C946D862B83A9B600521690 /* SignNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignNode.swift; sourceTree = "<group>"; };
 		9C946D8A2B83CB7B00521690 /* HopperNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperNode.swift; sourceTree = "<group>"; };
+		9C946D8E2B83E6C200521690 /* chest_s_e_n_w_dble.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = chest_s_e_n_w_dble.schem; sourceTree = "<group>"; };
 		9CD32BD52B81CAF400A069EC /* BlocksMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksMenuView.swift; sourceTree = "<group>"; };
 		9CD32BD72B81CB6000A069EC /* BlocksMenuView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlocksMenuView+ViewModel.swift"; sourceTree = "<group>"; };
 		9CD32BD92B81CBCA00A069EC /* BlocksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksData.swift; sourceTree = "<group>"; };
@@ -223,6 +227,7 @@
 				9C946D742B829E8D00521690 /* hopper_s_e_n_w_dwn.schem */,
 				9C946D762B829F1600521690 /* sign_s_e_n_w_stand.schem */,
 				9C946D782B829F2400521690 /* stairs_n_w_s_e_upsdwn.schem */,
+				9C946D8E2B83E6C200521690 /* chest_s_e_n_w_dble.schem */,
 				9C3298B72B7F93B500A75C29 /* VanillaResourcePackAssets.xcassets */,
 			);
 			path = Resources;
@@ -484,6 +489,7 @@
 				9C172E882B7F9CFA005FC710 /* BlockTextures.xcassets in Resources */,
 				9C946D732B829CFC00521690 /* slabTest_low_to_up.schem in Resources */,
 				9C7483442B75E0CA00FAFD7C /* Assets.xcassets in Resources */,
+				9C946D8F2B83E6C200521690 /* chest_s_e_n_w_dble.schem in Resources */,
 				9C3298AE2B7E8C8600A75C29 /* AmosBedrockCowFarmV2.schematic in Resources */,
 				9C7483412B75E0CA00FAFD7C /* Art.scnassets in Resources */,
 				9C3298B82B7F93B500A75C29 /* VanillaResourcePackAssets.xcassets in Resources */,
@@ -497,6 +503,7 @@
 				9C74832C2B75E0CA00FAFD7C /* Main.storyboard in Resources */,
 				9C74832F2B75E0CA00FAFD7C /* LaunchScreen.storyboard in Resources */,
 				9C172E892B7F9CFA005FC710 /* BlockTextures.xcassets in Resources */,
+				9C946D902B83E6C200521690 /* chest_s_e_n_w_dble.schem in Resources */,
 				9C7483452B75E0CA00FAFD7C /* Assets.xcassets in Resources */,
 				9C3298B92B7F93B500A75C29 /* VanillaResourcePackAssets.xcassets in Resources */,
 				9C7483422B75E0CA00FAFD7C /* Art.scnassets in Resources */,
@@ -509,6 +516,7 @@
 			files = (
 				9C74833C2B75E0CA00FAFD7C /* Main.storyboard in Resources */,
 				9C172E8A2B7F9CFA005FC710 /* BlockTextures.xcassets in Resources */,
+				9C946D912B83E6C200521690 /* chest_s_e_n_w_dble.schem in Resources */,
 				9C7483462B75E0CA00FAFD7C /* Assets.xcassets in Resources */,
 				9C7483432B75E0CA00FAFD7C /* Art.scnassets in Resources */,
 				9C3298BA2B7F93B500A75C29 /* VanillaResourcePackAssets.xcassets in Resources */,
