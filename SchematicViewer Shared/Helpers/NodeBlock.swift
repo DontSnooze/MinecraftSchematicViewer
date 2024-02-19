@@ -171,6 +171,9 @@ struct NodeBlock {
             block = SCNNode.signBlockFromName(blockName: name)
         } else if blockType == .wallSign {
             block = SCNNode.signBlockFromName(blockName: name, isWallSign: true)
+        } else if blockType == .hopper {
+            let isFacingDown = facing == .down
+            block = SCNNode.hopperBlockFromName(blockName: name, isFacingDown: isFacingDown)
         } else {
             block = SCNNode.blockFromName(blockName: name)
         }
@@ -189,7 +192,7 @@ struct NodeBlock {
         case .slab:
             applySlabAttributes(to: block)
         case .hopper:
-            break
+            applyDirectionAttribute(to: block)
         case .sign:
             break
         case .wallSign:
@@ -206,6 +209,9 @@ struct NodeBlock {
             let radial = GLKMathDegreesToRadians(90)
             block.runAction(SCNAction.rotateBy(x: CGFloat(radial), y: 0, z: 0, duration: 0))
         case .down:
+            guard blockType != .hopper else {
+                break
+            }
             let radial = GLKMathDegreesToRadians(-90)
             block.runAction(SCNAction.rotateBy(x: CGFloat(radial), y: 0, z: 0, duration: 0))
         case .north:

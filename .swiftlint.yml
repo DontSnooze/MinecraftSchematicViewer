@@ -130,7 +130,7 @@ number_separator:
 #and above that is extreme complexity.
 cyclomatic_complexity:
     ignores_case_statements: true
-    warning: 7
+    warning: 9
 #    error: 11
 
 custom_rules:

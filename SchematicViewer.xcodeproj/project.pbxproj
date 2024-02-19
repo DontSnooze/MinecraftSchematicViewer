@@ -79,6 +79,9 @@
 		9C946D872B83A9B600521690 /* SignNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D862B83A9B600521690 /* SignNode.swift */; };
 		9C946D882B83A9B600521690 /* SignNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D862B83A9B600521690 /* SignNode.swift */; };
 		9C946D892B83A9B600521690 /* SignNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D862B83A9B600521690 /* SignNode.swift */; };
+		9C946D8B2B83CB7B00521690 /* HopperNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D8A2B83CB7B00521690 /* HopperNode.swift */; };
+		9C946D8C2B83CB7B00521690 /* HopperNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D8A2B83CB7B00521690 /* HopperNode.swift */; };
+		9C946D8D2B83CB7B00521690 /* HopperNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D8A2B83CB7B00521690 /* HopperNode.swift */; };
 		9CD32BD62B81CAF400A069EC /* BlocksMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD52B81CAF400A069EC /* BlocksMenuView.swift */; };
 		9CD32BD82B81CB6000A069EC /* BlocksMenuView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD72B81CB6000A069EC /* BlocksMenuView+ViewModel.swift */; };
 		9CD32BDA2B81CBCA00A069EC /* BlocksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD92B81CBCA00A069EC /* BlocksData.swift */; };
@@ -144,6 +147,7 @@
 		9C946D802B83A54F00521690 /* StairsNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StairsNode.swift; sourceTree = "<group>"; };
 		9C946D822B83A7A100521690 /* GenericBlockNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericBlockNode.swift; sourceTree = "<group>"; };
 		9C946D862B83A9B600521690 /* SignNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignNode.swift; sourceTree = "<group>"; };
+		9C946D8A2B83CB7B00521690 /* HopperNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperNode.swift; sourceTree = "<group>"; };
 		9CD32BD52B81CAF400A069EC /* BlocksMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksMenuView.swift; sourceTree = "<group>"; };
 		9CD32BD72B81CB6000A069EC /* BlocksMenuView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlocksMenuView+ViewModel.swift"; sourceTree = "<group>"; };
 		9CD32BD92B81CBCA00A069EC /* BlocksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksData.swift; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 				9C172E992B7FCA28005FC710 /* WaterBlock.swift */,
 				9C946D802B83A54F00521690 /* StairsNode.swift */,
 				9C946D862B83A9B600521690 /* SignNode.swift */,
+				9C946D8A2B83CB7B00521690 /* HopperNode.swift */,
 				9C946D822B83A7A100521690 /* GenericBlockNode.swift */,
 			);
 			path = BlockNodes;
@@ -571,6 +576,7 @@
 				9C172EB12B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift in Sources */,
 				9CD32BE22B81F96D00A069EC /* GameViewController+MapLevelsMenuDelegate.swift in Sources */,
 				9C3298BC2B7F985F00A75C29 /* NBTParser+NBTNodeHelper.swift in Sources */,
+				9C946D8B2B83CB7B00521690 /* HopperNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +587,7 @@
 				9C946D882B83A9B600521690 /* SignNode.swift in Sources */,
 				9C172E8D2B7F9D8B005FC710 /* NBTParser+BlockNames.swift in Sources */,
 				9C3298C12B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift in Sources */,
+				9C946D8C2B83CB7B00521690 /* HopperNode.swift in Sources */,
 				9C1C4D942B7ABEE300C1E1C4 /* SceneBlocksHelper.swift in Sources */,
 				9C946D702B829ABD00521690 /* NodeBlock.swift in Sources */,
 				9CED803D2B7E62FA0033ADBF /* NBTParser.swift in Sources */,
@@ -604,6 +611,7 @@
 				9C946D892B83A9B600521690 /* SignNode.swift in Sources */,
 				9C172E8E2B7F9D8B005FC710 /* NBTParser+BlockNames.swift in Sources */,
 				9C3298C22B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift in Sources */,
+				9C946D8D2B83CB7B00521690 /* HopperNode.swift in Sources */,
 				9C1C4D952B7ABEE300C1E1C4 /* SceneBlocksHelper.swift in Sources */,
 				9C946D712B829ABD00521690 /* NodeBlock.swift in Sources */,
 				9CED803E2B7E62FA0033ADBF /* NBTParser.swift in Sources */,

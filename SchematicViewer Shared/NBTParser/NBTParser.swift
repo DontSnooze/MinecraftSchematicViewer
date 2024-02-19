@@ -22,13 +22,13 @@ class NBTParser {
             let allocator = ByteBufferAllocator()
             let nbtfile = try! NBTFile(io: NonBlockingFileIO(threadPool: threadPool), bufferAllocator: allocator)
             
-//            let hopperFileName = "hopper_s_e_n_w_dwn"
+            let hopperFileName = "hopper_s_e_n_w_dwn"
 //            let stairsFileName = "stairs_n_w_s_e_upsdwn"
-            let signFileName = "sign_s_e_n_w_stand"
+//            let signFileName = "sign_s_e_n_w_stand"
             
 //            let nbt = try! nbtfile.read(path: Bundle.main.path(forResource: "AmosBedrockCowFarmV2", ofType: "schematic") ?? "", eventLoop: eventLoop, gzip: true).wait()
             
-            let nbt = try! nbtfile.read(path: Bundle.main.path(forResource: signFileName, ofType: "schem") ?? "", eventLoop: eventLoop, gzip: true).wait()
+            let nbt = try! nbtfile.read(path: Bundle.main.path(forResource: hopperFileName, ofType: "schem") ?? "", eventLoop: eventLoop, gzip: true).wait()
             
             completion(nbt)
         }

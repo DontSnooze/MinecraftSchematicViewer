@@ -49,7 +49,6 @@ extension SCNNode {
             signNode.geometry?.firstMaterial?.transparency = 0.6
         } else {
             signNode.geometry?.materials = materials
-            signNode.geometry?.materials = materials
         }
         return blockNode
     }
