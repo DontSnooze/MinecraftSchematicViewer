@@ -44,7 +44,7 @@ extension NBTParser {
                 continue
             }
             
-            var paletteId = paletteIdNbtInt.value
+            let paletteId = paletteIdNbtInt.value
             
             // remove "minecraft:"
             var blockName = ""
@@ -55,7 +55,7 @@ extension NBTParser {
                 blockName = blockDescriptionValue.slice(from: ":", to: "") ?? ""
             }
             
-            var blockAttributes = blockDescriptionValue.slice(from: "[", to: "]") ?? ""
+            let blockAttributes = blockDescriptionValue.slice(from: "[", to: "]") ?? ""
             
             print("paletteId: \(paletteId)")
             print("blockName: \(String(describing: blockName))")

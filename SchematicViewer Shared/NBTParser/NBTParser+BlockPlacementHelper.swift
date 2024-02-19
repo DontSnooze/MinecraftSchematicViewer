@@ -19,14 +19,14 @@ extension NBTParser {
     
     static func blockForIndex(nbt: NBT, index: Int, blockId: Int) -> SCNNode {
         let position = blockPosition(from: nbt, index: index)
-        var block = SceneBlock.createBlock()
+        var block = SCNNode.createBlock()
         
-        if let customBlock = customBlock(blockId: blockId) {
+        if let customBlock = SCNNode.customBlock(blockId: blockId) {
             block = customBlock
         } else {
             let blockNames = blockNameDictionary(nbt: nbt)
             let blockName = blockNames[blockId] ?? ""
-            block = blockFromName(blockName: blockName)
+            block = SCNNode.blockFromName(blockName: blockName)
         }
         
         block.position = position
@@ -76,127 +76,6 @@ extension NBTParser {
 //        print("x: \(x), y: \(y), z: \(z),")
         
         return SCNVector3(x, y, z)
-    }
-    
-    static func blockFromName(blockName: String) -> SCNNode {
-        var sideImage: UIImage?
-        var topImage: UIImage?
-        var bottomImage: UIImage?
-        var frontImage: UIImage?
-        var backImage: UIImage?
-
-        // check for main image
-        var fileName = blockName
-
-        if let image = UIImage(named: fileName) {
-            sideImage = image
-            topImage = image
-            bottomImage = image
-            frontImage = image
-            backImage = image
-        }
-
-        // check for side image
-        fileName = blockName + "_side"
-
-        if let image = UIImage(named: fileName) {
-            sideImage = image
-        }
-
-        // check for top image
-        fileName = blockName + "_top"
-        
-        if let image = UIImage(named: fileName) {
-            topImage = image
-        }
-
-        // check for bottom image
-        fileName = blockName + "_bottom"
-        
-        if let image = UIImage(named: fileName) {
-            bottomImage = image
-        }
-
-        // check for front image
-        fileName = blockName + "_front"
-
-        if let image = UIImage(named: fileName) {
-            frontImage = image
-        }
-
-        // check for back image
-        fileName = blockName + "_back"
-        
-        if let image = UIImage(named: fileName) {
-            backImage = image
-        }
-
-        let block = SceneBlock.sixImageBlock(frontImage: frontImage, rightImage: sideImage, backImage: backImage, leftImage: sideImage, topImage: topImage, bottomImage: bottomImage)
-        
-        block.name = blockName
-        
-        return block
-    }
-    
-    static func stairsBlockFromName(blockName: String, halfType: NodeBlock.HalfType = .bottom) -> SCNNode {
-        
-        var sideImage: UIImage?
-        var topImage: UIImage?
-        var bottomImage: UIImage?
-        var frontImage: UIImage?
-        var backImage: UIImage?
-
-        // check for main image
-        var fileName = blockName.replacingOccurrences(of: "_stairs", with: "")
-
-        if let image = UIImage(named: fileName) {
-            sideImage = image
-            topImage = image
-            bottomImage = image
-            frontImage = image
-            backImage = image
-        }
-
-        // check for side image
-        fileName = blockName + "_side"
-
-        if let image = UIImage(named: fileName) {
-            sideImage = image
-        }
-
-        // check for top image
-        fileName = blockName + "_top"
-        
-        if let image = UIImage(named: fileName) {
-            topImage = image
-        }
-
-        // check for bottom image
-        fileName = blockName + "_bottom"
-        
-        if let image = UIImage(named: fileName) {
-            bottomImage = image
-        }
-
-        // check for front image
-        fileName = blockName + "_front"
-
-        if let image = UIImage(named: fileName) {
-            frontImage = image
-        }
-
-        // check for back image
-        fileName = blockName + "_back"
-        
-        if let image = UIImage(named: fileName) {
-            backImage = image
-        }
-
-        let block = SceneBlock.stairsBlock(frontImage: frontImage, rightImage: sideImage, backImage: backImage, leftImage: sideImage, topImage: topImage, bottomImage: bottomImage)
-        
-        block.name = blockName
-        
-        return block
     }
     
     static func addAllSchematicBlocks(nbt: NBT, scene: SCNScene, removinglevels: [Int] = []) -> [[SCNNode]] {
@@ -300,51 +179,5 @@ extension NBTParser {
         }
 
         return blockLevelsArray
-    }
-    
-    static func customBlock(blockId: Int) -> SCNNode? {
-        var block: SCNNode?
-        
-        switch blockId {
-        // water
-        case 9:
-            block = SCNNode.waterBlock()
-        
-        // grass dirt
-        case 2:
-            block = SCNNode.grassBlock()
-            
-        // chest
-        case 54:
-            block = SCNNode.chestBlock()
-        default:
-            return block
-            
-        }
-        
-        return block
-    }
-    
-    static func customBlock(blockName: String) -> SCNNode? {
-        var block: SCNNode?
-        
-        switch blockName {
-        // water
-        case "water":
-            block = SCNNode.waterBlock()
-        
-        // grass dirt
-        case "grass_block":
-            block = SCNNode.grassBlock()
-            
-        // chest
-        case "chest":
-            block = SCNNode.chestBlock()
-        default:
-            return block
-            
-        }
-        
-        return block
     }
 }

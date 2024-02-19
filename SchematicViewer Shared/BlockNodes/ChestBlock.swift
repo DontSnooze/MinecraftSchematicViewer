@@ -13,7 +13,7 @@ extension SCNNode {
         let backImage = UIImage(named: "chest_back")
         let topImage = UIImage(named: "chest_top")
         
-        let block = SceneBlock.sixImageBlock(frontImage: frontImage, rightImage: backImage, backImage: backImage, leftImage: backImage, topImage: topImage, bottomImage: topImage)
+        let block = SCNNode.sixImageBlock(frontImage: frontImage, rightImage: backImage, backImage: backImage, leftImage: backImage, topImage: topImage, bottomImage: topImage)
         
         block.name = "chest"
         

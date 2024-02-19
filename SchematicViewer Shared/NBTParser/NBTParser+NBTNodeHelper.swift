@@ -1,5 +1,5 @@
 //
-//  NBTParser+NodeHelper.swift
+//  NBTParser+NBTNodeHelper.swift
 //  SchematicViewer
 //
 //  Created by Amos Todman on 2/16/24.

@@ -28,17 +28,17 @@
 		9C172EB92B7FF320005FC710 /* VirtualController+RightThumbStick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EB82B7FF320005FC710 /* VirtualController+RightThumbStick.swift */; };
 		9C172EBD2B7FF3E7005FC710 /* VirtualController+ButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EBC2B7FF3E7005FC710 /* VirtualController+ButtonA.swift */; };
 		9C172EC12B7FF3F2005FC710 /* VirtualController+ButtonB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EC02B7FF3F2005FC710 /* VirtualController+ButtonB.swift */; };
-		9C1C4D932B7ABEE300C1E1C4 /* SceneBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1C4D922B7ABEE300C1E1C4 /* SceneBlock.swift */; };
-		9C1C4D942B7ABEE300C1E1C4 /* SceneBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1C4D922B7ABEE300C1E1C4 /* SceneBlock.swift */; };
-		9C1C4D952B7ABEE300C1E1C4 /* SceneBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1C4D922B7ABEE300C1E1C4 /* SceneBlock.swift */; };
+		9C1C4D932B7ABEE300C1E1C4 /* SceneBlocksHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1C4D922B7ABEE300C1E1C4 /* SceneBlocksHelper.swift */; };
+		9C1C4D942B7ABEE300C1E1C4 /* SceneBlocksHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1C4D922B7ABEE300C1E1C4 /* SceneBlocksHelper.swift */; };
+		9C1C4D952B7ABEE300C1E1C4 /* SceneBlocksHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1C4D922B7ABEE300C1E1C4 /* SceneBlocksHelper.swift */; };
 		9C3298AC2B7E7F6C00A75C29 /* hello_world.nbt in Resources */ = {isa = PBXBuildFile; fileRef = 9C3298AB2B7E7F6C00A75C29 /* hello_world.nbt */; };
 		9C3298AE2B7E8C8600A75C29 /* AmosBedrockCowFarmV2.schematic in Resources */ = {isa = PBXBuildFile; fileRef = 9C3298AD2B7E8C8600A75C29 /* AmosBedrockCowFarmV2.schematic */; };
 		9C3298B82B7F93B500A75C29 /* VanillaResourcePackAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C3298B72B7F93B500A75C29 /* VanillaResourcePackAssets.xcassets */; };
 		9C3298B92B7F93B500A75C29 /* VanillaResourcePackAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C3298B72B7F93B500A75C29 /* VanillaResourcePackAssets.xcassets */; };
 		9C3298BA2B7F93B500A75C29 /* VanillaResourcePackAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C3298B72B7F93B500A75C29 /* VanillaResourcePackAssets.xcassets */; };
-		9C3298BC2B7F985F00A75C29 /* NBTParser+NodeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3298BB2B7F985F00A75C29 /* NBTParser+NodeHelper.swift */; };
-		9C3298BD2B7F985F00A75C29 /* NBTParser+NodeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3298BB2B7F985F00A75C29 /* NBTParser+NodeHelper.swift */; };
-		9C3298BE2B7F985F00A75C29 /* NBTParser+NodeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3298BB2B7F985F00A75C29 /* NBTParser+NodeHelper.swift */; };
+		9C3298BC2B7F985F00A75C29 /* NBTParser+NBTNodeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3298BB2B7F985F00A75C29 /* NBTParser+NBTNodeHelper.swift */; };
+		9C3298BD2B7F985F00A75C29 /* NBTParser+NBTNodeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3298BB2B7F985F00A75C29 /* NBTParser+NBTNodeHelper.swift */; };
+		9C3298BE2B7F985F00A75C29 /* NBTParser+NBTNodeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3298BB2B7F985F00A75C29 /* NBTParser+NBTNodeHelper.swift */; };
 		9C3298C02B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3298BF2B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift */; };
 		9C3298C12B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3298BF2B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift */; };
 		9C3298C22B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3298BF2B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift */; };
@@ -72,6 +72,13 @@
 		9C946D792B829F2400521690 /* stairs_n_w_s_e_upsdwn.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C946D782B829F2400521690 /* stairs_n_w_s_e_upsdwn.schem */; };
 		9C946D7C2B833A0000521690 /* NodeBlock+Slab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D7B2B833A0000521690 /* NodeBlock+Slab.swift */; };
 		9C946D7E2B833FC300521690 /* NodeBlock+Stairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D7D2B833FC300521690 /* NodeBlock+Stairs.swift */; };
+		9C946D812B83A54F00521690 /* StairsNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D802B83A54F00521690 /* StairsNode.swift */; };
+		9C946D832B83A7A100521690 /* GenericBlockNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D822B83A7A100521690 /* GenericBlockNode.swift */; };
+		9C946D842B83A7A400521690 /* GenericBlockNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D822B83A7A100521690 /* GenericBlockNode.swift */; };
+		9C946D852B83A7A400521690 /* GenericBlockNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D822B83A7A100521690 /* GenericBlockNode.swift */; };
+		9C946D872B83A9B600521690 /* SignNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D862B83A9B600521690 /* SignNode.swift */; };
+		9C946D882B83A9B600521690 /* SignNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D862B83A9B600521690 /* SignNode.swift */; };
+		9C946D892B83A9B600521690 /* SignNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D862B83A9B600521690 /* SignNode.swift */; };
 		9CD32BD62B81CAF400A069EC /* BlocksMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD52B81CAF400A069EC /* BlocksMenuView.swift */; };
 		9CD32BD82B81CB6000A069EC /* BlocksMenuView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD72B81CB6000A069EC /* BlocksMenuView+ViewModel.swift */; };
 		9CD32BDA2B81CBCA00A069EC /* BlocksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD92B81CBCA00A069EC /* BlocksData.swift */; };
@@ -102,11 +109,11 @@
 		9C172EB82B7FF320005FC710 /* VirtualController+RightThumbStick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VirtualController+RightThumbStick.swift"; sourceTree = "<group>"; };
 		9C172EBC2B7FF3E7005FC710 /* VirtualController+ButtonA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VirtualController+ButtonA.swift"; sourceTree = "<group>"; };
 		9C172EC02B7FF3F2005FC710 /* VirtualController+ButtonB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VirtualController+ButtonB.swift"; sourceTree = "<group>"; };
-		9C1C4D922B7ABEE300C1E1C4 /* SceneBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneBlock.swift; sourceTree = "<group>"; };
+		9C1C4D922B7ABEE300C1E1C4 /* SceneBlocksHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneBlocksHelper.swift; sourceTree = "<group>"; };
 		9C3298AB2B7E7F6C00A75C29 /* hello_world.nbt */ = {isa = PBXFileReference; lastKnownFileType = file; path = hello_world.nbt; sourceTree = "<group>"; };
 		9C3298AD2B7E8C8600A75C29 /* AmosBedrockCowFarmV2.schematic */ = {isa = PBXFileReference; lastKnownFileType = file; path = AmosBedrockCowFarmV2.schematic; sourceTree = "<group>"; };
 		9C3298B72B7F93B500A75C29 /* VanillaResourcePackAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = VanillaResourcePackAssets.xcassets; sourceTree = "<group>"; };
-		9C3298BB2B7F985F00A75C29 /* NBTParser+NodeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NBTParser+NodeHelper.swift"; sourceTree = "<group>"; };
+		9C3298BB2B7F985F00A75C29 /* NBTParser+NBTNodeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NBTParser+NBTNodeHelper.swift"; sourceTree = "<group>"; };
 		9C3298BF2B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NBTParser+BlockPlacementHelper.swift"; sourceTree = "<group>"; };
 		9C74830C2B75E0C700FAFD7C /* GameSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneController.swift; sourceTree = "<group>"; };
 		9C74830D2B75E0C700FAFD7C /* Art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Art.scnassets; sourceTree = "<group>"; };
@@ -134,6 +141,9 @@
 		9C946D782B829F2400521690 /* stairs_n_w_s_e_upsdwn.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = stairs_n_w_s_e_upsdwn.schem; sourceTree = "<group>"; };
 		9C946D7B2B833A0000521690 /* NodeBlock+Slab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NodeBlock+Slab.swift"; sourceTree = "<group>"; };
 		9C946D7D2B833FC300521690 /* NodeBlock+Stairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NodeBlock+Stairs.swift"; sourceTree = "<group>"; };
+		9C946D802B83A54F00521690 /* StairsNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StairsNode.swift; sourceTree = "<group>"; };
+		9C946D822B83A7A100521690 /* GenericBlockNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericBlockNode.swift; sourceTree = "<group>"; };
+		9C946D862B83A9B600521690 /* SignNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignNode.swift; sourceTree = "<group>"; };
 		9CD32BD52B81CAF400A069EC /* BlocksMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksMenuView.swift; sourceTree = "<group>"; };
 		9CD32BD72B81CB6000A069EC /* BlocksMenuView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlocksMenuView+ViewModel.swift"; sourceTree = "<group>"; };
 		9CD32BD92B81CBCA00A069EC /* BlocksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksData.swift; sourceTree = "<group>"; };
@@ -171,21 +181,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9C172E932B7FC81A005FC710 /* CustomBlocks */ = {
+		9C172E932B7FC81A005FC710 /* BlockNodes */ = {
 			isa = PBXGroup;
 			children = (
 				9C172E942B7FC88C005FC710 /* GrassBlock.swift */,
 				9C172E9B2B7FCA28005FC710 /* ChestBlock.swift */,
 				9C172E992B7FCA28005FC710 /* WaterBlock.swift */,
+				9C946D802B83A54F00521690 /* StairsNode.swift */,
+				9C946D862B83A9B600521690 /* SignNode.swift */,
+				9C946D822B83A7A100521690 /* GenericBlockNode.swift */,
 			);
-			path = CustomBlocks;
+			path = BlockNodes;
 			sourceTree = "<group>";
 		};
 		9C172EC42B7FFC22005FC710 /* NBTParser */ = {
 			isa = PBXGroup;
 			children = (
 				9CED803B2B7E62FA0033ADBF /* NBTParser.swift */,
-				9C3298BB2B7F985F00A75C29 /* NBTParser+NodeHelper.swift */,
+				9C3298BB2B7F985F00A75C29 /* NBTParser+NBTNodeHelper.swift */,
 				9C3298BF2B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift */,
 				9C172E8B2B7F9D8B005FC710 /* NBTParser+BlockNames.swift */,
 			);
@@ -228,7 +241,7 @@
 				9CD32BED2B8241B900A069EC /* Game Scene */,
 				9CD32BE92B82405100A069EC /* Helpers */,
 				9C172EC42B7FFC22005FC710 /* NBTParser */,
-				9C172E932B7FC81A005FC710 /* CustomBlocks */,
+				9C172E932B7FC81A005FC710 /* BlockNodes */,
 				9C3298AA2B7E7F4B00A75C29 /* Resources */,
 			);
 			path = "SchematicViewer Shared";
@@ -313,7 +326,7 @@
 		9CD32BE92B82405100A069EC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				9C1C4D922B7ABEE300C1E1C4 /* SceneBlock.swift */,
+				9C1C4D922B7ABEE300C1E1C4 /* SceneBlocksHelper.swift */,
 				9CD32BD92B81CBCA00A069EC /* BlocksData.swift */,
 				9C946D6E2B829ABD00521690 /* NodeBlock.swift */,
 				9C946D7B2B833A0000521690 /* NodeBlock+Slab.swift */,
@@ -529,12 +542,14 @@
 			files = (
 				9C172E8C2B7F9D8B005FC710 /* NBTParser+BlockNames.swift in Sources */,
 				9C3298C02B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift in Sources */,
-				9C1C4D932B7ABEE300C1E1C4 /* SceneBlock.swift in Sources */,
+				9C1C4D932B7ABEE300C1E1C4 /* SceneBlocksHelper.swift in Sources */,
 				9CED803C2B7E62FA0033ADBF /* NBTParser.swift in Sources */,
 				9C172EB92B7FF320005FC710 /* VirtualController+RightThumbStick.swift in Sources */,
 				9C172EBD2B7FF3E7005FC710 /* VirtualController+ButtonA.swift in Sources */,
 				9C7483192B75E0CA00FAFD7C /* GameViewController.swift in Sources */,
+				9C946D812B83A54F00521690 /* StairsNode.swift in Sources */,
 				9CD32BE62B823AF200A069EC /* GameViewController+MenuOverlayDelegate.swift in Sources */,
+				9C946D832B83A7A100521690 /* GenericBlockNode.swift in Sources */,
 				9CD32BD82B81CB6000A069EC /* BlocksMenuView+ViewModel.swift in Sources */,
 				9CD32BD62B81CAF400A069EC /* BlocksMenuView.swift in Sources */,
 				9C946D7C2B833A0000521690 /* NodeBlock+Slab.swift in Sources */,
@@ -551,10 +566,11 @@
 				9C172E952B7FC88C005FC710 /* GrassBlock.swift in Sources */,
 				9C172EA02B7FCA28005FC710 /* WaterBlock.swift in Sources */,
 				9C946D7E2B833FC300521690 /* NodeBlock+Stairs.swift in Sources */,
+				9C946D872B83A9B600521690 /* SignNode.swift in Sources */,
 				9C172EB52B7FF1CC005FC710 /* VirtualController+LeftThumbStick.swift in Sources */,
 				9C172EB12B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift in Sources */,
 				9CD32BE22B81F96D00A069EC /* GameViewController+MapLevelsMenuDelegate.swift in Sources */,
-				9C3298BC2B7F985F00A75C29 /* NBTParser+NodeHelper.swift in Sources */,
+				9C3298BC2B7F985F00A75C29 /* NBTParser+NBTNodeHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,20 +578,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C946D882B83A9B600521690 /* SignNode.swift in Sources */,
 				9C172E8D2B7F9D8B005FC710 /* NBTParser+BlockNames.swift in Sources */,
 				9C3298C12B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift in Sources */,
-				9C1C4D942B7ABEE300C1E1C4 /* SceneBlock.swift in Sources */,
+				9C1C4D942B7ABEE300C1E1C4 /* SceneBlocksHelper.swift in Sources */,
 				9C946D702B829ABD00521690 /* NodeBlock.swift in Sources */,
 				9CED803D2B7E62FA0033ADBF /* NBTParser.swift in Sources */,
 				9CD32BEA2B82408100A069EC /* MenuOverlay.swift in Sources */,
 				9C7483292B75E0CA00FAFD7C /* GameViewController.swift in Sources */,
 				9CD32BDB2B81CBCA00A069EC /* BlocksData.swift in Sources */,
 				9C172EA72B7FCA28005FC710 /* ChestBlock.swift in Sources */,
+				9C946D842B83A7A400521690 /* GenericBlockNode.swift in Sources */,
 				9C74833F2B75E0CA00FAFD7C /* GameSceneController.swift in Sources */,
 				9C7483272B75E0CA00FAFD7C /* AppDelegate.swift in Sources */,
 				9C172E962B7FC88C005FC710 /* GrassBlock.swift in Sources */,
 				9C172EA12B7FCA28005FC710 /* WaterBlock.swift in Sources */,
-				9C3298BD2B7F985F00A75C29 /* NBTParser+NodeHelper.swift in Sources */,
+				9C3298BD2B7F985F00A75C29 /* NBTParser+NBTNodeHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,20 +601,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C946D892B83A9B600521690 /* SignNode.swift in Sources */,
 				9C172E8E2B7F9D8B005FC710 /* NBTParser+BlockNames.swift in Sources */,
 				9C3298C22B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift in Sources */,
-				9C1C4D952B7ABEE300C1E1C4 /* SceneBlock.swift in Sources */,
+				9C1C4D952B7ABEE300C1E1C4 /* SceneBlocksHelper.swift in Sources */,
 				9C946D712B829ABD00521690 /* NodeBlock.swift in Sources */,
 				9CED803E2B7E62FA0033ADBF /* NBTParser.swift in Sources */,
 				9CD32BEB2B82408100A069EC /* MenuOverlay.swift in Sources */,
 				9C7483392B75E0CA00FAFD7C /* GameViewController.swift in Sources */,
 				9CD32BDC2B81CBCA00A069EC /* BlocksData.swift in Sources */,
 				9C172EA82B7FCA28005FC710 /* ChestBlock.swift in Sources */,
+				9C946D852B83A7A400521690 /* GenericBlockNode.swift in Sources */,
 				9C7483402B75E0CA00FAFD7C /* GameSceneController.swift in Sources */,
 				9C7483372B75E0CA00FAFD7C /* AppDelegate.swift in Sources */,
 				9C172E972B7FC88C005FC710 /* GrassBlock.swift in Sources */,
 				9C172EA22B7FCA28005FC710 /* WaterBlock.swift in Sources */,
-				9C3298BE2B7F985F00A75C29 /* NBTParser+NodeHelper.swift in Sources */,
+				9C3298BE2B7F985F00A75C29 /* NBTParser+NBTNodeHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

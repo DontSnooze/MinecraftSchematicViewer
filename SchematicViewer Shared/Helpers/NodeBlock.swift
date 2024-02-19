@@ -14,17 +14,18 @@ struct NodeBlock {
         case slab
         case hopper
         case sign
+        case wallSign
         case block
     }
     
     enum Direction: String {
-        case up,
-        down,
-        north,
-        south,
-        east,
-        west,
-        none
+        case up
+        case down
+        case north
+        case south
+        case east
+        case west
+        case none
     }
     
     enum SlabType: String {
@@ -84,6 +85,9 @@ struct NodeBlock {
         }
         if name.hasSuffix("_sign") {
             blockType = .sign
+        }
+        if name.hasSuffix("wall_sign") {
+            blockType = .wallSign
         }
         if name == "hopper" {
             blockType = .hopper
@@ -159,12 +163,16 @@ struct NodeBlock {
     func scnNode() -> SCNNode? {
         var block: SCNNode?
         
-        if let customBlock = NBTParser.customBlock(blockName: name) {
+        if let customBlock = SCNNode.customBlock(blockName: name) {
             block = customBlock
         } else if blockType == .stairs {
-            block = NBTParser.stairsBlockFromName(blockName: name, halfType: halfType)
+            block = SCNNode.stairsBlockFromName(blockName: name, halfType: halfType)
+        } else if blockType == .sign {
+            block = SCNNode.signBlockFromName(blockName: name)
+        } else if blockType == .wallSign {
+            block = SCNNode.signBlockFromName(blockName: name, isWallSign: true)
         } else {
-            block = NBTParser.blockFromName(blockName: name)
+            block = SCNNode.blockFromName(blockName: name)
         }
         
         if let block = block {
@@ -184,8 +192,11 @@ struct NodeBlock {
             break
         case .sign:
             break
+        case .wallSign:
+            applyDirectionAttribute(to: block)
         case .block:
             break
+        
         }
     }
     
@@ -212,9 +223,5 @@ struct NodeBlock {
         case .none:
             break
         }
-    }
-    
-    func rotateNode() {
-        
     }
 }

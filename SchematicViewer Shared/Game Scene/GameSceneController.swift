@@ -53,6 +53,9 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
         
         sceneRenderer.scene = scene
         
+//        let block = NBTParser.blockFromName(blockName: "stripped_oak_log")
+//        scene.rootNode.addChildNode(block)
+        
         NBTParser.parseNbt { nbt in
             self.parsedNbt = nbt
             self.handleParsedNbt(nbt: nbt)
@@ -69,7 +72,7 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
             return
         }
         
-        let block = SceneBlock.sixImageBlock(frontImage: sideImage, rightImage: sideImage, backImage: sideImage, leftImage: sideImage, topImage: topImage, bottomImage: bottomImage)
+        let block = SCNNode.sixImageBlock(frontImage: sideImage, rightImage: sideImage, backImage: sideImage, leftImage: sideImage, topImage: topImage, bottomImage: bottomImage)
         
         block.position = SCNVector3(0, 1, 0)
         

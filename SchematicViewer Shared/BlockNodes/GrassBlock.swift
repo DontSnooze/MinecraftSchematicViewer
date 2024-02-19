@@ -14,10 +14,10 @@ extension SCNNode {
             let topImage = UIImage(named: "grass_top"),
             let bottomImage = UIImage(named: "dirt")
         else {
-            return SceneBlock.createBlock()
+            return SCNNode.createBlock()
         }
         
-        let block = SceneBlock.sixImageBlock(pxImage: sideImage, nxImage: sideImage, pyImage: topImage, nyImage: bottomImage, pzImage: sideImage, nzImage: sideImage)
+        let block = SCNNode.sixImageBlock(pxImage: sideImage, nxImage: sideImage, pyImage: topImage, nyImage: bottomImage, pzImage: sideImage, nzImage: sideImage)
         
         block.name = "grass_block"
         
