@@ -62,6 +62,16 @@
 		9C7483442B75E0CA00FAFD7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C74830E2B75E0CA00FAFD7C /* Assets.xcassets */; };
 		9C7483452B75E0CA00FAFD7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C74830E2B75E0CA00FAFD7C /* Assets.xcassets */; };
 		9C7483462B75E0CA00FAFD7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C74830E2B75E0CA00FAFD7C /* Assets.xcassets */; };
+		9C946D6D2B826E2400521690 /* test1.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C946D6C2B826E1D00521690 /* test1.schem */; };
+		9C946D6F2B829ABD00521690 /* NodeBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D6E2B829ABD00521690 /* NodeBlock.swift */; };
+		9C946D702B829ABD00521690 /* NodeBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D6E2B829ABD00521690 /* NodeBlock.swift */; };
+		9C946D712B829ABD00521690 /* NodeBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D6E2B829ABD00521690 /* NodeBlock.swift */; };
+		9C946D732B829CFC00521690 /* slabTest_low_to_up.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C946D722B829CFC00521690 /* slabTest_low_to_up.schem */; };
+		9C946D752B829E8D00521690 /* hopper_s_e_n_w_dwn.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C946D742B829E8D00521690 /* hopper_s_e_n_w_dwn.schem */; };
+		9C946D772B829F1600521690 /* sign_s_e_n_w_stand.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C946D762B829F1600521690 /* sign_s_e_n_w_stand.schem */; };
+		9C946D792B829F2400521690 /* stairs_n_w_s_e_upsdwn.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C946D782B829F2400521690 /* stairs_n_w_s_e_upsdwn.schem */; };
+		9C946D7C2B833A0000521690 /* NodeBlock+Slab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D7B2B833A0000521690 /* NodeBlock+Slab.swift */; };
+		9C946D7E2B833FC300521690 /* NodeBlock+Stairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D7D2B833FC300521690 /* NodeBlock+Stairs.swift */; };
 		9CD32BD62B81CAF400A069EC /* BlocksMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD52B81CAF400A069EC /* BlocksMenuView.swift */; };
 		9CD32BD82B81CB6000A069EC /* BlocksMenuView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD72B81CB6000A069EC /* BlocksMenuView+ViewModel.swift */; };
 		9CD32BDA2B81CBCA00A069EC /* BlocksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD92B81CBCA00A069EC /* BlocksData.swift */; };
@@ -116,6 +126,14 @@
 		9C7483382B75E0CA00FAFD7C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		9C74833B2B75E0CA00FAFD7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C74833D2B75E0CA00FAFD7C /* SchematicViewer_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SchematicViewer_macOS.entitlements; sourceTree = "<group>"; };
+		9C946D6C2B826E1D00521690 /* test1.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = test1.schem; sourceTree = "<group>"; };
+		9C946D6E2B829ABD00521690 /* NodeBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeBlock.swift; sourceTree = "<group>"; };
+		9C946D722B829CFC00521690 /* slabTest_low_to_up.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = slabTest_low_to_up.schem; sourceTree = "<group>"; };
+		9C946D742B829E8D00521690 /* hopper_s_e_n_w_dwn.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = hopper_s_e_n_w_dwn.schem; sourceTree = "<group>"; };
+		9C946D762B829F1600521690 /* sign_s_e_n_w_stand.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = sign_s_e_n_w_stand.schem; sourceTree = "<group>"; };
+		9C946D782B829F2400521690 /* stairs_n_w_s_e_upsdwn.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = stairs_n_w_s_e_upsdwn.schem; sourceTree = "<group>"; };
+		9C946D7B2B833A0000521690 /* NodeBlock+Slab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NodeBlock+Slab.swift"; sourceTree = "<group>"; };
+		9C946D7D2B833FC300521690 /* NodeBlock+Stairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NodeBlock+Stairs.swift"; sourceTree = "<group>"; };
 		9CD32BD52B81CAF400A069EC /* BlocksMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksMenuView.swift; sourceTree = "<group>"; };
 		9CD32BD72B81CB6000A069EC /* BlocksMenuView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlocksMenuView+ViewModel.swift"; sourceTree = "<group>"; };
 		9CD32BD92B81CBCA00A069EC /* BlocksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksData.swift; sourceTree = "<group>"; };
@@ -182,6 +200,11 @@
 				9C172E872B7F9CFA005FC710 /* BlockTextures.xcassets */,
 				9C3298AB2B7E7F6C00A75C29 /* hello_world.nbt */,
 				9C3298AD2B7E8C8600A75C29 /* AmosBedrockCowFarmV2.schematic */,
+				9C946D6C2B826E1D00521690 /* test1.schem */,
+				9C946D722B829CFC00521690 /* slabTest_low_to_up.schem */,
+				9C946D742B829E8D00521690 /* hopper_s_e_n_w_dwn.schem */,
+				9C946D762B829F1600521690 /* sign_s_e_n_w_stand.schem */,
+				9C946D782B829F2400521690 /* stairs_n_w_s_e_upsdwn.schem */,
 				9C3298B72B7F93B500A75C29 /* VanillaResourcePackAssets.xcassets */,
 			);
 			path = Resources;
@@ -292,6 +315,9 @@
 			children = (
 				9C1C4D922B7ABEE300C1E1C4 /* SceneBlock.swift */,
 				9CD32BD92B81CBCA00A069EC /* BlocksData.swift */,
+				9C946D6E2B829ABD00521690 /* NodeBlock.swift */,
+				9C946D7B2B833A0000521690 /* NodeBlock+Slab.swift */,
+				9C946D7D2B833FC300521690 /* NodeBlock+Stairs.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -431,9 +457,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C74831C2B75E0CA00FAFD7C /* Main.storyboard in Resources */,
+				9C946D792B829F2400521690 /* stairs_n_w_s_e_upsdwn.schem in Resources */,
+				9C946D752B829E8D00521690 /* hopper_s_e_n_w_dwn.schem in Resources */,
+				9C946D6D2B826E2400521690 /* test1.schem in Resources */,
 				9C3298AC2B7E7F6C00A75C29 /* hello_world.nbt in Resources */,
 				9C74831F2B75E0CA00FAFD7C /* LaunchScreen.storyboard in Resources */,
+				9C946D772B829F1600521690 /* sign_s_e_n_w_stand.schem in Resources */,
 				9C172E882B7F9CFA005FC710 /* BlockTextures.xcassets in Resources */,
+				9C946D732B829CFC00521690 /* slabTest_low_to_up.schem in Resources */,
 				9C7483442B75E0CA00FAFD7C /* Assets.xcassets in Resources */,
 				9C3298AE2B7E8C8600A75C29 /* AmosBedrockCowFarmV2.schematic in Resources */,
 				9C7483412B75E0CA00FAFD7C /* Art.scnassets in Resources */,
@@ -506,6 +537,7 @@
 				9CD32BE62B823AF200A069EC /* GameViewController+MenuOverlayDelegate.swift in Sources */,
 				9CD32BD82B81CB6000A069EC /* BlocksMenuView+ViewModel.swift in Sources */,
 				9CD32BD62B81CAF400A069EC /* BlocksMenuView.swift in Sources */,
+				9C946D7C2B833A0000521690 /* NodeBlock+Slab.swift in Sources */,
 				9CD32BDA2B81CBCA00A069EC /* BlocksData.swift in Sources */,
 				9CD32BDE2B81E73E00A069EC /* MapLevelsMenuView.swift in Sources */,
 				9C172EA62B7FCA28005FC710 /* ChestBlock.swift in Sources */,
@@ -515,8 +547,10 @@
 				9C172EC12B7FF3F2005FC710 /* VirtualController+ButtonB.swift in Sources */,
 				9CD32BE42B82017700A069EC /* MenuOverlay.swift in Sources */,
 				9C7483172B75E0CA00FAFD7C /* AppDelegate.swift in Sources */,
+				9C946D6F2B829ABD00521690 /* NodeBlock.swift in Sources */,
 				9C172E952B7FC88C005FC710 /* GrassBlock.swift in Sources */,
 				9C172EA02B7FCA28005FC710 /* WaterBlock.swift in Sources */,
+				9C946D7E2B833FC300521690 /* NodeBlock+Stairs.swift in Sources */,
 				9C172EB52B7FF1CC005FC710 /* VirtualController+LeftThumbStick.swift in Sources */,
 				9C172EB12B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift in Sources */,
 				9CD32BE22B81F96D00A069EC /* GameViewController+MapLevelsMenuDelegate.swift in Sources */,
@@ -531,6 +565,7 @@
 				9C172E8D2B7F9D8B005FC710 /* NBTParser+BlockNames.swift in Sources */,
 				9C3298C12B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift in Sources */,
 				9C1C4D942B7ABEE300C1E1C4 /* SceneBlock.swift in Sources */,
+				9C946D702B829ABD00521690 /* NodeBlock.swift in Sources */,
 				9CED803D2B7E62FA0033ADBF /* NBTParser.swift in Sources */,
 				9CD32BEA2B82408100A069EC /* MenuOverlay.swift in Sources */,
 				9C7483292B75E0CA00FAFD7C /* GameViewController.swift in Sources */,
@@ -551,6 +586,7 @@
 				9C172E8E2B7F9D8B005FC710 /* NBTParser+BlockNames.swift in Sources */,
 				9C3298C22B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift in Sources */,
 				9C1C4D952B7ABEE300C1E1C4 /* SceneBlock.swift in Sources */,
+				9C946D712B829ABD00521690 /* NodeBlock.swift in Sources */,
 				9CED803E2B7E62FA0033ADBF /* NBTParser.swift in Sources */,
 				9CD32BEB2B82408100A069EC /* MenuOverlay.swift in Sources */,
 				9C7483392B75E0CA00FAFD7C /* GameViewController.swift in Sources */,

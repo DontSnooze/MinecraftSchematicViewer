@@ -23,7 +23,7 @@ extension GameViewController: MenuOverlayDelegate {
 //            display node name
 //            print("node name: \(String(describing: result.node.name))")
             gameSceneController.highlightNodes(atPoint: location)
-            menuOverlay?.myLabel.text = result.node.name ?? ""
+            menuOverlay?.hudLabel.text = result.node.name ?? ""
         }
     }
 }

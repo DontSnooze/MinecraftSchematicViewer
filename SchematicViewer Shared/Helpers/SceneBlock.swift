@@ -68,40 +68,14 @@ class SceneBlock {
         var materials = [SCNMaterial]()
         
         // [ PZ(FRONT) , PX(RIGHT) , NZ(BACK) , NX(LEFT) , PY(TOP) , NY(BOTTOM) ]
-        if let frontImage = frontImage {
-            let material = SCNMaterial()
-            material.diffuse.contents = frontImage
-            materials.append(material)
-        }
+        let images = [frontImage, rightImage, backImage, leftImage, topImage, bottomImage]
         
-        if let rightImage = rightImage {
-            let material = SCNMaterial()
-            material.diffuse.contents = rightImage
-            materials.append(material)
-        }
-        
-        if let backImage = backImage {
-            let material = SCNMaterial()
-            material.diffuse.contents = backImage
-            materials.append(material)
-        }
-        
-        if let leftImage = leftImage {
-            let material = SCNMaterial()
-            material.diffuse.contents = leftImage
-            materials.append(material)
-        }
-        
-        if let topImage = topImage {
-            let material = SCNMaterial()
-            material.diffuse.contents = topImage
-            materials.append(material)
-        }
-        
-        if let bottomImage = bottomImage {
-            let material = SCNMaterial()
-            material.diffuse.contents = bottomImage
-            materials.append(material)
+        for image in images {
+            if let image = image {
+                let material = SCNMaterial()
+                material.diffuse.contents = image
+                materials.append(material)
+            }
         }
         
         // [ PZ(FRONT) , PX(RIGHT) , NZ(BACK) , NX(LEFT) , PY(TOP) , NY(BOTTOM) ]
@@ -117,5 +91,50 @@ class SceneBlock {
     // [ PZ(FRONT) , PX(RIGHT) , NZ(BACK) , NX(LEFT) , PY(TOP) , NY(BOTTOM) ]
     static func sixImageBlock(pxImage: UIImage, nxImage: UIImage, pyImage: UIImage, nyImage: UIImage, pzImage: UIImage, nzImage: UIImage) -> SCNNode {
         return sixImageBlock(frontImage: pzImage, rightImage: pxImage, backImage: nzImage, leftImage: nxImage, topImage: pyImage, bottomImage: nyImage)
+    }
+    
+    static func stairsBlock(frontImage: UIImage?,
+                            rightImage: UIImage?,
+                            backImage: UIImage?,
+                            leftImage: UIImage?,
+                            topImage: UIImage?,
+                            bottomImage: UIImage?) -> SCNNode {
+        guard let stairsScene = SCNScene(named: "Art.scnassets/stairs.scn") else {
+            fatalError("scene is nil")
+        }
+        
+        guard
+            let stairsBlockNode = stairsScene.rootNode.childNode(withName: "stairs", recursively: true),
+            let stairsTopNode = stairsBlockNode.childNode(withName: "stairs_top", recursively: true),
+            let stairsSlabNode = stairsBlockNode.childNode(withName: "stairs_slab", recursively: true)
+        else {
+            fatalError("stairs node is nil")
+        }
+        
+        var materials = [SCNMaterial]()
+        
+        // [ PZ(FRONT) , PX(RIGHT) , NZ(BACK) , NX(LEFT) , PY(TOP) , NY(BOTTOM) ]
+        let images = [frontImage, rightImage, backImage, leftImage, topImage, bottomImage]
+        
+        for image in images {
+            if let image = image {
+                let material = SCNMaterial()
+                material.diffuse.contents = image
+                materials.append(material)
+            }
+        }
+        
+        // [ PZ(FRONT) , PX(RIGHT) , NZ(BACK) , NX(LEFT) , PY(TOP) , NY(BOTTOM) ]
+        if materials.isEmpty {
+            stairsSlabNode.geometry?.firstMaterial?.diffuse.contents = UIColor.cyan
+            stairsSlabNode.geometry?.firstMaterial?.transparency = 0.6
+            
+            stairsTopNode.geometry?.firstMaterial?.diffuse.contents = UIColor.cyan
+            stairsTopNode.geometry?.firstMaterial?.transparency = 0.6
+        } else {
+            stairsSlabNode.geometry?.materials = materials
+            stairsTopNode.geometry?.materials = materials
+        }
+        return stairsBlockNode
     }
 }

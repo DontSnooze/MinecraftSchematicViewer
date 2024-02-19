@@ -22,6 +22,7 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
     var parsedNbt: NBT?
     var mapLevels = [[SCNNode]]()
     var hiddenMapLevels = [Int]()
+    var blockPalette = [Int: SCNNode]()
     
     init(sceneRenderer renderer: SCNSceneRenderer) {
         sceneRenderer = renderer
@@ -101,6 +102,10 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
             
             SCNTransaction.commit()
         }
+    }
+    
+    func handleParsedSchematicNbt(nbt: NBT) {
+        mapLevels = NBTParser.addAllSchematicBlocks(nbt: nbt, scene: scene, removinglevels: [])
     }
     
     func handleParsedNbt(nbt: NBT) {

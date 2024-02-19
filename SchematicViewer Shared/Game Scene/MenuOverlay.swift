@@ -15,7 +15,7 @@ protocol MenuOverlayDelegate: AnyObject {
 }
 
 class MenuOverlay: SKScene {
-    var myLabel: SKLabelNode!
+    var hudLabel: SKLabelNode!
     var blockCountsButton: SKSpriteNode!
     var mapLevelsButton: SKSpriteNode!
     var menuOverlayDelegate: MenuOverlayDelegate?
@@ -25,12 +25,20 @@ class MenuOverlay: SKScene {
     }
     
     override init(size: CGSize) {
-        myLabel = SKLabelNode(fontNamed: "Chalkduster")
-        myLabel.text = "Schematic"
-        myLabel.fontColor = UIColor.white
-        myLabel.fontSize = 12
-        myLabel.setScale(1.0)
-        myLabel.position = CGPoint(x: size.width * 0.5, y: size.height * 0.9)
+        hudLabel = SKLabelNode(fontNamed: "Helvetica")
+        hudLabel.text = "Schematic"
+        hudLabel.fontColor = UIColor.white
+        hudLabel.fontSize = 16
+        hudLabel.setScale(1.0)
+        hudLabel.position = CGPoint(x: 0, y: -hudLabel.frame.size.height / 2)
+        
+        let color = UIColor.black
+        let alphaColor = color.withAlphaComponent(0.9)
+        let labelBackground = SKSpriteNode(color: alphaColor, size: CGSize(width: hudLabel.frame.size.width * 5, height: hudLabel.frame.size.height + 8))
+        
+        labelBackground.position = CGPoint(x: size.width * 0.5, y: size.height * 0.9)
+        
+        labelBackground.addChild(hudLabel)
         
         blockCountsButton = SKSpriteNode(imageNamed: "BlockCountsMenuButton")
         blockCountsButton.position = CGPoint(x: size.width - 40, y: size.height - 40)
@@ -46,7 +54,7 @@ class MenuOverlay: SKScene {
         
         self.addChild(blockCountsButton)
         self.addChild(mapLevelsButton)
-        self.addChild(myLabel)
+        self.addChild(labelBackground)
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
