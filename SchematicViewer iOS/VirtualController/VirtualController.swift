@@ -40,7 +40,7 @@ protocol VirtualControllerDelegate: AnyObject {
 class VirtualController {
     
     var delegate: VirtualControllerDelegate?
-    let movementSpeed = 0.5
+    let movementSpeed = 0.25
     let verticalMovementSpeed = 0.25
     let lookAroundSpeed = 0.1
     
