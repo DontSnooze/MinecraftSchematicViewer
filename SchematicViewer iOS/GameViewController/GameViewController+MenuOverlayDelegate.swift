@@ -16,6 +16,10 @@ extension GameViewController: MenuOverlayDelegate {
         showMapLevelsMenu()
     }
     
+    func importFileButtonPressed() {
+        showDocumentPicker()
+    }
+    
     func overlayTouchesEnded(location: CGPoint) {
         let hitResults = gameView.hitTest(location, options: nil)
         

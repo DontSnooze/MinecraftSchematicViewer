@@ -92,27 +92,28 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
         let hitResults = self.sceneRenderer.hitTest(point, options: [:])
         for result in hitResults {
             // get its material
-            guard let material = result.node.geometry?.firstMaterial else {
-                return
-            }
             
-            // highlight it
-            SCNTransaction.begin()
-            SCNTransaction.animationDuration = 0.5
+            guard let materials = result.node.geometry?.materials else { return }
             
-            // on completion - unhighlight
-            SCNTransaction.completionBlock = {
+            for material in materials {
+                // highlight it
                 SCNTransaction.begin()
                 SCNTransaction.animationDuration = 0.5
                 
-                material.emission.contents = SCNColor.black
+                // on completion - unhighlight
+                SCNTransaction.completionBlock = {
+                    SCNTransaction.begin()
+                    SCNTransaction.animationDuration = 0.5
+                    
+                    material.emission.contents = SCNColor.black
+                    
+                    SCNTransaction.commit()
+                }
+                
+                material.emission.contents = SCNColor.red
                 
                 SCNTransaction.commit()
             }
-            
-            material.emission.contents = SCNColor.red
-            
-            SCNTransaction.commit()
         }
     }
     

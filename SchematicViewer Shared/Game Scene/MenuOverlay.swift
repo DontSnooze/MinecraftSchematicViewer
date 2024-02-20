@@ -12,12 +12,14 @@ protocol MenuOverlayDelegate: AnyObject {
     func blockCountsButtonPressed()
     func mapLevelsButtonPressed()
     func overlayTouchesEnded(location: CGPoint)
+    func importFileButtonPressed()
 }
 
 class MenuOverlay: SKScene {
     var hudLabel: SKLabelNode!
     var blockCountsButton: SKSpriteNode!
     var mapLevelsButton: SKSpriteNode!
+    var importFileButton: SKSpriteNode!
     var menuOverlayDelegate: MenuOverlayDelegate?
     
     required init?(coder aDecoder: NSCoder) {
@@ -50,10 +52,16 @@ class MenuOverlay: SKScene {
         mapLevelsButton.setScale(0.2)
         mapLevelsButton.name = "MapLevelsButton"
         
+        importFileButton = SKSpriteNode(imageNamed: "BlockCountsMenuButton")
+        importFileButton.position = CGPoint(x: size.width - 120, y: size.height - 40)
+        importFileButton.setScale(0.2)
+        importFileButton.name = "ImportFileButton"
+        
         super.init(size: size)
         
         self.addChild(blockCountsButton)
         self.addChild(mapLevelsButton)
+        self.addChild(importFileButton)
         self.addChild(labelBackground)
     }
     
@@ -67,6 +75,11 @@ class MenuOverlay: SKScene {
         
         if mapLevelsButton.contains(location) {
             menuOverlayDelegate?.mapLevelsButtonPressed()
+            return
+        }
+        
+        if importFileButton.contains(location) {
+            menuOverlayDelegate?.importFileButtonPressed()
             return
         }
         

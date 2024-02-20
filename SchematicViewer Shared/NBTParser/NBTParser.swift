@@ -33,11 +33,11 @@ class NBTParser {
     
     static func parseNbt(completion: @escaping (NBT) -> Void) {
         //            let hopperFileName = "hopper_s_e_n_w_dwn"
-        //            let stairsFileName = "stairs_n_w_s_e_upsdwn"
+        let stairsFileName = "stairs_n_w_s_e_upsdwn"
         //            let signFileName = "sign_s_e_n_w_stand"
 //        let chestFileName = "chest_s_e_n_w_dble"
-        let testFileName = "test1"
-        let path = Bundle.main.path(forResource: testFileName, ofType: "schem") ?? ""
+//        let testFileName = "test1"
+        let path = Bundle.main.path(forResource: stairsFileName, ofType: "schem") ?? ""
         
         parseNbt(path: path) { nbt in
             completion(nbt)
