@@ -147,6 +147,7 @@ extension GameViewController: VirtualControllerDelegate {
     
     func buttonBReleased() {
         stopVerticalMovement()
+        showDocumentPicker()
     }
     
     func stopVerticalRotations() {

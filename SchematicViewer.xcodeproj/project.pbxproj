@@ -85,6 +85,7 @@
 		9C946D8F2B83E6C200521690 /* chest_s_e_n_w_dble.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C946D8E2B83E6C200521690 /* chest_s_e_n_w_dble.schem */; };
 		9C946D902B83E6C200521690 /* chest_s_e_n_w_dble.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C946D8E2B83E6C200521690 /* chest_s_e_n_w_dble.schem */; };
 		9C946D912B83E6C200521690 /* chest_s_e_n_w_dble.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C946D8E2B83E6C200521690 /* chest_s_e_n_w_dble.schem */; };
+		9C946D932B84AF6600521690 /* GameViewController+FileImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D922B84AF6600521690 /* GameViewController+FileImport.swift */; };
 		9CD32BD62B81CAF400A069EC /* BlocksMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD52B81CAF400A069EC /* BlocksMenuView.swift */; };
 		9CD32BD82B81CB6000A069EC /* BlocksMenuView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD72B81CB6000A069EC /* BlocksMenuView+ViewModel.swift */; };
 		9CD32BDA2B81CBCA00A069EC /* BlocksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD92B81CBCA00A069EC /* BlocksData.swift */; };
@@ -152,6 +153,8 @@
 		9C946D862B83A9B600521690 /* SignNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignNode.swift; sourceTree = "<group>"; };
 		9C946D8A2B83CB7B00521690 /* HopperNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperNode.swift; sourceTree = "<group>"; };
 		9C946D8E2B83E6C200521690 /* chest_s_e_n_w_dble.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = chest_s_e_n_w_dble.schem; sourceTree = "<group>"; };
+		9C946D922B84AF6600521690 /* GameViewController+FileImport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController+FileImport.swift"; sourceTree = "<group>"; };
+		9C946D962B84C87E00521690 /* SchematicViewer iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SchematicViewer iOS.entitlements"; sourceTree = "<group>"; };
 		9CD32BD52B81CAF400A069EC /* BlocksMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksMenuView.swift; sourceTree = "<group>"; };
 		9CD32BD72B81CB6000A069EC /* BlocksMenuView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlocksMenuView+ViewModel.swift"; sourceTree = "<group>"; };
 		9CD32BD92B81CBCA00A069EC /* BlocksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksData.swift; sourceTree = "<group>"; };
@@ -270,6 +273,7 @@
 		9C7483152B75E0CA00FAFD7C /* SchematicViewer iOS */ = {
 			isa = PBXGroup;
 			children = (
+				9C946D962B84C87E00521690 /* SchematicViewer iOS.entitlements */,
 				9CD32BEC2B82413200A069EC /* GameViewController */,
 				9CD32BE72B823FAF00A069EC /* Views */,
 				9CD32BE82B823FC700A069EC /* ViewModels */,
@@ -352,6 +356,7 @@
 				9C172EB02B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift */,
 				9CD32BE12B81F96D00A069EC /* GameViewController+MapLevelsMenuDelegate.swift */,
 				9CD32BE52B823AF100A069EC /* GameViewController+MenuOverlayDelegate.swift */,
+				9C946D922B84AF6600521690 /* GameViewController+FileImport.swift */,
 			);
 			path = GameViewController;
 			sourceTree = "<group>";
@@ -561,6 +566,7 @@
 				9C172EBD2B7FF3E7005FC710 /* VirtualController+ButtonA.swift in Sources */,
 				9C7483192B75E0CA00FAFD7C /* GameViewController.swift in Sources */,
 				9C946D812B83A54F00521690 /* StairsNode.swift in Sources */,
+				9C946D932B84AF6600521690 /* GameViewController+FileImport.swift in Sources */,
 				9CD32BE62B823AF200A069EC /* GameViewController+MenuOverlayDelegate.swift in Sources */,
 				9C946D832B83A7A100521690 /* GenericBlockNode.swift in Sources */,
 				9CD32BD82B81CB6000A069EC /* BlocksMenuView+ViewModel.swift in Sources */,
@@ -801,6 +807,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SchematicViewer iOS/SchematicViewer iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3BT7A38RRX;
@@ -809,9 +816,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -832,6 +839,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SchematicViewer iOS/SchematicViewer iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3BT7A38RRX;
@@ -840,9 +848,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -62,6 +62,15 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
         }
     }
     
+    func parseNbt(path: String) {
+        NBTParser.removeAllNodes(from: mapLevels)
+        
+        NBTParser.parseNbt(path: path) { nbt in
+            self.parsedNbt = nbt
+            self.handleParsedNbt(nbt: nbt)
+        }
+    }
+    
     func addGrassBlock() {
         
         guard

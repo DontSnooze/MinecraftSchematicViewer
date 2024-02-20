@@ -36,7 +36,7 @@ extension NBTParser {
         for (blockDescriptionValue, paletteIdTag) in blockIdDictionary {
             
             // block name and attributes
-            print("\n=======\n")
+//            print("\n=======\n")
 //            print("blockDescriptionValue: \(blockDescriptionValue)")
             
             // block id:  NBTInt
@@ -57,18 +57,13 @@ extension NBTParser {
             
             let blockAttributes = blockDescriptionValue.slice(from: "[", to: "]") ?? ""
             
-            print("paletteId: \(paletteId)")
-            print("blockName: \(String(describing: blockName))")
-            print("blockAttributes: \(String(describing: blockAttributes))")
+//            print("paletteId: \(paletteId)")
+//            print("blockName: \(String(describing: blockName))")
+//            print("blockAttributes: \(String(describing: blockAttributes))")
             
             let nodeBlock = NodeBlock(with: blockName, attributesString: blockAttributes, paletteId: Int(paletteId))
-            print("nodeBlock: \(nodeBlock)")
             
             blockDict[Int(paletteId)] = nodeBlock
-            
-//            if let id = Int(blockId) {
-//                blockDict[id] = nbtName
-//            }
         }
         
         return blockDict
