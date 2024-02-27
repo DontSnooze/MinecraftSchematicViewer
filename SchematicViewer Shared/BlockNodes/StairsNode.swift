@@ -8,7 +8,7 @@
 import SceneKit
 
 extension SCNNode {
-    static func stairsBlockFromName(blockName: String, halfType: NodeBlock.HalfType = .bottom) -> SCNNode {
+    static func stairsBlockFromName(blockName: String, halfType: NodeBlockAttributes.HalfType = .bottom) -> SCNNode {
         var image: UIImage?
 
         // check for image - wood or not

@@ -8,7 +8,7 @@ import SceneKit
 
 extension NodeBlock {
     func applySlabAttributes(to block: SCNNode) {
-        switch slabType {
+        switch attributes.slabType {
         case .bottom:
             applyBottomSlabAttributes(to: block)
         case .top:

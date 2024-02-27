@@ -163,7 +163,7 @@ extension NBTParser {
             
             let position = blockPosition(from: nbt, index: i)
             block.position = position
-            block.name = "[\(nodeBlock.paletteId)][\(nodeBlock.name)] \(nodeBlock.rawAttributesString)"
+            block.name = "[\(nodeBlock.paletteId)][\(nodeBlock.name)] \(nodeBlock.attributes.rawAttributesString)"
             
             if !removinglevels.contains(currentLevel) {
                 scene.rootNode.addChildNode(block)

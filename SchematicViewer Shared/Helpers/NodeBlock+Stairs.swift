@@ -10,7 +10,7 @@ import SceneKit
 
 extension NodeBlock {
     func applyStairsAttributes(to block: SCNNode) {        
-        switch halfType {
+        switch attributes.halfType {
         case .top:
             let radial = GLKMathDegreesToRadians(180)
             block.runAction(SCNAction.rotateBy(x: 0, y: 0, z: CGFloat(radial), duration: 0))
@@ -18,7 +18,7 @@ extension NodeBlock {
             break
         }
         
-        switch facing {
+        switch attributes.facing {
         case .up:
             let radial = GLKMathDegreesToRadians(90)
             block.runAction(SCNAction.rotateBy(x: CGFloat(radial), y: 0, z: 0, duration: 0))
@@ -32,11 +32,11 @@ extension NodeBlock {
             let radial = GLKMathDegreesToRadians(180)
             block.runAction(SCNAction.rotateBy(x: 0, y: CGFloat(radial), z: 0, duration: 0))
         case .east:
-            let degrees: Float = halfType == .bottom ? -90 : 90
+            let degrees: Float = attributes.halfType == .bottom ? -90 : 90
             let radial = GLKMathDegreesToRadians(degrees)
             block.runAction(SCNAction.rotateBy(x: 0, y: CGFloat(radial), z: 0, duration: 0))
         case .west:
-            let degrees: Float = halfType == .bottom ? 90 : -90
+            let degrees: Float = attributes.halfType == .bottom ? 90 : -90
             let radial = GLKMathDegreesToRadians(degrees)
             block.runAction(SCNAction.rotateBy(x: 0, y: CGFloat(radial), z: 0, duration: 0))
         case .none:

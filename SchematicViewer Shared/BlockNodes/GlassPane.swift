@@ -8,7 +8,7 @@
 import SceneKit
 
 extension SCNNode {
-    static func glassPaneBlockFromName(blockName: String, directions: [NodeBlock.Direction] = []) -> SCNNode {
+    static func glassPaneBlockFromName(blockName: String, directions: [NodeBlockAttributes.Direction] = []) -> SCNNode {
         
         var image: UIImage?
         // check for main image
@@ -23,23 +23,17 @@ extension SCNNode {
         return block
     }
     
-    static func glassPaneBlockNode(directions: [NodeBlock.Direction] = [], image: UIImage?) -> SCNNode {
+    static func glassPaneBlockNode(directions: [NodeBlockAttributes.Direction] = [], image: UIImage?) -> SCNNode {
         
         // check for full length panes
-        if directions.count == 2 {
-            if
-                directions.contains(.east),
-                directions.contains(.west)
-            {
-                return fullGlassPaneBlockNode(facing: .north, image: image)
-            }
-            
-            if
-                directions.contains(.north),
-                directions.contains(.south)
-            {
-                return fullGlassPaneBlockNode(facing: .west, image: image)
-            }
+        let westSet = Set([NodeBlockAttributes.Direction.east, NodeBlockAttributes.Direction.west])
+        let northSet = Set([NodeBlockAttributes.Direction.north, NodeBlockAttributes.Direction.south])
+        let directionSet = Set(directions.sorted())
+        
+        if directionSet == northSet {
+            return fullGlassPaneBlockNode(facing: .west, image: image)
+        } else if directionSet == westSet {
+            return fullGlassPaneBlockNode(facing: .west, image: image)
         }
         
         guard let scene = SCNScene(named: "Art.scnassets/glass_pane.scn") else {
@@ -108,7 +102,7 @@ extension SCNNode {
         return blockNode
     }
     
-    static func fullGlassPaneBlockNode(facing: NodeBlock.Direction, image: UIImage?) -> SCNNode {
+    static func fullGlassPaneBlockNode(facing: NodeBlockAttributes.Direction, image: UIImage?) -> SCNNode {
         guard let scene = SCNScene(named: "Art.scnassets/glass_pane.scn") else {
             fatalError("scene is nil")
         }

@@ -95,6 +95,12 @@
 		9CBA39462B8DB04F0005E587 /* SlabNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA39452B8DB04F0005E587 /* SlabNode.swift */; };
 		9CBA39472B8DB04F0005E587 /* SlabNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA39452B8DB04F0005E587 /* SlabNode.swift */; };
 		9CBA39482B8DB04F0005E587 /* SlabNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA39452B8DB04F0005E587 /* SlabNode.swift */; };
+		9CBA394A2B8DD10D0005E587 /* WoodNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA39492B8DD10D0005E587 /* WoodNode.swift */; };
+		9CBA394B2B8DD10D0005E587 /* WoodNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA39492B8DD10D0005E587 /* WoodNode.swift */; };
+		9CBA394C2B8DD10D0005E587 /* WoodNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA39492B8DD10D0005E587 /* WoodNode.swift */; };
+		9CBA394E2B8DD4F50005E587 /* NodeBlockAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA394D2B8DD4F50005E587 /* NodeBlockAttributes.swift */; };
+		9CBA394F2B8DD4F50005E587 /* NodeBlockAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA394D2B8DD4F50005E587 /* NodeBlockAttributes.swift */; };
+		9CBA39502B8DD4F50005E587 /* NodeBlockAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA394D2B8DD4F50005E587 /* NodeBlockAttributes.swift */; };
 		9CD32BD62B81CAF400A069EC /* BlocksMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD52B81CAF400A069EC /* BlocksMenuView.swift */; };
 		9CD32BD82B81CB6000A069EC /* BlocksMenuView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD72B81CB6000A069EC /* BlocksMenuView+ViewModel.swift */; };
 		9CD32BDA2B81CBCA00A069EC /* BlocksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD92B81CBCA00A069EC /* BlocksData.swift */; };
@@ -167,6 +173,8 @@
 		9CBA393D2B86E8920005E587 /* futHouse9.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = futHouse9.schem; sourceTree = "<group>"; };
 		9CBA39412B8D847E0005E587 /* GlassPane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassPane.swift; sourceTree = "<group>"; };
 		9CBA39452B8DB04F0005E587 /* SlabNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlabNode.swift; sourceTree = "<group>"; };
+		9CBA39492B8DD10D0005E587 /* WoodNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodNode.swift; sourceTree = "<group>"; };
+		9CBA394D2B8DD4F50005E587 /* NodeBlockAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeBlockAttributes.swift; sourceTree = "<group>"; };
 		9CD32BD52B81CAF400A069EC /* BlocksMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksMenuView.swift; sourceTree = "<group>"; };
 		9CD32BD72B81CB6000A069EC /* BlocksMenuView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlocksMenuView+ViewModel.swift"; sourceTree = "<group>"; };
 		9CD32BD92B81CBCA00A069EC /* BlocksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksData.swift; sourceTree = "<group>"; };
@@ -215,6 +223,7 @@
 				9C946D8A2B83CB7B00521690 /* HopperNode.swift */,
 				9CBA39412B8D847E0005E587 /* GlassPane.swift */,
 				9CBA39452B8DB04F0005E587 /* SlabNode.swift */,
+				9CBA39492B8DD10D0005E587 /* WoodNode.swift */,
 				9C946D822B83A7A100521690 /* GenericBlockNode.swift */,
 			);
 			path = BlockNodes;
@@ -358,6 +367,7 @@
 				9C1C4D922B7ABEE300C1E1C4 /* SceneBlocksHelper.swift */,
 				9CD32BD92B81CBCA00A069EC /* BlocksData.swift */,
 				9C946D6E2B829ABD00521690 /* NodeBlock.swift */,
+				9CBA394D2B8DD4F50005E587 /* NodeBlockAttributes.swift */,
 				9C946D7B2B833A0000521690 /* NodeBlock+Slab.swift */,
 				9C946D7D2B833FC300521690 /* NodeBlock+Stairs.swift */,
 			);
@@ -588,10 +598,12 @@
 				9C946D932B84AF6600521690 /* GameViewController+FileImport.swift in Sources */,
 				9CD32BE62B823AF200A069EC /* GameViewController+MenuOverlayDelegate.swift in Sources */,
 				9C946D832B83A7A100521690 /* GenericBlockNode.swift in Sources */,
+				9CBA394A2B8DD10D0005E587 /* WoodNode.swift in Sources */,
 				9CD32BD82B81CB6000A069EC /* BlocksMenuView+ViewModel.swift in Sources */,
 				9CD32BD62B81CAF400A069EC /* BlocksMenuView.swift in Sources */,
 				9C946D7C2B833A0000521690 /* NodeBlock+Slab.swift in Sources */,
 				9CD32BDA2B81CBCA00A069EC /* BlocksData.swift in Sources */,
+				9CBA394E2B8DD4F50005E587 /* NodeBlockAttributes.swift in Sources */,
 				9CD32BDE2B81E73E00A069EC /* MapLevelsMenuView.swift in Sources */,
 				9C172EA62B7FCA28005FC710 /* ChestBlock.swift in Sources */,
 				9CD32BE02B81E74F00A069EC /* MapLevelsMenuView+ViewModel.swift in Sources */,
@@ -622,10 +634,12 @@
 				9C172E8D2B7F9D8B005FC710 /* NBTParser+BlockNames.swift in Sources */,
 				9C3298C12B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift in Sources */,
 				9C946D8C2B83CB7B00521690 /* HopperNode.swift in Sources */,
+				9CBA394B2B8DD10D0005E587 /* WoodNode.swift in Sources */,
 				9C1C4D942B7ABEE300C1E1C4 /* SceneBlocksHelper.swift in Sources */,
 				9C946D702B829ABD00521690 /* NodeBlock.swift in Sources */,
 				9CED803D2B7E62FA0033ADBF /* NBTParser.swift in Sources */,
 				9CD32BEA2B82408100A069EC /* MenuOverlay.swift in Sources */,
+				9CBA394F2B8DD4F50005E587 /* NodeBlockAttributes.swift in Sources */,
 				9C7483292B75E0CA00FAFD7C /* GameViewController.swift in Sources */,
 				9CBA39472B8DB04F0005E587 /* SlabNode.swift in Sources */,
 				9CD32BDB2B81CBCA00A069EC /* BlocksData.swift in Sources */,
@@ -648,10 +662,12 @@
 				9C172E8E2B7F9D8B005FC710 /* NBTParser+BlockNames.swift in Sources */,
 				9C3298C22B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift in Sources */,
 				9C946D8D2B83CB7B00521690 /* HopperNode.swift in Sources */,
+				9CBA394C2B8DD10D0005E587 /* WoodNode.swift in Sources */,
 				9C1C4D952B7ABEE300C1E1C4 /* SceneBlocksHelper.swift in Sources */,
 				9C946D712B829ABD00521690 /* NodeBlock.swift in Sources */,
 				9CED803E2B7E62FA0033ADBF /* NBTParser.swift in Sources */,
 				9CD32BEB2B82408100A069EC /* MenuOverlay.swift in Sources */,
+				9CBA39502B8DD4F50005E587 /* NodeBlockAttributes.swift in Sources */,
 				9C7483392B75E0CA00FAFD7C /* GameViewController.swift in Sources */,
 				9CBA39482B8DB04F0005E587 /* SlabNode.swift in Sources */,
 				9CD32BDC2B81CBCA00A069EC /* BlocksData.swift in Sources */,
