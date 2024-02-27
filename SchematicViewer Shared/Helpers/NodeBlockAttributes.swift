@@ -9,20 +9,21 @@ import SceneKit
 
 struct NodeBlockAttributes {
     enum BlockType: String {
-        case stairs
-        case slab
-        case hopper
-        case sign
-        case wallSign
         case block
-        case glassPane
-        case wood
-        case water
-        case chest
-        case grassBlock
-        case fence
-        case lantern
         case chain
+        case chest
+        case fence
+        case glassPane
+        case grassBlock
+        case hopper
+        case lantern
+        case rail
+        case sign
+        case slab
+        case stairs
+        case wallSign
+        case water
+        case wood
     }
     
     enum Direction: String, Comparable {
@@ -41,8 +42,8 @@ struct NodeBlockAttributes {
     
     enum SlabType: String {
         case bottom
-        case top
         case double
+        case top
         case none
     }
     
@@ -64,6 +65,16 @@ struct NodeBlockAttributes {
         case none
     }
     
+    enum Shape: String {
+        case north_west
+        case north_east
+        case south_west
+        case south_east
+        case north_south
+        case east_west
+        case none
+    }
+    
     var name = ""
     var rawAttributesString = ""
     var blockType: BlockType = .block
@@ -73,13 +84,14 @@ struct NodeBlockAttributes {
     var attachment: Attachment = .none
     var slabType: SlabType = .none
     var halfType: HalfType = .none
+    var shape: Shape = .none
     
     var north = false
     var south = false
     var east = false
     var west = false
     
-    var powered = false
+    var isPowered = false
     var waterlogged = false
     var snowy = false
     var isHanging = false
@@ -119,6 +131,9 @@ struct NodeBlockAttributes {
         }
         if name.hasSuffix("_fence") {
             blockType = .fence
+        }
+        if name.hasSuffix("_rail") || name == "rail" {
+            blockType = .rail
         }
     }
     
@@ -164,64 +179,69 @@ struct NodeBlockAttributes {
                 return
             }
             axis = axisObject
-        case "facing":
-            guard let direction = Direction(rawValue: attributeValueString) else {
-                return
-            }
-            facing = direction
         case "attachment":
             guard let attachmentObject = Attachment(rawValue: attributeValueString) else {
                 return
             }
             attachment = attachmentObject
-        case "type":
-            guard let slabTypeObject = SlabType(rawValue: attributeValueString) else {
-                return
-            }
-            slabType = slabTypeObject
-        case "half":
-            guard let halfTypeObject = HalfType(rawValue: attributeValueString) else {
-                return
-            }
-            halfType = halfTypeObject
-        case "north":
-            north = attributeValueString.boolValue
-            if north {
-                directions.append(.north)
-            }
-        case "south":
-            south = attributeValueString.boolValue
-            if south {
-                directions.append(.south)
-            }
         case "east":
             east = attributeValueString.boolValue
             if east {
                 directions.append(.east)
             }
-        case "west":
-            west = attributeValueString.boolValue
-            if west {
-                directions.append(.west)
-            }
-        case "powered":
-            powered = attributeValueString.boolValue
-        case "waterlogged":
-            waterlogged = attributeValueString.boolValue
-        case "snowy":
-            snowy = attributeValueString.boolValue
-        case "hanging":
-            isHanging = attributeValueString.boolValue
-        case "rotation":
-            guard let rotationInt = Int(attributeValueString) else {
+        case "facing":
+            guard let direction = Direction(rawValue: attributeValueString) else {
                 return
             }
-            rotation = rotationInt
+            facing = direction
+        case "half":
+            guard let halfTypeObject = HalfType(rawValue: attributeValueString) else {
+                return
+            }
+            halfType = halfTypeObject
+        case "hanging":
+            isHanging = attributeValueString.boolValue
         case "level":
             guard let levelInt = Int(attributeValueString) else {
                 return
             }
             level = levelInt
+        case "north":
+            north = attributeValueString.boolValue
+            if north {
+                directions.append(.north)
+            }
+        case "powered":
+            isPowered = attributeValueString.boolValue
+        case "rotation":
+            guard let rotationInt = Int(attributeValueString) else {
+                return
+            }
+            rotation = rotationInt
+        case "shape":
+            guard let shapeObject = Shape(rawValue: attributeValueString) else {
+                return
+            }
+            shape = shapeObject
+        case "snowy":
+            snowy = attributeValueString.boolValue
+        case "south":
+            south = attributeValueString.boolValue
+            if south {
+                directions.append(.south)
+            }
+        case "type":
+            guard let slabTypeObject = SlabType(rawValue: attributeValueString) else {
+                return
+            }
+            slabType = slabTypeObject
+        case "waterlogged":
+            waterlogged = attributeValueString.boolValue
+        case "west":
+            west = attributeValueString.boolValue
+            if west {
+                directions.append(.west)
+            }
         default:
             return
         }

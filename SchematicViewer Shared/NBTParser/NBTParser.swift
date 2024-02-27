@@ -36,7 +36,8 @@ class NBTParser {
 //        let stairsFileName = "stairs_n_w_s_e_upsdwn"
         //            let signFileName = "sign_s_e_n_w_stand"
 //        let chestFileName = "chest_s_e_n_w_dble"
-        let testFileName = "futHouse9"
+//        let testFileName = "futHouse9"
+        let testFileName = "redstone_and_doors"
         let path = Bundle.main.path(forResource: testFileName, ofType: "schem") ?? ""
         
         parseNbt(path: path) { nbt in

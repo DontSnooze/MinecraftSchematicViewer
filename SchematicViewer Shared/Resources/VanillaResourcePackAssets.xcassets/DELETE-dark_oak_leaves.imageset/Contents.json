@@ -1,15 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "oak_leaves.png",
+      "filename" : "dark_oak_leaves.png",
       "idiom" : "universal"
     }
   ],
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "preserves-vector-representation" : true
   }
 }

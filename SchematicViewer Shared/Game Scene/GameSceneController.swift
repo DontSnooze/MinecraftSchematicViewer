@@ -55,8 +55,13 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
         
 //        let block = NBTParser.blockFromName(blockName: "stripped_oak_log")
 //        scene.rootNode.addChildNode(block)
-//        let fence = SCNNode.fenceBlockFromName(blockName: "oak_fence", directions: [.east, .west, .north, .south])
-//        scene.rootNode.addChildNode(fence)
+        
+//        let blockNode = NodeBlock(with: "oak_leaves", attributesString: "", paletteId: -1)
+//        guard let block = blockNode.scnNode() else {
+//            print("could not create node.")
+//            return
+//        }
+//        scene.rootNode.addChildNode(block)
         
         NBTParser.parseNbt { nbt in
             self.parsedNbt = nbt

@@ -113,6 +113,15 @@
 		9CBA395E2B8E149B0005E587 /* ChainNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA395D2B8E149B0005E587 /* ChainNode.swift */; };
 		9CBA395F2B8E149B0005E587 /* ChainNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA395D2B8E149B0005E587 /* ChainNode.swift */; };
 		9CBA39602B8E149B0005E587 /* ChainNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA395D2B8E149B0005E587 /* ChainNode.swift */; };
+		9CBA39622B8E198B0005E587 /* RailNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA39612B8E198B0005E587 /* RailNode.swift */; };
+		9CBA39632B8E198B0005E587 /* RailNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA39612B8E198B0005E587 /* RailNode.swift */; };
+		9CBA39642B8E198B0005E587 /* RailNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA39612B8E198B0005E587 /* RailNode.swift */; };
+		9CBA39662B8E1B3B0005E587 /* NodeBlock+Rail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA39652B8E1B3B0005E587 /* NodeBlock+Rail.swift */; };
+		9CBA39672B8E1B3B0005E587 /* NodeBlock+Rail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA39652B8E1B3B0005E587 /* NodeBlock+Rail.swift */; };
+		9CBA39682B8E1B3B0005E587 /* NodeBlock+Rail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA39652B8E1B3B0005E587 /* NodeBlock+Rail.swift */; };
+		9CBA396E2B8E59700005E587 /* redstone_and_doors.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA396D2B8E59700005E587 /* redstone_and_doors.schem */; };
+		9CBA396F2B8E59700005E587 /* redstone_and_doors.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA396D2B8E59700005E587 /* redstone_and_doors.schem */; };
+		9CBA39702B8E59700005E587 /* redstone_and_doors.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA396D2B8E59700005E587 /* redstone_and_doors.schem */; };
 		9CD32BD62B81CAF400A069EC /* BlocksMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD52B81CAF400A069EC /* BlocksMenuView.swift */; };
 		9CD32BD82B81CB6000A069EC /* BlocksMenuView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD72B81CB6000A069EC /* BlocksMenuView+ViewModel.swift */; };
 		9CD32BDA2B81CBCA00A069EC /* BlocksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD92B81CBCA00A069EC /* BlocksData.swift */; };
@@ -191,6 +200,9 @@
 		9CBA39552B8E06350005E587 /* LanternNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanternNode.swift; sourceTree = "<group>"; };
 		9CBA39592B8E0E140005E587 /* NodeBlock+Lantern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NodeBlock+Lantern.swift"; sourceTree = "<group>"; };
 		9CBA395D2B8E149B0005E587 /* ChainNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainNode.swift; sourceTree = "<group>"; };
+		9CBA39612B8E198B0005E587 /* RailNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailNode.swift; sourceTree = "<group>"; };
+		9CBA39652B8E1B3B0005E587 /* NodeBlock+Rail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NodeBlock+Rail.swift"; sourceTree = "<group>"; };
+		9CBA396D2B8E59700005E587 /* redstone_and_doors.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = redstone_and_doors.schem; sourceTree = "<group>"; };
 		9CD32BD52B81CAF400A069EC /* BlocksMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksMenuView.swift; sourceTree = "<group>"; };
 		9CD32BD72B81CB6000A069EC /* BlocksMenuView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlocksMenuView+ViewModel.swift"; sourceTree = "<group>"; };
 		9CD32BD92B81CBCA00A069EC /* BlocksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksData.swift; sourceTree = "<group>"; };
@@ -243,6 +255,7 @@
 				9CBA39512B8DEED70005E587 /* FenceNode.swift */,
 				9CBA39552B8E06350005E587 /* LanternNode.swift */,
 				9CBA395D2B8E149B0005E587 /* ChainNode.swift */,
+				9CBA39612B8E198B0005E587 /* RailNode.swift */,
 				9C946D822B83A7A100521690 /* GenericBlockNode.swift */,
 			);
 			path = BlockNodes;
@@ -274,6 +287,7 @@
 				9C946D782B829F2400521690 /* stairs_n_w_s_e_upsdwn.schem */,
 				9C946D8E2B83E6C200521690 /* chest_s_e_n_w_dble.schem */,
 				9CBA393D2B86E8920005E587 /* futHouse9.schem */,
+				9CBA396D2B8E59700005E587 /* redstone_and_doors.schem */,
 				9C3298B72B7F93B500A75C29 /* VanillaResourcePackAssets.xcassets */,
 			);
 			path = Resources;
@@ -390,6 +404,7 @@
 				9C946D7B2B833A0000521690 /* NodeBlock+Slab.swift */,
 				9C946D7D2B833FC300521690 /* NodeBlock+Stairs.swift */,
 				9CBA39592B8E0E140005E587 /* NodeBlock+Lantern.swift */,
+				9CBA39652B8E1B3B0005E587 /* NodeBlock+Rail.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -531,6 +546,7 @@
 			files = (
 				9CBA393E2B86E8920005E587 /* futHouse9.schem in Resources */,
 				9C74831C2B75E0CA00FAFD7C /* Main.storyboard in Resources */,
+				9CBA396E2B8E59700005E587 /* redstone_and_doors.schem in Resources */,
 				9C946D792B829F2400521690 /* stairs_n_w_s_e_upsdwn.schem in Resources */,
 				9C946D752B829E8D00521690 /* hopper_s_e_n_w_dwn.schem in Resources */,
 				9C946D6D2B826E2400521690 /* test1.schem in Resources */,
@@ -554,6 +570,7 @@
 				9C74832C2B75E0CA00FAFD7C /* Main.storyboard in Resources */,
 				9CBA393F2B86E8920005E587 /* futHouse9.schem in Resources */,
 				9C74832F2B75E0CA00FAFD7C /* LaunchScreen.storyboard in Resources */,
+				9CBA396F2B8E59700005E587 /* redstone_and_doors.schem in Resources */,
 				9C172E892B7F9CFA005FC710 /* BlockTextures.xcassets in Resources */,
 				9C946D902B83E6C200521690 /* chest_s_e_n_w_dble.schem in Resources */,
 				9C7483452B75E0CA00FAFD7C /* Assets.xcassets in Resources */,
@@ -568,6 +585,7 @@
 			files = (
 				9C74833C2B75E0CA00FAFD7C /* Main.storyboard in Resources */,
 				9C172E8A2B7F9CFA005FC710 /* BlockTextures.xcassets in Resources */,
+				9CBA39702B8E59700005E587 /* redstone_and_doors.schem in Resources */,
 				9C946D912B83E6C200521690 /* chest_s_e_n_w_dble.schem in Resources */,
 				9C7483462B75E0CA00FAFD7C /* Assets.xcassets in Resources */,
 				9C7483432B75E0CA00FAFD7C /* Art.scnassets in Resources */,
@@ -611,6 +629,7 @@
 				9C1C4D932B7ABEE300C1E1C4 /* SceneBlocksHelper.swift in Sources */,
 				9CBA39462B8DB04F0005E587 /* SlabNode.swift in Sources */,
 				9CED803C2B7E62FA0033ADBF /* NBTParser.swift in Sources */,
+				9CBA39622B8E198B0005E587 /* RailNode.swift in Sources */,
 				9C172EB92B7FF320005FC710 /* VirtualController+RightThumbStick.swift in Sources */,
 				9CBA39562B8E06350005E587 /* LanternNode.swift in Sources */,
 				9C172EBD2B7FF3E7005FC710 /* VirtualController+ButtonA.swift in Sources */,
@@ -633,6 +652,7 @@
 				9C172EAD2B7FD3B9005FC710 /* VirtualController.swift in Sources */,
 				9C172EC12B7FF3F2005FC710 /* VirtualController+ButtonB.swift in Sources */,
 				9CD32BE42B82017700A069EC /* MenuOverlay.swift in Sources */,
+				9CBA39662B8E1B3B0005E587 /* NodeBlock+Rail.swift in Sources */,
 				9C7483172B75E0CA00FAFD7C /* AppDelegate.swift in Sources */,
 				9C946D6F2B829ABD00521690 /* NodeBlock.swift in Sources */,
 				9C172E952B7FC88C005FC710 /* GrassBlock.swift in Sources */,
@@ -655,9 +675,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C946D882B83A9B600521690 /* SignNode.swift in Sources */,
+				9CBA39632B8E198B0005E587 /* RailNode.swift in Sources */,
 				9C172E8D2B7F9D8B005FC710 /* NBTParser+BlockNames.swift in Sources */,
 				9CBA39572B8E06350005E587 /* LanternNode.swift in Sources */,
 				9C3298C12B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift in Sources */,
+				9CBA39672B8E1B3B0005E587 /* NodeBlock+Rail.swift in Sources */,
 				9C946D8C2B83CB7B00521690 /* HopperNode.swift in Sources */,
 				9CBA394B2B8DD10D0005E587 /* WoodNode.swift in Sources */,
 				9C1C4D942B7ABEE300C1E1C4 /* SceneBlocksHelper.swift in Sources */,
@@ -687,9 +709,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C946D892B83A9B600521690 /* SignNode.swift in Sources */,
+				9CBA39642B8E198B0005E587 /* RailNode.swift in Sources */,
 				9C172E8E2B7F9D8B005FC710 /* NBTParser+BlockNames.swift in Sources */,
 				9CBA39582B8E06350005E587 /* LanternNode.swift in Sources */,
 				9C3298C22B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift in Sources */,
+				9CBA39682B8E1B3B0005E587 /* NodeBlock+Rail.swift in Sources */,
 				9C946D8D2B83CB7B00521690 /* HopperNode.swift in Sources */,
 				9CBA394C2B8DD10D0005E587 /* WoodNode.swift in Sources */,
 				9C1C4D952B7ABEE300C1E1C4 /* SceneBlocksHelper.swift in Sources */,

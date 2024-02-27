@@ -40,6 +40,8 @@ struct NodeBlock {
             block = SCNNode.hopperBlockFromName(blockName: name, isFacingDown: isFacingDown)
         case .lantern:
             block = SCNNode.lanternBlockFromName(blockName: name, isHanging: attributes.isHanging)
+        case .rail:
+            block = SCNNode.railBlockFromName(blockName: name, isPowered: attributes.isPowered, shape: attributes.shape)
         case .sign:
             block = SCNNode.signBlockFromName(blockName: name)
         case .slab:
@@ -63,20 +65,20 @@ struct NodeBlock {
     
     func applyAttributes(to block: SCNNode) {
         switch attributes.blockType {
-        case .stairs:
-            applyStairsAttributes(to: block)
-        case .slab:
-            applySlabAttributes(to: block)
-        case .hopper:
-            applyDirectionAttribute(to: block)
-        case .sign:
-            break
-        case .wallSign:
-            applyDirectionAttribute(to: block)
         case .block:
+            applyDirectionAttribute(to: block)
+        case .hopper:
             applyDirectionAttribute(to: block)
         case .lantern:
             applyLanternAttributes(to: block, isHanging: attributes.isHanging)
+        case .rail:
+            applyRailAttributes(to: block)
+        case .slab:
+            applySlabAttributes(to: block)
+        case .stairs:
+            applyStairsAttributes(to: block)
+        case .wallSign:
+            applyDirectionAttribute(to: block)
         default:
             break
         }
