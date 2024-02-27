@@ -22,14 +22,21 @@ extension SCNNode {
         return brick
     }
     
-    static func repeatedImageBlock(image: UIImage) -> SCNNode {
+    static func repeatedImageBlock(image: UIImage?) -> SCNNode {
         let g = SCNBox(width: 1.0, height: 1.0, length: 1.0, chamferRadius: 0.01)
         let block = SCNNode(geometry: g)
         
         block.name = "block"
         
-        let  material = SCNMaterial()
-        material.diffuse.contents = image
+        let material = SCNMaterial()
+        
+        if let image = image {
+            material.diffuse.contents = image
+        } else {
+            material.diffuse.contents = UIColor.cyan
+            material.transparency = 0.6
+        }
+        
         block.geometry?.materials = [material]
         
         return block

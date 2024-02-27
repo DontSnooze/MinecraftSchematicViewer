@@ -17,6 +17,7 @@ extension SCNNode {
 
         // check for main image
         var fileName = blockName
+        var hasAlternateImages = false
 
         if let image = UIImage(named: fileName) {
             sideImage = image
@@ -33,6 +34,7 @@ extension SCNNode {
             sideImage = image
             frontImage = image
             backImage = image
+            hasAlternateImages = true
         }
 
         // check for top image
@@ -41,6 +43,7 @@ extension SCNNode {
         if let image = UIImage(named: fileName) {
             topImage = image
             bottomImage = image
+            hasAlternateImages = true
         }
 
         // check for bottom image
@@ -48,6 +51,7 @@ extension SCNNode {
         
         if let image = UIImage(named: fileName) {
             bottomImage = image
+            hasAlternateImages = true
         }
 
         // check for front image
@@ -55,6 +59,7 @@ extension SCNNode {
 
         if let image = UIImage(named: fileName) {
             frontImage = image
+            hasAlternateImages = true
         }
 
         // check for back image
@@ -62,10 +67,15 @@ extension SCNNode {
         
         if let image = UIImage(named: fileName) {
             backImage = image
+            hasAlternateImages = true
         }
-
-        let block = SCNNode.sixImageBlock(frontImage: frontImage, rightImage: sideImage, backImage: backImage, leftImage: sideImage, topImage: topImage, bottomImage: bottomImage)
+        var block = SCNNode()
         
+        if hasAlternateImages {
+            block = SCNNode.sixImageBlock(frontImage: frontImage, rightImage: sideImage, backImage: backImage, leftImage: sideImage, topImage: topImage, bottomImage: bottomImage)
+        } else {
+            block = SCNNode.repeatedImageBlock(image: sideImage)
+        }
         block.name = blockName
         
         return block

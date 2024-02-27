@@ -20,6 +20,12 @@ extension GameViewController: MenuOverlayDelegate {
         showDocumentPicker()
     }
     
+    func testButtonPressed() {
+        Task {
+            await gameSceneController.startSceneLoadTest()
+        }
+    }
+    
     func overlayTouchesEnded(location: CGPoint) {
         let hitResults = gameView.hitTest(location, options: nil)
         

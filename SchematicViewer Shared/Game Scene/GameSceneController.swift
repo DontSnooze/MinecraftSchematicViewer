@@ -15,10 +15,10 @@ import SwiftNBT
 #endif
 
 class GameSceneController: NSObject, SCNSceneRendererDelegate {
-    let scene: SCNScene
+    var scene: SCNScene
     let sceneRenderer: SCNSceneRenderer
-    let cameraNode: SCNNode
-    let playerNode: SCNNode
+    var cameraNode: SCNNode
+    var playerNode: SCNNode
     var parsedNbt: NBT?
     var mapLevels = [[SCNNode]]()
     var hiddenMapLevels = [Int]()
@@ -70,32 +70,15 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
             self.handleParsedNbt(nbt: nbt)
         }
     }
-    
-    func addGrassBlock() {
-        
-        guard
-            let sideImage = UIImage(named: "grass_side.png"),
-            let topImage = UIImage(named: "grass_top.png"),
-            let bottomImage = UIImage(named: "dirt.png")
-        else {
-            return
-        }
-        
-        let block = SCNNode.sixImageBlock(frontImage: sideImage, rightImage: sideImage, backImage: sideImage, leftImage: sideImage, topImage: topImage, bottomImage: bottomImage)
-        
-        block.position = SCNVector3(0, 1, 0)
-        
-        scene.rootNode.addChildNode(block)
-    }
-    
+
     func highlightNodes(atPoint point: CGPoint) {
         let hitResults = self.sceneRenderer.hitTest(point, options: [:])
         for result in hitResults {
             // get its material
+            let material = result.node.geometry?.firstMaterial
+//            guard let materials = result.node.geometry?.materials else { return }
             
-            guard let materials = result.node.geometry?.materials else { return }
-            
-            for material in materials {
+//            for material in materials {
                 // highlight it
                 SCNTransaction.begin()
                 SCNTransaction.animationDuration = 0.5
@@ -105,15 +88,15 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
                     SCNTransaction.begin()
                     SCNTransaction.animationDuration = 0.5
                     
-                    material.emission.contents = SCNColor.black
+                    material?.emission.contents = SCNColor.black
                     
                     SCNTransaction.commit()
                 }
                 
-                material.emission.contents = SCNColor.red
+                material?.emission.contents = SCNColor.red
                 
                 SCNTransaction.commit()
-            }
+//            }
         }
     }
     
@@ -134,6 +117,71 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
         NBTParser.removeAllNodes(from: mapLevels)
         hiddenMapLevels = removinglevels
         mapLevels = NBTParser.addAllBlocks(nbt: nbt, scene: scene, removinglevels: removinglevels)
+    }
+    
+    func startSceneLoadTest() async {
+        // create scene adding all blocks
+        guard let (newScene, _) = await createScene() else {
+            print("(newScene, levels) is nil")
+            return
+        }
+        
+        //  save scene
+        saveScene(scene: newScene)
+        
+        // load
+        loadScene()
+    }
+    
+    func createScene() async -> (SCNScene, [[SCNNode]])? {
+        guard let newScene = SCNScene(named: "Art.scnassets/world.scn") else {
+            print("scene is nil")
+            return nil
+        }
+        
+        guard let newNbt = await NBTParser.parseTestNbtFile() else {
+            print("could not parseTestNbt")
+            return nil
+        }
+        
+        let levels = NBTParser.addAllBlocks(nbt: newNbt, scene: newScene, removinglevels: [])
+        
+        return (newScene, levels)
+    }
+    
+    func saveScene(scene: SCNScene) {
+        let sceneToSave = scene
+        let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let url = documentsPath.appendingPathComponent( "test.scn")
+        sceneToSave.write(to: url, options: nil, delegate: nil, progressHandler: nil)
+    }
+    
+    func loadScene() {
+        let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let url = documentsPath.appendingPathComponent( "test.scn")
+        
+//        do {
+//            try SCNScene(url: url, options: nil) 
+//        } catch {
+//            print(error.localizedDescription)
+//        }
+        
+        guard let testScene = try? SCNScene(url: url, options: nil) else {
+            return
+        }
+        
+        guard let sceneCameraNode = testScene.rootNode.childNode(withName: "camera", recursively: true) else {
+            fatalError("camera node is nil")
+        }
+        
+        guard let scenePlayerNode = testScene.rootNode.childNode(withName: "player", recursively: true) else {
+            fatalError("player node is nil")
+        }
+        
+        playerNode = scenePlayerNode
+        cameraNode = sceneCameraNode
+        sceneRenderer.scene = testScene
+        scene = testScene
     }
     
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {

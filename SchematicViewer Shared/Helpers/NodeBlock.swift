@@ -16,6 +16,7 @@ struct NodeBlock {
         case sign
         case wallSign
         case block
+        case glassPane
     }
     
     enum Direction: String {
@@ -66,6 +67,7 @@ struct NodeBlock {
     var snowy = false
     var rotation = -1
     var level = -1
+    var directions = [Direction]()
     
     init(with name: String, attributesString: String, paletteId: Int) {
         self.name = name
@@ -86,8 +88,11 @@ struct NodeBlock {
         if name.hasSuffix("_sign") {
             blockType = .sign
         }
-        if name.hasSuffix("wall_sign") {
+        if name.hasSuffix("_wall_sign") {
             blockType = .wallSign
+        }
+        if name.hasSuffix("_glass_pane") {
+            blockType = .glassPane
         }
         if name == "hopper" {
             blockType = .hopper
@@ -132,13 +137,24 @@ struct NodeBlock {
             halfType = halfTypeObject
         case "north":
             north = attributeValueString.boolValue
+            if north {
+                directions.append(.north)
+            }
         case "south":
             south = attributeValueString.boolValue
+            if south {
+                directions.append(.south)
+            }
         case "east":
             east = attributeValueString.boolValue
+            if east {
+                directions.append(.east)
+            }
         case "west":
             west = attributeValueString.boolValue
-            
+            if west {
+                directions.append(.west)
+            }
         case "powered":
             powered = attributeValueString.boolValue
         case "waterlogged":
@@ -174,6 +190,10 @@ struct NodeBlock {
         } else if blockType == .hopper {
             let isFacingDown = facing == .down
             block = SCNNode.hopperBlockFromName(blockName: name, isFacingDown: isFacingDown)
+        } else if blockType == .glassPane {
+            block = SCNNode.glassPaneBlockFromName(blockName: name, directions: directions)
+        } else if blockType == .slab {
+            block = SCNNode.slabBlockFromName(blockName: name)
         } else {
             block = SCNNode.blockFromName(blockName: name)
         }
@@ -199,6 +219,8 @@ struct NodeBlock {
             applyDirectionAttribute(to: block)
         case .block:
             applyDirectionAttribute(to: block)
+        default:
+            break
         }
     }
     

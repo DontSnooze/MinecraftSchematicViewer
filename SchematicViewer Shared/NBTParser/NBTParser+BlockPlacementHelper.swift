@@ -177,7 +177,6 @@ extension NBTParser {
                 currentLevel += 1
             }
         }
-
         return blockLevelsArray
     }
 }
