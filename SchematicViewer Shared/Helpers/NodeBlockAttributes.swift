@@ -20,6 +20,9 @@ struct NodeBlockAttributes {
         case water
         case chest
         case grassBlock
+        case fence
+        case lantern
+        case chain
     }
     
     enum Direction: String, Comparable {
@@ -79,6 +82,7 @@ struct NodeBlockAttributes {
     var powered = false
     var waterlogged = false
     var snowy = false
+    var isHanging = false
     var rotation = -1
     var level = -1
     var directions = [Direction]()
@@ -113,6 +117,9 @@ struct NodeBlockAttributes {
         if name.hasSuffix("_wood") {
             blockType = .wood
         }
+        if name.hasSuffix("_fence") {
+            blockType = .fence
+        }
     }
     
     mutating func setupCustomBlockTypes(from name: String) {
@@ -127,6 +134,12 @@ struct NodeBlockAttributes {
         }
         if name == "grass_block" {
             blockType = .grassBlock
+        }
+        if name == "lantern" || name == "soul_lantern"{
+            blockType = .lantern
+        }
+        if name == "chain"{
+            blockType = .chain
         }
     }
     
@@ -197,6 +210,8 @@ struct NodeBlockAttributes {
             waterlogged = attributeValueString.boolValue
         case "snowy":
             snowy = attributeValueString.boolValue
+        case "hanging":
+            isHanging = attributeValueString.boolValue
         case "rotation":
             guard let rotationInt = Int(attributeValueString) else {
                 return

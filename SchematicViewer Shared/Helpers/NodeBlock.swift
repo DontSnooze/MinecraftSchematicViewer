@@ -23,29 +23,35 @@ struct NodeBlock {
         var block: SCNNode?
         
         switch attributes.blockType {
-        case .stairs:
-            block = SCNNode.stairsBlockFromName(blockName: name, halfType: attributes.halfType)
-        case .slab:
-            block = SCNNode.slabBlockFromName(blockName: name)
+        case .block:
+            block = SCNNode.blockFromName(blockName: name)
+        case .chain:
+            block = SCNNode.chainBlockFromName(blockName: name)
+        case .chest:
+            block = SCNNode.chestBlock()
+        case .fence:
+            block = SCNNode.fenceBlockFromName(blockName: name, directions: attributes.directions)
+        case .glassPane:
+            block = SCNNode.glassPaneBlockFromName(blockName: name, directions: attributes.directions)
+        case .grassBlock:
+            block = SCNNode.grassBlock()
         case .hopper:
             let isFacingDown = attributes.facing == .down
             block = SCNNode.hopperBlockFromName(blockName: name, isFacingDown: isFacingDown)
+        case .lantern:
+            block = SCNNode.lanternBlockFromName(blockName: name, isHanging: attributes.isHanging)
         case .sign:
             block = SCNNode.signBlockFromName(blockName: name)
+        case .slab:
+            block = SCNNode.slabBlockFromName(blockName: name)
+        case .stairs:
+            block = SCNNode.stairsBlockFromName(blockName: name, halfType: attributes.halfType)
         case .wallSign:
             block = SCNNode.signBlockFromName(blockName: name, isWallSign: true)
-        case .block:
-            block = SCNNode.blockFromName(blockName: name)
-        case .glassPane:
-            block = SCNNode.glassPaneBlockFromName(blockName: name, directions: attributes.directions)
-        case .wood:
-            block = SCNNode.woodBlockFromName(blockName: name)
         case .water:
             block = SCNNode.waterBlock()
-        case .chest:
-            block = SCNNode.chestBlock()
-        case .grassBlock:
-            block = SCNNode.grassBlock()
+        case .wood:
+            block = SCNNode.woodBlockFromName(blockName: name)
         }
         
         if let block = block {
@@ -69,6 +75,8 @@ struct NodeBlock {
             applyDirectionAttribute(to: block)
         case .block:
             applyDirectionAttribute(to: block)
+        case .lantern:
+            applyLanternAttributes(to: block, isHanging: attributes.isHanging)
         default:
             break
         }

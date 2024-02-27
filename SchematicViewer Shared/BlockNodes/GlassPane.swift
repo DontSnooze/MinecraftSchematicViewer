@@ -33,7 +33,7 @@ extension SCNNode {
         if directionSet == northSet {
             return fullGlassPaneBlockNode(facing: .west, image: image)
         } else if directionSet == westSet {
-            return fullGlassPaneBlockNode(facing: .west, image: image)
+            return fullGlassPaneBlockNode(facing: .north, image: image)
         }
         
         guard let scene = SCNScene(named: "Art.scnassets/glass_pane.scn") else {

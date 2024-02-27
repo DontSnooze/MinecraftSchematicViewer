@@ -5,7 +5,6 @@
 //  Created by Amos Todman on 2/19/24.
 //
 
-import Foundation
 import SceneKit
 
 extension NodeBlock {
