@@ -28,6 +28,15 @@
       }
     },
     {
+      "identity" : "swift-nbt",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/amostodman/swift-nbt",
+      "state" : {
+        "branch" : "master",
+        "revision" : "f424a820712e3734f044373af4df5e9ffc384a3e"
+      }
+    },
+    {
       "identity" : "swift-nio",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio.git",

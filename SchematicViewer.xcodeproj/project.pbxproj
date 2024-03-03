@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -526,7 +526,7 @@
 			);
 			mainGroup = 9C7483062B75E0C700FAFD7C;
 			packageReferences = (
-				9CED80462B7E77530033ADBF /* XCLocalSwiftPackageReference "../swift-nbt" */,
+				9CC11CC32B94C3AD000C2D48 /* XCRemoteSwiftPackageReference "swift-nbt" */,
 			);
 			productRefGroup = 9C7483142B75E0CA00FAFD7C /* Products */;
 			projectDirPath = "";
@@ -1117,12 +1117,16 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		9CED80462B7E77530033ADBF /* XCLocalSwiftPackageReference "../swift-nbt" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "../swift-nbt";
+/* Begin XCRemoteSwiftPackageReference section */
+		9CC11CC32B94C3AD000C2D48 /* XCRemoteSwiftPackageReference "swift-nbt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/amostodman/swift-nbt";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		9CED80492B7E79390033ADBF /* SwiftNBT */ = {
