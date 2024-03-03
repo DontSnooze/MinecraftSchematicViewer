@@ -24,7 +24,7 @@ extension SCNNode {
         return block
     }
     
-    static func woodBlockNode(image: UIImage?) -> SCNNode {
+    private static func woodBlockNode(image: UIImage?) -> SCNNode {
         return repeatedImageBlock(image: image)
     }
 }

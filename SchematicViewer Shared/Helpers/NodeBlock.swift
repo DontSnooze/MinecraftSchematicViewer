@@ -33,6 +33,8 @@ struct NodeBlock {
             block = SCNNode.chestBlock()
         case .fence:
             block = SCNNode.fenceBlockFromName(blockName: name, directions: attributes.directions)
+        case .fenceGate:
+            block = SCNNode.fenceGateNodeFromName(blockName: name, attributes: attributes)
         case .glassPane:
             block = SCNNode.glassPaneBlockFromName(blockName: name, directions: attributes.directions)
         case .grassBlock:
@@ -46,6 +48,8 @@ struct NodeBlock {
             block = SCNNode.leverNodeFromName(blockName: name)
         case .rail:
             block = SCNNode.railBlockFromName(blockName: name, isPowered: attributes.isPowered, shape: attributes.shape)
+        case .redstone:
+            block = SCNNode.redstoneDustDotNodeFromName(blockName: name, attributes: attributes)
         case .sign:
             block = SCNNode.signBlockFromName(blockName: name)
         case .slab:

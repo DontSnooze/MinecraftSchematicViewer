@@ -18,7 +18,7 @@ extension SCNNode {
         return block
     }
     
-    static func lanternBlockNode(isSoulLantern: Bool = false, isHanging: Bool = false) -> SCNNode {
+    private static func lanternBlockNode(isSoulLantern: Bool = false, isHanging: Bool = false) -> SCNNode {
         
         guard let scene = SCNScene(named: "Art.scnassets/lantern.scn") else {
             fatalError("lantern scene is nil")

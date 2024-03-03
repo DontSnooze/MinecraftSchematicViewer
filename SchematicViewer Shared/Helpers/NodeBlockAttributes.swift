@@ -14,12 +14,14 @@ struct NodeBlockAttributes {
         case chain
         case chest
         case fence
+        case fenceGate
         case glassPane
         case grassBlock
         case hopper
         case lantern
         case lever
         case rail
+        case redstone
         case sign
         case slab
         case stairs
@@ -105,6 +107,7 @@ struct NodeBlockAttributes {
     var waterlogged = false
     var snowy = false
     var isHanging = false
+    var isOpen = false
     var rotation = -1
     var level = -1
     var directions = [Direction]()
@@ -145,6 +148,9 @@ struct NodeBlockAttributes {
         if name.hasSuffix("_fence") {
             blockType = .fence
         }
+        if name.hasSuffix("_fence_gate") {
+            blockType = .fenceGate
+        }
         if name.hasSuffix("_rail") || name == "rail" {
             blockType = .rail
         }
@@ -171,6 +177,9 @@ struct NodeBlockAttributes {
         }
         if name == "lever"{
             blockType = .lever
+        }
+        if name == "redstone_wire"{
+            blockType = .redstone
         }
     }
     
@@ -232,6 +241,8 @@ struct NodeBlockAttributes {
             if north {
                 directions.append(.north)
             }
+        case "open":
+            isOpen = attributeValueString.boolValue
         case "powered":
             isPowered = attributeValueString.boolValue
         case "rotation":

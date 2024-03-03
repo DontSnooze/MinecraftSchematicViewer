@@ -16,7 +16,7 @@ extension SCNNode {
         return block
     }
     
-    static func hopperBlockNode(isFacingDown: Bool = false) -> SCNNode {
+    private static func hopperBlockNode(isFacingDown: Bool = false) -> SCNNode {
         guard let scene = SCNScene(named: "Art.scnassets/hopper.scn") else {
             fatalError("scene is nil")
         }

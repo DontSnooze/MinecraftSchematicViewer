@@ -30,11 +30,11 @@ extension SCNNode {
         return block
     }
     
-    static func slabBlockNode(image: UIImage?) -> SCNNode {
+    private static func slabBlockNode(image: UIImage?) -> SCNNode {
         return repeatedImageBlock(image: image)
     }
     
-    static func smoothStoneSlabBlockNode() -> SCNNode {
+    private static func smoothStoneSlabBlockNode() -> SCNNode {
         let sideImage = UIImage(named: "smooth_stone_slab_side")
         let topImage = UIImage(named: "smooth_stone")
         

@@ -22,7 +22,7 @@ extension SCNNode {
         return block
     }
     
-    static func signBlockNode(image: UIImage?, isWallSign: Bool = false) -> SCNNode {
+    private static func signBlockNode(image: UIImage?, isWallSign: Bool = false) -> SCNNode {
         guard let scene = SCNScene(named: "Art.scnassets/sign.scn") else {
             fatalError("scene is nil")
         }

@@ -23,7 +23,7 @@ extension SCNNode {
         return block
     }
     
-    static func glassPaneBlockNode(directions: [NodeBlockAttributes.Direction] = [], image: UIImage?) -> SCNNode {
+    private static func glassPaneBlockNode(directions: [NodeBlockAttributes.Direction] = [], image: UIImage?) -> SCNNode {
         
         // check for full length panes
         let westSet = Set([NodeBlockAttributes.Direction.east, NodeBlockAttributes.Direction.west])
@@ -102,7 +102,7 @@ extension SCNNode {
         return blockNode
     }
     
-    static func fullGlassPaneBlockNode(facing: NodeBlockAttributes.Direction, image: UIImage?) -> SCNNode {
+    private static func fullGlassPaneBlockNode(facing: NodeBlockAttributes.Direction, image: UIImage?) -> SCNNode {
         guard let scene = SCNScene(named: "Art.scnassets/glass_pane.scn") else {
             fatalError("scene is nil")
         }

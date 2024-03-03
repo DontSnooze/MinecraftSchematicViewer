@@ -27,7 +27,7 @@ extension SCNNode {
         return block
     }
     
-    static func stairsBlock(image: UIImage?) -> SCNNode {
+    private static func stairsBlock(image: UIImage?) -> SCNNode {
         guard let stairsScene = SCNScene(named: "Art.scnassets/stairs.scn") else {
             fatalError("scene is nil")
         }

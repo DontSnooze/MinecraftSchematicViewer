@@ -40,7 +40,7 @@ extension SCNNode {
         return block
     }
     
-    static func railBlock(image: UIImage?) -> SCNNode {
+    private static func railBlock(image: UIImage?) -> SCNNode {
         guard let railScene = SCNScene(named: "Art.scnassets/rail.scn") else {
             fatalError("rail scene is nil")
         }

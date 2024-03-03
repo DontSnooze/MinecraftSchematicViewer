@@ -17,7 +17,7 @@ extension SCNNode {
         return block
     }
     
-    static func chainBlockNode() -> SCNNode {
+    private static func chainBlockNode() -> SCNNode {
         
         guard let scene = SCNScene(named: "Art.scnassets/chain.scn") else {
             fatalError("chain scene is nil")

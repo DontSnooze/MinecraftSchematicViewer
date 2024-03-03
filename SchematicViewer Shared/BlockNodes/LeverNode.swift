@@ -4,6 +4,7 @@
 //
 //  Created by Amos Todman on 3/3/24.
 //
+
 import SceneKit
 
 extension SCNNode {
@@ -16,7 +17,7 @@ extension SCNNode {
         return block
     }
     
-    static func leverNode() -> SCNNode {
+    private static func leverNode() -> SCNNode {
         
         guard let scene = SCNScene(named: "Art.scnassets/lever.scn") else {
             fatalError("lever scene is nil")

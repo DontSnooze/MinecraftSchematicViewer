@@ -23,7 +23,7 @@ extension SCNNode {
         return block
     }
     
-    static func fenceBlockNode(directions: [NodeBlockAttributes.Direction] = [], image: UIImage?) -> SCNNode {
+    private static func fenceBlockNode(directions: [NodeBlockAttributes.Direction] = [], image: UIImage?) -> SCNNode {
         
         guard let scene = SCNScene(named: "Art.scnassets/fence.scn") else {
             fatalError("scene is nil")
