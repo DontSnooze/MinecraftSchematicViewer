@@ -13,6 +13,7 @@ struct NodeBlockAttributes {
         case button
         case chain
         case chest
+        case comparator
         case door
         case fence
         case fenceGate
@@ -23,6 +24,7 @@ struct NodeBlockAttributes {
         case lever
         case rail
         case redstone
+        case repeater
         case sign
         case slab
         case stairs
@@ -163,6 +165,9 @@ struct NodeBlockAttributes {
     }
     
     mutating func setupCustomBlockTypes(from name: String) {
+        if name == "comparator" {
+            blockType = .comparator
+        }
         if name == "hopper" {
             blockType = .hopper
         }
@@ -175,17 +180,20 @@ struct NodeBlockAttributes {
         if name == "grass_block" {
             blockType = .grassBlock
         }
-        if name == "lantern" || name == "soul_lantern"{
+        if name == "lantern" || name == "soul_lantern" {
             blockType = .lantern
         }
-        if name == "chain"{
+        if name == "chain" {
             blockType = .chain
         }
-        if name == "lever"{
+        if name == "lever" {
             blockType = .lever
         }
-        if name == "redstone_wire"{
+        if name == "redstone_wire" {
             blockType = .redstone
+        }
+        if name == "repeater" {
+            blockType = .repeater
         }
     }
     
