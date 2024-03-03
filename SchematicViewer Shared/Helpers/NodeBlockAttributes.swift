@@ -10,6 +10,7 @@ import SceneKit
 struct NodeBlockAttributes {
     enum BlockType: String {
         case block
+        case button
         case chain
         case chest
         case fence
@@ -17,6 +18,7 @@ struct NodeBlockAttributes {
         case grassBlock
         case hopper
         case lantern
+        case lever
         case rail
         case sign
         case slab
@@ -37,6 +39,13 @@ struct NodeBlockAttributes {
         case south
         case east
         case west
+        case none
+    }
+    
+    enum Face: String {
+        case floor
+        case wall
+        case ceiling
         case none
     }
     
@@ -80,6 +89,7 @@ struct NodeBlockAttributes {
     var blockType: BlockType = .block
     
     var axis: Axis = .none
+    var face: Face = .none
     var facing: Direction = .none
     var attachment: Attachment = .none
     var slabType: SlabType = .none
@@ -111,6 +121,9 @@ struct NodeBlockAttributes {
     }
     
     mutating func setupBlockNameAttributes(from blockName: String) {
+        if name.hasSuffix("_button") {
+            blockType = .button
+        }
         if name.hasSuffix("_stairs") {
             blockType = .stairs
         }
@@ -156,6 +169,9 @@ struct NodeBlockAttributes {
         if name == "chain"{
             blockType = .chain
         }
+        if name == "lever"{
+            blockType = .lever
+        }
     }
     
     mutating func setupAttributes(from string: String) {
@@ -189,6 +205,11 @@ struct NodeBlockAttributes {
             if east {
                 directions.append(.east)
             }
+        case "face":
+            guard let faceObject = Face(rawValue: attributeValueString) else {
+                return
+            }
+            face = faceObject
         case "facing":
             guard let direction = Direction(rawValue: attributeValueString) else {
                 return

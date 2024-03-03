@@ -1,0 +1,38 @@
+//
+//  SCNNode+ApplyAttributes.swift
+//  SchematicViewer
+//
+//  Created by Amos Todman on 3/3/24.
+//
+
+import SceneKit
+
+extension SCNNode {
+    func applyDirectionAttribute(attributes: NodeBlockAttributes) {
+        switch attributes.facing {
+        case .up:
+            let radial = GLKMathDegreesToRadians(90)
+            runAction(SCNAction.rotateBy(x: CGFloat(radial), y: 0, z: 0, duration: 0))
+        case .down:
+            guard attributes.blockType != .hopper else {
+                break
+            }
+            let radial = GLKMathDegreesToRadians(-90)
+            runAction(SCNAction.rotateBy(x: CGFloat(radial), y: 0, z: 0, duration: 0))
+        case .north:
+            // should default to facing north
+            break
+        case .south:
+            let radial = GLKMathDegreesToRadians(180)
+            runAction(SCNAction.rotateBy(x: 0, y: CGFloat(radial), z: 0, duration: 0))
+        case .east:
+            let radial = GLKMathDegreesToRadians(-90)
+            runAction(SCNAction.rotateBy(x: 0, y: CGFloat(radial), z: 0, duration: 0))
+        case .west:
+            let radial = GLKMathDegreesToRadians(90)
+            runAction(SCNAction.rotateBy(x: 0, y: CGFloat(radial), z: 0, duration: 0))
+        case .none:
+            break
+        }
+    }
+}

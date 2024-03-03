@@ -25,6 +25,8 @@ struct NodeBlock {
         switch attributes.blockType {
         case .block:
             block = SCNNode.blockFromName(blockName: name)
+        case .button:
+            block = SCNNode.buttonBlockFromName(blockName: name, attributes: attributes)
         case .chain:
             block = SCNNode.chainBlockFromName(blockName: name)
         case .chest:
@@ -40,6 +42,8 @@ struct NodeBlock {
             block = SCNNode.hopperBlockFromName(blockName: name, isFacingDown: isFacingDown)
         case .lantern:
             block = SCNNode.lanternBlockFromName(blockName: name, isHanging: attributes.isHanging)
+        case .lever:
+            block = SCNNode.leverNodeFromName(blockName: name)
         case .rail:
             block = SCNNode.railBlockFromName(blockName: name, isPowered: attributes.isPowered, shape: attributes.shape)
         case .sign:
@@ -71,6 +75,8 @@ struct NodeBlock {
             applyDirectionAttribute(to: block)
         case .lantern:
             applyLanternAttributes(to: block, isHanging: attributes.isHanging)
+        case .lever:
+            applyLeverAttributes(to: block)
         case .rail:
             applyRailAttributes(to: block)
         case .slab:

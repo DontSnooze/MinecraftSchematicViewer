@@ -122,6 +122,22 @@
 		9CBA396E2B8E59700005E587 /* redstone_and_doors.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA396D2B8E59700005E587 /* redstone_and_doors.schem */; };
 		9CBA396F2B8E59700005E587 /* redstone_and_doors.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA396D2B8E59700005E587 /* redstone_and_doors.schem */; };
 		9CBA39702B8E59700005E587 /* redstone_and_doors.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA396D2B8E59700005E587 /* redstone_and_doors.schem */; };
+		9CC11CC52B94C979000C2D48 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CC11CC42B94C979000C2D48 /* Media.xcassets */; };
+		9CC11CC82B94E4BE000C2D48 /* LeverNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC11CC72B94E4BE000C2D48 /* LeverNode.swift */; };
+		9CC11CC92B94E4BE000C2D48 /* LeverNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC11CC72B94E4BE000C2D48 /* LeverNode.swift */; };
+		9CC11CCA2B94E4BE000C2D48 /* LeverNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC11CC72B94E4BE000C2D48 /* LeverNode.swift */; };
+		9CC11CCC2B94E99B000C2D48 /* NodeBlock+Lever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC11CCB2B94E99B000C2D48 /* NodeBlock+Lever.swift */; };
+		9CC11CCD2B94E99B000C2D48 /* NodeBlock+Lever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC11CCB2B94E99B000C2D48 /* NodeBlock+Lever.swift */; };
+		9CC11CCE2B94E99B000C2D48 /* NodeBlock+Lever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC11CCB2B94E99B000C2D48 /* NodeBlock+Lever.swift */; };
+		9CC11CD02B94EEC2000C2D48 /* ButtonBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC11CCF2B94EEC2000C2D48 /* ButtonBlock.swift */; };
+		9CC11CD12B94EEC2000C2D48 /* ButtonBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC11CCF2B94EEC2000C2D48 /* ButtonBlock.swift */; };
+		9CC11CD22B94EEC2000C2D48 /* ButtonBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC11CCF2B94EEC2000C2D48 /* ButtonBlock.swift */; };
+		9CC11CD42B94EFF6000C2D48 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC11CD32B94EFF6000C2D48 /* ButtonNode.swift */; };
+		9CC11CD52B94EFF6000C2D48 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC11CD32B94EFF6000C2D48 /* ButtonNode.swift */; };
+		9CC11CD62B94EFF6000C2D48 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC11CD32B94EFF6000C2D48 /* ButtonNode.swift */; };
+		9CC11CD82B94F3BE000C2D48 /* SCNNode+ApplyAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC11CD72B94F3BE000C2D48 /* SCNNode+ApplyAttributes.swift */; };
+		9CC11CD92B94F3BE000C2D48 /* SCNNode+ApplyAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC11CD72B94F3BE000C2D48 /* SCNNode+ApplyAttributes.swift */; };
+		9CC11CDA2B94F3BE000C2D48 /* SCNNode+ApplyAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC11CD72B94F3BE000C2D48 /* SCNNode+ApplyAttributes.swift */; };
 		9CD32BD62B81CAF400A069EC /* BlocksMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD52B81CAF400A069EC /* BlocksMenuView.swift */; };
 		9CD32BD82B81CB6000A069EC /* BlocksMenuView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD72B81CB6000A069EC /* BlocksMenuView+ViewModel.swift */; };
 		9CD32BDA2B81CBCA00A069EC /* BlocksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BD92B81CBCA00A069EC /* BlocksData.swift */; };
@@ -203,6 +219,13 @@
 		9CBA39612B8E198B0005E587 /* RailNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailNode.swift; sourceTree = "<group>"; };
 		9CBA39652B8E1B3B0005E587 /* NodeBlock+Rail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NodeBlock+Rail.swift"; sourceTree = "<group>"; };
 		9CBA396D2B8E59700005E587 /* redstone_and_doors.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = redstone_and_doors.schem; sourceTree = "<group>"; };
+		9CC11CC42B94C979000C2D48 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		9CC11CC62B94D085000C2D48 /* SchematicViewer-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SchematicViewer-iOS-Info.plist"; sourceTree = SOURCE_ROOT; };
+		9CC11CC72B94E4BE000C2D48 /* LeverNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeverNode.swift; sourceTree = "<group>"; };
+		9CC11CCB2B94E99B000C2D48 /* NodeBlock+Lever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NodeBlock+Lever.swift"; sourceTree = "<group>"; };
+		9CC11CCF2B94EEC2000C2D48 /* ButtonBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBlock.swift; sourceTree = "<group>"; };
+		9CC11CD32B94EFF6000C2D48 /* ButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
+		9CC11CD72B94F3BE000C2D48 /* SCNNode+ApplyAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNNode+ApplyAttributes.swift"; sourceTree = "<group>"; };
 		9CD32BD52B81CAF400A069EC /* BlocksMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksMenuView.swift; sourceTree = "<group>"; };
 		9CD32BD72B81CB6000A069EC /* BlocksMenuView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlocksMenuView+ViewModel.swift"; sourceTree = "<group>"; };
 		9CD32BD92B81CBCA00A069EC /* BlocksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksData.swift; sourceTree = "<group>"; };
@@ -244,10 +267,13 @@
 			isa = PBXGroup;
 			children = (
 				9C172E942B7FC88C005FC710 /* GrassBlock.swift */,
+				9CC11CD32B94EFF6000C2D48 /* ButtonNode.swift */,
+				9CC11CD72B94F3BE000C2D48 /* SCNNode+ApplyAttributes.swift */,
 				9C172E9B2B7FCA28005FC710 /* ChestBlock.swift */,
 				9C172E992B7FCA28005FC710 /* WaterBlock.swift */,
 				9C946D802B83A54F00521690 /* StairsNode.swift */,
 				9C946D862B83A9B600521690 /* SignNode.swift */,
+				9CC11CCF2B94EEC2000C2D48 /* ButtonBlock.swift */,
 				9C946D8A2B83CB7B00521690 /* HopperNode.swift */,
 				9CBA39412B8D847E0005E587 /* GlassPane.swift */,
 				9CBA39452B8DB04F0005E587 /* SlabNode.swift */,
@@ -256,6 +282,7 @@
 				9CBA39552B8E06350005E587 /* LanternNode.swift */,
 				9CBA395D2B8E149B0005E587 /* ChainNode.swift */,
 				9CBA39612B8E198B0005E587 /* RailNode.swift */,
+				9CC11CC72B94E4BE000C2D48 /* LeverNode.swift */,
 				9C946D822B83A7A100521690 /* GenericBlockNode.swift */,
 			);
 			path = BlockNodes;
@@ -330,6 +357,7 @@
 		9C7483152B75E0CA00FAFD7C /* SchematicViewer iOS */ = {
 			isa = PBXGroup;
 			children = (
+				9CC11CC62B94D085000C2D48 /* SchematicViewer-iOS-Info.plist */,
 				9C946D962B84C87E00521690 /* SchematicViewer iOS.entitlements */,
 				9CD32BEC2B82413200A069EC /* GameViewController */,
 				9CD32BE72B823FAF00A069EC /* Views */,
@@ -338,6 +366,7 @@
 				9C7483162B75E0CA00FAFD7C /* AppDelegate.swift */,
 				9C74831A2B75E0CA00FAFD7C /* Main.storyboard */,
 				9C74831D2B75E0CA00FAFD7C /* LaunchScreen.storyboard */,
+				9CC11CC42B94C979000C2D48 /* Media.xcassets */,
 			);
 			path = "SchematicViewer iOS";
 			sourceTree = "<group>";
@@ -405,6 +434,7 @@
 				9C946D7D2B833FC300521690 /* NodeBlock+Stairs.swift */,
 				9CBA39592B8E0E140005E587 /* NodeBlock+Lantern.swift */,
 				9CBA39652B8E1B3B0005E587 /* NodeBlock+Rail.swift */,
+				9CC11CCB2B94E99B000C2D48 /* NodeBlock+Lever.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -547,6 +577,7 @@
 				9CBA393E2B86E8920005E587 /* futHouse9.schem in Resources */,
 				9C74831C2B75E0CA00FAFD7C /* Main.storyboard in Resources */,
 				9CBA396E2B8E59700005E587 /* redstone_and_doors.schem in Resources */,
+				9CC11CC52B94C979000C2D48 /* Media.xcassets in Resources */,
 				9C946D792B829F2400521690 /* stairs_n_w_s_e_upsdwn.schem in Resources */,
 				9C946D752B829E8D00521690 /* hopper_s_e_n_w_dwn.schem in Resources */,
 				9C946D6D2B826E2400521690 /* test1.schem in Resources */,
@@ -639,11 +670,13 @@
 				9C946D932B84AF6600521690 /* GameViewController+FileImport.swift in Sources */,
 				9CD32BE62B823AF200A069EC /* GameViewController+MenuOverlayDelegate.swift in Sources */,
 				9C946D832B83A7A100521690 /* GenericBlockNode.swift in Sources */,
+				9CC11CD42B94EFF6000C2D48 /* ButtonNode.swift in Sources */,
 				9CBA394A2B8DD10D0005E587 /* WoodNode.swift in Sources */,
 				9CD32BD82B81CB6000A069EC /* BlocksMenuView+ViewModel.swift in Sources */,
 				9CD32BD62B81CAF400A069EC /* BlocksMenuView.swift in Sources */,
 				9C946D7C2B833A0000521690 /* NodeBlock+Slab.swift in Sources */,
 				9CD32BDA2B81CBCA00A069EC /* BlocksData.swift in Sources */,
+				9CC11CCC2B94E99B000C2D48 /* NodeBlock+Lever.swift in Sources */,
 				9CBA394E2B8DD4F50005E587 /* NodeBlockAttributes.swift in Sources */,
 				9CD32BDE2B81E73E00A069EC /* MapLevelsMenuView.swift in Sources */,
 				9C172EA62B7FCA28005FC710 /* ChestBlock.swift in Sources */,
@@ -658,11 +691,14 @@
 				9C172E952B7FC88C005FC710 /* GrassBlock.swift in Sources */,
 				9C172EA02B7FCA28005FC710 /* WaterBlock.swift in Sources */,
 				9CBA395E2B8E149B0005E587 /* ChainNode.swift in Sources */,
+				9CC11CC82B94E4BE000C2D48 /* LeverNode.swift in Sources */,
 				9C946D7E2B833FC300521690 /* NodeBlock+Stairs.swift in Sources */,
 				9C946D872B83A9B600521690 /* SignNode.swift in Sources */,
 				9CBA39422B8D847E0005E587 /* GlassPane.swift in Sources */,
 				9C172EB52B7FF1CC005FC710 /* VirtualController+LeftThumbStick.swift in Sources */,
 				9C172EB12B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift in Sources */,
+				9CC11CD82B94F3BE000C2D48 /* SCNNode+ApplyAttributes.swift in Sources */,
+				9CC11CD02B94EEC2000C2D48 /* ButtonBlock.swift in Sources */,
 				9CD32BE22B81F96D00A069EC /* GameViewController+MapLevelsMenuDelegate.swift in Sources */,
 				9CBA39522B8DEED70005E587 /* FenceNode.swift in Sources */,
 				9C3298BC2B7F985F00A75C29 /* NBTParser+NBTNodeHelper.swift in Sources */,
@@ -674,16 +710,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CC11CCD2B94E99B000C2D48 /* NodeBlock+Lever.swift in Sources */,
 				9C946D882B83A9B600521690 /* SignNode.swift in Sources */,
 				9CBA39632B8E198B0005E587 /* RailNode.swift in Sources */,
 				9C172E8D2B7F9D8B005FC710 /* NBTParser+BlockNames.swift in Sources */,
 				9CBA39572B8E06350005E587 /* LanternNode.swift in Sources */,
+				9CC11CD52B94EFF6000C2D48 /* ButtonNode.swift in Sources */,
 				9C3298C12B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift in Sources */,
 				9CBA39672B8E1B3B0005E587 /* NodeBlock+Rail.swift in Sources */,
 				9C946D8C2B83CB7B00521690 /* HopperNode.swift in Sources */,
 				9CBA394B2B8DD10D0005E587 /* WoodNode.swift in Sources */,
 				9C1C4D942B7ABEE300C1E1C4 /* SceneBlocksHelper.swift in Sources */,
 				9C946D702B829ABD00521690 /* NodeBlock.swift in Sources */,
+				9CC11CC92B94E4BE000C2D48 /* LeverNode.swift in Sources */,
 				9CED803D2B7E62FA0033ADBF /* NBTParser.swift in Sources */,
 				9CD32BEA2B82408100A069EC /* MenuOverlay.swift in Sources */,
 				9CBA395B2B8E0E140005E587 /* NodeBlock+Lantern.swift in Sources */,
@@ -697,10 +736,12 @@
 				9C946D842B83A7A400521690 /* GenericBlockNode.swift in Sources */,
 				9CBA395F2B8E149B0005E587 /* ChainNode.swift in Sources */,
 				9C74833F2B75E0CA00FAFD7C /* GameSceneController.swift in Sources */,
+				9CC11CD92B94F3BE000C2D48 /* SCNNode+ApplyAttributes.swift in Sources */,
 				9C7483272B75E0CA00FAFD7C /* AppDelegate.swift in Sources */,
 				9C172E962B7FC88C005FC710 /* GrassBlock.swift in Sources */,
 				9C172EA12B7FCA28005FC710 /* WaterBlock.swift in Sources */,
 				9C3298BD2B7F985F00A75C29 /* NBTParser+NBTNodeHelper.swift in Sources */,
+				9CC11CD12B94EEC2000C2D48 /* ButtonBlock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,16 +749,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CC11CCE2B94E99B000C2D48 /* NodeBlock+Lever.swift in Sources */,
 				9C946D892B83A9B600521690 /* SignNode.swift in Sources */,
 				9CBA39642B8E198B0005E587 /* RailNode.swift in Sources */,
 				9C172E8E2B7F9D8B005FC710 /* NBTParser+BlockNames.swift in Sources */,
 				9CBA39582B8E06350005E587 /* LanternNode.swift in Sources */,
+				9CC11CD62B94EFF6000C2D48 /* ButtonNode.swift in Sources */,
 				9C3298C22B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift in Sources */,
 				9CBA39682B8E1B3B0005E587 /* NodeBlock+Rail.swift in Sources */,
 				9C946D8D2B83CB7B00521690 /* HopperNode.swift in Sources */,
 				9CBA394C2B8DD10D0005E587 /* WoodNode.swift in Sources */,
 				9C1C4D952B7ABEE300C1E1C4 /* SceneBlocksHelper.swift in Sources */,
 				9C946D712B829ABD00521690 /* NodeBlock.swift in Sources */,
+				9CC11CCA2B94E4BE000C2D48 /* LeverNode.swift in Sources */,
 				9CED803E2B7E62FA0033ADBF /* NBTParser.swift in Sources */,
 				9CD32BEB2B82408100A069EC /* MenuOverlay.swift in Sources */,
 				9CBA395C2B8E0E140005E587 /* NodeBlock+Lantern.swift in Sources */,
@@ -731,10 +775,12 @@
 				9C946D852B83A7A400521690 /* GenericBlockNode.swift in Sources */,
 				9CBA39602B8E149B0005E587 /* ChainNode.swift in Sources */,
 				9C7483402B75E0CA00FAFD7C /* GameSceneController.swift in Sources */,
+				9CC11CDA2B94F3BE000C2D48 /* SCNNode+ApplyAttributes.swift in Sources */,
 				9C7483372B75E0CA00FAFD7C /* AppDelegate.swift in Sources */,
 				9C172E972B7FC88C005FC710 /* GrassBlock.swift in Sources */,
 				9C172EA22B7FCA28005FC710 /* WaterBlock.swift in Sources */,
 				9C3298BE2B7F985F00A75C29 /* NBTParser+NBTNodeHelper.swift in Sources */,
+				9CC11CD22B94EEC2000C2D48 /* ButtonBlock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -903,14 +949,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "SchematicViewer iOS/SchematicViewer iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3BT7A38RRX;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SchematicViewer-iOS-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Schematic Viewer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
@@ -935,14 +985,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "SchematicViewer iOS/SchematicViewer iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3BT7A38RRX;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SchematicViewer-iOS-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Schematic Viewer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
@@ -972,6 +1026,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3BT7A38RRX;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Schematic Viewer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
@@ -999,6 +1055,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3BT7A38RRX;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Schematic Viewer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
@@ -1030,6 +1088,8 @@
 				DEVELOPMENT_TEAM = 3BT7A38RRX;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Schematic Viewer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -1059,6 +1119,8 @@
 				DEVELOPMENT_TEAM = 3BT7A38RRX;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Schematic Viewer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
