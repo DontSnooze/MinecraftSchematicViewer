@@ -31,6 +31,8 @@ struct NodeBlock {
             block = SCNNode.chainBlockFromName(blockName: name)
         case .chest:
             block = SCNNode.chestBlock()
+        case .door:
+            block = SCNNode.doorNodeFromName(blockName: name, attributes: attributes)
         case .fence:
             block = SCNNode.fenceBlockFromName(blockName: name, directions: attributes.directions)
         case .fenceGate:

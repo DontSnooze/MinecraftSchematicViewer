@@ -13,6 +13,7 @@ struct NodeBlockAttributes {
         case button
         case chain
         case chest
+        case door
         case fence
         case fenceGate
         case glassPane
@@ -61,6 +62,8 @@ struct NodeBlockAttributes {
     enum HalfType: String {
         case bottom
         case top
+        case lower
+        case upper
         case none
     }
     
@@ -126,6 +129,9 @@ struct NodeBlockAttributes {
     mutating func setupBlockNameAttributes(from blockName: String) {
         if name.hasSuffix("_button") {
             blockType = .button
+        }
+        if name.hasSuffix("_door") {
+            blockType = .door
         }
         if name.hasSuffix("_stairs") {
             blockType = .stairs
