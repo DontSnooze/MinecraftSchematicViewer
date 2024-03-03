@@ -95,7 +95,8 @@ extension SCNNode {
             
         // chest
         case 54:
-            block = SCNNode.chestBlock()
+//            block = SCNNode.chestBlock()
+            break
         default:
             return block
             
@@ -116,9 +117,6 @@ extension SCNNode {
         case "grass_block":
             block = SCNNode.grassBlock()
             
-        // chest
-        case "chest":
-            block = SCNNode.chestBlock()
         default:
             return block
             

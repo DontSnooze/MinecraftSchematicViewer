@@ -30,7 +30,7 @@ struct NodeBlock {
         case .chain:
             block = SCNNode.chainBlockFromName(blockName: name)
         case .chest:
-            block = SCNNode.chestBlock()
+            block = SCNNode.chestBlockFromName(blockName: name, attributes: attributes)
         case .comparator:
             block = SCNNode.comparatorNodeFromName(blockName: name, attributes: attributes)
         case .door:

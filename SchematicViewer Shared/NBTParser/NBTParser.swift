@@ -11,7 +11,7 @@ import NIO
 import SwiftNBT
 
 class NBTParser {
-    static var isForDebug = true
+    static var isForDebug = false
     
     static func parseNbt(path: String) async -> NBT {
         let threadPool = NIOThreadPool(numberOfThreads: 2)
