@@ -51,11 +51,21 @@ extension GameViewController: UIDocumentPickerDelegate {
             url.stopAccessingSecurityScopedResource()
         }
         
-        gameSceneController.parseNbt(path: tempURL.path())
+        Task {
+            await handleDocumentPicked(path: tempURL.path())
+        }
     }
     
     public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
         print("didPickDocument: \(url)")
-        gameSceneController.parseNbt(path: url.path())
+        Task {
+            await handleDocumentPicked(path: url.path())
+        }
+    }
+    
+    func handleDocumentPicked(path: String) async {
+        showLoadingTreatment()
+        await gameSceneController.parseNbt(path: path)
+        showLoadingTreatment(false)
     }
 }

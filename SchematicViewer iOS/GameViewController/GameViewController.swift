@@ -41,6 +41,17 @@ class GameViewController: UIViewController {
         
         // setup menu
         setupMenuOverlay()
+        
+        // open an initial schematic
+        Task {
+//            let fileName = "hopper_s_e_n_w_dwn"
+//            let fileName = "stairs_n_w_s_e_upsdwn"
+//            let fileName = "sign_s_e_n_w_stand"
+//            let fileName = "chest_s_e_n_w_dble"
+            let fileName = "futHouse9"
+//            let fileName = "redstone_and_doors"
+            await loadBundleNBT(fileName: fileName)
+        }
     }
     
     func setupVirtualController() {
@@ -73,6 +84,16 @@ class GameViewController: UIViewController {
         
         let vc = UIHostingController(rootView: MapLevelsMenuView(viewModel: viewModel))
         present(vc, animated: true)
+    }
+    
+    func showLoadingTreatment(_ show: Bool = true) {
+        menuOverlay?.loadingImage?.isHidden = !show
+        menuOverlay?.importFileButton?.isHidden = show
+    }
+    
+    func loadBundleNBT(fileName: String = "hopper_s_e_n_w_dwn") async {
+        let path = Bundle.main.path(forResource: fileName, ofType: "schem") ?? ""
+        await handleDocumentPicked(path: path)
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {

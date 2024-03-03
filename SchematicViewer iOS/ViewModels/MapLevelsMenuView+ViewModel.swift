@@ -31,12 +31,26 @@ extension MapLevelsMenuView {
             return levelIsHidden(level: level) ? "Show" : "Hide"
         }
         
+        func imageForLevelVisibility(level: Int) -> String {
+            return levelIsHidden(level: level) ? "eye.slash" : "eye"
+        }
+        
         func showAllLevels() {
             hiddenLevels.removeAll()
         }
         
         func hideAllLevels() {
             hiddenLevels = Array(0..<levelCount)
+        }
+        
+        func handleVisibilityPressed(level: Int) {
+            if levelIsHidden(level: level) {
+                hiddenLevels.removeAll { hiddenLevel in
+                    hiddenLevel == level
+                }
+            } else {
+                hiddenLevels.append(level)
+            }
         }
         
         func handleDonePressed() {

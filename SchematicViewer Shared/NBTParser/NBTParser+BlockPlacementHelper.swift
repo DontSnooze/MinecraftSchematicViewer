@@ -124,7 +124,7 @@ extension NBTParser {
         return blockLevelsArray
     }
     
-    static func addAllBlocks(nbt: NBT, scene: SCNScene, removinglevels: [Int] = []) -> [[SCNNode]] {
+    static func addAllBlocks(nbt: NBT, scene: SCNScene) -> [[SCNNode]] {
 
         let blockPaletteDictionary = blockDictionary(nbt: nbt)
         
@@ -163,12 +163,17 @@ extension NBTParser {
             
             let position = blockPosition(from: nbt, index: i)
             block.position = position
-            block.name = "[\(nodeBlock.paletteId)][\(nodeBlock.name)] \(nodeBlock.attributes.rawAttributesString)"
             
-            if !removinglevels.contains(currentLevel) {
-                scene.rootNode.addChildNode(block)
-                blockLevelArray.append(block)
+            var name = nodeBlock.name
+            
+            if isForDebug {
+                name = "[\(nodeBlock.paletteId)][\(nodeBlock.name)] \(nodeBlock.attributes.rawAttributesString)"
             }
+            
+            block.name = name
+            
+            scene.rootNode.addChildNode(block)
+            blockLevelArray.append(block)
             
             if i == currentPlaneCount - 1 {
                 blockLevelsArray.append(blockLevelArray)

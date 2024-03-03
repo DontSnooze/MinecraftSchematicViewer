@@ -13,7 +13,6 @@ protocol MenuOverlayDelegate: AnyObject {
     func mapLevelsButtonPressed()
     func overlayTouchesEnded(location: CGPoint)
     func importFileButtonPressed()
-    func testButtonPressed()
 }
 
 class MenuOverlay: SKScene {
@@ -21,7 +20,7 @@ class MenuOverlay: SKScene {
     var blockCountsButton: SKSpriteNode?
     var mapLevelsButton: SKSpriteNode?
     var importFileButton: SKSpriteNode?
-    var testButton: SKSpriteNode?
+    var loadingImage: SKSpriteNode?
     var menuOverlayDelegate: MenuOverlayDelegate?
     
     required init?(coder aDecoder: NSCoder) {
@@ -34,7 +33,7 @@ class MenuOverlay: SKScene {
         setupBlockCountsButton()
         setupMapLevelsButton()
         setupImportButton()
-        setupTestButton()
+        setupLoadingImage()
     }
     
     func setupHud() {
@@ -99,18 +98,22 @@ class MenuOverlay: SKScene {
         importFileButton = button
     }
     
-    func setupTestButton() {
-        guard let image = UIImage(systemName: "questionmark.app.fill") else {
+    func setupLoadingImage() {
+        // let imageName = "goforward"
+         let imageName = "slowmo"
+        guard let image = UIImage(systemName: imageName) else {
             return
         }
         let texture = SKTexture(image: image)
-        let button = SKSpriteNode(texture: texture)
-        button.position = CGPoint(x: size.width - 160, y: size.height - 40)
-        button.setScale(1.0)
-        button.name = "TestButton"
+        let imageNode = SKSpriteNode(texture: texture)
+        imageNode.position = CGPoint(x: size.width - 120, y: size.height - 40)
+        imageNode.setScale(1.0)
+        imageNode.name = "loadingImage"
         
-        self.addChild(button)
-        testButton = button
+        imageNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: -CGFloat.pi, duration: 2)), withKey: "rotate-loading-image")
+        imageNode.isHidden = true
+        self.addChild(imageNode)
+        loadingImage = imageNode
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -136,14 +139,6 @@ class MenuOverlay: SKScene {
             let button = importFileButton,
             button.contains(location) {
             menuOverlayDelegate?.importFileButtonPressed()
-            return
-        }
-        
-        if 
-            let button = testButton,
-            button.contains(location)
-        {
-            menuOverlayDelegate?.testButtonPressed()
             return
         }
         

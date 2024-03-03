@@ -46,11 +46,6 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
         super.init()
         
         sceneRenderer.delegate = self
-        
-//        if let ship = scene.rootNode.childNode(withName: "ship", recursively: true) {
-//            ship.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
-//        }
-        
         sceneRenderer.scene = scene
         
 //        let block = NBTParser.blockFromName(blockName: "stripped_oak_log")
@@ -62,20 +57,13 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
 //            return
 //        }
 //        scene.rootNode.addChildNode(block)
-        
-        NBTParser.parseNbt { nbt in
-            self.parsedNbt = nbt
-            self.handleParsedNbt(nbt: nbt)
-        }
     }
     
-    func parseNbt(path: String) {
+    func parseNbt(path: String) async {
         NBTParser.removeAllNodes(from: mapLevels)
         
-        NBTParser.parseNbt(path: path) { nbt in
-            self.parsedNbt = nbt
-            self.handleParsedNbt(nbt: nbt)
-        }
+        let nbt = await NBTParser.parseNbt(path: path)
+        await loadScene(with: nbt)
     }
 
     func highlightNodes(atPoint point: CGPoint) {
@@ -112,60 +100,69 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
     }
     
     func handleParsedNbt(nbt: NBT) {
-        mapLevels = NBTParser.addAllBlocks(nbt: nbt, scene: scene, removinglevels: [])
+        mapLevels = NBTParser.addAllBlocks(nbt: nbt, scene: scene)
     }
     
     func updateMap(removinglevels: [Int]) {
-        guard let nbt = parsedNbt else {
-            print("Could not updateMap. parsedNbt is nil")
-            return
+        let ignoredNodes = ["playerNode", "camera"]
+        for node in scene.rootNode.childNodes {
+            guard !ignoredNodes.contains(node.name ?? "") else {
+                continue
+            }
+            
+            let y = node.position.y
+            let shouldHide = removinglevels.contains(Int(y))
+            node.isHidden = shouldHide
         }
         
-        NBTParser.removeAllNodes(from: mapLevels)
         hiddenMapLevels = removinglevels
-        mapLevels = NBTParser.addAllBlocks(nbt: nbt, scene: scene, removinglevels: removinglevels)
     }
     
-    func startSceneLoadTest() async {
+    func loadScene(with nbt: NBT) async {
         // create scene adding all blocks
-        guard let (newScene, _) = await createScene() else {
+        guard let (newScene, levels) = await createScene(with: nbt) else {
             print("(newScene, levels) is nil")
             return
         }
         
-        //  save scene
-        saveScene(scene: newScene)
+        //  save scene to tmp dir
+        saveSceneToTempDirectory(scene: newScene)
         
-        // load
-        loadScene()
+        // load scene from tmp dir
+        loadSceneFromTempDirectory()
+        parsedNbt = nbt
+        mapLevels = levels
     }
     
-    func createScene() async -> (SCNScene, [[SCNNode]])? {
+    func createScene(with nbt: NBT) async -> (SCNScene, [[SCNNode]])? {
         guard let newScene = SCNScene(named: "Art.scnassets/world.scn") else {
             print("scene is nil")
             return nil
         }
         
-        guard let newNbt = await NBTParser.parseTestNbtFile() else {
-            print("could not parseTestNbt")
-            return nil
-        }
-        
-        let levels = NBTParser.addAllBlocks(nbt: newNbt, scene: newScene, removinglevels: [])
+        let levels = NBTParser.addAllBlocks(nbt: nbt, scene: newScene)
         
         return (newScene, levels)
     }
     
-    func saveScene(scene: SCNScene) {
-        let sceneToSave = scene
-        let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let url = documentsPath.appendingPathComponent( "test.scn")
-        sceneToSave.write(to: url, options: nil, delegate: nil, progressHandler: nil)
+    func saveSceneToTempDirectory(scene: SCNScene) {
+//        guard let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+//            print("Could not create documents path")
+//            return
+//        }
+//        
+//        let url = documentsPath.appendingPathComponent( "temp.scn")
+        let url = FileManager.default.temporaryDirectory.appendingPathComponent("temp.scn")
+        scene.write(to: url, options: nil, delegate: nil, progressHandler: nil)
     }
     
-    func loadScene() {
-        let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let url = documentsPath.appendingPathComponent( "test.scn")
+    func loadSceneFromTempDirectory() {
+        let url = FileManager.default.temporaryDirectory.appendingPathComponent("temp.scn")
+//        guard let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+//            print("Could not create documents path")
+//            return
+//        }
+//        let url = documentsPath.appendingPathComponent( "temp.scn")
         
 //        do {
 //            try SCNScene(url: url, options: nil) 
@@ -173,22 +170,23 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
 //            print(error.localizedDescription)
 //        }
         
-        guard let testScene = try? SCNScene(url: url, options: nil) else {
+        guard let newScene = try? SCNScene(url: url, options: nil) else {
             return
         }
         
-        guard let sceneCameraNode = testScene.rootNode.childNode(withName: "camera", recursively: true) else {
+        guard let sceneCameraNode = newScene.rootNode.childNode(withName: "camera", recursively: true) else {
             fatalError("camera node is nil")
         }
         
-        guard let scenePlayerNode = testScene.rootNode.childNode(withName: "player", recursively: true) else {
+        guard let scenePlayerNode = newScene.rootNode.childNode(withName: "player", recursively: true) else {
             fatalError("player node is nil")
         }
         
         playerNode = scenePlayerNode
         cameraNode = sceneCameraNode
-        sceneRenderer.scene = testScene
-        scene = testScene
+        sceneRenderer.scene = newScene
+        scene = newScene
+        hiddenMapLevels = []
     }
     
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {

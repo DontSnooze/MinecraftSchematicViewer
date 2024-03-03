@@ -17,13 +17,14 @@ extension GameViewController: MenuOverlayDelegate {
     }
     
     func importFileButtonPressed() {
-        showDocumentPicker()
-    }
-    
-    func testButtonPressed() {
-        Task {
-            await gameSceneController.startSceneLoadTest()
+        guard
+            let isHidden = menuOverlay?.loadingImage?.isHidden,
+            isHidden
+        else {
+            return
         }
+        
+        showDocumentPicker()
     }
     
     func overlayTouchesEnded(location: CGPoint) {

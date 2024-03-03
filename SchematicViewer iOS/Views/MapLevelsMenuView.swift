@@ -29,17 +29,18 @@ struct MapLevelsMenuView: View {
             
             List {
                 Section(header: Text("Map Levels")) {
-                    ForEach(Array(0..<viewModel.levelCount), id: \.self) { level in
+                    ForEach(Array(0..<viewModel.levelCount).reversed(), id: \.self) { level in
                         HStack {
                             Text("Level \(level)")
+                            
                             Spacer()
-                            Button(viewModel.textForLevelHideButton(level: level)) {
-                                if viewModel.levelIsHidden(level: level) {
-                                    viewModel.hiddenLevels.removeAll { hiddenLevel in
-                                        hiddenLevel == level
-                                    }
-                                } else {
-                                    viewModel.hiddenLevels.append(level)
+                            
+                            Button {
+                                viewModel.handleVisibilityPressed(level: level)
+                            } label: {
+                                HStack {
+                                    Image(systemName: viewModel.imageForLevelVisibility(level: level))
+                                    Text(viewModel.textForLevelHideButton(level: level))
                                 }
                             }
                             .buttonStyle(.borderless)
