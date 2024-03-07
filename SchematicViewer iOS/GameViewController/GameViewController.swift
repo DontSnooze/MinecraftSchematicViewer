@@ -46,8 +46,8 @@ class GameViewController: UIViewController {
 //            let fileName = "stairs_n_w_s_e_upsdwn"
 //            let fileName = "sign_s_e_n_w_stand"
 //            let fileName = "chest_s_e_n_w_dble"
-//            let fileName = "futHouse9"
-            let fileName = "redstone_and_doors"
+            let fileName = "futHouse9"
+//            let fileName = "redstone_and_doors"
             await loadBundleNBT(fileName: fileName)
         }
     }

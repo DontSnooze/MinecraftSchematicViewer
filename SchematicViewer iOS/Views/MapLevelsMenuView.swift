@@ -52,6 +52,8 @@ struct MapLevelsMenuView: View {
     }
 }
 
-#Preview {
-    MapLevelsMenuView(viewModel: MapLevelsMenuView.ViewModel(levelCount: 6, hiddenLevels: []))
+struct MapLevelsMenuView_Previews: PreviewProvider {
+    static var previews: some View {
+        MapLevelsMenuView(viewModel: MapLevelsMenuView.ViewModel(levelCount: 6, hiddenLevels: []))
+    }
 }

@@ -37,6 +37,8 @@ struct BlocksMenuView: View {
     }
 }
 
-#Preview {
-    BlocksMenuView(viewModel: BlocksMenuView.ViewModel(mapLevels: BlocksData.dummyMapLevels()))
+struct BlocksMenuView_Previews: PreviewProvider {
+    static var previews: some View {
+        BlocksMenuView(viewModel: BlocksMenuView.ViewModel(mapLevels: BlocksData.dummyMapLevels()))
+    }
 }
