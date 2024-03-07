@@ -73,7 +73,12 @@ platform :ios do
     #   team_id: "3BT7A38RRX"
     # )
 
-    upload_to_app_store
+    upload_to_testflight(
+      skip_screenshots: true,
+      skip_metadata: true,
+      force: true,
+      ipa: "./builds/SchematicViewer-iOS-#{short_hash}.ipa"
+    )
   end
 
   desc "Update App Screenshots"
