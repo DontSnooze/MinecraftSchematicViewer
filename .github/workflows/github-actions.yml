@@ -12,6 +12,9 @@ jobs:
       LKEY_PASS: ${{ secrets.LKEY_PASS }}
       MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION }}
       FASTLANE_KEYCHAIN_PASSWORD: ${{ secrets.FASTLANE_KEYCHAIN_PASSWORD }}
+      APP_STORE_API_KEY: ${{ secrets.APP_STORE_API_KEY }}
+      APP_STORE_API_ISSUER_ID: ${{ secrets.APP_STORE_API_ISSUER_ID }}
+      APP_STORE_API_KEY_ID: ${{ secrets.APP_STORE_API_KEY_ID }}
       FASTLANE_EXPLICIT_OPEN_SIMULATOR: "1"
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
