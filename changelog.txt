@@ -1,0 +1,15 @@
+Schematic Viewer is an app that helps with building Minecraft structures. 
+
+View schematics by layer and get block counts. No guessing about what block is behind/under/not visible. 
+
+Please try out the clip board button to test out the level viewer.
+
+If you have a .schem file downloaded please try the import file button.
+
+Try the charts button to get block counts of displayed levels.
+
+Transparent cyan colored blocks mean those blocks are in progress of being added but feel free to let me know about them.
+
+Let me know if anything is off and lookout for updates!
+
+Thank you!

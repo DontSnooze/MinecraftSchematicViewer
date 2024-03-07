@@ -48,7 +48,8 @@ class GameViewController: UIViewController {
 //            let fileName = "chest_s_e_n_w_dble"
             let fileName = "futHouse9"
 //            let fileName = "redstone_and_doors"
-            await loadBundleNBT(fileName: fileName)
+//            await loadBundleNBT(fileName: fileName)
+            await loadBundleNBTWithPrompt(fileName: fileName)
         }
     }
     
@@ -92,6 +93,11 @@ class GameViewController: UIViewController {
     func loadBundleNBT(fileName: String = "hopper_s_e_n_w_dwn") async {
         let path = Bundle.main.path(forResource: fileName, ofType: "schem") ?? ""
         await parseSchem(path: path)
+    }
+    
+    func loadBundleNBTWithPrompt(fileName: String = "hopper_s_e_n_w_dwn") async {
+        let path = Bundle.main.path(forResource: fileName, ofType: "schem") ?? ""
+        await handleDocumentPicked(path: path)
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {

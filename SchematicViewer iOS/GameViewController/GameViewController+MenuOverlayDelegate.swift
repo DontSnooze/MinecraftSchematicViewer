@@ -5,7 +5,7 @@
 //  Created by Amos Todman on 2/18/24.
 //
 
-import Foundation
+import UIKit
 
 extension GameViewController: MenuOverlayDelegate {
     func blockCountsButtonPressed() {
@@ -36,5 +36,13 @@ extension GameViewController: MenuOverlayDelegate {
             gameSceneController.highlightNodes(atPoint: location)
             menuOverlay?.hudLabel?.text = result.node.name ?? ""
         }
+    }
+    
+    func showOkAlert(title: String?, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        
+        present(alert, animated: true)
     }
 }

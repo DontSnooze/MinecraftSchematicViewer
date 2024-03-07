@@ -37,57 +37,63 @@ platform :ios do
   desc "Build App"
   lane :beta do
 
-    app_store_connect_api_key(
-      key_id: ENV["APP_STORE_API_KEY_ID"],
-      issuer_id: ENV["APP_STORE_API_ISSUER_ID"],
-      key_content: ENV["APP_STORE_API_KEY"],
-      in_house: false
-    )
+    changelog = File.read("changelog.txt")
+    puts changelog
 
-    current_version = get_version_number(
-      target: "SchematicViewer iOS" # replace with your main target, required if you have more than one non-test target
-    )
-
-    latest_build_number = latest_testflight_build_number(
-      version: current_version
-    )
-
-    increment_build_number(
-      build_number: (latest_build_number + 1),
-    )
-
-    match(
-      type: "appstore",
-      readonly: true,
-      git_basic_authorization: ENV["MATCH_GIT_BASIC_AUTHORIZATION"],
-      keychain_name: "fastlane.keychain",
-      keychain_password: ENV["FASTLANE_KEYCHAIN_PASSWORD"]
-    )
-
-    commit = last_git_commit
-    short_hash = commit[:abbreviated_commit_hash]
-
-    increment_build_number
-    
-    build_app(
-      scheme: "SchematicViewer iOS",
-      configuration: "Release",
-      output_directory: "./builds",
-      output_name: "SchematicViewer-iOS-#{short_hash}.ipa",
-      export_method: "app-store",
-      export_team_id: "3BT7A38RRX",
-      clean: true,
-      silent: true
-    )
-
-    # update_code_signing_settings(
-    #   use_automatic_signing: false,
-    #   team_id: "3BT7A38RRX"
+    # app_store_connect_api_key(
+    #   key_id: ENV["APP_STORE_API_KEY_ID"],
+    #   issuer_id: ENV["APP_STORE_API_ISSUER_ID"],
+    #   key_content: ENV["APP_STORE_API_KEY"],
+    #   in_house: false
     # )
 
-    upload_to_testflight(
-      ipa: "./builds/SchematicViewer-iOS-#{short_hash}.ipa"
-    )
+    # current_version = get_version_number(
+    #   target: "SchematicViewer iOS" # replace with your main target, required if you have more than one non-test target
+    # )
+
+    # latest_build_number = latest_testflight_build_number(
+    #   version: current_version
+    # )
+
+    # increment_build_number(
+    #   build_number: (latest_build_number + 1),
+    # )
+
+    # match(
+    #   type: "appstore",
+    #   readonly: true,
+    #   git_basic_authorization: ENV["MATCH_GIT_BASIC_AUTHORIZATION"],
+    #   keychain_name: "fastlane.keychain",
+    #   keychain_password: ENV["FASTLANE_KEYCHAIN_PASSWORD"]
+    # )
+
+    # commit = last_git_commit
+    # short_hash = commit[:abbreviated_commit_hash]
+
+    # increment_build_number
+    
+    # build_app(
+    #   scheme: "SchematicViewer iOS",
+    #   configuration: "Release",
+    #   output_directory: "./builds",
+    #   output_name: "SchematicViewer-iOS-#{short_hash}.ipa",
+    #   export_method: "app-store",
+    #   export_team_id: "3BT7A38RRX",
+    #   clean: true,
+    #   silent: true
+    # )
+
+    # changelog = File.read("")
+
+    # upload_to_testflight(
+    #   ipa: "./builds/SchematicViewer-iOS-#{short_hash}.ipa"
+    #   distribute_external: true,
+    #   skip_waiting_for_build_processing: false,
+    #   submit_beta_review: true,
+    #   groups: [
+    #     "Schematic Viewer Testers"
+    #   ]
+    # )
   end
 
   desc "Update App Screenshots"

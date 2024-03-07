@@ -66,11 +66,15 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
 //        scene.rootNode.addChildNode(block)
     }
     
-    func parseNbt(path: String) async {
+    func parseNbt(path: String) async -> Bool {
         NBTParser.removeAllNodes(from: mapLevels)
         
-        let nbt = await NBTParser.parseNbt(path: path)
+        guard let nbt = await NBTParser.parseNbt(path: path) else {
+            return false
+        }
+        
         await loadScene(with: nbt)
+        return true
     }
 
     func highlightNodes(atPoint point: CGPoint) {

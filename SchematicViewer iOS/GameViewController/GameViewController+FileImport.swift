@@ -70,6 +70,7 @@ extension GameViewController: UIDocumentPickerDelegate {
         else {
             let alert = UIAlertController(title: "Schematic file error", message: "Please upload a '.schem' file", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            present(alert, animated: true)
             return
         }
         
@@ -88,7 +89,11 @@ extension GameViewController: UIDocumentPickerDelegate {
     
     func parseSchem(path: String) async {
         self.showLoadingTreatment()
-        await gameSceneController.parseNbt(path: path)
+        let result = await gameSceneController.parseNbt(path: path)
         self.showLoadingTreatment(false)
+         
+        if !result {
+            showOkAlert(title: "FileError", message: "Could not parse schematic.")
+        }
     }
 }

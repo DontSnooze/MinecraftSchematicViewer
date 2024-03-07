@@ -13,7 +13,7 @@ import SwiftNBT
 class NBTParser {
     static var isForDebug = false
     
-    static func parseNbt(path: String) async -> NBT {
+    static func parseNbt(path: String) async -> NBT? {
         let threadPool = NIOThreadPool(numberOfThreads: 2)
         threadPool.start()
         let group = MultiThreadedEventLoopGroup(numberOfThreads: 2)
@@ -21,17 +21,19 @@ class NBTParser {
         
         let allocator = ByteBufferAllocator()
         guard let nbtfile = try? NBTFile(io: NonBlockingFileIO(threadPool: threadPool), bufferAllocator: allocator) else {
-            fatalError("Could not create NBTFile buffer")
+            print("Could not create NBTFile buffer")
+            return nil
         }
         
         guard let nbt = try? await nbtfile.read(path: path, eventLoop: eventLoop, gzip: true).get() else {
-            fatalError("could not create NBT from NBTFile")
+            print("could not create NBT from NBTFile")
+            return nil
         }
         
         return nbt
     }
     
-    static func parseBundleNbt(fileName: String = "redstone_and_doors") async -> NBT {
+    static func parseBundleNbt(fileName: String = "redstone_and_doors") async -> NBT? {
         let path = Bundle.main.path(forResource: fileName, ofType: "schem") ?? ""
         
         let nbt = await parseNbt(path: path)
