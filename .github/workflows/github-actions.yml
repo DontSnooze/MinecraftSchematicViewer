@@ -1,0 +1,63 @@
+name: Schematic Viewer GitHub Actions
+on:
+  workflow_dispatch:
+  push:
+jobs:
+  GitHub-Actions:
+    # runs-on: self-hosted
+    runs-on: macos-latest
+    environment: ios-development
+    env:
+      MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+      LKEY_PASS: ${{ secrets.LKEY_PASS }}
+      MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION }}
+      FASTLANE_KEYCHAIN_PASSWORD: ${{ secrets.FASTLANE_KEYCHAIN_PASSWORD }}
+      FASTLANE_EXPLICIT_OPEN_SIMULATOR: "1"
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - name: Setup
+        run: bundle install
+      - name: Create keychain
+        run: bundle exec fastlane keychain
+      # - name: Run unit tests
+      #   run: bundle exec fastlane unit_tests
+      # - name: Run UI tests
+      #   run: bundle exec fastlane ui_tests
+      # - name: Archive test results
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: test_results
+      #     path: |
+      #       test_results
+      #       ui_test_results
+      #     retention-days: 15
+      - name: Build and codesign
+        if: github.ref == 'refs/heads/main'
+        run: bundle exec fastlane beta
+      - name: Archive app build
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: |
+            builds/
+          retention-days: 15
+      # - name: Update app screenshots
+      #   run: bundle exec fastlane update_screenshots
+      # - name: Archive screenshots
+      #   uses: actions/upload-artifact@v4
+      #   if: always()
+      #   with:
+      #     name: screenshots
+      #     path: |
+      #       screenshots/
+      #     retention-days: 15
+      - run: echo "🍏 This job's status is ${{ job.status }}."
