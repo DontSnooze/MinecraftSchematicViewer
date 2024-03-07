@@ -73,7 +73,7 @@ platform :ios do
       scheme: "SchematicViewer iOS",
       configuration: "Release",
       output_directory: "./builds",
-      output_name: "SchematicViewer-iOS-#{short_hash}.ipa",
+      # output_name: "SchematicViewer-iOS-#{short_hash}.ipa",
       export_method: "app-store",
       export_team_id: "3BT7A38RRX",
       clean: true,
@@ -81,7 +81,7 @@ platform :ios do
     )
 
     upload_to_testflight(
-      ipa: "./builds/SchematicViewer-iOS-#{short_hash}.ipa",
+      # ipa: "./builds/SchematicViewer-iOS-#{short_hash}.ipa",
       distribute_external: true,
       skip_waiting_for_build_processing: false,
       submit_beta_review: true,
