@@ -23,7 +23,7 @@
 		9C172EA72B7FCA28005FC710 /* ChestBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172E9B2B7FCA28005FC710 /* ChestBlock.swift */; };
 		9C172EA82B7FCA28005FC710 /* ChestBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172E9B2B7FCA28005FC710 /* ChestBlock.swift */; };
 		9C172EAD2B7FD3B9005FC710 /* VirtualController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EAC2B7FD3B9005FC710 /* VirtualController.swift */; };
-		9C172EB12B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EB02B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift */; };
+		9C172EB12B7FD683005FC710 /* GameViewController+VirtualController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EB02B7FD683005FC710 /* GameViewController+VirtualController.swift */; };
 		9C1C4D932B7ABEE300C1E1C4 /* SceneBlocksHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1C4D922B7ABEE300C1E1C4 /* SceneBlocksHelper.swift */; };
 		9C1C4D942B7ABEE300C1E1C4 /* SceneBlocksHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1C4D922B7ABEE300C1E1C4 /* SceneBlocksHelper.swift */; };
 		9C1C4D952B7ABEE300C1E1C4 /* SceneBlocksHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1C4D922B7ABEE300C1E1C4 /* SceneBlocksHelper.swift */; };
@@ -171,7 +171,7 @@
 		9C172E992B7FCA28005FC710 /* WaterBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterBlock.swift; sourceTree = "<group>"; };
 		9C172E9B2B7FCA28005FC710 /* ChestBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChestBlock.swift; sourceTree = "<group>"; };
 		9C172EAC2B7FD3B9005FC710 /* VirtualController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualController.swift; sourceTree = "<group>"; };
-		9C172EB02B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController+VirtualControllerDelegate.swift"; sourceTree = "<group>"; };
+		9C172EB02B7FD683005FC710 /* GameViewController+VirtualController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController+VirtualController.swift"; sourceTree = "<group>"; };
 		9C1C4D922B7ABEE300C1E1C4 /* SceneBlocksHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneBlocksHelper.swift; sourceTree = "<group>"; };
 		9C3298AB2B7E7F6C00A75C29 /* hello_world.nbt */ = {isa = PBXFileReference; lastKnownFileType = file; path = hello_world.nbt; sourceTree = "<group>"; };
 		9C3298AD2B7E8C8600A75C29 /* AmosBedrockCowFarmV2.schematic */ = {isa = PBXFileReference; lastKnownFileType = file; path = AmosBedrockCowFarmV2.schematic; sourceTree = "<group>"; };
@@ -451,7 +451,7 @@
 			isa = PBXGroup;
 			children = (
 				9C7483182B75E0CA00FAFD7C /* GameViewController.swift */,
-				9C172EB02B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift */,
+				9C172EB02B7FD683005FC710 /* GameViewController+VirtualController.swift */,
 				9CD32BE12B81F96D00A069EC /* GameViewController+MapLevelsMenuDelegate.swift */,
 				9CD32BE52B823AF100A069EC /* GameViewController+MenuOverlayDelegate.swift */,
 				9C946D922B84AF6600521690 /* GameViewController+FileImport.swift */,
@@ -704,7 +704,7 @@
 				9C946D7E2B833FC300521690 /* NodeBlock+Stairs.swift in Sources */,
 				9C946D872B83A9B600521690 /* SignNode.swift in Sources */,
 				9CBA39422B8D847E0005E587 /* GlassPane.swift in Sources */,
-				9C172EB12B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift in Sources */,
+				9C172EB12B7FD683005FC710 /* GameViewController+VirtualController.swift in Sources */,
 				9CC11CD82B94F3BE000C2D48 /* SCNNode+ApplyAttributes.swift in Sources */,
 				9CC11CD02B94EEC2000C2D48 /* ButtonBlock.swift in Sources */,
 				9CD32BE22B81F96D00A069EC /* GameViewController+MapLevelsMenuDelegate.swift in Sources */,
