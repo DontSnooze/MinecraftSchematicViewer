@@ -7,12 +7,17 @@
 
 import SceneKit
 import SwiftNBT
+import GameController
 
 #if os(macOS)
     typealias SCNColor = NSColor
 #else
     typealias SCNColor = UIColor
 #endif
+
+protocol GameSceneControllerDelegate: AnyObject {
+    func frameWillRender()
+}
 
 class GameSceneController: NSObject, SCNSceneRendererDelegate {
     var scene: SCNScene
@@ -23,6 +28,8 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
     var mapLevels = [[SCNNode]]()
     var hiddenMapLevels = [Int]()
     var blockPalette = [Int: SCNNode]()
+    var virtualController: GCVirtualController?
+    var delegate: GameSceneControllerDelegate?
     
     init(sceneRenderer renderer: SCNSceneRenderer) {
         sceneRenderer = renderer
@@ -191,6 +198,6 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
         // Called before each frame is rendered
+        delegate?.frameWillRender()
     }
-
 }

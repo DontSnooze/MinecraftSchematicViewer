@@ -24,10 +24,6 @@
 		9C172EA82B7FCA28005FC710 /* ChestBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172E9B2B7FCA28005FC710 /* ChestBlock.swift */; };
 		9C172EAD2B7FD3B9005FC710 /* VirtualController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EAC2B7FD3B9005FC710 /* VirtualController.swift */; };
 		9C172EB12B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EB02B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift */; };
-		9C172EB52B7FF1CC005FC710 /* VirtualController+LeftThumbStick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EB42B7FF1CC005FC710 /* VirtualController+LeftThumbStick.swift */; };
-		9C172EB92B7FF320005FC710 /* VirtualController+RightThumbStick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EB82B7FF320005FC710 /* VirtualController+RightThumbStick.swift */; };
-		9C172EBD2B7FF3E7005FC710 /* VirtualController+ButtonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EBC2B7FF3E7005FC710 /* VirtualController+ButtonA.swift */; };
-		9C172EC12B7FF3F2005FC710 /* VirtualController+ButtonB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172EC02B7FF3F2005FC710 /* VirtualController+ButtonB.swift */; };
 		9C1C4D932B7ABEE300C1E1C4 /* SceneBlocksHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1C4D922B7ABEE300C1E1C4 /* SceneBlocksHelper.swift */; };
 		9C1C4D942B7ABEE300C1E1C4 /* SceneBlocksHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1C4D922B7ABEE300C1E1C4 /* SceneBlocksHelper.swift */; };
 		9C1C4D952B7ABEE300C1E1C4 /* SceneBlocksHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1C4D922B7ABEE300C1E1C4 /* SceneBlocksHelper.swift */; };
@@ -176,10 +172,6 @@
 		9C172E9B2B7FCA28005FC710 /* ChestBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChestBlock.swift; sourceTree = "<group>"; };
 		9C172EAC2B7FD3B9005FC710 /* VirtualController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualController.swift; sourceTree = "<group>"; };
 		9C172EB02B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController+VirtualControllerDelegate.swift"; sourceTree = "<group>"; };
-		9C172EB42B7FF1CC005FC710 /* VirtualController+LeftThumbStick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VirtualController+LeftThumbStick.swift"; sourceTree = "<group>"; };
-		9C172EB82B7FF320005FC710 /* VirtualController+RightThumbStick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VirtualController+RightThumbStick.swift"; sourceTree = "<group>"; };
-		9C172EBC2B7FF3E7005FC710 /* VirtualController+ButtonA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VirtualController+ButtonA.swift"; sourceTree = "<group>"; };
-		9C172EC02B7FF3F2005FC710 /* VirtualController+ButtonB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VirtualController+ButtonB.swift"; sourceTree = "<group>"; };
 		9C1C4D922B7ABEE300C1E1C4 /* SceneBlocksHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneBlocksHelper.swift; sourceTree = "<group>"; };
 		9C3298AB2B7E7F6C00A75C29 /* hello_world.nbt */ = {isa = PBXFileReference; lastKnownFileType = file; path = hello_world.nbt; sourceTree = "<group>"; };
 		9C3298AD2B7E8C8600A75C29 /* AmosBedrockCowFarmV2.schematic */ = {isa = PBXFileReference; lastKnownFileType = file; path = AmosBedrockCowFarmV2.schematic; sourceTree = "<group>"; };
@@ -417,10 +409,6 @@
 			isa = PBXGroup;
 			children = (
 				9C172EAC2B7FD3B9005FC710 /* VirtualController.swift */,
-				9C172EB42B7FF1CC005FC710 /* VirtualController+LeftThumbStick.swift */,
-				9C172EB82B7FF320005FC710 /* VirtualController+RightThumbStick.swift */,
-				9C172EBC2B7FF3E7005FC710 /* VirtualController+ButtonA.swift */,
-				9C172EC02B7FF3F2005FC710 /* VirtualController+ButtonB.swift */,
 			);
 			path = VirtualController;
 			sourceTree = "<group>";
@@ -682,9 +670,7 @@
 				9CBA39462B8DB04F0005E587 /* SlabNode.swift in Sources */,
 				9CED803C2B7E62FA0033ADBF /* NBTParser.swift in Sources */,
 				9CBA39622B8E198B0005E587 /* RailNode.swift in Sources */,
-				9C172EB92B7FF320005FC710 /* VirtualController+RightThumbStick.swift in Sources */,
 				9CBA39562B8E06350005E587 /* LanternNode.swift in Sources */,
-				9C172EBD2B7FF3E7005FC710 /* VirtualController+ButtonA.swift in Sources */,
 				9C7483192B75E0CA00FAFD7C /* GameViewController.swift in Sources */,
 				9C946D812B83A54F00521690 /* StairsNode.swift in Sources */,
 				9CBA395A2B8E0E140005E587 /* NodeBlock+Lantern.swift in Sources */,
@@ -705,7 +691,6 @@
 				9CD32BE02B81E74F00A069EC /* MapLevelsMenuView+ViewModel.swift in Sources */,
 				9C74833E2B75E0CA00FAFD7C /* GameSceneController.swift in Sources */,
 				9C172EAD2B7FD3B9005FC710 /* VirtualController.swift in Sources */,
-				9C172EC12B7FF3F2005FC710 /* VirtualController+ButtonB.swift in Sources */,
 				9CD32BE42B82017700A069EC /* MenuOverlay.swift in Sources */,
 				9CBA39662B8E1B3B0005E587 /* NodeBlock+Rail.swift in Sources */,
 				9CE9D0BC2B952A20008CF426 /* ComparatorNode.swift in Sources */,
@@ -719,7 +704,6 @@
 				9C946D7E2B833FC300521690 /* NodeBlock+Stairs.swift in Sources */,
 				9C946D872B83A9B600521690 /* SignNode.swift in Sources */,
 				9CBA39422B8D847E0005E587 /* GlassPane.swift in Sources */,
-				9C172EB52B7FF1CC005FC710 /* VirtualController+LeftThumbStick.swift in Sources */,
 				9C172EB12B7FD683005FC710 /* GameViewController+VirtualControllerDelegate.swift in Sources */,
 				9CC11CD82B94F3BE000C2D48 /* SCNNode+ApplyAttributes.swift in Sources */,
 				9CC11CD02B94EEC2000C2D48 /* ButtonBlock.swift in Sources */,
@@ -984,7 +968,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "SchematicViewer iOS/SchematicViewer iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2.1;
 				DEVELOPMENT_TEAM = 3BT7A38RRX;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1020,7 +1004,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "SchematicViewer iOS/SchematicViewer iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2.1;
 				DEVELOPMENT_TEAM = 3BT7A38RRX;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;

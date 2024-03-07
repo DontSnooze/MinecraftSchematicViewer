@@ -8,185 +8,108 @@
 import Foundation
 import SceneKit
 
-extension GameViewController: VirtualControllerDelegate {
-    func leftThumbstickMovedUp() {
-        gameSceneController.playerNode.simdPosition += gameSceneController.playerNode.simdWorldFront * Float(virtualController.movementSpeed)
-        leftThumbstickVerticalTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { _ in
-            self.gameSceneController.playerNode.simdPosition += self.gameSceneController.playerNode.simdWorldFront * Float(self.virtualController.movementSpeed)
-        })
+extension GameViewController: GameSceneControllerDelegate {
+    func frameWillRender() {
+        updateMovementPosition()
+        updateLookAraoundPosition()
+        handleAbutton()
+        handleBbutton()
     }
     
-    func leftThumbstickMovedDown() {
-        gameSceneController.playerNode.simdPosition += gameSceneController.playerNode.simdWorldFront * Float(-virtualController.movementSpeed)
-        leftThumbstickVerticalTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { _ in
-            self.gameSceneController.playerNode.simdPosition += self.gameSceneController.playerNode.simdWorldFront * Float(-self.virtualController.movementSpeed)
-        })
-    }
-    
-    func leftThumbstickMovedLeft() {
-        gameSceneController.playerNode.simdPosition += gameSceneController.playerNode.simdWorldRight * Float(-virtualController.movementSpeed)
-        leftThumbstickHorizontalTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { _ in
-            self.gameSceneController.playerNode.simdPosition += self.gameSceneController.playerNode.simdWorldRight * Float(-self.virtualController.movementSpeed)
-        })
-    }
-    
-    func leftThumbstickMovedRight() {
-        gameSceneController.playerNode.simdPosition += gameSceneController.playerNode.simdWorldRight * Float(virtualController.movementSpeed)
-        leftThumbstickHorizontalTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { _ in
-            self.gameSceneController.playerNode.simdPosition += self.gameSceneController.playerNode.simdWorldRight * Float(self.virtualController.movementSpeed)
-        })
-    }
-    
-    func leftThumbstickCenter() {
-        //
-    }
-    
-    func rightThumbstickMovedUp() {
-        let action = SCNAction.repeatForever(
-            SCNAction.rotateBy(
-                x: virtualController.lookAroundSpeed,
-                y: 0.0,
-                z: 0.0,
-                duration: 0.1
-            )
-        )
+    func updateMovementPosition() {
+        let controllerX = virtualController.virtualController?.controller?.extendedGamepad?.leftThumbstick.xAxis.value ?? 0
+        let controllerY = virtualController.virtualController?.controller?.extendedGamepad?.leftThumbstick.yAxis.value ?? 0
+        let playerNode = gameSceneController.playerNode
+        let multiplier: Float = VirtualController.movementSpeedMultiplier
+        let y = playerNode.position.y
         
-        gameSceneController.playerNode.runAction(action, forKey: "forward_rotations")
-    }
-    
-    func rightThumbstickMovedDown() {
-        let action = SCNAction.repeatForever(
-            SCNAction.rotateBy(
-                x: -virtualController.lookAroundSpeed,
-                y: 0.0,
-                z: 0.0,
-                duration: 0.1
-            )
-        )
+        if controllerX > 0 {
+            playerNode.simdPosition += playerNode.simdWorldRight * controllerX / multiplier
+            playerNode.position.y = y
+        }
         
-        gameSceneController.playerNode.runAction(action, forKey: "backward_rotations")
-    }
-    
-    func rightThumbstickMovedLeft() {
-        let action = SCNAction.repeatForever(
-            SCNAction.rotateBy(
-                x: 0.0,
-                y: virtualController.lookAroundSpeed,
-                z: 0.0,
-                duration: 0.1
-            )
-        )
-        gameSceneController.playerNode.runAction(action, forKey: "left_rotations")
-    }
-    
-    func rightThumbstickMovedRight() {
-        let action = SCNAction.repeatForever(
-            SCNAction.rotateBy(
-                x: 0.0,
-                y: -virtualController.lookAroundSpeed,
-                z: 0.0,
-                duration: 0.1
-            )
-        )
-        gameSceneController.playerNode.runAction(action, forKey: "right_rotations")
-    }
-    
-    func rightThumbstickCenter() {
-        //
-    }
-    
-    func horizontalMovementStopped() {
-        stopHorizontalMovement()
-    }
-    
-    func forwardMovementStopped() {
-        stopForwardMovement()
-    }
-    
-    func verticalRotationStopped() {
-        stopVerticalRotations()
-    }
-    
-    func horizontalRotationStopped() {
-        stopHorizontalRotations()
-    }
-    
-    func verticalMovementStopped() {
-        stopVerticalMovement()
-    }
-    
-    func buttonAPressed() {
-        let action = SCNAction.repeatForever(
-            SCNAction.moveBy(
-                x: 0.0,
-                y: -virtualController.verticalMovementSpeed,
-                z: 0.0,
-                duration: 0.1
-            )
-        )
+        if controllerX < 0 {
+            playerNode.simdPosition += playerNode.simdWorldRight * controllerX / multiplier
+            playerNode.position.y = y
+        }
         
-        gameSceneController.playerNode.runAction(action, forKey: "down_movement")
-    }
-    
-    func buttonAReleased() {
-        stopVerticalMovement()
-    }
-    
-    func buttonBPressed() {
-        let action = SCNAction.repeatForever(
-            SCNAction.moveBy(
-                x: 0.0,
-                y: virtualController.verticalMovementSpeed,
-                z: 0.0,
-                duration: 0.1
-            )
-        )
+        if controllerY > 0 {
+            playerNode.simdPosition += playerNode.simdWorldFront * controllerY / multiplier
+            playerNode.position.y = y
+        }
         
-        self.gameSceneController.playerNode.runAction(action, forKey: "up_movement")
-    }
-    
-    func buttonBReleased() {
-        stopVerticalMovement()
-    }
-    
-    func stopVerticalRotations() {
-        let keys = [
-            "left_rotations",
-            "right_rotations"
-        ]
-        
-        for key in keys {
-            gameSceneController.playerNode.removeAction(forKey: key)
+        if controllerY < 0 {
+            playerNode.simdPosition += playerNode.simdWorldFront * controllerY / multiplier
+            playerNode.position.y = y
         }
     }
     
-    func stopHorizontalRotations() {
-        let keys = [
-            "forward_rotations",
-            "backward_rotations"
-        ]
+    func updateLookAraoundPosition() {
+        let controllerX = virtualController.virtualController?.controller?.extendedGamepad?.rightThumbstick.xAxis.value ?? 0
+        let controllerY = virtualController.virtualController?.controller?.extendedGamepad?.rightThumbstick.yAxis.value ?? 0
+        let playerNode = gameSceneController.playerNode
+        let multiplier = VirtualController.lookAroundSpeedMultiplier
         
-        for key in keys {
-            gameSceneController.playerNode.removeAction(forKey: key)
+        if controllerX > 0 {
+            playerNode.runAction(
+                SCNAction.rotateBy(
+                    x: 0.0,
+                    y: CGFloat(-controllerX / multiplier),
+                    z: 0.0,
+                    duration: 0.1
+                )
+            )
+        }
+        
+        if controllerX < 0 {
+            playerNode.runAction(
+                SCNAction.rotateBy(
+                    x: 0.0,
+                    y: CGFloat(-controllerX / multiplier),
+                    z: 0.0,
+                    duration: 0.1
+                )
+            )
+        }
+        
+        if controllerY > 0 {
+            playerNode.runAction(
+                SCNAction.rotateBy(
+                    x: CGFloat(controllerY / multiplier),
+                    y: 0.0,
+                    z: 0.0,
+                    duration: 0.1
+                )
+            )
+        }
+        
+        if controllerY < 0 {
+            playerNode.runAction(
+                SCNAction.rotateBy(
+                    x: CGFloat(controllerY / multiplier),
+                    y: 0.0,
+                    z: 0.0,
+                    duration: 0.1
+                )
+            )
         }
     }
     
-    func stopForwardMovement() {
-        leftThumbstickVerticalTimer?.invalidate()
-    }
-    
-    func stopHorizontalMovement() {
-        leftThumbstickHorizontalTimer?.invalidate()
-    }
-    
-    func stopVerticalMovement() {
-        let keys = [
-            "up_movement",
-            "down_movement"
-        ]
-        
-        for key in keys {
-            gameSceneController.playerNode.removeAction(forKey: key)
+    func handleAbutton() {
+        guard virtualController.virtualController?.controller?.extendedGamepad?.buttonA.isPressed != false else {
+            return
         }
+        
+        let playerNode = gameSceneController.playerNode
+        playerNode.position.y -= VirtualController.verticalMovementSpeedMultiplier
+    }
+    
+    func handleBbutton() {
+        guard virtualController.virtualController?.controller?.extendedGamepad?.buttonB.isPressed != false else {
+            return
+        }
+        
+        let playerNode = gameSceneController.playerNode
+        playerNode.position.y += VirtualController.verticalMovementSpeedMultiplier
     }
 }

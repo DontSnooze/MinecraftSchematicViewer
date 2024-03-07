@@ -21,12 +21,10 @@ class GameViewController: UIViewController {
     var virtualController = VirtualController()
     var menuOverlay: MenuOverlay?
     
-    var leftThumbstickHorizontalTimer: Timer?
-    var leftThumbstickVerticalTimer: Timer?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         gameSceneController = GameSceneController(sceneRenderer: gameView)
+        gameSceneController.delegate = self
         // Allow the user to manipulate the camera
 //        gameView.allowsCameraControl = true
         
@@ -48,15 +46,15 @@ class GameViewController: UIViewController {
 //            let fileName = "stairs_n_w_s_e_upsdwn"
 //            let fileName = "sign_s_e_n_w_stand"
 //            let fileName = "chest_s_e_n_w_dble"
-            let fileName = "futHouse9"
-//            let fileName = "redstone_and_doors"
+//            let fileName = "futHouse9"
+            let fileName = "redstone_and_doors"
             await loadBundleNBT(fileName: fileName)
         }
     }
     
     func setupVirtualController() {
-        virtualController.delegate = self
         virtualController.setup()
+        gameSceneController.virtualController = virtualController.virtualController
     }
     
     func setupMenuOverlay() {
@@ -93,7 +91,7 @@ class GameViewController: UIViewController {
     
     func loadBundleNBT(fileName: String = "hopper_s_e_n_w_dwn") async {
         let path = Bundle.main.path(forResource: fileName, ofType: "schem") ?? ""
-        await handleDocumentPicked(path: path)
+        await parseSchem(path: path)
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {

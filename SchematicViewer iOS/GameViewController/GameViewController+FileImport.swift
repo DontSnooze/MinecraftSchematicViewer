@@ -64,8 +64,31 @@ extension GameViewController: UIDocumentPickerDelegate {
     }
     
     func handleDocumentPicked(path: String) async {
-        showLoadingTreatment()
+        guard 
+            path.hasSuffix(".schem"),
+            let filename = URL(string: path)?.lastPathComponent
+        else {
+            let alert = UIAlertController(title: "Schematic file error", message: "Please upload a '.schem' file", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            return
+        }
+        
+        let alert = UIAlertController(title: "Import", message: "Load file: \(filename)?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .destructive, handler: { _ in
+            Task {
+                await self.parseSchem(path: path)
+            }
+        }))
+        
+        present(alert, animated: true)
+    }
+    
+    func parseSchem(path: String) async {
+        self.showLoadingTreatment()
         await gameSceneController.parseNbt(path: path)
-        showLoadingTreatment(false)
+        self.showLoadingTreatment(false)
     }
 }

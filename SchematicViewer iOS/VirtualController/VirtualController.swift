@@ -9,40 +9,10 @@ import Foundation
 import GameController
 import SceneKit
 
-protocol VirtualControllerDelegate: AnyObject {
-    func leftThumbstickMovedUp()
-    func leftThumbstickMovedDown()
-    func leftThumbstickMovedLeft()
-    func leftThumbstickMovedRight()
-    func leftThumbstickCenter()
-    
-    func rightThumbstickMovedUp()
-    func rightThumbstickMovedDown()
-    func rightThumbstickMovedLeft()
-    func rightThumbstickMovedRight()
-    func rightThumbstickCenter()
-    
-    func horizontalMovementStopped()
-    func forwardMovementStopped()
-    
-    func verticalRotationStopped()
-    func horizontalRotationStopped()
-    
-    func verticalMovementStopped()
-    
-    func buttonAPressed()
-    func buttonAReleased()
-    
-    func buttonBPressed()
-    func buttonBReleased()
-}
-
 class VirtualController {
-    
-    var delegate: VirtualControllerDelegate?
-    let movementSpeed = 0.25
-    let verticalMovementSpeed = 0.25
-    let lookAroundSpeed = 0.1
+    static let movementSpeedMultiplier: Float = 4
+    static let verticalMovementSpeedMultiplier: Float = 0.1
+    static let lookAroundSpeedMultiplier: Float = 20
     
     // Virtual Onscreen Controller
     private var _virtualController: Any?
@@ -74,11 +44,6 @@ class VirtualController {
                 virtualController?.connect()
             }
         }
-        
-        guard let controller = GCController.controllers().first else {
-            return
-        }
-        registerGameController(controller)
     }
     
     @objc
@@ -88,46 +53,16 @@ class VirtualController {
             return
         }
         
-//        let status = "MFi Controller: \(String(describing: gameController.vendorName)) is connected"
+        _ = "MFi Controller: \(String(describing: gameController.vendorName)) is connected"
 //        print(status)
-        
-        unregisterGameController()
-        
-        //
-        // This breaks it and causes the controller not to appear
-        // (Guessing our controller gets disconnected)
-        //
-//        if #available(iOS 15.0, *) {
-//            if gameController != virtualController?.controller {
-//                print("gameController != virtualController?.controller")
-//                virtualController?.disconnect()
-//            }
-//        }
-        
-        registerGameController(gameController)
     }
     
     @objc
     func handleControllerDidDisconnect(_ notification: Notification) {
-        unregisterGameController()
-        
         if #available(iOS 15.0, *) {
             if GCController.controllers().isEmpty {
                 virtualController?.connect()
             }
         }
-    }
-    
-    func registerGameController(_ controller: GCController) {
-        if let gamepad = controller.extendedGamepad {
-            setupLeftThumbstick(gamepad: gamepad)
-            setupRightThumbstick(gamepad: gamepad)
-            setupButtonA(gamepad: gamepad)
-            setupButtonB(gamepad: gamepad)
-        }
-    }
-    
-    func unregisterGameController() {
-//        print("unregisterGameController start")
     }
 }
