@@ -48,8 +48,9 @@ class GameViewController: UIViewController {
 //            let fileName = "chest_s_e_n_w_dble"
             let fileName = "futHouse9"
 //            let fileName = "redstone_and_doors"
-//            await loadBundleNBT(fileName: fileName)
-            await loadBundleNBTWithPrompt(fileName: fileName)
+            
+            await loadBundleNBT(fileName: fileName)
+//            await loadBundleNBTWithPrompt(fileName: fileName)
         }
     }
     
@@ -92,6 +93,13 @@ class GameViewController: UIViewController {
     
     func loadBundleNBT(fileName: String = "hopper_s_e_n_w_dwn") async {
         let path = Bundle.main.path(forResource: fileName, ofType: "schem") ?? ""
+        
+        if FileManager.fileExists(filePath: path) {
+            menuOverlay?.hudLabel?.text = "\(fileName) exists"
+        } else {
+            menuOverlay?.hudLabel?.text = "\(fileName) does not exist"
+        }
+        
         await parseSchem(path: path)
     }
     
@@ -110,5 +118,12 @@ class GameViewController: UIViewController {
     
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+}
+
+extension FileManager {
+    class func fileExists(filePath: String) -> Bool {
+        var isDirectory = ObjCBool(false)
+        return self.default.fileExists(atPath: filePath, isDirectory: &isDirectory)
     }
 }

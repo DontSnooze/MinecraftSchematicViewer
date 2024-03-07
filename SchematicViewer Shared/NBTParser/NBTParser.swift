@@ -20,6 +20,7 @@ class NBTParser {
         let eventLoop = group.next()
         
         let allocator = ByteBufferAllocator()
+        
         guard let nbtfile = try? NBTFile(io: NonBlockingFileIO(threadPool: threadPool), bufferAllocator: allocator) else {
             print("Could not create NBTFile buffer")
             return nil

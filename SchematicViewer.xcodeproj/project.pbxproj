@@ -210,7 +210,6 @@
 		9C946D8A2B83CB7B00521690 /* HopperNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperNode.swift; sourceTree = "<group>"; };
 		9C946D8E2B83E6C200521690 /* chest_s_e_n_w_dble.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = chest_s_e_n_w_dble.schem; sourceTree = "<group>"; };
 		9C946D922B84AF6600521690 /* GameViewController+FileImport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController+FileImport.swift"; sourceTree = "<group>"; };
-		9C946D962B84C87E00521690 /* SchematicViewer iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SchematicViewer iOS.entitlements"; sourceTree = "<group>"; };
 		9CBA393D2B86E8920005E587 /* futHouse9.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = futHouse9.schem; sourceTree = "<group>"; };
 		9CBA39412B8D847E0005E587 /* GlassPane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassPane.swift; sourceTree = "<group>"; };
 		9CBA39452B8DB04F0005E587 /* SlabNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlabNode.swift; sourceTree = "<group>"; };
@@ -370,7 +369,6 @@
 			isa = PBXGroup;
 			children = (
 				9CC11CC62B94D085000C2D48 /* SchematicViewer-iOS-Info.plist */,
-				9C946D962B84C87E00521690 /* SchematicViewer iOS.entitlements */,
 				9CD32BEC2B82413200A069EC /* GameViewController */,
 				9CD32BE72B823FAF00A069EC /* Views */,
 				9CD32BE82B823FC700A069EC /* ViewModels */,
@@ -966,7 +964,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_ENTITLEMENTS = "SchematicViewer iOS/SchematicViewer iOS.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 5;
@@ -1006,7 +1003,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_ENTITLEMENTS = "SchematicViewer iOS/SchematicViewer iOS.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 5;
