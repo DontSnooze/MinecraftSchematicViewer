@@ -37,7 +37,7 @@ platform :ios do
   desc "Build App"
   lane :beta do
 
-    changelog = File.read("changelog.txt")
+    changelog = File.read("../changelog.txt")
     puts changelog
 
     # app_store_connect_api_key(
