@@ -82,13 +82,12 @@ platform :ios do
       silent: true
     )
 
-    changelog = File.read("")
-
     upload_to_testflight(
-      ipa: "./builds/SchematicViewer-iOS-#{short_hash}.ipa"
+      ipa: "./builds/SchematicViewer-iOS-#{short_hash}.ipa",
       distribute_external: true,
       skip_waiting_for_build_processing: false,
       submit_beta_review: true,
+      changelog: changelog,
       groups: [
         "Schematic Viewer Testers"
       ]
