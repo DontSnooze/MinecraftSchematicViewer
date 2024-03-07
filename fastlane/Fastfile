@@ -74,9 +74,6 @@ platform :ios do
     # )
 
     upload_to_testflight(
-      skip_screenshots: true,
-      skip_metadata: true,
-      force: true,
       ipa: "./builds/SchematicViewer-iOS-#{short_hash}.ipa"
     )
   end
