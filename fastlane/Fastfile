@@ -44,6 +44,18 @@ platform :ios do
       in_house: false
     )
 
+    current_version = get_version_number(
+      target: "SchematicViewer iOS" # replace with your main target, required if you have more than one non-test target
+    )
+
+    latest_build_number = latest_testflight_build_number(
+      version: current_version
+    )
+
+    increment_build_number(
+      build_number: (latest_build_number + 1),
+    )
+
     match(
       type: "appstore",
       readonly: true,

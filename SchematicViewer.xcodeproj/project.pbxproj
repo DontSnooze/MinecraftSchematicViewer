@@ -969,7 +969,7 @@
 				CODE_SIGN_ENTITLEMENTS = "SchematicViewer iOS/SchematicViewer iOS.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 3BT7A38RRX;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -1009,7 +1009,7 @@
 				CODE_SIGN_ENTITLEMENTS = "SchematicViewer iOS/SchematicViewer iOS.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 3BT7A38RRX;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
