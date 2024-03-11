@@ -65,12 +65,12 @@ extension GameViewController: UIDocumentPickerDelegate {
     
     func handleDocumentPicked(path: String) async {
         guard 
-            path.hasSuffix(".schem"),
+//            path.hasSuffix(".schem"),
             let filename = URL(string: path)?.lastPathComponent
         else {
-            let alert = UIAlertController(title: "Schematic file error", message: "Please upload a '.schem' file", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-            present(alert, animated: true)
+//            let alert = UIAlertController(title: "Schematic file error", message: "Please upload a '.schem' file", preferredStyle: .alert)
+//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+//            present(alert, animated: true)
             return
         }
         

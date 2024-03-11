@@ -11,7 +11,8 @@ import SceneKit
 extension NBTParser {
     static func blockNameDictionary(nbt: NBT) -> [Int: String] {
         var blockDict = [Int: String]()
-        let blockIdDictionary = NBTParser.nbtCompundNodeValue(nbt: nbt, key: "BlockIDs")
+        /*
+        let blockIdDictionary = NBTParser.nbtCompoundNodeValue(nbt: nbt, key: "BlockIDs")
         
         for (blockId, nbtTag) in blockIdDictionary {
             guard let nbtString = nbtTag as? NBTString else {
@@ -25,13 +26,20 @@ extension NBTParser {
                 blockDict[id] = nbtName
             }
         }
-        
+        */
         return blockDict
     }
     
     static func blockDictionary(nbt: NBT) -> [Int: NodeBlock] {
         var blockDict = [Int: NodeBlock]()
-        let blockIdDictionary = NBTParser.nbtCompundNodeValue(nbt: nbt, key: "Palette")
+        
+        guard 
+            let schematic = schematicFromNbt(nbt: nbt),
+            let blockIdDictionary = paletteFromSchematic(schematic: schematic)
+        else {
+            print("Could not load palette from schematic")
+            return blockDict
+        }
         
         for (blockDescriptionValue, paletteIdTag) in blockIdDictionary {
             
