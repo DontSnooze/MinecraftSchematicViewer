@@ -15,6 +15,7 @@ extension UIColor {
     
     static let lightBlue = UIColor(r: 173, g: 216, b: 230, alpha: 1.0)
     static let lime = UIColor(r: 50, g: 205, b: 50, alpha: 1.0)
+    static let fire = UIColor(r: 252, g: 102, b: 3, alpha: 1.0)
     
     static func colorWith(name: String) -> UIColor? {
         switch name {
