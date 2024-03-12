@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "wither_skeleton_skull.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

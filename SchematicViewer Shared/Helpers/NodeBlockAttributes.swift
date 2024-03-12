@@ -21,15 +21,19 @@ struct NodeBlockAttributes {
         case fenceGate
         case glassPane
         case grassBlock
+        case head
         case hopper
         case lantern
         case lever
+        case piston
+        case pistonHead
         case rail
         case redstone
         case repeater
         case sign
         case slab
         case stairs
+        case torch
         case trapDoor
         case wall
         case wallSign
@@ -116,6 +120,7 @@ struct NodeBlockAttributes {
     var isPowered = false
     var waterlogged = false
     var snowy = false
+    var isExtended = true
     var isHanging = false
     var isOpen = false
     var rotation = -1
@@ -148,38 +153,56 @@ struct NodeBlockAttributes {
         if name.hasSuffix("_door") {
             blockType = .door
         }
-        if name.hasSuffix("_stairs") {
-            blockType = .stairs
-        }
-        if name.hasSuffix("_slab") {
-            blockType = .slab
-        }
-        if name.hasSuffix("_sign") {
-            blockType = .sign
-        }
-        if name.hasSuffix("_wall_sign") {
-            blockType = .wallSign
-        }
-        if name.hasSuffix("_glass_pane") {
-            blockType = .glassPane
-        }
-        if name.hasSuffix("_wood") {
-            blockType = .wood
-        }
         if name.hasSuffix("_fence") {
             blockType = .fence
         }
         if name.hasSuffix("_fence_gate") {
             blockType = .fenceGate
         }
+        if name.hasSuffix("_glass_pane") {
+            blockType = .glassPane
+        }
+        if 
+            name.hasSuffix("_head"),
+            name != "piston_head"
+        {
+            blockType = .head
+        }
+        if name.hasSuffix("piston") {
+            blockType = .piston
+        }
+        if name.hasSuffix("piston_head") {
+            blockType = .pistonHead
+        }
         if name.hasSuffix("_rail") || name == "rail" {
             blockType = .rail
+        }
+        if name.hasSuffix("_sign") {
+            blockType = .sign
+        }
+        if name.hasSuffix("_skull") {
+            blockType = .head
+        }
+        if name.hasSuffix("_slab") {
+            blockType = .slab
+        }
+        if name.hasSuffix("_stairs") {
+            blockType = .stairs
+        }
+        if name.hasSuffix("torch") {
+            blockType = .torch
         }
         if name.hasSuffix("_trapdoor") {
             blockType = .trapDoor
         }
         if name.hasSuffix("_wall") {
             blockType = .wall
+        }
+        if name.hasSuffix("_wall_sign") {
+            blockType = .wallSign
+        }
+        if name.hasSuffix("_wood") {
+            blockType = .wood
         }
     }
     
@@ -264,6 +287,8 @@ struct NodeBlockAttributes {
             halfType = halfTypeObject
         case "hanging":
             isHanging = attributeValueString.boolValue
+        case "extended":
+            isExtended = attributeValueString.boolValue
         case "level":
             guard let levelInt = Int(attributeValueString) else {
                 return

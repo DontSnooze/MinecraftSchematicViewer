@@ -12,7 +12,7 @@ import SceneKit
 class VirtualController {
     static let movementSpeedMultiplier: Float = 4
     static let verticalMovementSpeedMultiplier: Float = 0.1
-    static let lookAroundSpeedMultiplier: Float = 20
+    static let lookAroundSpeedMultiplier: Float = 30
     
     // Virtual Onscreen Controller
     private var _virtualController: Any?

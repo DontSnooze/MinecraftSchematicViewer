@@ -46,6 +46,8 @@ struct NodeBlock {
             block = SCNNode.glassPaneBlockFromName(blockName: name, directions: attributes.directions)
         case .grassBlock:
             block = SCNNode.grassBlock()
+        case .head:
+            block = HeadBlock(with: attributes).node
         case .hopper:
             let isFacingDown = attributes.facing == .down
             block = SCNNode.hopperBlockFromName(blockName: name, isFacingDown: isFacingDown)
@@ -53,6 +55,10 @@ struct NodeBlock {
             block = SCNNode.lanternBlockFromName(blockName: name, isHanging: attributes.isHanging)
         case .lever:
             block = SCNNode.leverNodeFromName(blockName: name)
+        case .piston:
+            block = PistonBlock(with: attributes).node
+        case .pistonHead:
+            block = PistonHeadBlock(with: attributes).node
         case .rail:
             block = SCNNode.railBlockFromName(blockName: name, isPowered: attributes.isPowered, shape: attributes.shape)
         case .redstone:
@@ -65,6 +71,8 @@ struct NodeBlock {
             block = SCNNode.slabBlockFromName(blockName: name)
         case .stairs:
             block = SCNNode.stairsBlockFromName(blockName: name, halfType: attributes.halfType)
+        case .torch:
+            block = TorchBlock(with: attributes).node
         case .trapDoor:
             block = TrapDoorNode(attributes: attributes).node
         case .wall:
