@@ -9,8 +9,10 @@ import SceneKit
 
 struct NodeBlockAttributes {
     enum BlockType: String {
+        case banner
         case block
         case button
+        case carpet
         case chain
         case chest
         case comparator
@@ -28,6 +30,8 @@ struct NodeBlockAttributes {
         case sign
         case slab
         case stairs
+        case trapDoor
+        case wall
         case wallSign
         case water
         case wood
@@ -107,6 +111,7 @@ struct NodeBlockAttributes {
     var south = false
     var east = false
     var west = false
+    var up = false
     
     var isPowered = false
     var waterlogged = false
@@ -119,18 +124,26 @@ struct NodeBlockAttributes {
     
     init(with name: String, attributesString: String) {
         self.name = name
+        setupBlockNameAttributes(from: name)
+        setupCustomBlockTypes(from: name)
+        
         guard !attributesString.isEmpty else {
             return
         }
         self.rawAttributesString = attributesString
-        setupBlockNameAttributes(from: name)
+        
         setupAttributes(from: attributesString)
-        setupCustomBlockTypes(from: name)
     }
     
     mutating func setupBlockNameAttributes(from blockName: String) {
+        if name.hasSuffix("_banner") {
+            blockType = .banner
+        }
         if name.hasSuffix("_button") {
             blockType = .button
+        }
+        if name.hasSuffix("_carpet") {
+            blockType = .carpet
         }
         if name.hasSuffix("_door") {
             blockType = .door
@@ -161,6 +174,12 @@ struct NodeBlockAttributes {
         }
         if name.hasSuffix("_rail") || name == "rail" {
             blockType = .rail
+        }
+        if name.hasSuffix("_trapdoor") {
+            blockType = .trapDoor
+        }
+        if name.hasSuffix("_wall") {
+            blockType = .wall
         }
     }
     
@@ -281,6 +300,11 @@ struct NodeBlockAttributes {
                 return
             }
             slabType = slabTypeObject
+        case "up":
+            up = attributeValueString.boolValue
+            if up {
+                directions.append(.up)
+            }
         case "waterlogged":
             waterlogged = attributeValueString.boolValue
         case "west":

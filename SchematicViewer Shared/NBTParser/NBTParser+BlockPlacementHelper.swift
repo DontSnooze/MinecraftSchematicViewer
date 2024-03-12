@@ -18,8 +18,9 @@ extension NBTParser {
     }
     
     static func blockForIndex(nbt: NBT, index: Int, blockId: Int) -> SCNNode {
+        let block = SCNNode.createBlock()
+        /*
         let position = blockPosition(from: nbt, index: index)
-        var block = SCNNode.createBlock()
         
         if let customBlock = SCNNode.customBlock(blockId: blockId) {
             block = customBlock
@@ -30,17 +31,14 @@ extension NBTParser {
         }
         
         block.position = position
+         */
         return block
     }
     
-    static func blockPosition(from nbt: NBT, index: Int) -> SCNVector3 {
+    static func blockPosition(index: Int, mapLength: Int, mapWidth: Int, mapHeight: Int) -> SCNVector3 {
         var x = 0
         var y = 0
         var z = 0
-        
-        let mapLength = Int(NBTParser.nbtShortNodeValue(nbt: nbt, key: "Length"))
-        let mapWidth = Int(NBTParser.nbtShortNodeValue(nbt: nbt, key: "Width"))
-        let mapHeight = Int(NBTParser.nbtShortNodeValue(nbt: nbt, key: "Height"))
         
         // get y
         let mapPlaneCount = mapWidth * mapLength
@@ -79,12 +77,14 @@ extension NBTParser {
     }
     
     static func addAllSchematicBlocks(nbt: NBT, scene: SCNScene, removinglevels: [Int] = []) -> [[SCNNode]] {
-//        var blocks = new THREE.Object3D();
-        let blockIndexArray = NBTParser.nbtByteArrayNodeValue(nbt: nbt, key: "Blocks")
-        let mapLength = Int(NBTParser.nbtShortNodeValue(nbt: nbt, key: "Length"))
-        let mapWidth = Int(NBTParser.nbtShortNodeValue(nbt: nbt, key: "Width"))
         
-        var blockLevelsArray = [[SCNNode]]()
+//        var blocks = new THREE.Object3D();
+//        let blockIndexArray = NBTParser.nbtByteArrayNodeValue(nbt: nbt, key: "Blocks")
+//        let mapLength = Int(NBTParser.nbtShortNodeValue(nbt: nbt, key: "Length"))
+//        let mapWidth = Int(NBTParser.nbtShortNodeValue(nbt: nbt, key: "Width"))
+        
+        let blockLevelsArray = [[SCNNode]]()
+        /*
         var blockLevelArray = [SCNNode]()
         
         let levelArea = mapLength * mapWidth
@@ -121,16 +121,23 @@ extension NBTParser {
             }
         }
 //        scene.add( blocks );
+         */
         return blockLevelsArray
     }
     
     static func addAllBlocks(nbt: NBT, scene: SCNScene) -> [[SCNNode]] {
-
         let blockPaletteDictionary = blockDictionary(nbt: nbt)
         
-        let blockIndexArray = NBTParser.nbtByteArrayNodeValue(nbt: nbt, key: "BlockData")
-        let mapLength = Int(NBTParser.nbtShortNodeValue(nbt: nbt, key: "Length"))
-        let mapWidth = Int(NBTParser.nbtShortNodeValue(nbt: nbt, key: "Width"))
+        guard
+            let schematic = schematicFromNbt(nbt: nbt),
+            let mapLength = lengthFromSchematic(schematic: schematic),
+            let mapWidth = widthFromSchematic(schematic: schematic),
+            let mapHeight = heightFromSchematic(schematic: schematic)
+        else {
+            return []
+        }
+        
+        let blockIndexArray = blockDataFromSchematic(schematic: schematic)
         
         var blockLevelsArray = [[SCNNode]]()
         var blockLevelArray = [SCNNode]()
@@ -161,7 +168,7 @@ extension NBTParser {
                 continue
             }
             
-            let position = blockPosition(from: nbt, index: i)
+            let position = blockPosition(index: i, mapLength: mapLength, mapWidth: mapWidth, mapHeight: mapHeight)
             block.position = position
             
             var name = nodeBlock.name

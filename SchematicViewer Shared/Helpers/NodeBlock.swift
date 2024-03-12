@@ -21,12 +21,15 @@ struct NodeBlock {
     
     func scnNode() -> SCNNode? {
         var block: SCNNode?
-        
         switch attributes.blockType {
+        case .banner:
+            block = BannerBlock(with: attributes).node
         case .block:
             block = SCNNode.blockFromName(blockName: name)
         case .button:
             block = SCNNode.buttonBlockFromName(blockName: name, attributes: attributes)
+        case .carpet:
+            block = CarpetNode(with: attributes).node
         case .chain:
             block = SCNNode.chainBlockFromName(blockName: name)
         case .chest:
@@ -62,6 +65,10 @@ struct NodeBlock {
             block = SCNNode.slabBlockFromName(blockName: name)
         case .stairs:
             block = SCNNode.stairsBlockFromName(blockName: name, halfType: attributes.halfType)
+        case .trapDoor:
+            block = TrapDoorNode(attributes: attributes).node
+        case .wall:
+            block = WallNode(with: attributes).node
         case .wallSign:
             block = SCNNode.signBlockFromName(blockName: name, isWallSign: true)
         case .water:

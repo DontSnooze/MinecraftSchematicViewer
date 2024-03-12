@@ -38,6 +38,25 @@
 		9C3298C02B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3298BF2B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift */; };
 		9C3298C12B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3298BF2B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift */; };
 		9C3298C22B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3298BF2B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift */; };
+		9C56FBBB2B9AEF5600BB1351 /* Boulevardier's_Japanese_Chateau.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C56FBBA2B9AEF5600BB1351 /* Boulevardier's_Japanese_Chateau.schem */; };
+		9C56FBBC2B9AEF5600BB1351 /* Boulevardier's_Japanese_Chateau.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C56FBBA2B9AEF5600BB1351 /* Boulevardier's_Japanese_Chateau.schem */; };
+		9C56FBBD2B9AEF5600BB1351 /* Boulevardier's_Japanese_Chateau.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C56FBBA2B9AEF5600BB1351 /* Boulevardier's_Japanese_Chateau.schem */; };
+		9C56FBBF2B9B2D6200BB1351 /* chicken.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C56FBBE2B9B2D6200BB1351 /* chicken.schem */; };
+		9C56FBC12B9B31A100BB1351 /* Modern_House_3.litematic in Resources */ = {isa = PBXBuildFile; fileRef = 9C56FBC02B9B31A000BB1351 /* Modern_House_3.litematic */; };
+		9C56FBC22B9B31A100BB1351 /* Modern_House_3.litematic in Resources */ = {isa = PBXBuildFile; fileRef = 9C56FBC02B9B31A000BB1351 /* Modern_House_3.litematic */; };
+		9C56FBC32B9B31A100BB1351 /* Modern_House_3.litematic in Resources */ = {isa = PBXBuildFile; fileRef = 9C56FBC02B9B31A000BB1351 /* Modern_House_3.litematic */; };
+		9C56FBC52B9B3B7A00BB1351 /* VillageHome.schematic in Resources */ = {isa = PBXBuildFile; fileRef = 9C56FBC42B9B3B7A00BB1351 /* VillageHome.schematic */; };
+		9C56FBC62B9B3B7A00BB1351 /* VillageHome.schematic in Resources */ = {isa = PBXBuildFile; fileRef = 9C56FBC42B9B3B7A00BB1351 /* VillageHome.schematic */; };
+		9C56FBC72B9B3B7A00BB1351 /* VillageHome.schematic in Resources */ = {isa = PBXBuildFile; fileRef = 9C56FBC42B9B3B7A00BB1351 /* VillageHome.schematic */; };
+		9C56FBC92B9B423000BB1351 /* Modern_House_3.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C56FBC82B9B423000BB1351 /* Modern_House_3.schem */; };
+		9C56FBCA2B9B423000BB1351 /* Modern_House_3.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C56FBC82B9B423000BB1351 /* Modern_House_3.schem */; };
+		9C56FBCB2B9B423000BB1351 /* Modern_House_3.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C56FBC82B9B423000BB1351 /* Modern_House_3.schem */; };
+		9C56FBCD2B9B43FF00BB1351 /* MH1.schematic in Resources */ = {isa = PBXBuildFile; fileRef = 9C56FBCC2B9B43FF00BB1351 /* MH1.schematic */; };
+		9C56FBD22B9B473C00BB1351 /* Model2.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C56FBCE2B9B473B00BB1351 /* Model2.schem */; };
+		9C56FBD32B9B473C00BB1351 /* Model3.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C56FBCF2B9B473C00BB1351 /* Model3.schem */; };
+		9C56FBD42B9B473C00BB1351 /* Model4.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C56FBD02B9B473C00BB1351 /* Model4.schem */; };
+		9C56FBD52B9B473C00BB1351 /* Model1.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C56FBD12B9B473C00BB1351 /* Model1.schem */; };
+		9C56FBD72B9B4BE500BB1351 /* McDonalds2.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C56FBD62B9B4BE500BB1351 /* McDonalds2.schem */; };
 		9C7483172B75E0CA00FAFD7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7483162B75E0CA00FAFD7C /* AppDelegate.swift */; };
 		9C7483192B75E0CA00FAFD7C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7483182B75E0CA00FAFD7C /* GameViewController.swift */; };
 		9C74831C2B75E0CA00FAFD7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C74831A2B75E0CA00FAFD7C /* Main.storyboard */; };
@@ -82,6 +101,18 @@
 		9C946D902B83E6C200521690 /* chest_s_e_n_w_dble.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C946D8E2B83E6C200521690 /* chest_s_e_n_w_dble.schem */; };
 		9C946D912B83E6C200521690 /* chest_s_e_n_w_dble.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9C946D8E2B83E6C200521690 /* chest_s_e_n_w_dble.schem */; };
 		9C946D932B84AF6600521690 /* GameViewController+FileImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C946D922B84AF6600521690 /* GameViewController+FileImport.swift */; };
+		9C94BAEB2BA0825A004678DE /* BannerBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C94BAEA2BA0825A004678DE /* BannerBlock.swift */; };
+		9C94BAEC2BA0825A004678DE /* BannerBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C94BAEA2BA0825A004678DE /* BannerBlock.swift */; };
+		9C94BAED2BA0825A004678DE /* BannerBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C94BAEA2BA0825A004678DE /* BannerBlock.swift */; };
+		9CA0A2F12B9F0C81008B2078 /* CarpetNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0A2F02B9F0C81008B2078 /* CarpetNode.swift */; };
+		9CA0A2F22B9F0C81008B2078 /* CarpetNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0A2F02B9F0C81008B2078 /* CarpetNode.swift */; };
+		9CA0A2F32B9F0C81008B2078 /* CarpetNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0A2F02B9F0C81008B2078 /* CarpetNode.swift */; };
+		9CA0A2F52B9F16C9008B2078 /* SVNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0A2F42B9F16C9008B2078 /* SVNode.swift */; };
+		9CA0A2F62B9F16C9008B2078 /* SVNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0A2F42B9F16C9008B2078 /* SVNode.swift */; };
+		9CA0A2F72B9F16C9008B2078 /* SVNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0A2F42B9F16C9008B2078 /* SVNode.swift */; };
+		9CA0A2F92B9F1C27008B2078 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0A2F82B9F1C27008B2078 /* UIColor+Extensions.swift */; };
+		9CA0A2FA2B9F1C27008B2078 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0A2F82B9F1C27008B2078 /* UIColor+Extensions.swift */; };
+		9CA0A2FB2B9F1C27008B2078 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0A2F82B9F1C27008B2078 /* UIColor+Extensions.swift */; };
 		9CBA393E2B86E8920005E587 /* futHouse9.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA393D2B86E8920005E587 /* futHouse9.schem */; };
 		9CBA393F2B86E8920005E587 /* futHouse9.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA393D2B86E8920005E587 /* futHouse9.schem */; };
 		9CBA39402B86E8920005E587 /* futHouse9.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA393D2B86E8920005E587 /* futHouse9.schem */; };
@@ -143,6 +174,12 @@
 		9CD32BE62B823AF200A069EC /* GameViewController+MenuOverlayDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BE52B823AF100A069EC /* GameViewController+MenuOverlayDelegate.swift */; };
 		9CD32BEA2B82408100A069EC /* MenuOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BE32B82017700A069EC /* MenuOverlay.swift */; };
 		9CD32BEB2B82408100A069EC /* MenuOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD32BE32B82017700A069EC /* MenuOverlay.swift */; };
+		9CE3A96D2B9F5B2600620571 /* WallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3A96C2B9F5B2600620571 /* WallNode.swift */; };
+		9CE3A96E2B9F5B2600620571 /* WallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3A96C2B9F5B2600620571 /* WallNode.swift */; };
+		9CE3A96F2B9F5B2600620571 /* WallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3A96C2B9F5B2600620571 /* WallNode.swift */; };
+		9CE3A9712B9F7D0300620571 /* TrapDoorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3A9702B9F7D0300620571 /* TrapDoorNode.swift */; };
+		9CE3A9722B9F7D0300620571 /* TrapDoorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3A9702B9F7D0300620571 /* TrapDoorNode.swift */; };
+		9CE3A9732B9F7D0300620571 /* TrapDoorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3A9702B9F7D0300620571 /* TrapDoorNode.swift */; };
 		9CE9D0AC2B950E0D008CF426 /* FenceGateNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9D0AB2B950E0D008CF426 /* FenceGateNode.swift */; };
 		9CE9D0AD2B950E0D008CF426 /* FenceGateNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9D0AB2B950E0D008CF426 /* FenceGateNode.swift */; };
 		9CE9D0AE2B950E0D008CF426 /* FenceGateNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9D0AB2B950E0D008CF426 /* FenceGateNode.swift */; };
@@ -178,6 +215,17 @@
 		9C3298B72B7F93B500A75C29 /* VanillaResourcePackAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = VanillaResourcePackAssets.xcassets; sourceTree = "<group>"; };
 		9C3298BB2B7F985F00A75C29 /* NBTParser+NBTNodeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NBTParser+NBTNodeHelper.swift"; sourceTree = "<group>"; };
 		9C3298BF2B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NBTParser+BlockPlacementHelper.swift"; sourceTree = "<group>"; };
+		9C56FBBA2B9AEF5600BB1351 /* Boulevardier's_Japanese_Chateau.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Boulevardier's_Japanese_Chateau.schem"; sourceTree = "<group>"; };
+		9C56FBBE2B9B2D6200BB1351 /* chicken.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = chicken.schem; sourceTree = "<group>"; };
+		9C56FBC02B9B31A000BB1351 /* Modern_House_3.litematic */ = {isa = PBXFileReference; lastKnownFileType = file; path = Modern_House_3.litematic; sourceTree = "<group>"; };
+		9C56FBC42B9B3B7A00BB1351 /* VillageHome.schematic */ = {isa = PBXFileReference; lastKnownFileType = file; path = VillageHome.schematic; sourceTree = "<group>"; };
+		9C56FBC82B9B423000BB1351 /* Modern_House_3.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = Modern_House_3.schem; sourceTree = "<group>"; };
+		9C56FBCC2B9B43FF00BB1351 /* MH1.schematic */ = {isa = PBXFileReference; lastKnownFileType = file; path = MH1.schematic; sourceTree = "<group>"; };
+		9C56FBCE2B9B473B00BB1351 /* Model2.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = Model2.schem; sourceTree = "<group>"; };
+		9C56FBCF2B9B473C00BB1351 /* Model3.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = Model3.schem; sourceTree = "<group>"; };
+		9C56FBD02B9B473C00BB1351 /* Model4.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = Model4.schem; sourceTree = "<group>"; };
+		9C56FBD12B9B473C00BB1351 /* Model1.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = Model1.schem; sourceTree = "<group>"; };
+		9C56FBD62B9B4BE500BB1351 /* McDonalds2.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = McDonalds2.schem; sourceTree = "<group>"; };
 		9C74830C2B75E0C700FAFD7C /* GameSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneController.swift; sourceTree = "<group>"; };
 		9C74830D2B75E0C700FAFD7C /* Art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Art.scnassets; sourceTree = "<group>"; };
 		9C74830E2B75E0CA00FAFD7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -210,6 +258,10 @@
 		9C946D8A2B83CB7B00521690 /* HopperNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopperNode.swift; sourceTree = "<group>"; };
 		9C946D8E2B83E6C200521690 /* chest_s_e_n_w_dble.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = chest_s_e_n_w_dble.schem; sourceTree = "<group>"; };
 		9C946D922B84AF6600521690 /* GameViewController+FileImport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController+FileImport.swift"; sourceTree = "<group>"; };
+		9C94BAEA2BA0825A004678DE /* BannerBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerBlock.swift; sourceTree = "<group>"; };
+		9CA0A2F02B9F0C81008B2078 /* CarpetNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarpetNode.swift; sourceTree = "<group>"; };
+		9CA0A2F42B9F16C9008B2078 /* SVNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVNode.swift; sourceTree = "<group>"; };
+		9CA0A2F82B9F1C27008B2078 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		9CBA393D2B86E8920005E587 /* futHouse9.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = futHouse9.schem; sourceTree = "<group>"; };
 		9CBA39412B8D847E0005E587 /* GlassPane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassPane.swift; sourceTree = "<group>"; };
 		9CBA39452B8DB04F0005E587 /* SlabNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlabNode.swift; sourceTree = "<group>"; };
@@ -236,6 +288,8 @@
 		9CD32BE12B81F96D00A069EC /* GameViewController+MapLevelsMenuDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController+MapLevelsMenuDelegate.swift"; sourceTree = "<group>"; };
 		9CD32BE32B82017700A069EC /* MenuOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOverlay.swift; sourceTree = "<group>"; };
 		9CD32BE52B823AF100A069EC /* GameViewController+MenuOverlayDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameViewController+MenuOverlayDelegate.swift"; sourceTree = "<group>"; };
+		9CE3A96C2B9F5B2600620571 /* WallNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallNode.swift; sourceTree = "<group>"; };
+		9CE3A9702B9F7D0300620571 /* TrapDoorNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrapDoorNode.swift; sourceTree = "<group>"; };
 		9CE9D0AB2B950E0D008CF426 /* FenceGateNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FenceGateNode.swift; sourceTree = "<group>"; };
 		9CE9D0AF2B9517AE008CF426 /* RedstoneDustDotNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedstoneDustDotNode.swift; sourceTree = "<group>"; };
 		9CE9D0B32B951D9C008CF426 /* DoorNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorNode.swift; sourceTree = "<group>"; };
@@ -275,7 +329,9 @@
 			children = (
 				9C946D822B83A7A100521690 /* GenericBlockNode.swift */,
 				9CC11CD72B94F3BE000C2D48 /* SCNNode+ApplyAttributes.swift */,
+				9C94BAEA2BA0825A004678DE /* BannerBlock.swift */,
 				9CC11CCF2B94EEC2000C2D48 /* ButtonBlock.swift */,
+				9CA0A2F02B9F0C81008B2078 /* CarpetNode.swift */,
 				9CBA395D2B8E149B0005E587 /* ChainNode.swift */,
 				9C172E9B2B7FCA28005FC710 /* ChestBlock.swift */,
 				9CE9D0BB2B952A20008CF426 /* ComparatorNode.swift */,
@@ -293,6 +349,8 @@
 				9C946D862B83A9B600521690 /* SignNode.swift */,
 				9CBA39452B8DB04F0005E587 /* SlabNode.swift */,
 				9C946D802B83A54F00521690 /* StairsNode.swift */,
+				9CE3A9702B9F7D0300620571 /* TrapDoorNode.swift */,
+				9CE3A96C2B9F5B2600620571 /* WallNode.swift */,
 				9C172E992B7FCA28005FC710 /* WaterBlock.swift */,
 				9CBA39492B8DD10D0005E587 /* WoodNode.swift */,
 			);
@@ -316,6 +374,7 @@
 				9C74830D2B75E0C700FAFD7C /* Art.scnassets */,
 				9C74830E2B75E0CA00FAFD7C /* Assets.xcassets */,
 				9C172E872B7F9CFA005FC710 /* BlockTextures.xcassets */,
+				9C3298B72B7F93B500A75C29 /* VanillaResourcePackAssets.xcassets */,
 				9C3298AB2B7E7F6C00A75C29 /* hello_world.nbt */,
 				9C3298AD2B7E8C8600A75C29 /* AmosBedrockCowFarmV2.schematic */,
 				9C946D6C2B826E1D00521690 /* test1.schem */,
@@ -326,7 +385,17 @@
 				9C946D8E2B83E6C200521690 /* chest_s_e_n_w_dble.schem */,
 				9CBA393D2B86E8920005E587 /* futHouse9.schem */,
 				9CBA396D2B8E59700005E587 /* redstone_and_doors.schem */,
-				9C3298B72B7F93B500A75C29 /* VanillaResourcePackAssets.xcassets */,
+				9C56FBBA2B9AEF5600BB1351 /* Boulevardier's_Japanese_Chateau.schem */,
+				9C56FBBE2B9B2D6200BB1351 /* chicken.schem */,
+				9C56FBC02B9B31A000BB1351 /* Modern_House_3.litematic */,
+				9C56FBC82B9B423000BB1351 /* Modern_House_3.schem */,
+				9C56FBCC2B9B43FF00BB1351 /* MH1.schematic */,
+				9C56FBD62B9B4BE500BB1351 /* McDonalds2.schem */,
+				9C56FBD12B9B473C00BB1351 /* Model1.schem */,
+				9C56FBCE2B9B473B00BB1351 /* Model2.schem */,
+				9C56FBCF2B9B473C00BB1351 /* Model3.schem */,
+				9C56FBD02B9B473C00BB1351 /* Model4.schem */,
+				9C56FBC42B9B3B7A00BB1351 /* VillageHome.schematic */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -441,6 +510,8 @@
 				9CBA39592B8E0E140005E587 /* NodeBlock+Lantern.swift */,
 				9CBA39652B8E1B3B0005E587 /* NodeBlock+Rail.swift */,
 				9CC11CCB2B94E99B000C2D48 /* NodeBlock+Lever.swift */,
+				9CA0A2F42B9F16C9008B2078 /* SVNode.swift */,
+				9CA0A2F82B9F1C27008B2078 /* UIColor+Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -585,16 +656,27 @@
 				9CBA396E2B8E59700005E587 /* redstone_and_doors.schem in Resources */,
 				9CC11CC52B94C979000C2D48 /* Media.xcassets in Resources */,
 				9C946D792B829F2400521690 /* stairs_n_w_s_e_upsdwn.schem in Resources */,
+				9C56FBD72B9B4BE500BB1351 /* McDonalds2.schem in Resources */,
+				9C56FBD22B9B473C00BB1351 /* Model2.schem in Resources */,
 				9C946D752B829E8D00521690 /* hopper_s_e_n_w_dwn.schem in Resources */,
+				9C56FBD42B9B473C00BB1351 /* Model4.schem in Resources */,
+				9C56FBD52B9B473C00BB1351 /* Model1.schem in Resources */,
 				9C946D6D2B826E2400521690 /* test1.schem in Resources */,
+				9C56FBD32B9B473C00BB1351 /* Model3.schem in Resources */,
 				9C3298AC2B7E7F6C00A75C29 /* hello_world.nbt in Resources */,
 				9C74831F2B75E0CA00FAFD7C /* LaunchScreen.storyboard in Resources */,
 				9C946D772B829F1600521690 /* sign_s_e_n_w_stand.schem in Resources */,
 				9C172E882B7F9CFA005FC710 /* BlockTextures.xcassets in Resources */,
 				9C946D732B829CFC00521690 /* slabTest_low_to_up.schem in Resources */,
 				9C7483442B75E0CA00FAFD7C /* Assets.xcassets in Resources */,
+				9C56FBBF2B9B2D6200BB1351 /* chicken.schem in Resources */,
+				9C56FBC92B9B423000BB1351 /* Modern_House_3.schem in Resources */,
+				9C56FBCD2B9B43FF00BB1351 /* MH1.schematic in Resources */,
+				9C56FBBB2B9AEF5600BB1351 /* Boulevardier's_Japanese_Chateau.schem in Resources */,
 				9C946D8F2B83E6C200521690 /* chest_s_e_n_w_dble.schem in Resources */,
+				9C56FBC12B9B31A100BB1351 /* Modern_House_3.litematic in Resources */,
 				9C3298AE2B7E8C8600A75C29 /* AmosBedrockCowFarmV2.schematic in Resources */,
+				9C56FBC52B9B3B7A00BB1351 /* VillageHome.schematic in Resources */,
 				9C7483412B75E0CA00FAFD7C /* Art.scnassets in Resources */,
 				9C3298B82B7F93B500A75C29 /* VanillaResourcePackAssets.xcassets in Resources */,
 			);
@@ -604,15 +686,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C56FBC62B9B3B7A00BB1351 /* VillageHome.schematic in Resources */,
 				9C74832C2B75E0CA00FAFD7C /* Main.storyboard in Resources */,
 				9CBA393F2B86E8920005E587 /* futHouse9.schem in Resources */,
 				9C74832F2B75E0CA00FAFD7C /* LaunchScreen.storyboard in Resources */,
+				9C56FBBC2B9AEF5600BB1351 /* Boulevardier's_Japanese_Chateau.schem in Resources */,
 				9CBA396F2B8E59700005E587 /* redstone_and_doors.schem in Resources */,
 				9C172E892B7F9CFA005FC710 /* BlockTextures.xcassets in Resources */,
 				9C946D902B83E6C200521690 /* chest_s_e_n_w_dble.schem in Resources */,
 				9C7483452B75E0CA00FAFD7C /* Assets.xcassets in Resources */,
+				9C56FBC22B9B31A100BB1351 /* Modern_House_3.litematic in Resources */,
 				9C3298B92B7F93B500A75C29 /* VanillaResourcePackAssets.xcassets in Resources */,
 				9C7483422B75E0CA00FAFD7C /* Art.scnassets in Resources */,
+				9C56FBCA2B9B423000BB1351 /* Modern_House_3.schem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,10 +710,14 @@
 				9C172E8A2B7F9CFA005FC710 /* BlockTextures.xcassets in Resources */,
 				9CBA39702B8E59700005E587 /* redstone_and_doors.schem in Resources */,
 				9C946D912B83E6C200521690 /* chest_s_e_n_w_dble.schem in Resources */,
+				9C56FBBD2B9AEF5600BB1351 /* Boulevardier's_Japanese_Chateau.schem in Resources */,
 				9C7483462B75E0CA00FAFD7C /* Assets.xcassets in Resources */,
+				9C56FBC32B9B31A100BB1351 /* Modern_House_3.litematic in Resources */,
 				9C7483432B75E0CA00FAFD7C /* Art.scnassets in Resources */,
+				9C56FBCB2B9B423000BB1351 /* Modern_House_3.schem in Resources */,
 				9CBA39402B86E8920005E587 /* futHouse9.schem in Resources */,
 				9C3298BA2B7F93B500A75C29 /* VanillaResourcePackAssets.xcassets in Resources */,
+				9C56FBC72B9B3B7A00BB1351 /* VillageHome.schematic in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,6 +751,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA0A2F52B9F16C9008B2078 /* SVNode.swift in Sources */,
 				9C172E8C2B7F9D8B005FC710 /* NBTParser+BlockNames.swift in Sources */,
 				9C3298C02B7F98EC00A75C29 /* NBTParser+BlockPlacementHelper.swift in Sources */,
 				9CE9D0B82B95292C008CF426 /* RepeaterNode.swift in Sources */,
@@ -671,10 +762,12 @@
 				9CBA39562B8E06350005E587 /* LanternNode.swift in Sources */,
 				9C7483192B75E0CA00FAFD7C /* GameViewController.swift in Sources */,
 				9C946D812B83A54F00521690 /* StairsNode.swift in Sources */,
+				9CE3A96D2B9F5B2600620571 /* WallNode.swift in Sources */,
 				9CBA395A2B8E0E140005E587 /* NodeBlock+Lantern.swift in Sources */,
 				9C946D932B84AF6600521690 /* GameViewController+FileImport.swift in Sources */,
 				9CE9D0B02B9517AE008CF426 /* RedstoneDustDotNode.swift in Sources */,
 				9CD32BE62B823AF200A069EC /* GameViewController+MenuOverlayDelegate.swift in Sources */,
+				9CE3A9712B9F7D0300620571 /* TrapDoorNode.swift in Sources */,
 				9C946D832B83A7A100521690 /* GenericBlockNode.swift in Sources */,
 				9CBA394A2B8DD10D0005E587 /* WoodNode.swift in Sources */,
 				9CD32BD82B81CB6000A069EC /* BlocksMenuView+ViewModel.swift in Sources */,
@@ -691,11 +784,13 @@
 				9C172EAD2B7FD3B9005FC710 /* VirtualController.swift in Sources */,
 				9CD32BE42B82017700A069EC /* MenuOverlay.swift in Sources */,
 				9CBA39662B8E1B3B0005E587 /* NodeBlock+Rail.swift in Sources */,
+				9C94BAEB2BA0825A004678DE /* BannerBlock.swift in Sources */,
 				9CE9D0BC2B952A20008CF426 /* ComparatorNode.swift in Sources */,
 				9C7483172B75E0CA00FAFD7C /* AppDelegate.swift in Sources */,
 				9CE9D0B42B951D9C008CF426 /* DoorNode.swift in Sources */,
 				9C946D6F2B829ABD00521690 /* NodeBlock.swift in Sources */,
 				9C172E952B7FC88C005FC710 /* GrassBlock.swift in Sources */,
+				9CA0A2F12B9F0C81008B2078 /* CarpetNode.swift in Sources */,
 				9C172EA02B7FCA28005FC710 /* WaterBlock.swift in Sources */,
 				9CBA395E2B8E149B0005E587 /* ChainNode.swift in Sources */,
 				9CC11CC82B94E4BE000C2D48 /* LeverNode.swift in Sources */,
@@ -708,6 +803,7 @@
 				9CD32BE22B81F96D00A069EC /* GameViewController+MapLevelsMenuDelegate.swift in Sources */,
 				9CBA39522B8DEED70005E587 /* FenceNode.swift in Sources */,
 				9C3298BC2B7F985F00A75C29 /* NBTParser+NBTNodeHelper.swift in Sources */,
+				9CA0A2F92B9F1C27008B2078 /* UIColor+Extensions.swift in Sources */,
 				9C946D8B2B83CB7B00521690 /* HopperNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -731,8 +827,13 @@
 				9C946D8C2B83CB7B00521690 /* HopperNode.swift in Sources */,
 				9CBA394B2B8DD10D0005E587 /* WoodNode.swift in Sources */,
 				9C1C4D942B7ABEE300C1E1C4 /* SceneBlocksHelper.swift in Sources */,
+				9C94BAEC2BA0825A004678DE /* BannerBlock.swift in Sources */,
+				9CE3A96E2B9F5B2600620571 /* WallNode.swift in Sources */,
 				9C946D702B829ABD00521690 /* NodeBlock.swift in Sources */,
+				9CA0A2FA2B9F1C27008B2078 /* UIColor+Extensions.swift in Sources */,
 				9CC11CC92B94E4BE000C2D48 /* LeverNode.swift in Sources */,
+				9CE3A9722B9F7D0300620571 /* TrapDoorNode.swift in Sources */,
+				9CA0A2F22B9F0C81008B2078 /* CarpetNode.swift in Sources */,
 				9CED803D2B7E62FA0033ADBF /* NBTParser.swift in Sources */,
 				9CD32BEA2B82408100A069EC /* MenuOverlay.swift in Sources */,
 				9CBA395B2B8E0E140005E587 /* NodeBlock+Lantern.swift in Sources */,
@@ -747,6 +848,7 @@
 				9CBA395F2B8E149B0005E587 /* ChainNode.swift in Sources */,
 				9C74833F2B75E0CA00FAFD7C /* GameSceneController.swift in Sources */,
 				9CC11CD92B94F3BE000C2D48 /* SCNNode+ApplyAttributes.swift in Sources */,
+				9CA0A2F62B9F16C9008B2078 /* SVNode.swift in Sources */,
 				9C7483272B75E0CA00FAFD7C /* AppDelegate.swift in Sources */,
 				9C172E962B7FC88C005FC710 /* GrassBlock.swift in Sources */,
 				9C172EA12B7FCA28005FC710 /* WaterBlock.swift in Sources */,
@@ -774,8 +876,13 @@
 				9C946D8D2B83CB7B00521690 /* HopperNode.swift in Sources */,
 				9CBA394C2B8DD10D0005E587 /* WoodNode.swift in Sources */,
 				9C1C4D952B7ABEE300C1E1C4 /* SceneBlocksHelper.swift in Sources */,
+				9C94BAED2BA0825A004678DE /* BannerBlock.swift in Sources */,
+				9CE3A96F2B9F5B2600620571 /* WallNode.swift in Sources */,
 				9C946D712B829ABD00521690 /* NodeBlock.swift in Sources */,
+				9CA0A2FB2B9F1C27008B2078 /* UIColor+Extensions.swift in Sources */,
 				9CC11CCA2B94E4BE000C2D48 /* LeverNode.swift in Sources */,
+				9CE3A9732B9F7D0300620571 /* TrapDoorNode.swift in Sources */,
+				9CA0A2F32B9F0C81008B2078 /* CarpetNode.swift in Sources */,
 				9CED803E2B7E62FA0033ADBF /* NBTParser.swift in Sources */,
 				9CD32BEB2B82408100A069EC /* MenuOverlay.swift in Sources */,
 				9CBA395C2B8E0E140005E587 /* NodeBlock+Lantern.swift in Sources */,
@@ -790,6 +897,7 @@
 				9CBA39602B8E149B0005E587 /* ChainNode.swift in Sources */,
 				9C7483402B75E0CA00FAFD7C /* GameSceneController.swift in Sources */,
 				9CC11CDA2B94F3BE000C2D48 /* SCNNode+ApplyAttributes.swift in Sources */,
+				9CA0A2F72B9F16C9008B2078 /* SVNode.swift in Sources */,
 				9C7483372B75E0CA00FAFD7C /* AppDelegate.swift in Sources */,
 				9C172E972B7FC88C005FC710 /* GrassBlock.swift in Sources */,
 				9C172EA22B7FCA28005FC710 /* WaterBlock.swift in Sources */,

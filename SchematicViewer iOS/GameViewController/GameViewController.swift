@@ -46,10 +46,19 @@ class GameViewController: UIViewController {
 //            let fileName = "stairs_n_w_s_e_upsdwn"
 //            let fileName = "sign_s_e_n_w_stand"
 //            let fileName = "chest_s_e_n_w_dble"
-            let fileName = "futHouse9"
+//            let fileName = "futHouse9"
 //            let fileName = "redstone_and_doors"
+//            let fileName = "Boulevardier's_Japanese_Chateau"
+//            let fileName = "chicken"
+//            let fileName = "Modern_House_3"
+//            let fileName = "MH1"
+//            let fileName = "Model4"
+            let fileName = "McDonalds2"
             
-            await loadBundleNBT(fileName: fileName)
+            let fileType = "schem"
+//            let fileType = "schematic"
+            
+            await loadBundleNBT(fileName: fileName, ofType: fileType)
 //            await loadBundleNBTWithPrompt(fileName: fileName)
         }
     }
@@ -73,12 +82,15 @@ class GameViewController: UIViewController {
     }
     
     func showMapLevelsMenu() {
-        guard let nbt = gameSceneController.parsedNbt else {
+        guard 
+            let nbt = gameSceneController.parsedNbt,
+            let schematic = NBTParser.schematicFromNbt(nbt: nbt),
+            let height = NBTParser.heightFromSchematic(schematic: schematic)
+        else {
             print("could not show showMapLevelsMenu. parsedNbt is nil.")
             return
         }
         
-        let height = Int(NBTParser.nbtShortNodeValue(nbt: nbt, key: "Height"))
         let viewModel = MapLevelsMenuView.ViewModel(levelCount: height, hiddenLevels: gameSceneController.hiddenMapLevels)
         viewModel.delegate = self
         
@@ -91,8 +103,8 @@ class GameViewController: UIViewController {
         menuOverlay?.importFileButton?.isHidden = show
     }
     
-    func loadBundleNBT(fileName: String = "hopper_s_e_n_w_dwn") async {
-        let path = Bundle.main.path(forResource: fileName, ofType: "schem") ?? ""
+    func loadBundleNBT(fileName: String = "hopper_s_e_n_w_dwn", ofType: String = "schem") async {
+        let path = Bundle.main.path(forResource: fileName, ofType: ofType) ?? ""
         
         if FileManager.fileExists(filePath: path) {
             menuOverlay?.hudLabel?.text = "\(fileName) exists"
@@ -103,8 +115,8 @@ class GameViewController: UIViewController {
         await parseSchem(path: path)
     }
     
-    func loadBundleNBTWithPrompt(fileName: String = "hopper_s_e_n_w_dwn") async {
-        let path = Bundle.main.path(forResource: fileName, ofType: "schem") ?? ""
+    func loadBundleNBTWithPrompt(fileName: String = "hopper_s_e_n_w_dwn", ofType: String = "schem") async {
+        let path = Bundle.main.path(forResource: fileName, ofType: ofType) ?? ""
         await handleDocumentPicked(path: path)
     }
 
