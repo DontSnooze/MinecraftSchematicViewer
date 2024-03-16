@@ -39,6 +39,8 @@ platform :ios do
 
     changelog = File.read("../changelog.txt")
 
+    clear_derived_data
+    
     app_store_connect_api_key(
       key_id: ENV["APP_STORE_API_KEY_ID"],
       issuer_id: ENV["APP_STORE_API_ISSUER_ID"],
