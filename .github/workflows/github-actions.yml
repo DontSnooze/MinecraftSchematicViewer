@@ -47,7 +47,10 @@ jobs:
       #     retention-days: 15
       - name: Build and codesign
         if: github.ref == 'refs/heads/main'
-        run: bundle exec fastlane beta
+        run: |
+          export LC_ALL=en_US.UTF-8
+          export LANG=en_US.UTF-8
+          bundle exec fastlane beta
       - name: Archive app build
         uses: actions/upload-artifact@v4
         with:
