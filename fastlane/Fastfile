@@ -71,7 +71,7 @@ platform :ios do
     
     build_app(
       scheme: "SchematicViewer iOS",
-      configuration: "Release",
+      # configuration: "Release",
       output_directory: "./builds",
       output_name: "SchematicViewer-iOS-#{short_hash}.ipa",
       export_method: "app-store",
