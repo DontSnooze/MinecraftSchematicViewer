@@ -77,7 +77,8 @@ platform :ios do
       export_method: "app-store",
       export_team_id: "3BT7A38RRX",
       clean: true,
-      silent: true
+      silent: true,
+      include_bitcode: true
     )
 
     upload_to_testflight(

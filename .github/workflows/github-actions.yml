@@ -16,6 +16,8 @@ jobs:
       APP_STORE_API_ISSUER_ID: ${{ secrets.APP_STORE_API_ISSUER_ID }}
       APP_STORE_API_KEY_ID: ${{ secrets.APP_STORE_API_KEY_ID }}
       FASTLANE_EXPLICIT_OPEN_SIMULATOR: "1"
+      LC_ALL: "en_US.UTF-8"
+      LANG: "en_US.UTF-8"
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
