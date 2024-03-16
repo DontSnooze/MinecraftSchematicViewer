@@ -77,12 +77,11 @@ platform :ios do
       export_method: "app-store",
       export_team_id: "3BT7A38RRX",
       clean: true,
-      silent: true,
-      include_bitcode: true
+      silent: true
     )
 
     upload_to_testflight(
-      ipa: "./builds/SchematicViewer-iOS-#{short_hash}.ipa",
+      # ipa: "./builds/SchematicViewer-iOS-#{short_hash}.ipa",
       distribute_external: true,
       skip_waiting_for_build_processing: false,
       submit_beta_review: true,
