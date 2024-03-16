@@ -49,6 +49,12 @@ extension NBTParser {
             print("Could not load height from schematic")
             return
         }
+        
+        print("blockData: \(blockData)")
+        print("palette: \(palette)")
+        print("length: \(length)")
+        print("width: \(width)")
+        print("height: \(height)")
     }
     
     static func schematicFromNbt(nbt: NBT) -> [String: NBTTag]? {
@@ -56,9 +62,9 @@ extension NBTParser {
         
         var schematic: [String: NBTTag]?
         
-        // fabric style
-        // fabric style schematic keys: ["Offset", "Length", "Height", "Blocks", "Metadata", "Width", "DataVersion", "Version"]
         if let schematicObject = root?.value["Schematic"] as? NBTCompound {
+            // fabric style
+            // fabric style schematic keys: ["Offset", "Length", "Height", "Blocks", "Metadata", "Width", "DataVersion", "Version"]
             schematic = schematicObject.value
         } else if
             let schematicObject = root?.value as? [String: NBTTag],
@@ -136,149 +142,4 @@ extension NBTParser {
         
         return results
     }
-    /*
-    static func nbtByteNodeValue(nbt: NBT, key: String) -> Int8 {
-        let root = nbtRoot(nbt: nbt)
-        
-        guard
-            let nodeValue = root[key],
-            let targetNode = nodeValue as? NBTByte else {
-            fatalError("could not create targetNode from node value")
-        }
-        
-        return targetNode.value
-    }
-    
-    static func nbtByteArrayNodeValue(nbt: NBT, key: String) -> [Int8] {
-        let root = nbtRoot(nbt: nbt)
-        
-        guard
-            let nodeValue = root[key],
-            let targetNode = nodeValue as? NBTByteArray else {
-            fatalError("could not create targetNode from node value")
-        }
-        
-        return targetNode.value
-    }
-    
-    static func nbtCompoundNodeValue(nbt: NBT, key: String) -> [String: NBTTag] {
-        let root = nbtRoot(nbt: nbt)
-        
-        guard
-            let nodeValue = root[key],
-            let targetNode = nodeValue as? NBTCompound else {
-            fatalError("could not create targetNode from node value")
-        }
-        
-        return targetNode.value
-    }
-    
-    static func nbtDoubleNodeValue(nbt: NBT, key: String) -> Float64 {
-        let root = nbtRoot(nbt: nbt)
-        
-        guard
-            let nodeValue = root[key],
-            let targetNode = nodeValue as? NBTDouble else {
-            fatalError("could not create targetNode from node value")
-        }
-        
-        return targetNode.value
-    }
-    
-    static func nbtFloatNodeValue(nbt: NBT, key: String) -> Float32 {
-        let root = nbtRoot(nbt: nbt)
-        
-        guard
-            let nodeValue = root[key],
-            let targetNode = nodeValue as? NBTFloat else {
-            fatalError("could not create targetNode from node value")
-        }
-        
-        return targetNode.value
-    }
-    
-    static func nbtIntNodeValue(nbt: NBT, key: String) -> Int32 {
-        let root = nbtRoot(nbt: nbt)
-        
-        guard
-            let nodeValue = root[key],
-            let targetNode = nodeValue as? NBTInt else {
-            fatalError("could not create targetNode from node value")
-        }
-        
-        return targetNode.value
-    }
-    
-    static func nbtIntArrayNodeValue(nbt: NBT, key: String) -> [Int32] {
-        let root = nbtRoot(nbt: nbt)
-        
-        guard
-            let nodeValue = root[key],
-            let targetNode = nodeValue as? NBTIntArray else {
-            fatalError("could not create targetNode from node value")
-        }
-        
-        return targetNode.value
-    }
-    
-    static func nbtListNodeValue(nbt: NBT, key: String) -> [NBTTag] {
-        let root = nbtRoot(nbt: nbt)
-        
-        guard
-            let nodeValue = root[key],
-            let targetNode = nodeValue as? NBTList else {
-            fatalError("could not create targetNode from node value")
-        }
-        
-        return targetNode.value
-    }
-    
-    static func nbtLongNodeValue(nbt: NBT, key: String) -> Int64 {
-        let root = nbtRoot(nbt: nbt)
-        
-        guard
-            let nodeValue = root[key],
-            let targetNode = nodeValue as? NBTLong else {
-            fatalError("could not create targetNode from node value")
-        }
-        
-        return targetNode.value
-    }
-    
-    static func nbtLongArrayNodeValue(nbt: NBT, key: String) -> [Int64] {
-        let root = nbtRoot(nbt: nbt)
-        
-        guard
-            let nodeValue = root[key],
-            let targetNode = nodeValue as? NBTLongArray else {
-            fatalError("could not create targetNode from node value")
-        }
-        
-        return targetNode.value
-    }
-    
-    static func nbtShortNodeValue(nbt: NBT, key: String) -> Int16 {
-        let root = nbtRoot(nbt: nbt)
-        
-        guard
-            let nodeValue = root[key],
-            let targetNode = nodeValue as? NBTShort else {
-            fatalError("could not create targetNode from node value")
-        }
-        
-        return targetNode.value
-    }
-    
-    static func nbtStringNodeValue(nbt: NBT, key: String) -> String {
-        let root = nbtRoot(nbt: nbt)
-        
-        guard
-            let nodeValue = root[key],
-            let targetNode = nodeValue as? NBTString else {
-            fatalError("could not create targetNode from node value")
-        }
-        
-        return targetNode.value
-    }
-     */
 }

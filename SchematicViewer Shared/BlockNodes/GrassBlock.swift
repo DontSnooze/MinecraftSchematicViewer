@@ -7,20 +7,29 @@
 
 import SceneKit
 
-extension SCNNode {
-    static func grassBlock() -> SCNNode {
+class GrassBlock: SVNode {
+    var attributes: NodeBlockAttributes
+    var node = SCNNode()
+    
+    init(with attributes: NodeBlockAttributes) {
+        self.attributes = attributes
+        setup()
+    }
+    
+    func setup() {
         guard
             let sideImage = UIImage(named: "grass_side"),
             let topImage = UIImage(named: "grass_top"),
             let bottomImage = UIImage(named: "dirt")
         else {
-            return SCNNode.createBlock()
+            node = SCNNode.createBlock()
+            return
         }
         
-        let block = SCNNode.sixImageBlock(pxImage: sideImage, nxImage: sideImage, pyImage: topImage, nyImage: bottomImage, pzImage: sideImage, nzImage: sideImage)
+        node = SCNNode.sixImageBlock(pxImage: sideImage, nxImage: sideImage, pyImage: topImage, nyImage: bottomImage, pzImage: sideImage, nzImage: sideImage)
         
-        block.name = "grass_block"
-        
-        return block
+        node.name = "grass_block"
     }
+    
+    func applyAttributes() {}
 }

@@ -1,5 +1,5 @@
 //
-//  CarpetNode.swift
+//  CarpetBlock.swift
 //  SchematicViewer
 //
 //  Created by Amos Todman on 3/11/24.
@@ -7,7 +7,7 @@
 
 import SceneKit
 
-class CarpetNode: SVNode {
+class CarpetBlock: SVNode {
     var attributes: NodeBlockAttributes
     var node = SCNNode()
     

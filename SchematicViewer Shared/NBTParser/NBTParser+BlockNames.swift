@@ -10,7 +10,7 @@ import SceneKit
 
 extension NBTParser {
     static func blockNameDictionary(nbt: NBT) -> [Int: String] {
-        var blockDict = [Int: String]()
+        let blockDict = [Int: String]()
         /*
         let blockIdDictionary = NBTParser.nbtCompoundNodeValue(nbt: nbt, key: "BlockIDs")
         
@@ -80,17 +80,4 @@ extension NBTParser {
 //    static func attributesFromString(_ string: String) -> [String: String] {
 //        let attributes
 //    }
-}
-
-extension String {
-    func slice(from: String, to: String) -> String? {
-        guard let fromRange = from.isEmpty ? startIndex..<startIndex : range(of: from) else { return nil }
-        guard let toRange = to.isEmpty ? endIndex..<endIndex : range(of: to, range: fromRange.upperBound..<endIndex) else { return nil }
-        
-        return String(self[fromRange.upperBound..<toRange.lowerBound])
-    }
-    
-    var boolValue: Bool {
-        return (self as NSString).boolValue
-    }
 }

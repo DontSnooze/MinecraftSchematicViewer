@@ -7,37 +7,45 @@
 
 import SceneKit
 
-extension SCNNode {
-    static func glassPaneBlockFromName(blockName: String, directions: [NodeBlockAttributes.Direction] = []) -> SCNNode {
-        
+class GlassPaneBlock: SVNode {
+    var attributes: NodeBlockAttributes
+    var node = SCNNode()
+    var blockImage: UIImage? {
         var image: UIImage?
+        
         // check for main image
-        let fileName = blockName.replacingOccurrences(of: "_pane", with: "")
+        let fileName = attributes.name.replacingOccurrences(of: "_pane", with: "")
         if let fileImage = UIImage(named: fileName) {
             image = fileImage
         }
-        let block = SCNNode.glassPaneBlockNode(directions: directions, image: image)
-        
-        block.name = blockName
-        
-        return block
+        return image
     }
     
-    private static func glassPaneBlockNode(directions: [NodeBlockAttributes.Direction] = [], image: UIImage?) -> SCNNode {
-        
+    init(attributes: NodeBlockAttributes) {
+        self.attributes = attributes
+        setup()
+    }
+    
+    func setup() {
         // check for full length panes
         let westSet = Set([NodeBlockAttributes.Direction.east, NodeBlockAttributes.Direction.west])
         let northSet = Set([NodeBlockAttributes.Direction.north, NodeBlockAttributes.Direction.south])
-        let directionSet = Set(directions.sorted())
+        let directionSet = Set(attributes.directions.sorted())
         
-        if directionSet == northSet {
-            return fullGlassPaneBlockNode(facing: .west, image: image)
-        } else if directionSet == westSet {
-            return fullGlassPaneBlockNode(facing: .north, image: image)
+        switch directionSet {
+        case northSet:
+            setupFullGlassPaneBlockNode(facing: .west)
+        case westSet:
+            setupFullGlassPaneBlockNode(facing: .north)
+        default:
+            setupGlasppPaneNode()
         }
-        
+    }
+    
+    func setupGlasppPaneNode() {
         guard let scene = SCNScene(named: "Art.scnassets/glass_pane.scn") else {
-            fatalError("scene is nil")
+            print("glass pane scene is nil")
+            return
         }
         
         let blockNodeName = "glass_pane_block"
@@ -50,72 +58,61 @@ extension SCNNode {
             let eastNode = blockNode.childNode(withName: "east", recursively: true),
             let westNode = blockNode.childNode(withName: "west", recursively: true)
         else {
-            fatalError("glass pane node is nil")
+            print("glass pane node is nil")
+            return
         }
         
-        let nodes = [
-            centerNode,
-            northNode,
-            southNode,
-            eastNode,
-            westNode
-        ]
+        let resultNode = SCNNode()
+        
+        if attributes.directions.isEmpty || attributes.directions.contains(.none) {
+            resultNode.addChildNode(centerNode)
+        }
+        for direction in attributes.directions {
+            switch direction {
+            case .north:
+                resultNode.addChildNode(northNode)
+            case .south:
+                resultNode.addChildNode(southNode)
+            case .east:
+                resultNode.addChildNode(eastNode)
+            case .west:
+                resultNode.addChildNode(westNode)
+            default:
+                break
+            }
+        }
+        
+        node = resultNode.flattenedClone()
+        node.name = attributes.name
         
         let material = SCNMaterial()
         
-        // hide all nodes
-        for node in nodes {
-            node.isHidden = true
-        }
-        
-        if directions.isEmpty || directions.contains(.none) {
-            centerNode.isHidden = false
-        }
-        
-        if directions.contains(.north) {
-            northNode.isHidden = false
-        }
-        
-        if directions.contains(.south) {
-            southNode.isHidden = false
-        }
-        
-        if directions.contains(.east) {
-            eastNode.isHidden = false
-        }
-        
-        if directions.contains(.west) {
-            westNode.isHidden = false
-        }
-        
-        if let image = image {
+        if let image = blockImage {
             material.diffuse.contents = image
         } else {
             material.diffuse.contents = UIColor.cyan
             material.transparency = 0.6
         }
         
-        for node in (nodes.filter { !$0.isHidden }) {
-            node.geometry?.materials = [material]
-        }
-        
-        return blockNode
+        node.geometry?.materials = [material]
     }
     
-    private static func fullGlassPaneBlockNode(facing: NodeBlockAttributes.Direction, image: UIImage?) -> SCNNode {
+    func setupFullGlassPaneBlockNode(facing: NodeBlockAttributes.Direction) {
         guard let scene = SCNScene(named: "Art.scnassets/glass_pane.scn") else {
-            fatalError("scene is nil")
+            print("glass pane scene is nil")
+            return
         }
 
         let blockNodeName = facing == .north ? "full_glass_pane_north" : "full_glass_pane_west"
         
         guard let blockNode = scene.rootNode.childNode(withName: blockNodeName, recursively: true) else {
-            fatalError("glass pane node is nil")
+            print("glass pane node is nil")
+            return
         }
         
         let material = SCNMaterial()
         
-        if let image = image {
+        if let image = blockImage {
             material.diffuse.contents = image
         } else {
             material.diffuse.contents = UIColor.cyan
@@ -124,6 +121,8 @@ extension SCNNode {
         
         blockNode.geometry?.materials = [material]
         
-        return blockNode
+        node = blockNode
     }
+    
+    func applyAttributes() {}
 }

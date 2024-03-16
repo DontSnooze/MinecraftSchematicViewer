@@ -59,8 +59,6 @@ class GameViewController: UIViewController {
 //            let fileType = "schematic"
             
 //            await loadBundleNBTWithPrompt(fileName: fileName)
-//            let text = await NBTParser.testParseBundleNbt()
-//            menuOverlay?.hudLabel?.text = text
             await loadBundleNBT(fileName: fileName, ofType: fileType)
         }
     }

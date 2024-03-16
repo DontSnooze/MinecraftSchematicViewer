@@ -91,7 +91,7 @@ extension SCNNode {
         
         // grass dirt
         case 2:
-            block = SCNNode.grassBlock()
+            block = GrassBlock(with: NodeBlockAttributes(with: "", attributesString: "")).node
             
         // chest
         case 54:
@@ -112,10 +112,6 @@ extension SCNNode {
         // water
         case "water":
             block = SCNNode.waterBlock()
-        
-        // grass dirt
-        case "grass_block":
-            block = SCNNode.grassBlock()
             
         default:
             return block

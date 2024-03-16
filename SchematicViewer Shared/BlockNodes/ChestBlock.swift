@@ -7,22 +7,27 @@
 
 import SceneKit
 
-extension SCNNode {
-    static func chestBlockFromName(blockName: String, attributes: NodeBlockAttributes) -> SCNNode {
+class ChestBlock: SVNode {
+    var attributes: NodeBlockAttributes
+    var node = SCNNode()
+    
+    init(with attributes: NodeBlockAttributes) {
+        self.attributes = attributes
+        setup()
+    }
+    
+    func setup() {
         let frontImage = UIImage(named: "chest_front")
         let backImage = UIImage(named: "chest_back")
         let topImage = UIImage(named: "chest_top")
         
-        let block = SCNNode.sixImageBlock(frontImage: backImage, rightImage: backImage, backImage: frontImage, leftImage: backImage, topImage: topImage, bottomImage: topImage)
+        node = SCNNode.sixImageBlock(frontImage: backImage, rightImage: backImage, backImage: frontImage, leftImage: backImage, topImage: topImage, bottomImage: topImage)
         
-        block.name = blockName
-        
-        block.applyAttributes(attributes: attributes)
-        
-        return block
+        applyAttributes()
     }
     
-    private func applyAttributes(attributes: NodeBlockAttributes) {
-        applyDirectionAttribute(attributes: attributes)
+    func applyAttributes() {
+        node.name = attributes.name
+        node.applyDirectionAttribute(attributes: attributes)
     }
 }

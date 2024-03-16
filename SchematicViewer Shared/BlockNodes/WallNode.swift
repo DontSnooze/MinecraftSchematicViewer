@@ -18,9 +18,7 @@ class WallNode: SVNode {
         }
     }
     
-    func applyAttributes() { 
-        
-    }
+    func applyAttributes() {}
     
     func wallNode() -> SCNNode? {
         guard let scene = SCNScene(named: "Art.scnassets/wall.scn") else {
@@ -73,7 +71,6 @@ class WallNode: SVNode {
         }
         
         let flatNode = resultNode.flattenedClone()
-        flatNode.name = attributes.name
         
         let material = SCNMaterial()
         if let image = wallImage() {

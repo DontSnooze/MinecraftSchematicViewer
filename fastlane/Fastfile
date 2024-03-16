@@ -37,8 +37,6 @@ platform :ios do
   desc "Build App"
   lane :beta do
 
-    changelog = File.read("../changelog.txt")
-
     clear_derived_data
     
     app_store_connect_api_key(
@@ -81,6 +79,9 @@ platform :ios do
       clean: true,
       silent: true
     )
+
+    changelog = File.read("../changelog.txt")
+    changelog += "\n\nRevision: #{short_hash}"
 
     upload_to_testflight(
       # ipa: "./builds/SchematicViewer-iOS-#{short_hash}.ipa",

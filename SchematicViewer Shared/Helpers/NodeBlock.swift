@@ -27,25 +27,25 @@ struct NodeBlock {
         case .block:
             block = SCNNode.blockFromName(blockName: name)
         case .button:
-            block = SCNNode.buttonBlockFromName(blockName: name, attributes: attributes)
+            block = ButtonBlock(with: attributes).node
         case .carpet:
-            block = CarpetNode(with: attributes).node
+            block = CarpetBlock(with: attributes).node
         case .chain:
-            block = SCNNode.chainBlockFromName(blockName: name)
+            block = ChainBlock(with: attributes).node
         case .chest:
-            block = SCNNode.chestBlockFromName(blockName: name, attributes: attributes)
+            block = ChestBlock(with: attributes).node
         case .comparator:
-            block = SCNNode.comparatorNodeFromName(blockName: name, attributes: attributes)
+            block = ComparatorBlock(with: attributes).node
         case .door:
-            block = SCNNode.doorNodeFromName(blockName: name, attributes: attributes)
+            block = DoorBlock(with: attributes).node
         case .fence:
-            block = SCNNode.fenceBlockFromName(blockName: name, directions: attributes.directions)
+            block = FenceBlock(with: attributes).node
         case .fenceGate:
-            block = SCNNode.fenceGateNodeFromName(blockName: name, attributes: attributes)
+            block = FenceGateBlock(with: attributes).node
         case .glassPane:
-            block = SCNNode.glassPaneBlockFromName(blockName: name, directions: attributes.directions)
+            block = GlassPaneBlock(attributes: attributes).node
         case .grassBlock:
-            block = SCNNode.grassBlock()
+            block = GrassBlock(with: attributes).node
         case .head:
             block = HeadBlock(with: attributes).node
         case .hopper:

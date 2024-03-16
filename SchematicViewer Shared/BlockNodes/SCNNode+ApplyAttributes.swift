@@ -35,4 +35,20 @@ extension SCNNode {
             break
         }
     }
+    
+    func applyAxisAttribute(attributes: NodeBlockAttributes) {
+        switch attributes.axis {
+        case .x:
+            let radial = CGFloat(GLKMathDegreesToRadians(90))
+            runAction(SCNAction.rotateBy(x: 0, y: 0, z: radial, duration: 0))
+        case .y:
+            // default
+            break
+        case .z:
+            let radial = CGFloat(GLKMathDegreesToRadians(90))
+            runAction(SCNAction.rotateBy(x: radial, y: 0, z: 0, duration: 0))
+        case .none:
+            break
+        }
+    }
 }
