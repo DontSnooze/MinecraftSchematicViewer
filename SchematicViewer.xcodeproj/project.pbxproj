@@ -129,6 +129,7 @@
 		9CA0A2F92B9F1C27008B2078 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0A2F82B9F1C27008B2078 /* UIColor+Extensions.swift */; };
 		9CA0A2FA2B9F1C27008B2078 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0A2F82B9F1C27008B2078 /* UIColor+Extensions.swift */; };
 		9CA0A2FB2B9F1C27008B2078 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0A2F82B9F1C27008B2078 /* UIColor+Extensions.swift */; };
+		9CAA49572BA5DEBB007739F0 /* testTextFile.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9CAA49562BA5DEBA007739F0 /* testTextFile.txt */; };
 		9CBA393E2B86E8920005E587 /* futHouse9.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA393D2B86E8920005E587 /* futHouse9.schem */; };
 		9CBA393F2B86E8920005E587 /* futHouse9.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA393D2B86E8920005E587 /* futHouse9.schem */; };
 		9CBA39402B86E8920005E587 /* futHouse9.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA393D2B86E8920005E587 /* futHouse9.schem */; };
@@ -282,6 +283,7 @@
 		9CA0A2F02B9F0C81008B2078 /* CarpetNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarpetNode.swift; sourceTree = "<group>"; };
 		9CA0A2F42B9F16C9008B2078 /* SVNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVNode.swift; sourceTree = "<group>"; };
 		9CA0A2F82B9F1C27008B2078 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		9CAA49562BA5DEBA007739F0 /* testTextFile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testTextFile.txt; sourceTree = "<group>"; };
 		9CBA393D2B86E8920005E587 /* futHouse9.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = futHouse9.schem; sourceTree = "<group>"; };
 		9CBA39412B8D847E0005E587 /* GlassPane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassPane.swift; sourceTree = "<group>"; };
 		9CBA39452B8DB04F0005E587 /* SlabNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlabNode.swift; sourceTree = "<group>"; };
@@ -420,6 +422,7 @@
 				9C56FBCF2B9B473C00BB1351 /* Model3.schem */,
 				9C56FBD02B9B473C00BB1351 /* Model4.schem */,
 				9C56FBC42B9B3B7A00BB1351 /* VillageHome.schematic */,
+				9CAA49562BA5DEBA007739F0 /* testTextFile.txt */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -697,6 +700,7 @@
 				9C56FBC92B9B423000BB1351 /* Modern_House_3.schem in Resources */,
 				9C56FBCD2B9B43FF00BB1351 /* MH1.schematic in Resources */,
 				9C56FBBB2B9AEF5600BB1351 /* Boulevardier's_Japanese_Chateau.schem in Resources */,
+				9CAA49572BA5DEBB007739F0 /* testTextFile.txt in Resources */,
 				9C946D8F2B83E6C200521690 /* chest_s_e_n_w_dble.schem in Resources */,
 				9C56FBC12B9B31A100BB1351 /* Modern_House_3.litematic in Resources */,
 				9C3298AE2B7E8C8600A75C29 /* AmosBedrockCowFarmV2.schematic in Resources */,

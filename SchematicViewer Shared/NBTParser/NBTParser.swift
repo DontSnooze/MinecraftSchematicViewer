@@ -36,8 +36,24 @@ struct NBTParser {
     
     static func parseBundleNbt(fileName: String = "redstone_and_doors") async -> NBT? {
         let path = Bundle.main.path(forResource: fileName, ofType: "schem") ?? ""
-        
         let nbt = await parseNbt(path: path)
         return nbt
+    }
+    
+    static func testParseBundleNbt(fileName: String = "redstone_and_doors") async -> String {
+        var text = " - "
+        guard
+            let filePath = Bundle.main.path(forResource: "testTextFile", ofType: "txt")
+        else {
+            return "error: filePath is nil"
+        }
+        
+        do {
+            text = try String(contentsOfFile: filePath, encoding: .utf8)
+        } catch {
+            text = "load error: \(error.localizedDescription)"
+        }
+        
+        return text
     }
 }
