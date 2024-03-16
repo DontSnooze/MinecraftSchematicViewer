@@ -43,7 +43,7 @@ struct NBTParser {
     static func testParseBundleNbt(fileName: String = "redstone_and_doors") async -> String {
         var text = " - "
         guard
-            let filePath = Bundle.main.path(forResource: "testTextFile", ofType: "txt")
+            let filePath = Bundle.main.path(forResource: fileName, ofType: "schem")
         else {
             return "error: filePath is nil"
         }
