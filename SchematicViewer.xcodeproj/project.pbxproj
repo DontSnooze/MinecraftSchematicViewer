@@ -241,7 +241,7 @@
 		9C56FBCF2B9B473C00BB1351 /* Model3.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = Model3.schem; sourceTree = "<group>"; };
 		9C56FBD02B9B473C00BB1351 /* Model4.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = Model4.schem; sourceTree = "<group>"; };
 		9C56FBD12B9B473C00BB1351 /* Model1.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = Model1.schem; sourceTree = "<group>"; };
-		9C56FBD62B9B4BE500BB1351 /* McDonalds2.schem */ = {isa = PBXFileReference; lastKnownFileType = file; name = McDonalds2.schem; path = "SchematicViewer Shared/Resources/McDonalds2.schem"; sourceTree = SOURCE_ROOT; };
+		9C56FBD62B9B4BE500BB1351 /* McDonalds2.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = McDonalds2.schem; sourceTree = "<group>"; };
 		9C74830C2B75E0C700FAFD7C /* GameSceneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneController.swift; sourceTree = "<group>"; };
 		9C74830D2B75E0C700FAFD7C /* Art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Art.scnassets; sourceTree = "<group>"; };
 		9C74830E2B75E0CA00FAFD7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };

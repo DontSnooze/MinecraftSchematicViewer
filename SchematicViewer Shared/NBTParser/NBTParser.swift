@@ -10,7 +10,7 @@ import SceneKit
 import NIO
 import SwiftNBT
 
-class NBTParser {
+struct NBTParser {
     static var isForDebug = false
     
     static func parseNbt(path: String) async -> NBT? {
