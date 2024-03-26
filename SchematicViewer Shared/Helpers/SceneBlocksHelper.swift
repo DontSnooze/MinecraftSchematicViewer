@@ -98,4 +98,39 @@ extension SCNNode {
     static func sixImageBlock(pxImage: UIImage, nxImage: UIImage, pyImage: UIImage, nyImage: UIImage, pzImage: UIImage, nzImage: UIImage) -> SCNNode {
         return sixImageBlock(frontImage: pzImage, rightImage: pxImage, backImage: nzImage, leftImage: nxImage, topImage: pyImage, bottomImage: nyImage)
     }
+    
+    static func spriteBlock(image: UIImage?, name: String) -> SCNNode {
+        let parentNode = SCNNode()
+        let g = SCNPlane(width: 1, height: 1)
+        let node1 = SCNNode(geometry: g)
+        let node2 = SCNNode(geometry: g)
+        
+        let radial = GLKMathDegreesToRadians(45)
+        
+        node1.eulerAngles = SCNVector3Make(0, radial, 0)
+        node2.eulerAngles = SCNVector3Make(0, -radial, 0)
+        
+        var materials = [SCNMaterial]()
+        let material = SCNMaterial()
+        
+        if let image = image {
+            material.diffuse.contents = image
+            material.isDoubleSided = true
+        } else {
+            material.diffuse.contents = UIColor.cyan
+            material.transparency = 0.6
+        }
+        
+        materials.append(material)
+        node1.geometry?.materials = materials
+        node2.geometry?.materials = materials
+        
+        node1.name = name
+        node2.name = name
+        
+        parentNode.addChildNode(node1)
+        parentNode.addChildNode(node2)
+        
+        return parentNode
+    }
 }

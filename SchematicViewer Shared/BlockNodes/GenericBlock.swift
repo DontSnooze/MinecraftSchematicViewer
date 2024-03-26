@@ -79,7 +79,9 @@ class GenericBlock: SVNode {
         }
         var block = SCNNode()
         
-        if hasAlternateImages {
+        if attributes.isSprite {
+            block = SCNNode.spriteBlock(image: sideImage, name: attributes.name)
+        } else if hasAlternateImages {
             block = SCNNode.sixImageBlock(frontImage: frontImage, rightImage: sideImage, backImage: backImage, leftImage: sideImage, topImage: topImage, bottomImage: bottomImage)
         } else {
             block = SCNNode.repeatedImageBlock(image: sideImage)

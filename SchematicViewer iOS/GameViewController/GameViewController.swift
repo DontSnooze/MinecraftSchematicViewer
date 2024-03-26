@@ -62,6 +62,8 @@ class GameViewController: UIViewController {
 //            await loadBundleNBTWithPrompt(fileName: fileName)
             await loadBundleNBT(fileName: fileName, ofType: fileType)
         }
+
+//        addBlock()
     }
     
     func setupVirtualController() {
@@ -77,7 +79,8 @@ class GameViewController: UIViewController {
     }
     
     func showBlockCountsMenu() {
-        let viewModel = BlocksMenuView.ViewModel(mapLevels: gameSceneController.mapLevels, hiddenLevels: gameSceneController.hiddenMapLevels)
+        let viewModel = BlocksMenuView.ViewModel(mapLevels: gameSceneController.mapLevels, hiddenLevels: gameSceneController.hiddenMapLevels, hiddenBlocks: gameSceneController.hiddenBlocks)
+        viewModel.delegate = self
         let vc = UIHostingController(rootView: BlocksMenuView(viewModel: viewModel))
         vc.view.isOpaque = false
         vc.view.backgroundColor = .clear
@@ -138,6 +141,12 @@ class GameViewController: UIViewController {
     
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    func addBlock() {
+        let image = UIImage(named: "tall_grass_top")
+        let block = SCNNode.spriteBlock(image: image, name: "tall_grass")
+        gameView.scene?.rootNode.addChildNode(block)
     }
 }
 

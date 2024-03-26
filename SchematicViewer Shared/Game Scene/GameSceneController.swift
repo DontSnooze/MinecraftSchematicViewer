@@ -27,6 +27,7 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
     var parsedNbt: NBT?
     var mapLevels = [[SCNNode]]()
     var hiddenMapLevels = [Int]()
+    var hiddenBlocks = [String]()
     var blockPalette = [Int: SCNNode]()
     var virtualController: GCVirtualController?
     var delegate: GameSceneControllerDelegate?
@@ -129,6 +130,25 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
         hiddenMapLevels = removinglevels
     }
     
+    func updateMap(removingBlocks: [String]) {
+        let ignoredNodes = ["playerNode", "camera", "floor"]
+        for node in scene.rootNode.childNodes {
+            guard !ignoredNodes.contains(node.name ?? "") else {
+                continue
+            }
+            
+            let y = node.position.y
+            let isHidden = hiddenMapLevels.contains(Int(y))
+            
+            if !isHidden {
+                let shouldHide = removingBlocks.contains(node.name ?? "")
+                node.isHidden = shouldHide
+            }
+        }
+        
+        hiddenBlocks = removingBlocks
+    }
+    
     func loadScene(with nbt: NBT) async {
         // create scene adding all blocks
         guard let (newScene, levels) = await createScene(with: nbt) else {
@@ -198,6 +218,7 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
         sceneRenderer.scene = newScene
         scene = newScene
         hiddenMapLevels = []
+        hiddenBlocks = []
     }
     
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {

@@ -31,6 +31,8 @@ extension NodeBlockAttributes {
             blockType = .redstone
         case "repeater":
             blockType = .repeater
+        case "tall_grass":
+            blockType = .tallGrass
         default:
             break
         }

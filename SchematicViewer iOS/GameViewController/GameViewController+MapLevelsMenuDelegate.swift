@@ -11,6 +11,7 @@ extension GameViewController: MapLevelsMenuViewDelegate {
             return
         }
         gameSceneController.updateMap(removinglevels: hiddenLevels)
+        gameSceneController.updateMap(removingBlocks: gameSceneController.hiddenBlocks)
     }
     
     func donePressed(hiddenLevels: [Int]) {

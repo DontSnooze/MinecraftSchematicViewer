@@ -70,6 +70,8 @@ struct NodeBlock {
             block = SlabBlock(with: attributes).node
         case .stairs:
             block = StairsBlock(with: attributes).node
+        case .tallGrass:
+            block = TallGrassBlock(with: attributes).node
         case .torch:
             block = TorchBlock(with: attributes).node
         case .trapDoor:

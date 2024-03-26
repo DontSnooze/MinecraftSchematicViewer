@@ -33,6 +33,7 @@ struct NodeBlockAttributes {
         case sign
         case slab
         case stairs
+        case tallGrass
         case torch
         case trapDoor
         case wall
@@ -126,6 +127,16 @@ struct NodeBlockAttributes {
     var rotation = -1
     var level = -1
     var directions = [Direction]()
+    
+    var isSprite: Bool {
+        spriteBlockNames.contains(name)
+    }
+    var spriteBlockNames = [
+        "brewing_stand",
+        "campfire",
+        "tall_grass",
+        "soul_campfire"
+    ]
     
     init(with name: String, attributesString: String) {
         self.name = name
