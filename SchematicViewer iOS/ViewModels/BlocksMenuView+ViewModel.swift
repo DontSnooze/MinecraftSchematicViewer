@@ -50,6 +50,21 @@ extension BlocksMenuView {
             blockIsHidden(block: block) ? "eye.slash" : "eye"
         }
         
+        func textForBlockCount(count: Int) -> String {
+            var text = ""
+            
+            guard count > 64 else {
+                return "\(count)"
+            }
+            
+            let stacks: Int = count / 64
+            let remainder = count % 64
+            
+            text = "\(count)[\(stacks)s\(remainder)]"
+            
+            return text
+        }
+        
         func showAllBlocks() {
             hiddenBlocks.removeAll()
             delegate?.hiddenBlocksUpdated(hiddenBlocks: hiddenBlocks)

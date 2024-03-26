@@ -58,7 +58,7 @@ struct BlocksMenuView: View {
                         HStack {
                             Text(key)
                             Spacer()
-                            Text("\(value)")
+                            Text(viewModel.textForBlockCount(count: value))
                             Button {
                                 viewModel.handleVisibilityPressed(block: key)
                             } label: {
