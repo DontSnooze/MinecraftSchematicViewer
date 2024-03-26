@@ -8,7 +8,7 @@
 import SceneKit
 
 extension NodeBlockAttributes {
-    mutating func setupBlockNameAttributes(from blockName: String) {
+    mutating func setupBlockAttributes(from blockName: String) {
         if name.hasSuffix("_banner") {
             blockType = .banner
         }
@@ -42,7 +42,7 @@ extension NodeBlockAttributes {
         if name.hasSuffix("piston_head") {
             blockType = .pistonHead
         }
-        if name.hasSuffix("_rail") || name == "rail" {
+        if name.hasSuffix("rail") {
             blockType = .rail
         }
         if name.hasSuffix("_sign") {

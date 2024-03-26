@@ -129,8 +129,8 @@ struct NodeBlockAttributes {
     
     init(with name: String, attributesString: String) {
         self.name = name
-        setupBlockNameAttributes(from: name)
-        setupCustomBlockTypes(from: name)
+        setupBlockAttributes(from: name)
+        setupBlockType(from: name)
         
         guard !attributesString.isEmpty else {
             return

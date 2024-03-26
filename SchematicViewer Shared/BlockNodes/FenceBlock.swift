@@ -68,7 +68,6 @@ class FenceBlock: SVNode {
         }
         
         let flatNode = resultNode.flattenedClone()
-        flatNode.name = attributes.name
         
         if let image = blockImage {
             material.diffuse.contents = image
@@ -79,7 +78,10 @@ class FenceBlock: SVNode {
         
         flatNode.geometry?.materials = [material]
         node = flatNode
+        applyAttributes()
     }
     
-    func applyAttributes() {}
+    func applyAttributes() {
+        node.name = attributes.name
+    }
 }

@@ -115,7 +115,7 @@ class GameSceneController: NSObject, SCNSceneRendererDelegate {
     }
     
     func updateMap(removinglevels: [Int]) {
-        let ignoredNodes = ["playerNode", "camera"]
+        let ignoredNodes = ["playerNode", "camera", "floor"]
         for node in scene.rootNode.childNodes {
             guard !ignoredNodes.contains(node.name ?? "") else {
                 continue

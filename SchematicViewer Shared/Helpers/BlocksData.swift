@@ -5,18 +5,21 @@
 //  Created by Amos Todman on 2/18/24.
 //
 
-import Foundation
 import SceneKit
 
 struct BlocksData {
     var mapLevels: [[SCNNode]]
+    var hiddenLevels = [Int]()
     
     func blockCounts() -> [String: Int] {
         var detailsDict = [String: Int]()
         
-        for level in mapLevels {
-            for block in level {
-                
+        for level in 0..<mapLevels.count {
+            guard !hiddenLevels.contains(level) else {
+                continue
+            }
+            
+            for block in mapLevels[level] {
                 guard let blockName = block.name else {
                     continue
                 }

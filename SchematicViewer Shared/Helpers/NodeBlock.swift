@@ -5,7 +5,6 @@
 //  Created by Amos Todman on 2/18/24.
 //
 
-import Foundation
 import SceneKit
 
 struct NodeBlock {
@@ -25,7 +24,7 @@ struct NodeBlock {
         case .banner:
             block = BannerBlock(with: attributes).node
         case .block:
-            block = SCNNode.blockFromName(blockName: name)
+            block = GenericBlock(with: attributes).node
         case .button:
             block = ButtonBlock(with: attributes).node
         case .carpet:
@@ -49,40 +48,38 @@ struct NodeBlock {
         case .head:
             block = HeadBlock(with: attributes).node
         case .hopper:
-            let isFacingDown = attributes.facing == .down
-            block = SCNNode.hopperBlockFromName(blockName: name, isFacingDown: isFacingDown)
+            block = HopperBlock(with: attributes).node
         case .lantern:
-            block = SCNNode.lanternBlockFromName(blockName: name, isHanging: attributes.isHanging)
+            block = LanternBlock(with: attributes).node
         case .lever:
-            block = SCNNode.leverNodeFromName(blockName: name)
+            block = LeverBlock(with: attributes).node
         case .piston:
             block = PistonBlock(with: attributes).node
         case .pistonHead:
             block = PistonHeadBlock(with: attributes).node
         case .rail:
-            block = SCNNode.railBlockFromName(blockName: name, isPowered: attributes.isPowered, shape: attributes.shape)
+            block = RailBlock(with: attributes).node
         case .redstone:
-            block = SCNNode.redstoneDustDotNodeFromName(blockName: name, attributes: attributes)
+            block = RedstoneDustDotBlock(with: attributes).node
         case .repeater:
-            block = SCNNode.repeaterNodeFromName(blockName: name, attributes: attributes)
-        case .sign:
-            block = SCNNode.signBlockFromName(blockName: name)
+            block = RepeaterBlock(with: attributes).node
+        case .sign,
+             .wallSign:
+            block = SignBlock(with: attributes).node
         case .slab:
-            block = SCNNode.slabBlockFromName(blockName: name)
+            block = SlabBlock(with: attributes).node
         case .stairs:
-            block = SCNNode.stairsBlockFromName(blockName: name, halfType: attributes.halfType)
+            block = StairsBlock(with: attributes).node
         case .torch:
             block = TorchBlock(with: attributes).node
         case .trapDoor:
-            block = TrapDoorNode(attributes: attributes).node
+            block = TrapDoorBlock(attributes: attributes).node
         case .wall:
-            block = WallNode(with: attributes).node
-        case .wallSign:
-            block = SCNNode.signBlockFromName(blockName: name, isWallSign: true)
+            block = WallBlock(with: attributes).node
         case .water:
-            block = SCNNode.waterBlock()
+            block = WaterBlock(with: attributes).node
         case .wood:
-            block = SCNNode.woodBlockFromName(blockName: name)
+            block = WoodBlock(with: attributes).node
         }
         
         if let block = block {
@@ -95,27 +92,13 @@ struct NodeBlock {
     func applyAttributes(to block: SCNNode) {
         switch attributes.blockType {
         case .block:
-            applyDirectionAttribute(to: block)
-        case .hopper:
-            applyDirectionAttribute(to: block)
-        case .lantern:
-            applyLanternAttributes(to: block, isHanging: attributes.isHanging)
-        case .lever:
-            applyLeverAttributes(to: block)
-        case .rail:
-            applyRailAttributes(to: block)
-        case .slab:
-            applySlabAttributes(to: block)
-        case .stairs:
-            applyStairsAttributes(to: block)
-        case .wallSign:
-            applyDirectionAttribute(to: block)
+            block.applyDirectionAttribute(attributes: attributes)
         default:
             break
         }
         
         if attributes.axis != .none {
-            applyAxisAttribute(to: block)
+            block.applyAxisAttribute(attributes: attributes)
         }
     }
     

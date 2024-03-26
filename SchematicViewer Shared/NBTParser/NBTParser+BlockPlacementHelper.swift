@@ -170,14 +170,10 @@ extension NBTParser {
             
             let position = blockPosition(index: i, mapLength: mapLength, mapWidth: mapWidth, mapHeight: mapHeight)
             block.position = position
-            
-            var name = nodeBlock.name
-            
+
             if isForDebug {
-                name = "[\(nodeBlock.paletteId)][\(nodeBlock.name)] \(nodeBlock.attributes.rawAttributesString)"
+                block.name = "[\(nodeBlock.paletteId)][\(nodeBlock.name)] \(nodeBlock.attributes.rawAttributesString)"
             }
-            
-            block.name = name
             
             scene.rootNode.addChildNode(block)
             blockLevelArray.append(block)

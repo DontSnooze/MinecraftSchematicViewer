@@ -1,5 +1,5 @@
 //
-//  WallNode.swift
+//  WallBlock.swift
 //  SchematicViewer
 //
 //  Created by Amos Todman on 3/11/24.
@@ -7,23 +7,23 @@
 
 import SceneKit
 
-class WallNode: SVNode {
+class WallBlock: SVNode {
     var attributes: NodeBlockAttributes
     var node = SCNNode()
     
     init(with attributes: NodeBlockAttributes) {
         self.attributes = attributes
-        if let wallNode =  wallNode() {
-            node = wallNode
-        }
+        setup()
     }
     
-    func applyAttributes() {}
+    func applyAttributes() {
+        node.name = attributes.name
+    }
     
-    func wallNode() -> SCNNode? {
+    func setup() {
         guard let scene = SCNScene(named: "Art.scnassets/wall.scn") else {
             print("wall scene is nil")
-            return nil
+            return
         }
         
         let nodeName = attributes.directions.contains(.up) ? "wall_up" : "wall"
@@ -37,7 +37,7 @@ class WallNode: SVNode {
             let westNode = parentNode.childNode(withName: "west", recursively: true)
         else {
             print("wall node is nil")
-            return nil
+            return
         }
         
         let allNodes = [
@@ -81,9 +81,9 @@ class WallNode: SVNode {
         }
         
         flatNode.geometry?.materials = [material]
-        flatNode.name = attributes.name
         
-        return flatNode
+        node = flatNode
+        applyAttributes()
     }
     
     func wallImage() -> UIImage? {

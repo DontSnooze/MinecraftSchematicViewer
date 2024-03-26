@@ -37,10 +37,12 @@ extension MapLevelsMenuView {
         
         func showAllLevels() {
             hiddenLevels.removeAll()
+            delegate?.hiddenMapLevelsUpdated(hiddenLevels: hiddenLevels)
         }
         
         func hideAllLevels() {
             hiddenLevels = Array(0..<levelCount)
+            delegate?.hiddenMapLevelsUpdated(hiddenLevels: hiddenLevels)
         }
         
         func handleVisibilityPressed(level: Int) {
@@ -51,10 +53,10 @@ extension MapLevelsMenuView {
             } else {
                 hiddenLevels.append(level)
             }
+            delegate?.hiddenMapLevelsUpdated(hiddenLevels: hiddenLevels)
         }
         
         func handleDonePressed() {
-            delegate?.hiddenMapLevelsUpdated(hiddenLevels: hiddenLevels)
         }
     }
 }

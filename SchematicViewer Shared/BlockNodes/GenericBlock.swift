@@ -1,5 +1,5 @@
 //
-//  GenericBlockNode.swift
+//  GenericBlock.swift
 //  SchematicViewer iOS
 //
 //  Created by Amos Todman on 2/19/24.
@@ -7,8 +7,16 @@
 
 import SceneKit
 
-extension SCNNode {
-    static func blockFromName(blockName: String) -> SCNNode {
+class GenericBlock: SVNode {
+    var attributes: NodeBlockAttributes
+    var node = SCNNode()
+    
+    init(with attributes: NodeBlockAttributes) {
+        self.attributes = attributes
+        setup()
+    }
+    
+    func setup() {
         var sideImage: UIImage?
         var topImage: UIImage?
         var bottomImage: UIImage?
@@ -16,7 +24,7 @@ extension SCNNode {
         var backImage: UIImage?
 
         // check for main image
-        var fileName = blockName
+        var fileName = attributes.name
         var hasAlternateImages = false
 
         if let image = UIImage(named: fileName) {
@@ -28,7 +36,7 @@ extension SCNNode {
         }
 
         // check for side image
-        fileName = blockName + "_side"
+        fileName = attributes.name + "_side"
 
         if let image = UIImage(named: fileName) {
             sideImage = image
@@ -38,7 +46,7 @@ extension SCNNode {
         }
 
         // check for top image
-        fileName = blockName + "_top"
+        fileName = attributes.name + "_top"
         
         if let image = UIImage(named: fileName) {
             topImage = image
@@ -47,7 +55,7 @@ extension SCNNode {
         }
 
         // check for bottom image
-        fileName = blockName + "_bottom"
+        fileName = attributes.name + "_bottom"
         
         if let image = UIImage(named: fileName) {
             bottomImage = image
@@ -55,7 +63,7 @@ extension SCNNode {
         }
 
         // check for front image
-        fileName = blockName + "_front"
+        fileName = attributes.name + "_front"
 
         if let image = UIImage(named: fileName) {
             frontImage = image
@@ -63,7 +71,7 @@ extension SCNNode {
         }
 
         // check for back image
-        fileName = blockName + "_back"
+        fileName = attributes.name + "_back"
         
         if let image = UIImage(named: fileName) {
             backImage = image
@@ -76,48 +84,12 @@ extension SCNNode {
         } else {
             block = SCNNode.repeatedImageBlock(image: sideImage)
         }
-        block.name = blockName
         
-        return block
+        node = block
+        applyAttributes()
     }
     
-    static func customBlock(blockId: Int) -> SCNNode? {
-        var block: SCNNode?
-        
-        switch blockId {
-        // water
-        case 9:
-            block = SCNNode.waterBlock()
-        
-        // grass dirt
-        case 2:
-            block = GrassBlock(with: NodeBlockAttributes(with: "", attributesString: "")).node
-            
-        // chest
-        case 54:
-//            block = SCNNode.chestBlock()
-            break
-        default:
-            return block
-            
-        }
-        
-        return block
-    }
-    
-    static func customBlock(blockName: String) -> SCNNode? {
-        var block: SCNNode?
-        
-        switch blockName {
-        // water
-        case "water":
-            block = SCNNode.waterBlock()
-            
-        default:
-            return block
-            
-        }
-        
-        return block
+    func applyAttributes() {
+        node.name = attributes.name
     }
 }

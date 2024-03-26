@@ -28,8 +28,10 @@ class GrassBlock: SVNode {
         
         node = SCNNode.sixImageBlock(pxImage: sideImage, nxImage: sideImage, pyImage: topImage, nyImage: bottomImage, pzImage: sideImage, nzImage: sideImage)
         
-        node.name = "grass_block"
+        applyAttributes()
     }
     
-    func applyAttributes() {}
+    func applyAttributes() {
+        node.name = attributes.name
+    }
 }

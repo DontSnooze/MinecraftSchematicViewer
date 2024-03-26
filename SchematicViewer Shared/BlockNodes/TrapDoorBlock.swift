@@ -1,5 +1,5 @@
 //
-//  TrapDoorNode.swift
+//  TrapDoorBlock.swift
 //  SchematicViewer
 //
 //  Created by Amos Todman on 3/11/24.
@@ -7,7 +7,7 @@
 
 import SceneKit
 
-class TrapDoorNode: SVNode {
+class TrapDoorBlock: SVNode {
     var attributes: NodeBlockAttributes
     var node = SCNNode()
     
@@ -36,6 +36,7 @@ class TrapDoorNode: SVNode {
     }
     
     func applyAttributes() {
+        node.name = attributes.name
         if attributes.halfType == .top {
             let radial = GLKMathDegreesToRadians(180)
             node.runAction(SCNAction.rotateBy(x: 0, y: 0, z: CGFloat(radial), duration: 0))

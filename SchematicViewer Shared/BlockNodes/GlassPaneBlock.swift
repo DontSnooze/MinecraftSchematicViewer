@@ -38,11 +38,12 @@ class GlassPaneBlock: SVNode {
         case westSet:
             setupFullGlassPaneBlockNode(facing: .north)
         default:
-            setupGlasppPaneNode()
+            setupGlassPaneNode()
         }
+        applyAttributes()
     }
     
-    func setupGlasppPaneNode() {
+    func setupGlassPaneNode() {
         guard let scene = SCNScene(named: "Art.scnassets/glass_pane.scn") else {
             print("glass pane scene is nil")
             return
@@ -83,7 +84,6 @@ class GlassPaneBlock: SVNode {
         }
         
         node = resultNode.flattenedClone()
-        node.name = attributes.name
         
         let material = SCNMaterial()
         
@@ -124,5 +124,7 @@ class GlassPaneBlock: SVNode {
         node = blockNode
     }
     
-    func applyAttributes() {}
+    func applyAttributes() {
+        node.name = attributes.name
+    }
 }

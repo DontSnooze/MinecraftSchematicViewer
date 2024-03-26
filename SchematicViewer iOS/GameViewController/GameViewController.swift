@@ -45,6 +45,7 @@ class GameViewController: UIViewController {
 //            let fileName = "hopper_s_e_n_w_dwn"
 //            let fileName = "stairs_n_w_s_e_upsdwn"
 //            let fileName = "sign_s_e_n_w_stand"
+//            let fileName = "slabTest_low_to_up"
 //            let fileName = "chest_s_e_n_w_dble"
 //            let fileName = "futHouse9"
 //            let fileName = "redstone_and_doors"
@@ -76,8 +77,11 @@ class GameViewController: UIViewController {
     }
     
     func showBlockCountsMenu() {
-        let viewModel = BlocksMenuView.ViewModel(mapLevels: gameSceneController.mapLevels)
+        let viewModel = BlocksMenuView.ViewModel(mapLevels: gameSceneController.mapLevels, hiddenLevels: gameSceneController.hiddenMapLevels)
         let vc = UIHostingController(rootView: BlocksMenuView(viewModel: viewModel))
+        vc.view.isOpaque = false
+        vc.view.backgroundColor = .clear
+        vc.modalPresentationStyle = .overCurrentContext
         present(vc, animated: true)
     }
     
@@ -95,6 +99,10 @@ class GameViewController: UIViewController {
         viewModel.delegate = self
         
         let vc = UIHostingController(rootView: MapLevelsMenuView(viewModel: viewModel))
+        
+        vc.view.isOpaque = false
+        vc.view.backgroundColor = .clear
+        vc.modalPresentationStyle = .overCurrentContext
         present(vc, animated: true)
     }
     

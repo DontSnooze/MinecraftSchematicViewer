@@ -12,39 +12,58 @@ struct MapLevelsMenuView: View {
     @ObservedObject var viewModel: ViewModel
     
     var body: some View {
-        VStack {
-            HStack {
-                Button("Done") {
-                    viewModel.handleDonePressed()
-                    dismiss()
-                }.padding()
-                Spacer()
-                Button("Show All") {
-                    viewModel.showAllLevels()
-                }
-                Button("Hide All") {
-                    viewModel.hideAllLevels()
-                }.padding()
-            }
+        HStack {
+            let width = (UIScreen.main.bounds.size.width / 5) * 3
+            Spacer(minLength: width)
             
-            List {
-                Section(header: Text("Map Levels")) {
-                    ForEach(Array(0..<viewModel.levelCount).reversed(), id: \.self) { level in
-                        HStack {
-                            Text("Level \(level)")
-                            
-                            Spacer()
-                            
-                            Button {
-                                viewModel.handleVisibilityPressed(level: level)
-                            } label: {
-                                HStack {
-                                    Image(systemName: viewModel.imageForLevelVisibility(level: level))
-                                    Text(viewModel.textForLevelHideButton(level: level))
-                                }
+            VStack {
+                header
+                levels
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 40))
+            }
+            .background {
+                Color.white
+            }
+        }
+        .ignoresSafeArea()
+    }
+    
+    var header: some View {
+        HStack {
+            Button("Done") {
+                viewModel.handleDonePressed()
+                dismiss()
+            }.padding(EdgeInsets(top: 8, leading: 5, bottom: 0, trailing: 0))
+            Spacer()
+            Button("Show All") {
+                viewModel.showAllLevels()
+            }
+            .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
+            Button("Hide All") {
+                viewModel.hideAllLevels()
+            }
+            .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 25))
+        }
+    }
+    
+    var levels: some View {
+        List {
+            Section(header: Text("Map Levels")) {
+                ForEach(Array(0..<viewModel.levelCount).reversed(), id: \.self) { level in
+                    HStack {
+                        Text("Level \(level)")
+                        
+                        Spacer()
+                        
+                        Button {
+                            viewModel.handleVisibilityPressed(level: level)
+                        } label: {
+                            HStack {
+                                Image(systemName: viewModel.imageForLevelVisibility(level: level))
+                                Text(viewModel.textForLevelHideButton(level: level))
                             }
-                            .buttonStyle(.borderless)
                         }
+                        .buttonStyle(.borderless)
                     }
                 }
             }

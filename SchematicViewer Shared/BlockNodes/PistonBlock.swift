@@ -40,11 +40,11 @@ class PistonBlock: SVNode {
         }
         node = SCNNode.sixImageBlock(frontImage: bottomImage, rightImage: sideImage, backImage: topImage, leftImage: sideImage, topImage: sideImage, bottomImage: sideImage)
         
-        node.name = attributes.name
         applyAttributes()
     }
     
     func applyAttributes() {
+        node.name = attributes.name
         node.applyDirectionAttribute(attributes: attributes)
     }
 }

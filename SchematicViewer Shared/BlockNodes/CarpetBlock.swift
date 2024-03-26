@@ -25,10 +25,14 @@ class CarpetBlock: SVNode {
     
     func applyAttributes() {
         guard let carpet = node.childNode(withName: "carpet", recursively: true) else {
-            fatalError("carpet node is nil")
+            print("carpet node is nil")
+            return
         }
-        
+    
         let name = attributes.name
+        carpet.name = name
+        node.name = name
+        
         let colorString = name.replacingOccurrences(of: "_carpet", with: "")
         let material = SCNMaterial()
         

@@ -63,6 +63,7 @@ class FenceGateBlock: SVNode {
     }
     
     func applyAttributes() {
+        node.name = attributes.name
         node.applyDirectionAttribute(attributes: attributes)
     }
 }

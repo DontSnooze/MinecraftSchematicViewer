@@ -5,8 +5,6 @@
 //  Created by Amos Todman on 3/12/24.
 //
 
-import Foundation
-
 import SceneKit
 
 class HeadBlock: SVNode {
@@ -26,6 +24,7 @@ class HeadBlock: SVNode {
     }
     
     func applyAttributes() {
+        node.name = attributes.name
         guard let head = node.childNode(withName: "head", recursively: true) else {
             print("head node is nil")
             return
@@ -40,5 +39,6 @@ class HeadBlock: SVNode {
             material.transparency = 0.6
         }
         head.geometry?.materials = [material]
+        head.name = attributes.name
     }
 }

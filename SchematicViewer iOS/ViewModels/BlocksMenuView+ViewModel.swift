@@ -11,13 +11,10 @@ import SceneKit
 extension BlocksMenuView {
     struct ViewModel {
         var mapLevels: [[SCNNode]]
-        
-        init(mapLevels: [[SCNNode]]) {
-            self.mapLevels = mapLevels
-        }
+        var hiddenLevels: [Int]
         
         func blockCounts() -> [String: Int] {
-            return BlocksData(mapLevels: mapLevels).blockCounts()
+            return BlocksData(mapLevels: mapLevels, hiddenLevels: hiddenLevels).blockCounts()
             
         }
     }

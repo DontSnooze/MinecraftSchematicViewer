@@ -49,10 +49,10 @@ class PistonHeadBlock: SVNode {
         applyAttributes(node: parentNode)
         
         node = parentNode.flattenedClone()
-        node.name = attributes.name
     }
     
     func applyAttributes(node: SCNNode?) {
+        node?.name = attributes.name
         node?.applyDirectionAttribute(attributes: attributes)
     }
     

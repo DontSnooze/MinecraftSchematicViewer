@@ -1,27 +1,28 @@
 //
-//  HopperNode.swift
+//  HopperBlock.swift
 //  SchematicViewer
 //
-//  Created by Amos Todman on 2/19/24.
+//  Created by Amos Todman on 3/26/24.
 //
 
 import SceneKit
 
-extension SCNNode {
-    static func hopperBlockFromName(blockName: String, isFacingDown: Bool = false) -> SCNNode {
-        let block = SCNNode.hopperBlockNode(isFacingDown: isFacingDown)
-        
-        block.name = blockName
-        
-        return block
+class HopperBlock: SVNode {
+    var attributes: NodeBlockAttributes
+    var node = SCNNode()
+    
+    init(with attributes: NodeBlockAttributes) {
+        self.attributes = attributes
+        setup()
     }
     
-    private static func hopperBlockNode(isFacingDown: Bool = false) -> SCNNode {
+    func setup() {
         guard let scene = SCNScene(named: "Art.scnassets/hopper.scn") else {
-            fatalError("scene is nil")
+            print("hopper scene is nil")
+            return
         }
         
-        let blockNodeName = isFacingDown ? "hopper_block_down" : "hopper_block"
+        let blockNodeName = attributes.facing == .down ? "hopper_block_down" : "hopper_block"
         
         guard
             let blockNode = scene.rootNode.childNode(withName: blockNodeName, recursively: true),
@@ -30,7 +31,8 @@ extension SCNNode {
             let bottomNode = blockNode.childNode(withName: "bottom", recursively: true),
             let insideNode = blockNode.childNode(withName: "inside", recursively: true)
         else {
-            fatalError("hopper node is nil")
+            print("hopper node is nil")
+            return
         }
         
         var topMaterials = [SCNMaterial]()
@@ -82,6 +84,12 @@ extension SCNNode {
             insideNode.geometry?.materials = bottomMaterials
         }
         
-        return blockNode
+        node = blockNode
+        applyAttributes()
+    }
+    
+    func applyAttributes() {
+        node.name = attributes.name
+        node.applyDirectionAttribute(attributes: attributes)
     }
 }
