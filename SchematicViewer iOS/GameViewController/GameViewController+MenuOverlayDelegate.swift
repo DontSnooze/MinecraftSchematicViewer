@@ -27,6 +27,10 @@ extension GameViewController: MenuOverlayDelegate {
         showDocumentPicker()
     }
     
+    func resetPositionButtonPressed() {
+        resetPosition()
+    }
+    
     func overlayTouchesEnded(location: CGPoint) {
         let hitResults = gameView.hitTest(location, options: nil)
         

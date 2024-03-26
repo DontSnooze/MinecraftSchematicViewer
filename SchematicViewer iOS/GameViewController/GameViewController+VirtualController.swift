@@ -112,4 +112,10 @@ extension GameViewController: GameSceneControllerDelegate {
         let playerNode = gameSceneController.playerNode
         playerNode.position.y += VirtualController.verticalMovementSpeedMultiplier
     }
+    
+    func resetPosition() {
+        let playerNode = gameSceneController.playerNode
+        playerNode.position = SCNVector3(x: 0, y: 1, z: 3)
+        playerNode.eulerAngles = SCNVector3Make(0, 0, 0)
+    }
 }

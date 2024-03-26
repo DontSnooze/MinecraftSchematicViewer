@@ -13,6 +13,7 @@ protocol MenuOverlayDelegate: AnyObject {
     func mapLevelsButtonPressed()
     func overlayTouchesEnded(location: CGPoint)
     func importFileButtonPressed()
+    func resetPositionButtonPressed()
 }
 
 class MenuOverlay: SKScene {
@@ -20,6 +21,7 @@ class MenuOverlay: SKScene {
     var blockCountsButton: SKSpriteNode?
     var mapLevelsButton: SKSpriteNode?
     var importFileButton: SKSpriteNode?
+    var resetPlayerLocationButton: SKSpriteNode?
     var loadingImage: SKSpriteNode?
     var menuOverlayDelegate: MenuOverlayDelegate?
     
@@ -33,6 +35,7 @@ class MenuOverlay: SKScene {
         setupBlockCountsButton()
         setupMapLevelsButton()
         setupImportButton()
+        setupResetPlayerLocationButton()
         setupLoadingImage()
     }
     
@@ -98,6 +101,19 @@ class MenuOverlay: SKScene {
         importFileButton = button
     }
     
+    func setupResetPlayerLocationButton() {
+        guard let image = UIImage(systemName: "house.fill") else {
+            return
+        }
+        let texture = SKTexture(image: image)
+        let button = SKSpriteNode(texture: texture)
+        button.position = CGPoint(x: size.width - 160, y: size.height - 40)
+        button.setScale(1.0)
+        button.name = "ResetPlayerPositionButton"
+        self.addChild(button)
+        resetPlayerLocationButton = button
+    }
+    
     func setupLoadingImage() {
         // let imageName = "goforward"
          let imageName = "slowmo"
@@ -139,6 +155,13 @@ class MenuOverlay: SKScene {
             let button = importFileButton,
             button.contains(location) {
             menuOverlayDelegate?.importFileButtonPressed()
+            return
+        }
+        
+        if
+            let button = resetPlayerLocationButton,
+            button.contains(location) {
+            menuOverlayDelegate?.resetPositionButtonPressed()
             return
         }
         
