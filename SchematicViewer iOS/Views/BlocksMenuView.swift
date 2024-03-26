@@ -73,6 +73,7 @@ struct BlocksMenuView: View {
             }
             .searchable(text: $viewModel.searchText, prompt: "Filter")
         }
+        .navigationViewStyle(.stack)
     }
 }
 
