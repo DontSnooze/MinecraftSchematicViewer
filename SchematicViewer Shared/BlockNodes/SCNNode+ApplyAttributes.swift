@@ -42,6 +42,10 @@ extension SCNNode {
     }
     
     func applySpriteDirectionAttribute(attributes: NodeBlockAttributes) {
+        guard !attributes.name.hasSuffix("campfire") else {
+            return
+        }
+        
         switch attributes.facing {
         case .up:
             // already facing up
