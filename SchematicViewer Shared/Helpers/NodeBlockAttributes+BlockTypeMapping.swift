@@ -10,21 +10,23 @@ import SceneKit
 extension NodeBlockAttributes {
     mutating func setupBlockType(from name: String) {
         switch name {
-        case "comparator":
-            blockType = .comparator
-        case "hopper":
-            blockType = .hopper
+        case "bamboo":
+            blockType = .bamboo
+        case "chain":
+            blockType = .chain
         case "chest":
             blockType = .chest
-        case "water":
-            blockType = .water
+        case "comparator":
+            blockType = .comparator
+        case "decorated_pot":
+            blockType = .decoratedPot
         case "grass_block":
             blockType = .grassBlock
+        case "hopper":
+            blockType = .hopper
         case "lantern",
              "soul_lantern":
             blockType = .lantern
-        case "chain":
-            blockType = .chain
         case "lever":
             blockType = .lever
         case "redstone_wire":
@@ -33,6 +35,8 @@ extension NodeBlockAttributes {
             blockType = .repeater
         case "tall_grass":
             blockType = .tallGrass
+        case "water":
+            blockType = .water
         default:
             break
         }

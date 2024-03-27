@@ -133,4 +133,35 @@ extension SCNNode {
         
         return parentNode
     }
+    
+    static func flatPlaneBlock(image: UIImage?, name: String) -> SCNNode {
+        let parentNode = SCNNode()
+        let g = SCNPlane(width: 1, height: 1)
+        let plane = SCNNode(geometry: g)
+        plane.position = SCNVector3(0, -0.495, 0)
+        
+        let radial = GLKMathDegreesToRadians(90)
+        
+        plane.eulerAngles = SCNVector3Make(radial, 0, 0)
+        
+        var materials = [SCNMaterial]()
+        let material = SCNMaterial()
+        
+        if let image = image {
+            material.diffuse.contents = image
+            material.isDoubleSided = true
+        } else {
+            material.diffuse.contents = UIColor.cyan
+            material.transparency = 0.6
+        }
+        
+        materials.append(material)
+        plane.geometry?.materials = materials
+        
+        plane.name = name
+        
+        parentNode.addChildNode(plane)
+        
+        return parentNode
+    }
 }

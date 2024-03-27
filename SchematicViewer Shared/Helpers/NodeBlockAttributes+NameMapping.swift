@@ -36,6 +36,9 @@ extension NodeBlockAttributes {
         {
             blockType = .head
         }
+        if name.hasSuffix("ladder") {
+            blockType = .ladder
+        }
         if name.hasSuffix("piston") {
             blockType = .piston
         }

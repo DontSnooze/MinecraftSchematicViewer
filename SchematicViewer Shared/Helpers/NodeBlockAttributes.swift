@@ -9,6 +9,7 @@ import SceneKit
 
 struct NodeBlockAttributes {
     enum BlockType: String {
+        case bamboo
         case banner
         case block
         case button
@@ -16,6 +17,7 @@ struct NodeBlockAttributes {
         case chain
         case chest
         case comparator
+        case decoratedPot
         case door
         case fence
         case fenceGate
@@ -23,6 +25,7 @@ struct NodeBlockAttributes {
         case grassBlock
         case head
         case hopper
+        case ladder
         case lantern
         case lever
         case piston
@@ -166,6 +169,10 @@ struct NodeBlockAttributes {
     
     var isHalfSizedBlock: Bool {
         name.hasSuffix("conduit")
+    }
+    
+    var isFlatPlaneBlock: Bool {
+        name.hasSuffix("glow_lichen")
     }
     
     init(with name: String, attributesString: String) {
