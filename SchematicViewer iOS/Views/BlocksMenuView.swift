@@ -23,7 +23,7 @@ struct BlocksMenuView: View {
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 40))
             }
             .background {
-                Color.white
+                Color(UIColor.systemBackground)
             }
         }
         .ignoresSafeArea()
@@ -33,16 +33,17 @@ struct BlocksMenuView: View {
         HStack {
             Button("Done") {
                 dismiss()
-            }.padding(EdgeInsets(top: 8, leading: 5, bottom: 0, trailing: 0))
+            }
+            .padding([.top, .leading])
             Spacer()
             Button("Show All") {
                 viewModel.showAllBlocks()
             }
-            .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
+            .padding([.top])
             Button("Hide All") {
                 viewModel.hideAllBlocks()
             }
-            .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 25))
+            .padding([.top, .trailing])
         }
     }
     
@@ -74,6 +75,7 @@ struct BlocksMenuView: View {
             .searchable(text: $viewModel.searchText, prompt: "Filter")
         }
         .navigationViewStyle(.stack)
+        .statusBar(hidden: true)
     }
 }
 

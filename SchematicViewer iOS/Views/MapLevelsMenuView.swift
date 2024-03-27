@@ -22,8 +22,9 @@ struct MapLevelsMenuView: View {
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 40))
             }
             .background {
-                Color.white
+                Color(UIColor.systemBackground)
             }
+            .statusBar(hidden: true)
         }
         .ignoresSafeArea()
     }
@@ -33,16 +34,17 @@ struct MapLevelsMenuView: View {
             Button("Done") {
                 viewModel.handleDonePressed()
                 dismiss()
-            }.padding(EdgeInsets(top: 8, leading: 5, bottom: 0, trailing: 0))
+            }
+            .padding([.top, .leading])
             Spacer()
             Button("Show All") {
                 viewModel.showAllLevels()
             }
-            .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
+            .padding([.top])
             Button("Hide All") {
                 viewModel.hideAllLevels()
             }
-            .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 25))
+            .padding([.top, .trailing])
         }
     }
     
