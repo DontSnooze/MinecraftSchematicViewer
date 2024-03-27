@@ -24,6 +24,11 @@ extension NodeBlockAttributes {
     
     mutating func mapAttribute(attributeString: String, attributeValueString: String) {
         switch attributeString {
+        case "age":
+            guard let ageValue = Int(attributeValueString) else {
+                return
+            }
+            age = ageValue
         case "axis":
             guard let axisObject = Axis(rawValue: attributeValueString) else {
                 return

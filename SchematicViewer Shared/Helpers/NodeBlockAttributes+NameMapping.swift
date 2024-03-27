@@ -27,7 +27,7 @@ extension NodeBlockAttributes {
         if name.hasSuffix("_fence_gate") {
             blockType = .fenceGate
         }
-        if name.hasSuffix("_glass_pane") {
+        if name.hasSuffix("glass_pane") {
             blockType = .glassPane
         }
         if
@@ -41,6 +41,9 @@ extension NodeBlockAttributes {
         }
         if name.hasSuffix("piston_head") {
             blockType = .pistonHead
+        }
+        if name.hasSuffix("pressure_plate") {
+            blockType = .pressurePlate
         }
         if name.hasSuffix("rail") {
             blockType = .rail

@@ -70,11 +70,11 @@ extension SCNNode {
         
         let g = SCNBox(width: 1.0, height: 1.0, length: 1.0, chamferRadius: 0.01)
         let block = SCNNode(geometry: g)
-        
+
         var materials = [SCNMaterial]()
         
         // [ PZ(FRONT) , PX(RIGHT) , NZ(BACK) , NX(LEFT) , PY(TOP) , NY(BOTTOM) ]
-        let images = [frontImage, rightImage, backImage, leftImage, topImage, bottomImage]
+        let images = [backImage, rightImage, frontImage, leftImage, topImage, bottomImage]
         
         for image in images {
             if let image = image {

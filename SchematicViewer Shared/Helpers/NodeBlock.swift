@@ -57,6 +57,8 @@ struct NodeBlock {
             block = PistonBlock(with: attributes).node
         case .pistonHead:
             block = PistonHeadBlock(with: attributes).node
+        case .pressurePlate:
+            block = PressurePlateBlock(with: attributes).node
         case .rail:
             block = RailBlock(with: attributes).node
         case .redstone:

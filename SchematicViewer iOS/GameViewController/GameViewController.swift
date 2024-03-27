@@ -21,6 +21,27 @@ class GameViewController: UIViewController {
     var virtualController = VirtualController()
     var menuOverlay: MenuOverlay?
     
+    enum SchematicFileNames: String {
+        case boulevardiersJapaneseChateau = "Boulevardiers_Japanese_Chateau"
+        case chest_s_e_n_w_dble
+        case chicken
+        case fountain
+        case furnaces
+        case futHouse9
+        case garden
+        case hopper_s_e_n_w_dwn
+        case mh1 = "MH1"
+        case mcDonalds2 = "McDonalds2"
+        case model4 = "Model4"
+        case modernHouse3 = "Modern_House_3"
+        case random
+        case redstone_and_doors
+        case sign_s_e_n_w_stand
+        case slabTest_low_to_up
+        case stairs_n_w_s_e_upsdwn
+        case village
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         gameSceneController = GameSceneController(sceneRenderer: gameView)
@@ -42,20 +63,7 @@ class GameViewController: UIViewController {
         
         // open an initial schematic
         Task {
-//            let fileName = "hopper_s_e_n_w_dwn"
-//            let fileName = "stairs_n_w_s_e_upsdwn"
-//            let fileName = "sign_s_e_n_w_stand"
-//            let fileName = "slabTest_low_to_up"
-//            let fileName = "chest_s_e_n_w_dble"
-//            let fileName = "futHouse9"
-//            let fileName = "redstone_and_doors"
-//            let fileName = "Boulevardier's_Japanese_Chateau"
-//            let fileName = "chicken"
-//            let fileName = "Modern_House_3"
-//            let fileName = "MH1"
-//            let fileName = "Model4"
-            let fileName = "McDonalds2"
-            
+            let fileName = SchematicFileNames.mcDonalds2.rawValue
             let fileType = "schem"
 //            let fileType = "schematic"
             

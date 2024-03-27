@@ -9,6 +9,11 @@ import SceneKit
 
 extension SCNNode {
     func applyDirectionAttribute(attributes: NodeBlockAttributes) {
+        guard !attributes.isSprite else {
+            applySpriteDirectionAttribute(attributes: attributes)
+            return
+        }
+        
         switch attributes.facing {
         case .up:
             let radial = GLKMathDegreesToRadians(90)
@@ -31,6 +36,31 @@ extension SCNNode {
         case .west:
             let radial = GLKMathDegreesToRadians(90)
             runAction(SCNAction.rotateBy(x: 0, y: CGFloat(radial), z: 0, duration: 0))
+        case .none:
+            break
+        }
+    }
+    
+    func applySpriteDirectionAttribute(attributes: NodeBlockAttributes) {
+        switch attributes.facing {
+        case .up:
+            // already facing up
+            break
+        case .down:
+            let radial = GLKMathDegreesToRadians(180)
+            runAction(SCNAction.rotateBy(x: CGFloat(radial), y: 0, z: 0, duration: 0))
+        case .north:
+            let radial = GLKMathDegreesToRadians(90)
+            runAction(SCNAction.rotateBy(x: CGFloat(radial), y: 0, z: 0, duration: 0))
+        case .south:
+            let radial = GLKMathDegreesToRadians(-90)
+            runAction(SCNAction.rotateBy(x: CGFloat(radial), y: 0, z: 0, duration: 0))
+        case .east:
+            let radial = GLKMathDegreesToRadians(-90)
+            runAction(SCNAction.rotateBy(x: 0, y: 0, z: CGFloat(radial), duration: 0))
+        case .west:
+            let radial = GLKMathDegreesToRadians(90)
+            runAction(SCNAction.rotateBy(x: 0, y: 0, z: CGFloat(radial), duration: 0))
         case .none:
             break
         }

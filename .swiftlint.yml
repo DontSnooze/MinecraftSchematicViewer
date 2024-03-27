@@ -130,8 +130,8 @@ number_separator:
 #and above that is extreme complexity.
 cyclomatic_complexity:
     ignores_case_statements: true
-    warning: 25
-#    error: 11
+    warning: 100
+    error: 200
 
 custom_rules:
     comments_space: # From https://github.com/brandenr/swiftlintconfig

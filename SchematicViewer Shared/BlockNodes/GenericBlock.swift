@@ -77,8 +77,17 @@ class GenericBlock: SVNode {
             backImage = image
             hasAlternateImages = true
         }
-        var block = SCNNode()
         
+        // check for image with age attribute
+        if
+            sideImage == nil,
+            attributes.age > -1,
+            let image = UIImage(named: "\(attributes.name)_stage\(attributes.age)")
+        {
+            sideImage = image
+        }
+        
+        var block = SCNNode()
         if attributes.isSprite {
             block = SCNNode.spriteBlock(image: sideImage, name: attributes.name)
         } else if hasAlternateImages {
@@ -93,5 +102,33 @@ class GenericBlock: SVNode {
     
     func applyAttributes() {
         node.name = attributes.name
+        
+        if attributes.isHalfHeightBlock {
+            applyHalfSizeBlockAttributes()
+        }
+        
+        if attributes.isThirdHeightBlock {
+            applyThirdSizeBlockAttributes()
+        }
+        
+        if attributes.isHalfSizedBlock {
+            applyHalfScaledBlockSizeAttributes()
+        }
+    }
+    
+    func applyHalfSizeBlockAttributes() {
+        let pivot = SCNMatrix4MakeTranslation(0, 0.5, 0)
+        node.pivot = pivot
+        node.scale = SCNVector3(x: 1, y: 0.5, z: 1)
+    }
+    
+    func applyThirdSizeBlockAttributes() {
+        let pivot = SCNMatrix4MakeTranslation(0, 0.97, 0)
+        node.pivot = pivot
+        node.scale = SCNVector3(x: 1, y: 0.34, z: 1)
+    }
+    
+    func applyHalfScaledBlockSizeAttributes() {
+        node.scale = SCNVector3(x: 0.5, y: 0.5, z: 0.5)
     }
 }

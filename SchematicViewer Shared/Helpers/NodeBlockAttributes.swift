@@ -27,6 +27,7 @@ struct NodeBlockAttributes {
         case lever
         case piston
         case pistonHead
+        case pressurePlate
         case rail
         case redstone
         case repeater
@@ -127,16 +128,45 @@ struct NodeBlockAttributes {
     var rotation = -1
     var level = -1
     var directions = [Direction]()
+    var age = -1
     
     var isSprite: Bool {
-        spriteBlockNames.contains(name)
+        name.hasSuffix("allium")
+        || name.hasSuffix("bluet")
+        || name.hasSuffix("bud")
+        || name.hasSuffix("bush")
+        || name.hasSuffix("brewing_stand")
+        || name.hasSuffix("campfire")
+        || name.hasSuffix("cluster")
+        || name.hasSuffix("daisy")
+        || name.hasSuffix("dripstone")
+        || name.hasSuffix("fern")
+        || name.hasSuffix("fungus")
+        || name.hasSuffix("grass")
+        || name.hasSuffix("mushroom")
+        || name.hasSuffix("orchid")
+        || name.hasSuffix("poppy")
+        || name.hasSuffix("propagule")
+        || name.hasSuffix("roots")
+        || name.hasSuffix("sapling")
+        || name.hasSuffix("sprouts")
+        || name.hasSuffix("tulip")
+        || name.hasSuffix("tripwire_hook")
+        || name.hasSuffix("vines")
     }
-    var spriteBlockNames = [
-        "brewing_stand",
-        "campfire",
-        "tall_grass",
-        "soul_campfire"
-    ]
+    
+    var isHalfHeightBlock: Bool {
+        name.hasSuffix("sculk_sensor")
+        || name.hasSuffix("stonecutter")
+    }
+    
+    var isThirdHeightBlock: Bool {
+        name.hasSuffix("daylight_detector")
+    }
+    
+    var isHalfSizedBlock: Bool {
+        name.hasSuffix("conduit")
+    }
     
     init(with name: String, attributesString: String) {
         self.name = name

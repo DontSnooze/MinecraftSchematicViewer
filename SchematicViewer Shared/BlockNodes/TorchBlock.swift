@@ -26,32 +26,31 @@ class TorchBlock: SVNode {
             print("torch node is nil")
             return
         }
-        
-        if attributes.name == "wall_torch" {
-            applyAttributes(node: parentNode)
-        }
 
-        node = parentNode.flattenedClone()
+//        node = parentNode.flattenedClone()
+        node = parentNode
+        applyAttributes()
+    }
+    
+    func applyAttributes() {
+        if attributes.name == "wall_torch" {
+            node.applyDirectionAttribute(attributes: attributes)
+        }
+        
+        if let flame = node.childNode(withName: "flame", recursively: true) {
+            let material = SCNMaterial()
+            var color = UIColor.fire
+            if attributes.name.hasPrefix("soul") {
+                color = .blue
+            }
+            
+            material.diffuse.contents = color
+            flame.geometry?.materials = [material]
+        }
+        
         node.name = attributes.name
-    }
-    
-    func applyAttributes(node: SCNNode?) {
-        node?.applyDirectionAttribute(attributes: attributes)
-        
-        guard let flame = node?.childNode(withName: "flame", recursively: true) else {
-            print("flame node is nil")
-            return
+        for child in node.childNodes {
+            child.name = attributes.name
         }
-        
-        let material = SCNMaterial()
-        var color = UIColor.fire
-        if attributes.name.hasPrefix("soul") {
-            color = .blue
-        }
-        
-        material.diffuse.contents = color
-        flame.geometry?.materials = [material]
     }
-    
-    func applyAttributes() {}
 }
