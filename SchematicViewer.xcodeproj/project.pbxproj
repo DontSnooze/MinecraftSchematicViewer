@@ -155,6 +155,12 @@
 		9CB1A0B42BB502570011F18B /* BedBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB1A0B32BB502570011F18B /* BedBlock.swift */; };
 		9CB1A0B52BB502570011F18B /* BedBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB1A0B32BB502570011F18B /* BedBlock.swift */; };
 		9CB1A0B62BB502570011F18B /* BedBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB1A0B32BB502570011F18B /* BedBlock.swift */; };
+		9CB1A0B82BB517110011F18B /* torches.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CB1A0B72BB517110011F18B /* torches.schem */; };
+		9CB1A0B92BB517110011F18B /* torches.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CB1A0B72BB517110011F18B /* torches.schem */; };
+		9CB1A0BA2BB517110011F18B /* torches.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CB1A0B72BB517110011F18B /* torches.schem */; };
+		9CB1A0BC2BB527890011F18B /* bushes.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CB1A0BB2BB527890011F18B /* bushes.schem */; };
+		9CB1A0BD2BB527890011F18B /* bushes.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CB1A0BB2BB527890011F18B /* bushes.schem */; };
+		9CB1A0BE2BB527890011F18B /* bushes.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CB1A0BB2BB527890011F18B /* bushes.schem */; };
 		9CBA393E2B86E8920005E587 /* futHouse9.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA393D2B86E8920005E587 /* futHouse9.schem */; };
 		9CBA393F2B86E8920005E587 /* futHouse9.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA393D2B86E8920005E587 /* futHouse9.schem */; };
 		9CBA39402B86E8920005E587 /* futHouse9.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA393D2B86E8920005E587 /* futHouse9.schem */; };
@@ -338,6 +344,8 @@
 		9CB1A0AB2BB4E1F90011F18B /* AnvilBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnvilBlock.swift; sourceTree = "<group>"; };
 		9CB1A0AF2BB4EB780011F18B /* GrindstoneBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrindstoneBlock.swift; sourceTree = "<group>"; };
 		9CB1A0B32BB502570011F18B /* BedBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedBlock.swift; sourceTree = "<group>"; };
+		9CB1A0B72BB517110011F18B /* torches.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = torches.schem; sourceTree = "<group>"; };
+		9CB1A0BB2BB527890011F18B /* bushes.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = bushes.schem; sourceTree = "<group>"; };
 		9CBA393D2B86E8920005E587 /* futHouse9.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = futHouse9.schem; sourceTree = "<group>"; };
 		9CBA39412B8D847E0005E587 /* GlassPaneBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassPaneBlock.swift; sourceTree = "<group>"; };
 		9CBA39452B8DB04F0005E587 /* SlabBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlabBlock.swift; sourceTree = "<group>"; };
@@ -475,28 +483,30 @@
 				9C3298B72B7F93B500A75C29 /* VanillaResourcePackAssets.xcassets */,
 				9C3298AB2B7E7F6C00A75C29 /* hello_world.nbt */,
 				9C3298AD2B7E8C8600A75C29 /* AmosBedrockCowFarmV2.schematic */,
-				9C946D6C2B826E1D00521690 /* test1.schem */,
-				9C946D722B829CFC00521690 /* slabTest_low_to_up.schem */,
-				9C946D742B829E8D00521690 /* hopper_s_e_n_w_dwn.schem */,
-				9CC3EF6F2BB441F500527F9D /* garden.schem */,
-				9C946D762B829F1600521690 /* sign_s_e_n_w_stand.schem */,
-				9C946D782B829F2400521690 /* stairs_n_w_s_e_upsdwn.schem */,
+				9C56FBBA2B9AEF5600BB1351 /* Boulevardiers_Japanese_Chateau.schem */,
+				9CB1A0BB2BB527890011F18B /* bushes.schem */,
 				9C946D8E2B83E6C200521690 /* chest_s_e_n_w_dble.schem */,
+				9C56FBBE2B9B2D6200BB1351 /* chicken.schem */,
+				9CC3EF6F2BB441F500527F9D /* garden.schem */,
+				9C946D742B829E8D00521690 /* hopper_s_e_n_w_dwn.schem */,
 				9CC3EF732BB443CF00527F9D /* fountain.schem */,
 				9CC3EF672BB43CC200527F9D /* furnaces.schem */,
 				9CBA393D2B86E8920005E587 /* futHouse9.schem */,
-				9CBA396D2B8E59700005E587 /* redstone_and_doors.schem */,
-				9C56FBBA2B9AEF5600BB1351 /* Boulevardiers_Japanese_Chateau.schem */,
-				9C56FBBE2B9B2D6200BB1351 /* chicken.schem */,
-				9C56FBC02B9B31A000BB1351 /* Modern_House_3.litematic */,
-				9C56FBC82B9B423000BB1351 /* Modern_House_3.schem */,
 				9C56FBCC2B9B43FF00BB1351 /* MH1.schematic */,
 				9C56FBD62B9B4BE500BB1351 /* McDonalds2.schem */,
 				9C56FBD12B9B473C00BB1351 /* Model1.schem */,
 				9C56FBCE2B9B473B00BB1351 /* Model2.schem */,
 				9C56FBCF2B9B473C00BB1351 /* Model3.schem */,
 				9C56FBD02B9B473C00BB1351 /* Model4.schem */,
+				9C56FBC02B9B31A000BB1351 /* Modern_House_3.litematic */,
+				9C56FBC82B9B423000BB1351 /* Modern_House_3.schem */,
 				9CC3EF772BB458AA00527F9D /* random.schem */,
+				9CBA396D2B8E59700005E587 /* redstone_and_doors.schem */,
+				9C946D762B829F1600521690 /* sign_s_e_n_w_stand.schem */,
+				9C946D722B829CFC00521690 /* slabTest_low_to_up.schem */,
+				9C946D782B829F2400521690 /* stairs_n_w_s_e_upsdwn.schem */,
+				9C946D6C2B826E1D00521690 /* test1.schem */,
+				9CB1A0B72BB517110011F18B /* torches.schem */,
 				9CC3EF6B2BB4409300527F9D /* village.schem */,
 				9C56FBC42B9B3B7A00BB1351 /* VillageHome.schematic */,
 			);
@@ -767,6 +777,7 @@
 				9C56FBD22B9B473C00BB1351 /* Model2.schem in Resources */,
 				9C946D752B829E8D00521690 /* hopper_s_e_n_w_dwn.schem in Resources */,
 				9C56FBD42B9B473C00BB1351 /* Model4.schem in Resources */,
+				9CB1A0BC2BB527890011F18B /* bushes.schem in Resources */,
 				9C56FBD52B9B473C00BB1351 /* Model1.schem in Resources */,
 				9C946D6D2B826E2400521690 /* test1.schem in Resources */,
 				9C56FBD32B9B473C00BB1351 /* Model3.schem in Resources */,
@@ -786,6 +797,7 @@
 				9C56FBC12B9B31A100BB1351 /* Modern_House_3.litematic in Resources */,
 				9CC3EF702BB441F500527F9D /* garden.schem in Resources */,
 				9C3298AE2B7E8C8600A75C29 /* AmosBedrockCowFarmV2.schematic in Resources */,
+				9CB1A0B82BB517110011F18B /* torches.schem in Resources */,
 				9C56FBC52B9B3B7A00BB1351 /* VillageHome.schematic in Resources */,
 				9C7483412B75E0CA00FAFD7C /* Art.scnassets in Resources */,
 				9C3298B82B7F93B500A75C29 /* VanillaResourcePackAssets.xcassets in Resources */,
@@ -805,8 +817,10 @@
 				9CBA396F2B8E59700005E587 /* redstone_and_doors.schem in Resources */,
 				9C172E892B7F9CFA005FC710 /* BlockTextures.xcassets in Resources */,
 				9C946D902B83E6C200521690 /* chest_s_e_n_w_dble.schem in Resources */,
+				9CB1A0BD2BB527890011F18B /* bushes.schem in Resources */,
 				9CC3EF712BB441F500527F9D /* garden.schem in Resources */,
 				9CC3EF692BB43CC200527F9D /* furnaces.schem in Resources */,
+				9CB1A0B92BB517110011F18B /* torches.schem in Resources */,
 				9CAA496C2BB29E1C007739F0 /* PrivacyInfo.xcprivacy in Resources */,
 				9C7483452B75E0CA00FAFD7C /* Assets.xcassets in Resources */,
 				9C56FBC22B9B31A100BB1351 /* Modern_House_3.litematic in Resources */,
@@ -822,11 +836,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CB1A0BE2BB527890011F18B /* bushes.schem in Resources */,
 				9C74833C2B75E0CA00FAFD7C /* Main.storyboard in Resources */,
 				9CC3EF762BB443CF00527F9D /* fountain.schem in Resources */,
 				9CC3EF6E2BB4409300527F9D /* village.schem in Resources */,
 				9C172E8A2B7F9CFA005FC710 /* BlockTextures.xcassets in Resources */,
 				9CBA39702B8E59700005E587 /* redstone_and_doors.schem in Resources */,
+				9CB1A0BA2BB517110011F18B /* torches.schem in Resources */,
 				9CC3EF7A2BB458AA00527F9D /* random.schem in Resources */,
 				9CAA496D2BB29E1C007739F0 /* PrivacyInfo.xcprivacy in Resources */,
 				9C946D912B83E6C200521690 /* chest_s_e_n_w_dble.schem in Resources */,

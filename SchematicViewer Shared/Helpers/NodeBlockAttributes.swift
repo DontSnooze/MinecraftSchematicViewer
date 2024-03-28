@@ -163,17 +163,23 @@ struct NodeBlockAttributes {
         || name.hasSuffix("fungus")
         || name.hasSuffix("grass")
         || name.hasSuffix("lightning_rod")
+        || name.hasSuffix("lilac")
         || name.hasSuffix("mushroom")
         || name.hasSuffix("orchid")
+        || name.hasSuffix("petals")
+        || name.hasSuffix("peony")
+        || name.hasSuffix("pitcher_plant")
         || name.hasSuffix("poppy")
         || name.hasSuffix("propagule")
         || name.hasSuffix("roots")
         || name.hasSuffix("sapling")
         || name.hasSuffix("sprouts")
         || name.hasSuffix("torch")
+        || name.hasSuffix("torchflower")
         || name.hasSuffix("tulip")
         || name.hasSuffix("tripwire_hook")
         || name.hasSuffix("vines")
+        || name.hasSuffix("wither_rose")
     }
     
     var isHalfHeightBlock: Bool {

@@ -121,48 +121,4 @@ struct NodeBlock {
             block.applyAxisAttribute(attributes: attributes)
         }
     }
-    
-    func applyDirectionAttribute(to block: SCNNode) {
-        switch attributes.facing {
-        case .up:
-            let radial = GLKMathDegreesToRadians(90)
-            block.runAction(SCNAction.rotateBy(x: CGFloat(radial), y: 0, z: 0, duration: 0))
-        case .down:
-            guard attributes.blockType != .hopper else {
-                break
-            }
-            let radial = GLKMathDegreesToRadians(-90)
-            block.runAction(SCNAction.rotateBy(x: CGFloat(radial), y: 0, z: 0, duration: 0))
-        case .north:
-            // should default to facing north
-            break
-        case .south:
-            let radial = GLKMathDegreesToRadians(180)
-            block.runAction(SCNAction.rotateBy(x: 0, y: CGFloat(radial), z: 0, duration: 0))
-        case .east:
-            let radial = GLKMathDegreesToRadians(-90)
-            block.runAction(SCNAction.rotateBy(x: 0, y: CGFloat(radial), z: 0, duration: 0))
-        case .west:
-            let radial = GLKMathDegreesToRadians(90)
-            block.runAction(SCNAction.rotateBy(x: 0, y: CGFloat(radial), z: 0, duration: 0))
-        case .none:
-            break
-        }
-    }
-    
-    func applyAxisAttribute(to block: SCNNode) {
-        switch attributes.axis {
-        case .x:
-            let radial = CGFloat(GLKMathDegreesToRadians(90))
-            block.runAction(SCNAction.rotateBy(x: 0, y: 0, z: radial, duration: 0))
-        case .y:
-            // default
-            break
-        case .z:
-            let radial = CGFloat(GLKMathDegreesToRadians(90))
-            block.runAction(SCNAction.rotateBy(x: radial, y: 0, z: 0, duration: 0))
-        case .none:
-            break
-        }
-    }
 }

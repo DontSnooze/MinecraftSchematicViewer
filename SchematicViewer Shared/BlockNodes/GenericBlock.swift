@@ -89,6 +89,20 @@ class GenericBlock: SVNode {
         
         var block = SCNNode()
         if attributes.isSprite {
+            // check for top and bottom imges
+            // check for image with half attribute
+            
+            if
+                sideImage == nil,
+                attributes.halfType != .none
+            {
+                var imageName = attributes.halfType == .upper ? "\(attributes.name)_top" : "\(attributes.name)_bottom"
+                
+                if let image = UIImage(named: imageName) {
+                    sideImage = image
+                }
+            }
+            
             block = SCNNode.spriteBlock(image: sideImage, name: attributes.name)
         } else if attributes.isFlatPlaneBlock {
             block = SCNNode.flatPlaneBlock(image: sideImage, name: attributes.name)

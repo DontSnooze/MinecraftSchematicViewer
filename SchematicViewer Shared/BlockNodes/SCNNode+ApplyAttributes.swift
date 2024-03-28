@@ -10,7 +10,7 @@ import SceneKit
 extension SCNNode {
     func applyDirectionAttribute(attributes: NodeBlockAttributes) {
         guard !attributes.isSprite else {
-            applySpriteDirectionAttribute(attributes: attributes)
+            applySpriteDirectionAttributes(attributes: attributes)
             return
         }
         
@@ -41,7 +41,7 @@ extension SCNNode {
         }
     }
     
-    func applySpriteDirectionAttribute(attributes: NodeBlockAttributes) {
+    func applySpriteDirectionAttributes(attributes: NodeBlockAttributes) {
         let blocksToIgnore = ["bell"]
         guard
             !blocksToIgnore.contains(attributes.name),

@@ -23,6 +23,7 @@ class GameViewController: UIViewController {
     
     enum SchematicFileNames: String {
         case boulevardiersJapaneseChateau = "Boulevardiers_Japanese_Chateau"
+        case bushes
         case chest_s_e_n_w_dble
         case chicken
         case fountain
@@ -40,6 +41,7 @@ class GameViewController: UIViewController {
         case slabTest_low_to_up
         case stairs_n_w_s_e_upsdwn
         case village
+        case torches
     }
     
     override func viewDidLoad() {
@@ -63,7 +65,7 @@ class GameViewController: UIViewController {
         
         // open an initial schematic
         Task {
-            let fileName = SchematicFileNames.fountain.rawValue
+            let fileName = SchematicFileNames.bushes.rawValue
             let fileType = "schem"
 //            let fileType = "schematic"
             
