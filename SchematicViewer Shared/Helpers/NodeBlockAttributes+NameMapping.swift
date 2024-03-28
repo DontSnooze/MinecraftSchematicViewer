@@ -12,6 +12,9 @@ extension NodeBlockAttributes {
         if name.hasSuffix("_banner") {
             blockType = .banner
         }
+        if name.hasSuffix("_bed") {
+            blockType = .bed
+        }
         if name.hasSuffix("_button") {
             blockType = .button
         }

@@ -43,6 +43,9 @@ class TorchBlock: SVNode {
             if attributes.name.hasPrefix("soul") {
                 color = .blue
             }
+            if attributes.name.hasPrefix("redstone") {
+                color = .red
+            }
             
             material.diffuse.contents = color
             flame.geometry?.materials = [material]

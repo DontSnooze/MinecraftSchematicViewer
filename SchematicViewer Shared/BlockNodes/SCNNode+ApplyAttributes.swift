@@ -42,7 +42,11 @@ extension SCNNode {
     }
     
     func applySpriteDirectionAttribute(attributes: NodeBlockAttributes) {
-        guard !attributes.name.hasSuffix("campfire") else {
+        let blocksToIgnore = ["bell"]
+        guard
+            !blocksToIgnore.contains(attributes.name),
+            !attributes.name.hasSuffix("campfire")
+        else {
             return
         }
         

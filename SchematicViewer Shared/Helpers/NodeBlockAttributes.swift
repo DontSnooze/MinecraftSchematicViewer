@@ -9,8 +9,10 @@ import SceneKit
 
 struct NodeBlockAttributes {
     enum BlockType: String {
+        case anvil
         case bamboo
         case banner
+        case bed
         case block
         case button
         case carpet
@@ -21,12 +23,15 @@ struct NodeBlockAttributes {
         case door
         case fence
         case fenceGate
+        case flowerPot
         case glassPane
         case grassBlock
+        case grindstone
         case head
         case hopper
         case ladder
         case lantern
+        case lectern
         case lever
         case piston
         case pistonHead
@@ -104,6 +109,12 @@ struct NodeBlockAttributes {
         case none
     }
     
+    enum Part: String {
+        case head
+        case foot
+        case none
+    }
+    
     var name = ""
     var rawAttributesString = ""
     var blockType: BlockType = .block
@@ -115,6 +126,7 @@ struct NodeBlockAttributes {
     var slabType: SlabType = .none
     var halfType: HalfType = .none
     var shape: Shape = .none
+    var part: Part = .none
     
     var north = false
     var south = false
@@ -135,17 +147,22 @@ struct NodeBlockAttributes {
     
     var isSprite: Bool {
         name.hasSuffix("allium")
+        || name.hasSuffix("bell")
         || name.hasSuffix("bluet")
         || name.hasSuffix("bud")
         || name.hasSuffix("bush")
         || name.hasSuffix("brewing_stand")
         || name.hasSuffix("campfire")
         || name.hasSuffix("cluster")
+        || name.hasSuffix("coral")
+        || name.hasSuffix("coral_fan")
         || name.hasSuffix("daisy")
         || name.hasSuffix("dripstone")
+        || name.hasSuffix("end_rod")
         || name.hasSuffix("fern")
         || name.hasSuffix("fungus")
         || name.hasSuffix("grass")
+        || name.hasSuffix("lightning_rod")
         || name.hasSuffix("mushroom")
         || name.hasSuffix("orchid")
         || name.hasSuffix("poppy")
@@ -153,6 +170,7 @@ struct NodeBlockAttributes {
         || name.hasSuffix("roots")
         || name.hasSuffix("sapling")
         || name.hasSuffix("sprouts")
+        || name.hasSuffix("torch")
         || name.hasSuffix("tulip")
         || name.hasSuffix("tripwire_hook")
         || name.hasSuffix("vines")
@@ -173,6 +191,8 @@ struct NodeBlockAttributes {
     
     var isFlatPlaneBlock: Bool {
         name.hasSuffix("glow_lichen")
+        || name.hasSuffix("tripwire")
+        || name.hasSuffix("lily_pad")
     }
     
     init(with name: String, attributesString: String) {

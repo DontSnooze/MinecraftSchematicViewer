@@ -21,10 +21,14 @@ struct NodeBlock {
     func scnNode() -> SCNNode? {
         var block: SCNNode?
         switch attributes.blockType {
+        case .anvil:
+            block = AnvilBlock(with: attributes).node
         case .bamboo:
             block = BambooBlock(with: attributes).node
         case .banner:
             block = BannerBlock(with: attributes).node
+        case .bed:
+            block = BedBlock(with: attributes).node
         case .block:
             block = GenericBlock(with: attributes).node
         case .button:
@@ -45,10 +49,14 @@ struct NodeBlock {
             block = FenceBlock(with: attributes).node
         case .fenceGate:
             block = FenceGateBlock(with: attributes).node
+        case .flowerPot:
+            block = FlowerPotBlock(with: attributes).node
         case .glassPane:
             block = GlassPaneBlock(attributes: attributes).node
         case .grassBlock:
             block = GrassBlock(with: attributes).node
+        case .grindstone:
+            block = GrindstoneBlock(with: attributes).node
         case .head:
             block = HeadBlock(with: attributes).node
         case .hopper:
@@ -57,6 +65,8 @@ struct NodeBlock {
             block = LadderBlock(attributes: attributes).node
         case .lantern:
             block = LanternBlock(with: attributes).node
+        case .lectern:
+            block = LecternBlock(with: attributes).node
         case .lever:
             block = LeverBlock(with: attributes).node
         case .piston:

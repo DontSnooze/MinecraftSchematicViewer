@@ -75,6 +75,11 @@ extension NodeBlockAttributes {
             }
         case "open":
             isOpen = attributeValueString.boolValue
+        case "part":
+            guard let partObject = Part(rawValue: attributeValueString) else {
+                return
+            }
+            part = partObject
         case "powered":
             isPowered = attributeValueString.boolValue
         case "rotation":

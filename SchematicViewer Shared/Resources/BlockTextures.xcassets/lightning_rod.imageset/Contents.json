@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "lightning_rod.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
