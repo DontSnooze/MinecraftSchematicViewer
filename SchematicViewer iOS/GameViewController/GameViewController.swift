@@ -63,7 +63,7 @@ class GameViewController: UIViewController {
         
         // open an initial schematic
         Task {
-            let fileName = SchematicFileNames.mcDonalds2.rawValue
+            let fileName = SchematicFileNames.fountain.rawValue
             let fileType = "schem"
 //            let fileType = "schematic"
             
