@@ -11,6 +11,21 @@ class WallBlock: SVNode {
     var attributes: NodeBlockAttributes
     var node = SCNNode()
     
+    var blockImage: UIImage? {
+        var imageName = attributes.name.replacingOccurrences(of: "_wall", with: "")
+        
+        if imageName.hasSuffix("_brick") {
+            imageName += "s"
+        }
+        
+        guard let image = UIImage(named: imageName) else {
+            print("wall image was nil")
+            return nil
+        }
+        
+        return image
+    }
+    
     init(with attributes: NodeBlockAttributes) {
         self.attributes = attributes
         setup()
@@ -18,6 +33,9 @@ class WallBlock: SVNode {
     
     func applyAttributes() {
         node.name = attributes.name
+        for childNode in node.childNodes {
+            childNode.name = attributes.name
+        }
     }
     
     func setup() {
@@ -40,17 +58,6 @@ class WallBlock: SVNode {
             return
         }
         
-        let allNodes = [
-            northNode,
-            southNode,
-            eastNode,
-            westNode
-        ]
-        
-        for node in allNodes {
-            node.isHidden = true
-        }
-        
         setupAttributes()
         let resultNode = SCNNode()
         resultNode.addChildNode(postNode)
@@ -70,34 +77,21 @@ class WallBlock: SVNode {
             }
         }
         
-        let flatNode = resultNode.flattenedClone()
-        
         let material = SCNMaterial()
-        if let image = wallImage() {
+        if let image = blockImage {
             material.diffuse.contents = image
         } else {
+            print("blockImage was nil")
             material.diffuse.contents = UIColor.cyan
             material.transparency = 0.6
         }
         
-        flatNode.geometry?.materials = [material]
+        for childNode in resultNode.childNodes {
+            childNode.geometry?.materials = [material]
+        }
         
-        node = flatNode
+        node = resultNode
         applyAttributes()
-    }
-    
-    func wallImage() -> UIImage? {
-        var imageName = attributes.name.replacingOccurrences(of: "_wall", with: "")
-        
-        if imageName.hasSuffix("_brick") {
-            imageName += "s"
-        }
-        
-        guard let image = UIImage(named: imageName) else {
-            return nil
-        }
-        
-        return image
     }
     
     func setupAttributes() {
