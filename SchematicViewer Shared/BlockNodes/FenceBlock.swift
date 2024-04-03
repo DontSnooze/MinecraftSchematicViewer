@@ -85,6 +85,7 @@ class FenceBlock: SVNode {
     }
     
     func applyAttributes() {
+        node.name = attributes.name
         for child in node.childNodes {
             child.name = attributes.name
         }

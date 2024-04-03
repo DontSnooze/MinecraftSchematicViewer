@@ -69,6 +69,8 @@ struct NodeBlock {
             block = LecternBlock(with: attributes).node
         case .lever:
             block = LeverBlock(with: attributes).node
+        case .pitcherPlant:
+            block = PitcherPlantBlock(with: attributes).node
         case .piston:
             block = PistonBlock(with: attributes).node
         case .pistonHead:
@@ -94,6 +96,8 @@ struct NodeBlock {
             block = TorchBlock(with: attributes).node
         case .trapDoor:
             block = TrapDoorBlock(attributes: attributes).node
+        case .vine:
+            block = VineBlock(with: attributes).node
         case .wall:
             block = WallBlock(with: attributes).node
         case .water:

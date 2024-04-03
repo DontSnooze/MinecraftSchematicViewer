@@ -37,12 +37,16 @@ extension NodeBlockAttributes {
             blockType = .lectern
         case "lever":
             blockType = .lever
+        case "pitcher_plant":
+            blockType = .pitcherPlant
         case "redstone_wire":
             blockType = .redstone
         case "repeater":
             blockType = .repeater
         case "tall_grass":
             blockType = .tallGrass
+        case "vine":
+            blockType = .vine
         case "water":
             blockType = .water
         default:

@@ -96,7 +96,7 @@ class GenericBlock: SVNode {
                 sideImage == nil,
                 attributes.halfType != .none
             {
-                var imageName = attributes.halfType == .upper ? "\(attributes.name)_top" : "\(attributes.name)_bottom"
+                let imageName = attributes.halfType == .upper ? "\(attributes.name)_top" : "\(attributes.name)_bottom"
                 
                 if let image = UIImage(named: imageName) {
                     sideImage = image

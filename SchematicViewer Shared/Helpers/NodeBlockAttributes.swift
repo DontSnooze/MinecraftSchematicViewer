@@ -33,6 +33,7 @@ struct NodeBlockAttributes {
         case lantern
         case lectern
         case lever
+        case pitcherPlant
         case piston
         case pistonHead
         case pressurePlate
@@ -45,6 +46,7 @@ struct NodeBlockAttributes {
         case tallGrass
         case torch
         case trapDoor
+        case vine
         case wall
         case wallSign
         case water

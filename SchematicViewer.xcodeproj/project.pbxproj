@@ -161,6 +161,12 @@
 		9CB1A0BC2BB527890011F18B /* bushes.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CB1A0BB2BB527890011F18B /* bushes.schem */; };
 		9CB1A0BD2BB527890011F18B /* bushes.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CB1A0BB2BB527890011F18B /* bushes.schem */; };
 		9CB1A0BE2BB527890011F18B /* bushes.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CB1A0BB2BB527890011F18B /* bushes.schem */; };
+		9CB1A0C02BBDE25A0011F18B /* PitcherPlantBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB1A0BF2BBDE25A0011F18B /* PitcherPlantBlock.swift */; };
+		9CB1A0C12BBDE25A0011F18B /* PitcherPlantBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB1A0BF2BBDE25A0011F18B /* PitcherPlantBlock.swift */; };
+		9CB1A0C22BBDE25A0011F18B /* PitcherPlantBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB1A0BF2BBDE25A0011F18B /* PitcherPlantBlock.swift */; };
+		9CB1A0C42BBDEDCA0011F18B /* VineBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB1A0C32BBDEDC90011F18B /* VineBlock.swift */; };
+		9CB1A0C52BBDEDCA0011F18B /* VineBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB1A0C32BBDEDC90011F18B /* VineBlock.swift */; };
+		9CB1A0C62BBDEDCA0011F18B /* VineBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB1A0C32BBDEDC90011F18B /* VineBlock.swift */; };
 		9CBA393E2B86E8920005E587 /* futHouse9.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA393D2B86E8920005E587 /* futHouse9.schem */; };
 		9CBA393F2B86E8920005E587 /* futHouse9.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA393D2B86E8920005E587 /* futHouse9.schem */; };
 		9CBA39402B86E8920005E587 /* futHouse9.schem in Resources */ = {isa = PBXBuildFile; fileRef = 9CBA393D2B86E8920005E587 /* futHouse9.schem */; };
@@ -346,6 +352,8 @@
 		9CB1A0B32BB502570011F18B /* BedBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedBlock.swift; sourceTree = "<group>"; };
 		9CB1A0B72BB517110011F18B /* torches.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = torches.schem; sourceTree = "<group>"; };
 		9CB1A0BB2BB527890011F18B /* bushes.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = bushes.schem; sourceTree = "<group>"; };
+		9CB1A0BF2BBDE25A0011F18B /* PitcherPlantBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitcherPlantBlock.swift; sourceTree = "<group>"; };
+		9CB1A0C32BBDEDC90011F18B /* VineBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VineBlock.swift; sourceTree = "<group>"; };
 		9CBA393D2B86E8920005E587 /* futHouse9.schem */ = {isa = PBXFileReference; lastKnownFileType = file; path = futHouse9.schem; sourceTree = "<group>"; };
 		9CBA39412B8D847E0005E587 /* GlassPaneBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassPaneBlock.swift; sourceTree = "<group>"; };
 		9CBA39452B8DB04F0005E587 /* SlabBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlabBlock.swift; sourceTree = "<group>"; };
@@ -444,6 +452,7 @@
 				9CBA39552B8E06350005E587 /* LanternBlock.swift */,
 				9CB1A0A72BB4D6320011F18B /* LecternBlock.swift */,
 				9CC11CC72B94E4BE000C2D48 /* LeverBlock.swift */,
+				9CB1A0BF2BBDE25A0011F18B /* PitcherPlantBlock.swift */,
 				9C94BAF62BA0B10B004678DE /* PistonBlock.swift */,
 				9C94BAFA2BA0B8A4004678DE /* PistonHeadBlock.swift */,
 				9CC3EF7B2BB46C9A00527F9D /* PressurePlateBlock.swift */,
@@ -456,6 +465,7 @@
 				9CF0E5502BB33E7700DB50E5 /* TallGrassBlock.swift */,
 				9CE3A9702B9F7D0300620571 /* TrapDoorBlock.swift */,
 				9C94BAFE2BA0C868004678DE /* TorchBlock.swift */,
+				9CB1A0C32BBDEDC90011F18B /* VineBlock.swift */,
 				9CE3A96C2B9F5B2600620571 /* WallBlock.swift */,
 				9C172E992B7FCA28005FC710 /* WaterBlock.swift */,
 				9CBA39492B8DD10D0005E587 /* WoodBlock.swift */,
@@ -903,6 +913,7 @@
 				9C946D812B83A54F00521690 /* StairsBlock.swift in Sources */,
 				9CC3EF8C2BB4B12800527F9D /* DecoratedPotBlock.swift in Sources */,
 				9CE3A96D2B9F5B2600620571 /* WallBlock.swift in Sources */,
+				9CB1A0C02BBDE25A0011F18B /* PitcherPlantBlock.swift in Sources */,
 				9C946D932B84AF6600521690 /* GameViewController+FileImport.swift in Sources */,
 				9CE9D0B02B9517AE008CF426 /* RedstoneDustDotBlock.swift in Sources */,
 				9CD32BE62B823AF200A069EC /* GameViewController+MenuOverlayDelegate.swift in Sources */,
@@ -929,6 +940,7 @@
 				9C94BAEB2BA0825A004678DE /* BannerBlock.swift in Sources */,
 				9CE9D0BC2B952A20008CF426 /* ComparatorBlock.swift in Sources */,
 				9C7483172B75E0CA00FAFD7C /* AppDelegate.swift in Sources */,
+				9CB1A0C42BBDEDCA0011F18B /* VineBlock.swift in Sources */,
 				9CC3EF842BB495E100527F9D /* LadderBlock.swift in Sources */,
 				9CE9D0B42B951D9C008CF426 /* DoorBlock.swift in Sources */,
 				9CAA49592BA603A5007739F0 /* NodeBlockAttributes+BlockTypeMapping.swift in Sources */,
@@ -995,10 +1007,12 @@
 				9CE3A9722B9F7D0300620571 /* TrapDoorBlock.swift in Sources */,
 				9CA0A2F22B9F0C81008B2078 /* CarpetBlock.swift in Sources */,
 				9CAA49682BA606A7007739F0 /* String+Extensions.swift in Sources */,
+				9CB1A0C52BBDEDCA0011F18B /* VineBlock.swift in Sources */,
 				9CED803D2B7E62FA0033ADBF /* NBTParser.swift in Sources */,
 				9C94BAFC2BA0B8A4004678DE /* PistonHeadBlock.swift in Sources */,
 				9CD32BEA2B82408100A069EC /* MenuOverlay.swift in Sources */,
 				9CBA39532B8DEED70005E587 /* FenceBlock.swift in Sources */,
+				9CB1A0C12BBDE25A0011F18B /* PitcherPlantBlock.swift in Sources */,
 				9CAA495E2BA604B0007739F0 /* NodeBlockAttributes+NameMapping.swift in Sources */,
 				9CBA394F2B8DD4F50005E587 /* NodeBlockAttributes.swift in Sources */,
 				9CAA49642BA604C9007739F0 /* StairsBlock.swift in Sources */,
@@ -1060,10 +1074,12 @@
 				9CE3A9732B9F7D0300620571 /* TrapDoorBlock.swift in Sources */,
 				9CA0A2F32B9F0C81008B2078 /* CarpetBlock.swift in Sources */,
 				9CAA49692BA606A7007739F0 /* String+Extensions.swift in Sources */,
+				9CB1A0C62BBDEDCA0011F18B /* VineBlock.swift in Sources */,
 				9CED803E2B7E62FA0033ADBF /* NBTParser.swift in Sources */,
 				9C94BAFD2BA0B8A4004678DE /* PistonHeadBlock.swift in Sources */,
 				9CD32BEB2B82408100A069EC /* MenuOverlay.swift in Sources */,
 				9CBA39542B8DEED70005E587 /* FenceBlock.swift in Sources */,
+				9CB1A0C22BBDE25A0011F18B /* PitcherPlantBlock.swift in Sources */,
 				9CAA495F2BA604B0007739F0 /* NodeBlockAttributes+NameMapping.swift in Sources */,
 				9CBA39502B8DD4F50005E587 /* NodeBlockAttributes.swift in Sources */,
 				9CAA49652BA604CA007739F0 /* StairsBlock.swift in Sources */,
