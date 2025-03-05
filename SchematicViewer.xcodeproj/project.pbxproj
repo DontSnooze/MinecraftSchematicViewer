@@ -1336,7 +1336,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dontsnooze.SchematicViewer;
 				PRODUCT_NAME = SchematicViewer;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match AppStore com.dontsnooze.SchematicViewer";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match AppStore com.dontsnooze.SchematicViewer 1741132275";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
